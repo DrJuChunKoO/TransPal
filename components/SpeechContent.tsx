@@ -1,6 +1,7 @@
 import Avatar from "@/components/Avatar";
 import MessageText from "@/components/MessageText";
-import Markdown from "react-markdown";
+import Markdown from "@/components/Markdown";
+import { twMerge } from "tailwind-merge";
 export default function SpeechContent({
   content,
   keywords = [],
@@ -22,25 +23,30 @@ export default function SpeechContent({
           return (
             <div
               key={item.id}
-              className="ml-14 flex justify-between gap-4 items-center"
+              className="ml-14 flex items-center justify-between gap-4"
             >
               {item.text ? (
                 <>
-                  <div className="w-full bg-gray-50 h-1 dark:bg-gray-100/10"></div>
+                  <div className="h-1 w-full bg-gray-50 dark:bg-gray-100/10"></div>
                   <div className="shrink-0 opacity-50">{item.text}</div>
-                  <div className="w-full bg-gray-50 h-1 dark:bg-gray-100/10"></div>
+                  <div className="h-1 w-full bg-gray-50 dark:bg-gray-100/10"></div>
                 </>
               ) : (
-                <div className="w-full bg-gray-50 h-1 dark:bg-gray-100/10"></div>
+                <div className="h-1 w-full bg-gray-50 dark:bg-gray-100/10"></div>
               )}
             </div>
           );
         if (item.type === "markdown")
           return (
-            <div key={item.id} className="ml-14">
-              <Markdown className="prose prose-sm w-full dark:prose-invert my-6 break-all">
-                {item.text}
-              </Markdown>
+            <div
+              key={item.id}
+              className={twMerge(
+                "ml-14",
+                // for markdown
+                "prose prose-sm dark:prose-invert my-6 w-full break-all",
+              )}
+            >
+              <Markdown>{item.text}</Markdown>
             </div>
           );
 
@@ -54,12 +60,12 @@ export default function SpeechContent({
         );
         const avatar = (
           <div
-            className="flex items-start justify-start gap-2 -mb-6"
+            className="-mb-6 flex items-start justify-start gap-2"
             key={`avatar-${index}`}
           >
             <Avatar name={item.speaker} />
             <div>
-              <div className="font-bold text-gray-800 dark:text-slate-400">
+              <div className="font-bold text-gray-800 dark:text-blue-400">
                 {item.speaker}
               </div>
             </div>

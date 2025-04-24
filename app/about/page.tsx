@@ -10,10 +10,7 @@ export default function Page() {
         <h2>原始碼</h2>
         <p>
           你可以在{" "}
-          <a
-            href="https://github.com/DrJuChunKoO/TransPal-website"
-            target="_blank"
-          >
+          <a href="https://github.com/DrJuChunKoO/TransPal" target="_blank">
             GitHub
           </a>{" "}
           中，找到這個網站的原始碼和相關部署說明。

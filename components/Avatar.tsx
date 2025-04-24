@@ -1,7 +1,7 @@
 "use client";
 import { twMerge } from "tailwind-merge";
 import { UserIcon } from "@heroicons/react/24/solid";
-import avatars from "@/public/avatars.json";
+import { avatarMap } from "@/utils/generated/avatars";
 
 function genColor(name: string) {
   let randomSeed = name
@@ -23,14 +23,14 @@ export default function Avatar({
   className?: string;
 }) {
   // 檢查是否有有效的頭貼
-  const hasAvatar = name in avatars;
+  const hasAvatar = name in avatarMap;
 
   if (hasAvatar) {
     return (
       <div
         className={twMerge(
-          "size-12 rounded-full overflow-hidden flex items-center justify-center text-white bg-white",
-          className
+          "flex size-12 items-center justify-center overflow-hidden rounded-full bg-white text-white",
+          className,
         )}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -49,8 +49,8 @@ export default function Avatar({
   return (
     <div
       className={twMerge(
-        "size-12 rounded-full overflow-hidden flex items-center justify-center text-white",
-        className
+        "flex size-12 items-center justify-center overflow-hidden rounded-full text-white",
+        className,
       )}
       style={{
         backgroundColor: bgColor,

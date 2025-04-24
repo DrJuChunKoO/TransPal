@@ -34,5 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-public/searchResult.json
-public/avatars.json
+.wrangler
+utils/generated
+.dev.vars
+public/search-data.json

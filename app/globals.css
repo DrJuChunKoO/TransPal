@@ -1,7 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
+@plugin 'tailwind-scrollbar';
+@config "../tailwind.config.ts";
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -67,9 +66,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   .text-balance {
     text-wrap: balance;
   }

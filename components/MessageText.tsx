@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect, use } from "react";
+import { useState } from "react";
 import { useMount } from "react-use";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/24/solid";
@@ -33,10 +33,10 @@ export default function MessageText({
   return (
     <div
       className={twMerge(
-        "ml-12 text-gray-700 dark:text-gray-300 -mt-4 py-1 px-2 rounded flex justify-between items-center gap-4 group",
+        "group -mt-4 ml-12 flex items-center justify-between gap-4 rounded px-2 py-1 text-gray-700 dark:text-gray-300",
         active
           ? "bg-gray-200 dark:bg-white/10"
-          : "hover:bg-gray-50 dark:hover:bg-white/5"
+          : "hover:bg-gray-50 dark:hover:bg-white/5",
       )}
       id={item.id}
     >
@@ -44,6 +44,7 @@ export default function MessageText({
       <Link
         href={`/speeches/${filename}/${item.id}`}
         className="opacity-0 group-hover:opacity-100"
+        prefetch={false}
       >
         <div className="text-gray-400">
           <LinkIcon className="size-5" />

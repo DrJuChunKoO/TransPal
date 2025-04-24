@@ -1,48 +1,93 @@
-import path from "path";
-import { promises as fs } from "fs";
 import { cache } from "react";
-export const getSpeeches = cache(async () => {
-  const speeches = await Promise.all(
-    (
-      await fs.readdir(path.join(process.cwd(), "/public/speeches"))
-    )
-      .filter((file) => file.endsWith(".json"))
-      .map(async (file) => {
-        const fileData = await fs.readFile(
-          path.join(process.cwd(), "/public/speeches/", file),
-          "utf-8"
+// Remove fs and path imports as they are no longer needed
+// import fs from "fs/promises";
+// import path from "path";
+// Import the index file containing the list of speeches
+import { speeches as speechMetadataList } from "@/utils/generated/index";
+
+// Define the structure for a single speech detail (matching the dynamically imported module's default export)
+interface SpeechDetail {
+  info: { name?: string; date?: string; description?: string; time?: string }; // Make fields optional as fallback might occur
+  content: {
+    id: string;
+    speaker: string;
+    text: string;
+    type: string;
+  }[];
+}
+
+// Define the structure for the speech list entry (derived from index)
+interface SpeechListEntry {
+  filename: string;
+  name: string;
+  date: string;
+}
+
+// No longer need BASE_URL or fetch
+
+// Gets the list of speeches from the imported index data
+export const getSpeeches = cache(async (): Promise<SpeechListEntry[]> => {
+  try {
+    // The imported list is already sorted by the build script
+    // Map to the required structure for the list
+    return speechMetadataList.map((meta) => ({
+      filename: meta.filename,
+      name: meta.name,
+      date: meta.date,
+    }));
+  } catch (error) {
+    console.error("Error processing speech metadata list:", error);
+    return []; // Return empty array on error
+  }
+});
+
+// Dynamically imports the details of a single speech file
+export const getSpeech = cache(
+  async (filename: string): Promise<SpeechDetail | null> => {
+    const decodedFilename = decodeURIComponent(filename);
+    // Revert to dynamic import
+    try {
+      // Use dynamic import to load the specific speech module from the generated directory
+      const speechModule = await import(
+        `@/utils/generated/speeches/${decodedFilename}.js`
+      );
+
+      // The content is the default export of the module
+      const speechData: SpeechDetail = speechModule.default;
+
+      // Basic validation remains useful
+      if (!speechData || typeof speechData !== "object") {
+        console.warn(
+          `Speech data module loaded but content is invalid for: ${decodedFilename}.js`,
         );
-        const fileParsed = JSON.parse(fileData);
-        let { name, date } = fileParsed.info;
-        if (!name) name = file.split(".").slice(0, -1).join(".");
-        return {
-          filename: file.replace(/\.json$/, ""),
-          name,
-          date,
-        };
-      })
-  );
-  return speeches.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-});
-export const getSpeech = cache(async (filename: string) => {
-  const file = await fs.readFile(
-    path.join(
-      process.cwd(),
-      "/public/speeches/",
-      decodeURIComponent(filename) + ".json"
-    ),
-    "utf-8"
-  );
-  const fileParsed: {
-    info: { name: string; date: string; description?: string; time?: string };
-    content: {
-      id: string;
-      speaker: string;
-      text: string;
-      type: string;
-    }[];
-  } = JSON.parse(file);
-  return fileParsed;
-});
+        return null;
+      }
+
+      // Add fallbacks here if necessary (build script should handle most cases)
+      if (!speechData.info) speechData.info = {};
+      if (!speechData.info.name) speechData.info.name = decodedFilename;
+      if (!speechData.info.date)
+        speechData.info.date = new Date(0).toISOString();
+      if (!speechData.content) speechData.content = [];
+
+      return speechData;
+    } catch (error: any) {
+      // Handle module not found error specifically (dynamic import error)
+      if (
+        error instanceof Error &&
+        (error.message.includes("Cannot find module") || // Node.js error
+          error.message.includes("Failed to fetch dynamically imported module")) // Browser/Bundler error
+      ) {
+        console.warn(
+          `Speech data module not found for filename: ${decodedFilename}.js`,
+        );
+      } else {
+        console.error(
+          `Error dynamically importing speech data for ${decodedFilename}.js:`,
+          error,
+        );
+      }
+      return null; // Return null on error
+    }
+  },
+);

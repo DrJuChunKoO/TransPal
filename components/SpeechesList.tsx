@@ -7,11 +7,11 @@ export default function SpeechesList({ Speeches }: { Speeches: any[] }) {
         <Link
           href={"/speeches/" + speech.filename}
           key={speech.filename}
-          className="flex gap-2 items-center hover:bg-gray-50 active:bg-gray-100 dark:hover:bg-white/5 dark:active:bg-white/10 rounded p-2"
+          className="flex items-center gap-2 rounded p-2 hover:bg-blue-50 active:bg-blue-100 dark:hover:bg-white/5 dark:active:bg-white/10"
         >
-          <DocumentTextIcon className="size-6" />
+          <DocumentTextIcon className="size-6 shrink-0" />
           <div className="flex flex-wrap">
-            <span className="text-gray-500 dark:text-gray-300 tabular-nums tracking-tight mr-2">
+            <span className="mr-2 tracking-tight text-gray-500 tabular-nums dark:text-gray-300">
               {speech.date}
             </span>
             <span>{speech.name}</span>

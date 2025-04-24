@@ -5,7 +5,7 @@ import Nav from "@/components/Nav";
 import { twMerge } from "tailwind-merge";
 const inter = Inter({ subsets: ["latin"] });
 import { GoogleTagManager } from "@next/third-parties/google";
-
+import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "TransPal",
   description: "會議記錄網站",
@@ -25,13 +25,13 @@ export default function RootLayout({
       <body
         className={twMerge(
           inter.className,
-          "dark:bg-[#1C1C1C] dark:text-gray-50 text-gray-950"
+          "text-gray-950 dark:bg-[#1C1C1C] dark:text-gray-50",
+          "flex min-h-screen flex-col",
         )}
       >
-        <div>
-          <Nav />
-          {children}
-        </div>
+        <Nav />
+        <div className="flex-1">{children}</div>
+        <Footer />
       </body>
       <GoogleTagManager gtmId="GTM-MN9HZ6G2" />
     </html>

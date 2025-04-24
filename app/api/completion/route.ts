@@ -1,90 +1,98 @@
-import OpenAI from "openai";
-import { OpenAIStream, StreamingTextResponse } from "ai";
-import { promises as fs } from "fs";
-import path from "path";
+import { createOpenAI } from "@ai-sdk/openai";
+import { streamText, smoothStream } from "ai";
+import { getSpeech } from "@/utils/speeches";
 
-// Create an OpenAI API client
-const openai = new OpenAI({
+export const runtime = "edge";
+export const maxDuration = 30;
+
+const openai = createOpenAI({
   apiKey: process.env.OPENAI_API_KEY,
   baseURL:
     "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/open-ai/openai",
 });
 
 export async function POST(req: Request) {
-  const { messages, filename, prompt } = await req.json();
-  const filePath = path.join(
-    process.cwd(),
-    `./public/speeches/${decodeURIComponent(filename)}.json`
-  );
+  let filename: string | null = null;
+  let messages: any[] | null = null;
+
   try {
-    await fs.access(filePath);
-  } catch (e) {
-    console.error(e);
-    return new Response("File not found", { status: 404 });
-  }
-  try {
-    let speechData = JSON.parse(await fs.readFile(filePath, "utf-8"));
+    const body = await req.json();
+    messages = body.messages;
+    filename = body.filename;
+
+    // Check if filename and messages were provided
+    if (!filename || typeof filename !== "string") {
+      console.error(
+        "[API Completion] Error: Missing or invalid filename in request body.",
+      );
+      return new Response("Missing or invalid filename", { status: 400 });
+    }
+    if (!messages || !Array.isArray(messages)) {
+      console.error(
+        "[API Completion] Error: Missing or invalid messages in request body.",
+      );
+      return new Response("Missing or invalid messages", { status: 400 });
+    }
+
+    // Now filename is guaranteed to be a string here
+    const speechData = await getSpeech(filename);
+
+    if (!speechData) {
+      console.error(
+        `[API Completion] Error: Speech data not found for filename: ${filename}`,
+      );
+      return new Response("Speech data not found", { status: 404 });
+    }
+
+    if (!speechData.content || speechData.content.length === 0) {
+      console.error(
+        `[API Completion] Error: Speech content is empty for filename: ${filename}`,
+      );
+      return new Response("Speech content is empty", { status: 400 });
+    }
+
     let speechMessages = speechData.content.map(
       ({ speaker, text }: { speaker: string; text: string }) => ({
         speaker,
         text,
-      })
+      }),
     );
-    const systemPrompt = `你是會議逐字稿的 AI 助手
-1. 請根據對話內容回答使用者的問題，若無法回答請告知使用者「無法回答」。
-2. 請不要回答與對話內容無關的問題
-3. 請不要根據對話中沒有的資訊回答問題
-4. 在分析議題時，若有不同觀點，請多方參考並總結`;
 
-    // Ask OpenAI for a streaming completion given the prompt
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini",
-      stream: true,
-      temperature: 0.6,
-      max_tokens: 4096,
+    const systemPrompt = `你是會議逐字稿的 AI 助手
+  1. 請根據對話內容回答使用者的問題，若無法回答請告知使用者「無法根據現有資訊回答」。
+  2. 請不要回答與對話內容嚴重偏題的問題
+  3. 請不要根據對話中沒有的資訊回答問題
+  4. 在分析議題時，若有不同觀點，請多方參考並總結`;
+
+    const result = streamText({
+      model: openai("gpt-4.1-mini"),
+      experimental_transform: smoothStream({
+        delayInMs: 10,
+        chunking: /[\u4E00-\u9FFF]|\S+\s+/,
+      }),
       messages: [
         { role: "system", content: systemPrompt },
         {
-          role: "user",
-          content: speechMessages
-            .map((x: { speaker: string; text: string }, i: number) => {
-              if (speechMessages[i - 1]?.speaker === x.speaker) {
-                return x.text;
-              }
-              return `\n${x.speaker}：${x.text}`;
+          role: "system",
+          content: `這是對話內容：\n\n${speechMessages
+            .map((x: { speaker: string; text: string }) => {
+              return `${x.speaker}：${x.text}`;
             })
-            .join(""),
+            .join("\n")}`,
         },
-        ...messages,
-        {
-          role: "user",
-          content: prompt,
-        },
+        ...messages, // messages from useChat already includes the latest user prompt
       ],
     });
-    // Convert the response into a friendly text-stream
-    const stream = OpenAIStream(response);
-    const reStream = new ReadableStream({
-      async start(controller) {
-        for await (const chunk of stream as any) {
-          controller.enqueue(chunk);
-          // on end
-          await new Promise((r) =>
-            setTimeout(
-              r,
-              // get a random number between 5ms and 25ms to simulate a random delay
-              Math.floor(Math.random() * 20) + 5
-            )
-          );
-        }
-        controller.close();
-      },
-    });
 
-    // Respond with the stream
-    return new StreamingTextResponse(reStream);
+    return result.toDataStreamResponse();
   } catch (e) {
-    console.error(e);
-    return new Response("Unexpected error", { status: 500 });
+    // Log the error with filename context if available
+    console.error(
+      `[API Completion] Error caught in POST for filename: ${filename ?? "[unknown]"}. Error:`,
+      e,
+    );
+    return new Response("Unexpected error processing AI completion request", {
+      status: 500,
+    });
   }
 }
