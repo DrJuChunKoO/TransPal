@@ -1,0 +1,3171 @@
+{
+  "info": {
+    "filename": "Recording 138",
+    "name": "工研院拜會說明FHIR平臺",
+    "slug": "itri-mohw-health-standards-project-clarification",
+    "date": "2025-04-24",
+    "description": "為 Gemini 轉錄，有錯誤歡迎留言分享\n\n錄音：[bafybeidioscbwbg6is2r57ml46ogpr3isulecehrg2oqiqjbb7kyeufzfe](https://ipfs.juchunko.com/ipfs/bafybeidioscbwbg6is2r57ml46ogpr3isulecehrg2oqiqjbb7kyeufzfe)\n\n#### 工研院主管名單\n- 法務長王鵬瑜\n- 生醫所莊曜宇所長 \n- 計畫主持人-產科國際所張慈映副所長\n- 國會聯絡小組李宗嶽主任 \n\n#### 重點整理\n\n*   **會議目的**：釐清工研院執行衛福部健康資訊標準專案所引發的爭議，特別是關於 GitHub 連結、預算追加疑慮及專案交付成果。\n*   **GitHub 與平台連結問題**：工研院說明，是一名同仁不當將內部工作平台（被外界誤認為 GitHub）連結至衛福部專案網站，此舉未經授權，造成公私領域混淆。該同仁亦有處理開源軟體授權不當（未於 Readme 標示出處）及封鎖批評者之行為。\n*   **人員懲處與調查**：工研院已展開調查，釐清該員行為是僅止於授權引用疏失或涉及程式碼抄襲（當事人否認），並強調將依調查結果進行懲處，不會包庇。\n*   **預算釐清**：針對預算爭議，工研院解釋 113 年度專案原預算約 3.95 億，後因計畫範疇調整減項約 1.3 億，但經契約變更將經費轉為投入新工作項目（如願景規劃、平台建置），最終僅小幅減少 180 萬，並非外界誤解的大額追加。\n*   **交付成果與智財權**：工研院強調 113 年度主要交付成果為醫療資訊「標準」（如 FHIR 標準、CQL、TW Core IG），專案網站是展示這些標準的介面。網站本身（界面與內容）產權屬衛福部，但開發過程使用的底層程式碼、工具等智財權仍屬工研院，非合約交付項目。開發的實作工具（如 FHIR 中台）也與最終交付的「標準」有所區別。\n*   **後續專案**：114 年度相關專案已招標結束，正在評選中，與本次討論的 113 年度專案及其爭議點（如提早建置的網站平台）需分開看待。"
+  },
+  "content": [
+    {
+      "id": "ca9ef3f0-db5d-48db-bbed-aa4e841c3958",
+      "start": 0.44,
+      "end": 6.65,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，算是這麼百忙之中，來讓我們可以有機會稍微溝通一下這次的事情。"
+    },
+    {
+      "id": "bf7e1193-9439-433c-9747-44acbb71d9d0",
+      "start": 7.4,
+      "end": 12.49,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那，呃，所以，有沒有，你們這邊有沒有什麼需要先說明的地方？對。"
+    },
+    {
+      "id": "ba90c9e3-fc02-4595-81b6-230686c5b6eb",
+      "start": 13.43,
+      "end": 15.07,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那我就先跟委員報告。"
+    },
+    {
+      "id": "61a78ca4-0f27-4f05-8f0d-702caae54792",
+      "start": 16.86,
+      "end": 17.76,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好，請說。"
+    },
+    {
+      "id": "7b153ece-213c-4bd2-abf6-18a482e9fb1a",
+      "start": 18.06,
+      "end": 18.58,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "嗯，好。"
+    },
+    {
+      "id": "c00a95a3-efab-451e-be35-70bf2def7b5e",
+      "start": 19.1,
+      "end": 19.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "90fe1589-65a4-4942-b17c-bac3e3bc1204",
+      "start": 19.94,
+      "end": 21.56,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "委員時間很寶貴啦，沒有沒有。"
+    },
+    {
+      "id": "2554fe6f-8a28-4e0b-af8c-e848fc739a76",
+      "start": 22.21,
+      "end": 25.58,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "您昨天講的幾個，我都覺得講得很好，很有道理。"
+    },
+    {
+      "id": "a987c4e9-66ee-4c27-bf5f-e23cc3176e93",
+      "start": 25.94,
+      "end": 31.34,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我覺得有說我們工會做不到的，做不好地方，我到會跟您做說明，昨天您講得很有道理。"
+    },
+    {
+      "id": "126b795d-116a-49a7-a5e8-9cd1a9369977",
+      "start": 31.65,
+      "end": 34.61,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那我先大概要想要補充一下，昨天因為時間很有限。"
+    },
+    {
+      "id": "1f286411-52e2-44a5-8c8d-4ded969042e5",
+      "start": 34.61,
+      "end": 36.74,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們工會沒有機會上去做說明。"
+    },
+    {
+      "id": "6c699fd1-8464-455b-a3de-5b9c1a6ca22c",
+      "start": 37.49,
+      "end": 40.69,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "呃，這整個事情，我們有幾個地方沒有做好。"
+    },
+    {
+      "id": "95946a06-235e-44b4-bc95-e9291a9327aa",
+      "start": 40.96,
+      "end": 41.95,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "好，我要跟您報告。"
+    },
+    {
+      "id": "7a542e50-6503-4b3d-8052-ed70b0fa88b7",
+      "start": 42.45,
+      "end": 47.86,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "第一個是我們這個同仁，接衛福部這個計畫，是一個公網域，一個公領域。"
+    },
+    {
+      "id": "a5f75c12-4e61-496e-824a-97d7b7a31256",
+      "start": 48.11,
+      "end": 50.15,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那這同仁他自己在，我們是有個工作平台。"
+    },
+    {
+      "id": "4ba3e028-1868-4c41-9270-ae74f75a684c",
+      "start": 50.53,
+      "end": 52.92,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就是所謂大家看到很多在討論什麼 GitHub。"
+    },
+    {
+      "id": "fff1f7ae-e4e2-4f28-b1cf-c20d4d4a88c9",
+      "start": 53.33,
+      "end": 56.98,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那其實是一個我們自己的工作平台，並不是屬於衛福部的網站。"
+    },
+    {
+      "id": "cfaa4eb2-bd8a-4abf-90f2-2a9d26ba421a",
+      "start": 57.38,
+      "end": 58.93,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那這個同仁呢，他自己覺得說，我做了很多的"
+    },
+    {
+      "id": "23ee691c-c6e4-4982-b77e-a7aa90f696c4",
+      "start": 59.88,
+      "end": 103.96,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "呃，測試，做了很多的教學影片，他覺得很有成就感。"
+    },
+    {
+      "id": "ef81565d-e473-48f4-96fb-37865bd161c2",
+      "start": 104.33,
+      "end": 109.27,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以他就希望說把這個平台能不能跟公領域的部分，他做的部分相連接。"
+    },
+    {
+      "id": "468f6c1c-1d22-409d-83ab-12582edddc71",
+      "start": 109.75,
+      "end": 115.16,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他認為說這個又看到讓人家看到他自己的 craving，又有助於人家去使用衛福部的網站。"
+    },
+    {
+      "id": "087eaef7-fe62-45aa-afe7-1ba1059a14ea",
+      "start": 115.53,
+      "end": 118.71,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以他就把他自己的工作平台給打通了，就連接了。"
+    },
+    {
+      "id": "e55239e6-3cf2-4957-91c4-67a65563124e",
+      "start": 119.06,
+      "end": 121.72,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這是我們覺得第一個不應該的地方。"
+    },
+    {
+      "id": "9331f588-9de9-4cd3-b57a-5e83bb0114f3",
+      "start": 121.97,
+      "end": 126.53,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就是不當的做個連接，導致於會被人家認為說公跟私部分。"
+    },
+    {
+      "id": "1df1bae8-fb0e-43b7-9641-8785ea25b8ba",
+      "start": 126.94,
+      "end": 128.68,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這是第一個要先跟您做報告。"
+    },
+    {
+      "id": "43ced931-7bf4-4a6e-a1a0-d59b1f46e574",
+      "start": 128.99,
+      "end": 134.59,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那第二個，現在所有的爭議跟非耐，老實說發生的都是在我們的工作平台當中。"
+    },
+    {
+      "id": "23963e46-79a2-42fb-9d64-56799e2307bd",
+      "start": 134.95,
+      "end": 138.27,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那個包括不當的去封鎖人家去批評他的人。"
+    },
+    {
+      "id": "8705a212-8e5b-4e5d-be4e-9b764ebfc7ee",
+      "start": 138.84,
+      "end": 145.09,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "包括去引用那個開源軟體的授權，沒有標示出處，這都是事實。"
+    },
+    {
+      "id": "21c35213-6875-42c3-96ab-07486f2bd6b0",
+      "start": 145.56,
+      "end": 147.07,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這個都違反我們規定。"
+    },
+    {
+      "id": "b8c34e4c-4415-4b0a-a900-0a6cf3826750",
+      "start": 147.47,
+      "end": 153.43,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "不過我要跟委員還有您這邊報告是，他的這個不當行為倒不是去衛福部的網站做操作。"
+    },
+    {
+      "id": "19768196-7b8e-4557-bc3f-014f4e5d09b4",
+      "start": 153.85,
+      "end": 155.47,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他是在我們這個平台做操作。"
+    },
+    {
+      "id": "b2922d3a-c74c-4f5c-8e4b-4d0f710aa789",
+      "start": 155.96,
+      "end": 157.83,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "壞就是壞在他當初做這個連接。"
+    },
+    {
+      "id": "4051de5a-b44c-4fa6-a869-c4f45a7d6aa3",
+      "start": 158.33,
+      "end": 162.24,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "導致於大家就說這到底就是就會把這個賬算到衛部頭上。"
+    },
+    {
+      "id": "adacda6f-2b67-4eb0-9d1d-997466cd8deb",
+      "start": 162.63,
+      "end": 164.81,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以坦白講我們對衛服部也很不好意思。"
+    },
+    {
+      "id": "0d5af3f0-555c-431a-b6f3-806b47a0a092",
+      "start": 165.17,
+      "end": 167.06,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這這第一個我要跟委員報告。"
+    },
+    {
+      "id": "55c22191-9cc4-4c6f-8a22-306cd965bcee",
+      "start": 167.06,
+      "end": 171.7,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以歸納來說，我們的同仁跟我們公約院有幾個地方真的是做錯了，您教訓的及事啦。"
+    },
+    {
+      "id": "51d32451-26d3-46eb-ab1e-82b2519f2d75",
+      "start": 172.68,
+      "end": 173.89,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們要承認錯誤。"
+    },
+    {
+      "id": "0462cd42-8a73-4b91-bc04-ef7abe0e99d4",
+      "start": 174.25,
+      "end": 179.47,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以我們院內也有一些改進的機制，待會您時間有空的話，跟您報告我們的機制。"
+    },
+    {
+      "id": "2cd0a9c5-eca2-44ef-a431-7f72098badec",
+      "start": 180.02,
+      "end": 185.82,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "第一個這同仁不當的就是剛剛講的，把自己的工作平台，家裡在做的事情，覺得我做得很棒啊，我讓你們看看，你們就直接可以用我的東西。"
+    },
+    {
+      "id": "afff4262-1cdc-4158-9016-4a9eec6a4b19",
+      "start": 187.73,
+      "end": 188.91,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他就做了一個連接。"
+    },
+    {
+      "id": "ee9257db-ae24-49b2-9183-276c55a71452",
+      "start": 189.26,
+      "end": 190.91,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這沒有經過同意，沒有"
+    },
+    {
+      "id": "2aa1c679-84ea-4473-9b5d-b31aa0b1c088",
+      "start": 190.91,
+      "end": 191.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "連接什麼？"
+    },
+    {
+      "id": "46e6bcb3-beb7-41a3-b503-f533a1816507",
+      "start": 191.84,
+      "end": 192.91,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "連接網站。"
+    },
+    {
+      "id": "2ec30bc0-d4a1-42c7-b341-f56d3a6c488a",
+      "start": 193.57,
+      "end": 198.37,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "把自己的工作平台的網站跟衛福部，我們要交那個專案計劃的網站。"
+    },
+    {
+      "id": "e8794ad5-245e-468c-a84e-324a37a079a4",
+      "start": 198.9,
+      "end": 203.55,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "大家一般看到的就是那個網站上怎麼做操作，待會我請發組可以秀給你看。"
+    },
+    {
+      "id": "a1527665-be73-444d-a8f7-60597ce95cd3",
+      "start": 203.55,
+      "end": 204.03,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "嗯。"
+    },
+    {
+      "id": "f9e7202a-0e18-4101-ae26-62a2f1cc1366",
+      "start": 204.25,
+      "end": 208.76,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "有，我知道，現在 CQL 本來是連接 GitHub 的啦，現在變成下載了。"
+    },
+    {
+      "id": "98cc5784-4e97-4fc8-a0dd-bdd00d7e2b6c",
+      "start": 208.76,
+      "end": 209.1,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "對。"
+    },
+    {
+      "id": "a4199209-d323-4474-a9e8-b3c2518fdaf6",
+      "start": 209.1,
+      "end": 211.92,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對，先繼續，對，連接，所以這個事情你們是知道的，OK，好，那繼續。"
+    },
+    {
+      "id": "8326858b-9619-4570-9f45-ab1cd5e43b32",
+      "start": 209.9,
+      "end": 211.92,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他連接。"
+    },
+    {
+      "id": "95acbea2-bb7b-4a57-a6f0-80f4604c5bb1",
+      "start": 212.6,
+      "end": 214.92,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們是後來發生這個事情，我們才曉得。"
+    },
+    {
+      "id": "cdfc6de0-0e65-4509-b161-c9d9fadfb991",
+      "start": 214.92,
+      "end": 218.89,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "好，繼續。 他等於是把自己後端作業的平台跟人家前面的平台商連接。"
+    },
+    {
+      "id": "7fccca3e-dfa8-4a4c-9ce7-655018b44364",
+      "start": 218.89,
+      "end": 219.79,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這第一個不當。"
+    },
+    {
+      "id": "e88e28bc-8443-4898-a976-a89b04ba60cd",
+      "start": 220.41,
+      "end": 220.78,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "好。"
+    },
+    {
+      "id": "6b2d3955-547d-42d3-8f39-842d6a71c7ce",
+      "start": 220.97,
+      "end": 225.36,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那第二個就是，他在他作業平台當中，的確引用了開源軟體授權。"
+    },
+    {
+      "id": "1a818d99-513b-4915-91a4-ede0faf42a31",
+      "start": 226.56,
+      "end": 231.82,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "很明確的就知道那個 Readme，就是讀我檔案，沒有引用出處，這絕對已經違反授權規範。"
+    },
+    {
+      "id": "f9426007-07e5-429c-b01a-35182293a4b9",
+      "start": 233.63,
+      "end": 234.65,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這個已經錯。"
+    },
+    {
+      "id": "41dfd82e-7cbf-49e9-a244-22d5f24e3e09",
+      "start": 234.83,
+      "end": 235.95,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "現在我們在調查的是，"
+    },
+    {
+      "id": "92999434-93e8-43c8-9433-d7b3bbbc221c",
+      "start": 236.72,
+      "end": 239.38,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們問這個同仁，那你那個原始碼有沒有照抄？"
+    },
+    {
+      "id": "15e7f7af-5bee-4424-a66e-9c5eea315bcb",
+      "start": 239.61,
+      "end": 241.98,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他說原始碼絕對沒有抄，是他的創作。"
+    },
+    {
+      "id": "620d0114-1a42-4b85-b7c6-2c979f35b54b",
+      "start": 242.55,
+      "end": 244.86,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "呃，我們從嚴做審查。"
+    },
+    {
+      "id": "d0a0987e-a393-4024-95ee-8744ae409619",
+      "start": 245.26,
+      "end": 249.18,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "院裡頭現在組了一個調查小組，包括找教授，包括找律師。"
+    },
+    {
+      "id": "061a84e6-9bcf-4beb-a817-09111becad63",
+      "start": 249.86,
+      "end": 254.71,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們來仔細整個專案每個程式重新做比對，做查找。"
+    },
+    {
+      "id": "7e1ea535-c37c-4e22-b193-d3c51a134342",
+      "start": 255.31,
+      "end": 258.39,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以，同仁是一定要預儲的。"
+    },
+    {
+      "id": "2c75ce2d-6c5e-40ad-96b8-a1884bab05ea",
+      "start": 258.67,
+      "end": 259.93,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "同仁的最高主管在這邊。"
+    },
+    {
+      "id": "084e5776-866d-4a38-af51-f7eaf85a6cf7",
+      "start": 260.5,
+      "end": 262.8,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們絕對不會互打，這個一定要存儲。"
+    },
+    {
+      "id": "fdb3c110-80ac-4c68-99b6-2687a5a34611",
+      "start": 263.01,
+      "end": 264.81,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "只是要按照他的情節做存儲。"
+    },
+    {
+      "id": "7506eab6-ce39-4296-8e71-9267490523f1",
+      "start": 265.11,
+      "end": 272.23,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他是照他所說的是說明文件沒有引用而已呢？還是連原始碼都照抄，有沒有標示出處？"
+    },
+    {
+      "id": "4f9e77ba-f8b2-4e11-8386-e7d6738cdd77",
+      "start": 273.42,
+      "end": 274.9,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那個情節可是真的不一樣。"
+    },
+    {
+      "id": "0dcbb321-581d-4e39-b614-37aa4ba6cfc4",
+      "start": 275.25,
+      "end": 278.35,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "等於說原始碼抄的不說，等於是主文照抄。"
+    },
+    {
+      "id": "4a092747-0f5c-48d0-83e1-905e5149e0e4",
+      "start": 278.58,
+      "end": 282.75,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他說那個那個 Readme 是附帶說明的檔案，那兩者的效果不同。"
+    },
+    {
+      "id": "41f5c3d4-03fa-4575-b7c5-373f477f8cf6",
+      "start": 283.95,
+      "end": 286.95,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以我們會有一個調查報告，也有有院外的，這是我第二個向您做說明。"
+    },
+    {
+      "id": "c0ccdb29-8532-4d43-9991-3b1ccc922eb5",
+      "start": 288.99,
+      "end": 293.72,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "第三個，這個同仁被人家檢舉之後，被攻擊之後，他很不理性啊。"
+    },
+    {
+      "id": "8fbcd7b7-b3b0-4ea1-8951-09e4a549926f",
+      "start": 294.1,
+      "end": 296.76,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就在他自己那個作業平台當中，就把人家封鎖踢出去。"
+    },
+    {
+      "id": "d458f5b2-3845-4e80-96e4-bec603261344",
+      "start": 297.1,
+      "end": 300.69,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這這絕對不對，所以我們院裡頭也會就這個部分做成儲。"
+    },
+    {
+      "id": "2c910591-da81-4a9b-9ca8-409dbfbf5ef6",
+      "start": 301.13,
+      "end": 302.63,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就以上大概跟您做幾個報告。"
+    },
+    {
+      "id": "cde6597e-8d35-4eb2-b043-44e73f28f3e1",
+      "start": 303.6,
+      "end": 304.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "41681765-c33e-4a28-9ede-b94c9b1cd264",
+      "start": 304.61,
+      "end": 305.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，謝謝啦。"
+    },
+    {
+      "id": "a1128e3d-1cde-457f-a87d-9ae42c3d88f0",
+      "start": 305.42,
+      "end": 310.38,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我想我還是一貫的口徑啊，就是說，呃這個專案應該是意是好的啦。"
+    },
+    {
+      "id": "e8068e4f-6cfe-491e-8b3b-2c36d4f5345d",
+      "start": 312.98,
+      "end": 316.96,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "就是讓台灣的醫療可以更多的跟數位跟科技連結。"
+    },
+    {
+      "id": "2acb3e1f-1903-45bb-afac-c5b191b8f8d1",
+      "start": 317.39,
+      "end": 322.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那第二個我覺得衛福部、公研院也都有很多用心的同仁，我覺得這個我們不能抹殺。"
+    },
+    {
+      "id": "696020b7-a824-431a-a761-6d10c24f8a45",
+      "start": 323.87,
+      "end": 327.43,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得這還是我一貫的這個出發點。"
+    },
+    {
+      "id": "98d011d3-49db-46a8-83ac-b5754ada3dbe",
+      "start": 328.2,
+      "end": 330.26,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那現在的狀況是說，"
+    },
+    {
+      "id": "33b95514-7c0b-4a3b-8a20-988eb2428cfd",
+      "start": 331.16,
+      "end": 343.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得那一天質詢上，我覺得衛福部作為委委託者，你們是受委託的單位。"
+    },
+    {
+      "id": "dca5f789-f06f-4d31-8b28-b7b6567c48a1",
+      "start": 342.94,
+      "end": 343.4,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "是。"
+    },
+    {
+      "id": "43bbea57-8b95-43b1-bbbe-8cb3d5fc6fdd",
+      "start": 343.78,
+      "end": 347.87,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個衛福部"
+    },
+    {
+      "id": "4cb93af2-51e8-4311-97a8-df951f0fb6f5",
+      "start": 348.84,
+      "end": 350.52,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "嗯，怎麼講？"
+    },
+    {
+      "id": "a615cbd2-f814-45c1-8ec9-2c5e29741780",
+      "start": 350.84,
+      "end": 361.77,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "現在是 4 月嘛，所以他現在的工作其實去年，我先問一件事喔，去年的 113 年度的案子結案了沒？"
+    },
+    {
+      "id": "886b6bb2-1e01-4b49-89cc-4141f70c9368",
+      "start": 362.09,
+      "end": 364.09,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "目前算是 425 節，它延後結案。"
+    },
+    {
+      "id": "34792d30-b156-47d3-9456-e82439e95b14",
+      "start": 364.73,
+      "end": 369.1,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該講去年整個計劃是 3.95 億委託公研院。"
+    },
+    {
+      "id": "08cf43ca-e259-4625-a8db-65b1a69596b1",
+      "start": 368.43,
+      "end": 369.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "但是"
+    },
+    {
+      "id": "0030323c-95ae-425b-8161-5af500d80340",
+      "start": 369.6,
+      "end": 370.77,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "3.95 億對。"
+    },
+    {
+      "id": "63e6b3ed-8091-4093-92a9-62432ee4d27c",
+      "start": 370.77,
+      "end": 371.06,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "只有 3.95 億。"
+    },
+    {
+      "id": "5ea42801-279a-4360-9e3b-474675985373",
+      "start": 371.87,
+      "end": 374.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那後面的追加是大家搞錯了。"
+    },
+    {
+      "id": "3b480095-58e5-4a17-804f-d59be7397166",
+      "start": 373.64,
+      "end": 374.45,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "大家弄錯了。"
+    },
+    {
+      "id": "cf712add-b7c2-4b61-ae82-82ccd926c442",
+      "start": 374.89,
+      "end": 377.84,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "弄錯了，因為是前面扣款，因為最主要是因為"
+    },
+    {
+      "id": "ad6cdee1-3135-48f1-b802-4ea52f442a3b",
+      "start": 377.84,
+      "end": 379.58,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "喔，3.95 有被扣。"
+    },
+    {
+      "id": "b795defa-0a8c-4f90-a5e6-cf1e86b296a6",
+      "start": 379.58,
+      "end": 380.92,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，有被扣，扣了一點多億。"
+    },
+    {
+      "id": "c3984a6e-040a-4fa9-9f79-d66cffb3cd80",
+      "start": 381.14,
+      "end": 382.72,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "扣了一點三，喔。"
+    },
+    {
+      "id": "10941fb1-de3c-4a97-a599-7c35b3a0ed4d",
+      "start": 382.72,
+      "end": 386.08,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以我們算錯，我們誤會了，好，那我們可能要澄清一下。"
+    },
+    {
+      "id": "13a1f47d-04c7-4035-8675-b88911cabe23",
+      "start": 386.11,
+      "end": 387.98,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "加起來其實我們還少了 180 萬。"
+    },
+    {
+      "id": "ae752ad4-1204-4d97-b09e-742a1195d891",
+      "start": 388.13,
+      "end": 389.14,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "因為我們有做工作。"
+    },
+    {
+      "id": "4f334fd3-9cf7-4d38-9cab-f4569618445d",
+      "start": 389.34,
+      "end": 395.76,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以你們減了 1.3 億，但是後來有做完了，所以又把 1.3 億加回去給你們，是這個概念嗎？"
+    },
+    {
+      "id": "f46cf18b-36af-49e0-a600-1c275327ca6c",
+      "start": 396.34,
+      "end": 404.95,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該是說，我們去科技部，因為這個計畫算是國家高度認為是要幫大家做這個大平台，讓大家資訊可以共通標準的，他們是非常的嚴謹。"
+    },
+    {
+      "id": "180627ea-4999-48e3-bac0-1c6e105aaffb",
+      "start": 405.74,
+      "end": 410.94,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們其實幾乎每一季都有去國科會報告，那有一次我們去報告的時候，他們就發現說李處長的話規劃的方向跟前一任的龐處長規劃方向不太一樣。"
+    },
+    {
+      "id": "d0e15139-c094-4da4-9fb3-70002ba1d3f3",
+      "start": 415.57,
+      "end": 418.07,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，所以我們的工作項目就要做一些調整。"
+    },
+    {
+      "id": "ea1a6f62-ed67-43e0-9f23-043226682277",
+      "start": 418.53,
+      "end": 425.36,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，就是因為工作，因為像以前沒有說要做 CQL，沒有說要做 Smart 這些事情，就是沒有要幫大家建平台。"
+    },
+    {
+      "id": "d956c4fb-90d5-4011-80e3-39028dae8aa1",
+      "start": 425.64,
+      "end": 429.14,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以工作項目有大幅的刪減，少了一點多億。"
+    },
+    {
+      "id": "65d1835b-da87-41ef-9b1d-f86f84ed3a9c",
+      "start": 429.14,
+      "end": 432.95,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，我等下可以給委員看那個工作項目的比對。"
+    },
+    {
+      "id": "e504e08a-8fbe-4e6b-aa7f-d5abea37e0f1",
+      "start": 433.13,
+      "end": 440.57,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，那就是因為這樣的關係，所以他本來是 3.95 億給我們之後，他發現中間有一點多億的項目是不需要做的。"
+    },
+    {
+      "id": "272ee9f1-c315-43e6-969b-6c8e881686cc",
+      "start": 440.94,
+      "end": 446.55,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以處長呢就幫我們追加說，你要做願景，你要做醫療平台，你要做什麼事情。"
+    },
+    {
+      "id": "2a3b5bdd-bfb5-468a-8a04-14bab69ce7bf",
+      "start": 446.55,
+      "end": 447.36,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "變更契約標的。"
+    },
+    {
+      "id": "b838ce0e-09bf-434a-9cb0-7451149620ae",
+      "start": 447.63,
+      "end": 449.69,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，就變更契約，所以委員可以看到它其實這個"
+    },
+    {
+      "id": "da4bf3f5-95d8-4185-8de2-f0cef3a82794",
+      "start": 450.6,
+      "end": 454.26,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "1.33 億上面有寫第一次契約變更。"
+    },
+    {
+      "id": "8c681104-955d-48a0-a525-0f1818598b3a",
+      "start": 454.58,
+      "end": 500.6,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "他是因為契約變更之後，才幫我們把本來幫我們扣完的錢，幫我們加回去 1.33 億。"
+    },
+    {
+      "id": "1abe5227-05b9-455a-93b0-824cecf52051",
+      "start": 500.05,
+      "end": 500.6,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "c7b00206-d17f-4906-8b83-0f887e9b4865",
+      "start": 501.3,
+      "end": 504.9,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那你加 1.33，所以少了 180 億。 對。"
+    },
+    {
+      "id": "983fbb46-5ea8-4e03-a5cb-88e878a922dc",
+      "start": 503.08,
+      "end": 504.9,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，總共少了 180 億。"
+    },
+    {
+      "id": "14d0b253-ef66-4409-b1f4-9ae88fcf7204",
+      "start": 504.9,
+      "end": 505.44,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "加 180 萬。"
+    },
+    {
+      "id": "b5c72bfd-dab5-422e-9017-4c3833fd25a7",
+      "start": 505.44,
+      "end": 505.84,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "180 萬。"
+    },
+    {
+      "id": "0d0cf4bd-0cfe-4841-b74c-910de9fb8b47",
+      "start": 505.84,
+      "end": 507.51,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "180 萬啦，所以是等於是少了 180 萬。"
+    },
+    {
+      "id": "5f2378d2-0cbb-41bd-baa4-0e085b59b0f5",
+      "start": 510.51,
+      "end": 511.71,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "180 萬還是 1800？180 萬。"
+    },
+    {
+      "id": "c7ccb21b-6be1-418e-b6f5-fb4d53841471",
+      "start": 512.65,
+      "end": 514.63,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "180 萬，因為它第一次"
+    },
+    {
+      "id": "21062304-c63e-4beb-bc09-e4932a4ffec5",
+      "start": 514.63,
+      "end": 517.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "你那個，你那個比對，這一份是公開的嗎？"
+    },
+    {
+      "id": "5e34df4d-7b22-4f6c-bb92-39fe2c8406b1",
+      "start": 517.65,
+      "end": 518.95,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "這一份是他們"
+    },
+    {
+      "id": "d3feea10-ba23-400e-a5f0-160675aaee96",
+      "start": 519.13,
+      "end": 520.02,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個應該是公開的吧？"
+    },
+    {
+      "id": "c4caad52-3e7a-449b-8421-6247546bccd7",
+      "start": 520.02,
+      "end": 520.82,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "有個契約是跟我們公開的。"
+    },
+    {
+      "id": "621c8aec-e839-45ce-aeff-dbd7f84b1b9e",
+      "start": 521.56,
+      "end": 524.29,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那提供一下好不好？有公開的就就提供。"
+    },
+    {
+      "id": "a7034434-a165-4964-95c9-5928a7b41b3a",
+      "start": 524.47,
+      "end": 526.17,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "契約是我們跟衛福部兩個的"
+    },
+    {
+      "id": "dd8c9ecc-73c9-47c1-8330-6edd6ce54047",
+      "start": 526.17,
+      "end": 526.69,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "也不是公開。"
+    },
+    {
+      "id": "fdd3ef84-7eb1-4089-95c4-ae61b04f3d4b",
+      "start": 526.69,
+      "end": 529.01,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不是，對不起，抱歉，不是公開，不能公開的。抱歉。"
+    },
+    {
+      "id": "f8d41cfb-b83f-4baf-b3a1-fd545fc4dfba",
+      "start": 528.68,
+      "end": 529.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我看一下。"
+    },
+    {
+      "id": "14d33064-2cd0-4bd3-940d-51e84527e994",
+      "start": 529.75,
+      "end": 531.28,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "比對可以，可以給我"
+    },
+    {
+      "id": "22827e41-fc3f-49f4-b517-3a1b31a22fe9",
+      "start": 531.28,
+      "end": 531.95,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "比對可以吧？"
+    },
+    {
+      "id": "cb689da9-ed94-48cf-addf-00d0bedac804",
+      "start": 531.95,
+      "end": 532.77,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "可是只有在契約裡面。"
+    },
+    {
+      "id": "39cd31f9-48ed-401f-9739-c997b49eaaa2",
+      "start": 532.77,
+      "end": 534.32,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "喔因為那是你們兩造雙方的。"
+    },
+    {
+      "id": "b7be7f7f-0895-4d87-ae6e-03ff1ffd9eee",
+      "start": 534.69,
+      "end": 536.91,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那是機密，講話慢慢講。"
+    },
+    {
+      "id": "67503766-4b50-4076-a5cc-ad57c041109d",
+      "start": 537.33,
+      "end": 539.83,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不好意思，我太急，太著急了，不好意思，我要慢慢說。"
+    },
+    {
+      "id": "1c375fe1-8725-4e28-a14e-c6289e994824",
+      "start": 540.23,
+      "end": 543.67,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們不能為了解決問題，結果犧牲另外一個契約。"
+    },
+    {
+      "id": "14e7a828-e36f-4a30-8144-44364d95ad70",
+      "start": 543.87,
+      "end": 545.84,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "你抱歉抱歉抱歉。 對對，幫我們會被。 對對對，不好意思，是我沒有把它弄清楚，謝謝，謝謝。"
+    },
+    {
+      "id": "97e60f28-18ec-4abc-aafd-4db33a874965",
+      "start": 547.84,
+      "end": 548.55,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "e509f528-10bf-4fe7-acf5-3e785927e6f2",
+      "start": 549.03,
+      "end": 549.8,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們就照實講啦。"
+    },
+    {
+      "id": "681cf503-dd71-41f8-9b07-acbe3887f984",
+      "start": 550.07,
+      "end": 550.87,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，我是照實講的。"
+    },
+    {
+      "id": "400c8374-dcdd-4151-a43a-ab7079bace3d",
+      "start": 551.12,
+      "end": 551.97,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "它都是公權私信的。"
+    },
+    {
+      "id": "65ece916-3885-42e7-b17b-1cbdb754f11f",
+      "start": 552.24,
+      "end": 553.61,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那，呃，沒有，好。"
+    },
+    {
+      "id": "b198ad8d-ab5a-44be-af68-b2b7061ba088",
+      "start": 554.87,
+      "end": 601.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那個 113 年度，所以是延後到 4 月 25 號結案，是今天幾號？"
+    },
+    {
+      "id": "5aa5ab82-e46a-428c-991c-f90e2d3cc78b",
+      "start": 602.12,
+      "end": 604.99,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "今天是 4 月 24 號。 剛好 4 月 24 嘛，對不對？"
+    },
+    {
+      "id": "50ca489a-2c54-470e-85d0-6f1a890bc31d",
+      "start": 605.64,
+      "end": 606.77,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "剛好滿一年。"
+    },
+    {
+      "id": "f3f36fb4-e126-4ee0-bbed-a58a1aa47f88",
+      "start": 607.01,
+      "end": 607.41,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對。"
+    },
+    {
+      "id": "db8145a4-783f-4454-90fa-38c4f562d6d1",
+      "start": 607.95,
+      "end": 609.63,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "因為本來是 2 月 25 號。"
+    },
+    {
+      "id": "d26028d4-7317-4423-8d52-867aa467bf01",
+      "start": 610.52,
+      "end": 613.78,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "2 月 25 號是我們那個 本來是 2 月 25 號。"
+    },
+    {
+      "id": "3dde5e19-276a-4abc-a6a0-211fed089ce4",
+      "start": 612.56,
+      "end": 613.78,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "本來是 2 月 25。"
+    },
+    {
+      "id": "294c92a5-f36c-4304-9d6b-c486e0b670d6",
+      "start": 613.78,
+      "end": 614.46,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "後來延了。"
+    },
+    {
+      "id": "6e43f40e-8752-4169-903c-b6daf9944ab7",
+      "start": 614.46,
+      "end": 619.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對，就是變跟，契約變更的時候同時延到 4 月 25。 對。"
+    },
+    {
+      "id": "6eb05e6c-383a-4d17-aaa4-637a1597acd9",
+      "start": 618.92,
+      "end": 619.3,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對。"
+    },
+    {
+      "id": "5ea5ff57-9c0d-4f71-a6b2-552d80cd4fec",
+      "start": 620.02,
+      "end": 623.58,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "這是契約期間的延長，所以大家看起來好像只有剩。"
+    },
+    {
+      "id": "930cbe1e-0f8e-42f9-81c3-8889bf835347",
+      "start": 623.75,
+      "end": 624.9,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以那現在可以結案嗎？目前。"
+    },
+    {
+      "id": "940f1ec1-3ef5-49f9-9c8c-aeda031c8f6d",
+      "start": 625.43,
+      "end": 627.94,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，現在目前是我們工作項目是 OK 的。"
+    },
+    {
+      "id": "b665cf3a-875e-4a63-8b2e-1f0609b63be6",
+      "start": 628.07,
+      "end": 628.74,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就準備等驗收了。"
+    },
+    {
+      "id": "e8e3d9a3-e081-440f-8479-b5e143e7a98b",
+      "start": 628.85,
+      "end": 629.76,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對對對對對。"
+    },
+    {
+      "id": "06cf1c49-9298-414a-a6de-4940cfc1d303",
+      "start": 630.57,
+      "end": 638.46,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "結案就是，等於是時間完成，可是通常結案報告都會在設物以前就送過去啦。"
+    },
+    {
+      "id": "405d8095-0bdb-4f31-af24-9e32e811709e",
+      "start": 638.13,
+      "end": 638.46,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，就送過去。"
+    },
+    {
+      "id": "f61a8eea-1836-40e8-b3e0-575a7ad1ea3a",
+      "start": 638.46,
+      "end": 639.16,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對不對？"
+    },
+    {
+      "id": "6d723328-04cf-4566-90f1-5a61e598575e",
+      "start": 639.16,
+      "end": 639.57,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，我們"
+    },
+    {
+      "id": "cdf63655-846d-49b9-8f38-3a7f7672e518",
+      "start": 639.57,
+      "end": 641.15,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以結案報告已經送過去了，對不對？"
+    },
+    {
+      "id": "24dc1a82-be40-4fdd-8f5c-d57cc383baef",
+      "start": 641.15,
+      "end": 642.76,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "有，我們 2 月多就送過去了。"
+    },
+    {
+      "id": "2ccc7aa6-f140-45a3-a034-ba93d0a7e0ad",
+      "start": 643.05,
+      "end": 644.53,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "因為本來是那時候要結案。"
+    },
+    {
+      "id": "2342a51d-48b8-440c-8578-2810659ad34b",
+      "start": 644.01,
+      "end": 644.53,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "2 月多就送了。"
+    },
+    {
+      "id": "431d8b45-a1dc-464d-ac76-6da28dad65b4",
+      "start": 645.15,
+      "end": 645.66,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，因為必須有個"
+    },
+    {
+      "id": "966fc4a0-2fb0-4230-bcd2-ad5778a207f5",
+      "start": 645.22,
+      "end": 645.66,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "OK。"
+    },
+    {
+      "id": "a8945ec2-4fc9-4856-98c1-da9be1cdbfdb",
+      "start": 646.03,
+      "end": 653.53,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "公開把這個追加，不能說追加款，應該是把後面的款項，把它把它把工作項目把它補齊嘛。"
+    },
+    {
+      "id": "bc7bb92f-3891-42c7-a0c9-df981e2e37e0",
+      "start": 653.83,
+      "end": 700.1,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以他就會在 425 的時候，需要有一個在，我記得那天 4 月 8 號的時候才跟我們在一架。"
+    },
+    {
+      "id": "5cfe2235-075b-4804-b6c7-896a7b5fcf0b",
+      "start": 700.59,
+      "end": 702.88,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，因為他等於是走契約的變更。"
+    },
+    {
+      "id": "56d582eb-ac9d-4934-86e0-f0cfb50107ca",
+      "start": 703.55,
+      "end": 703.91,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "a4065601-1a1d-429f-8e55-32aad1a1aa4a",
+      "start": 704.41,
+      "end": 706.97,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那現在 114 年度的開始了嗎？"
+    },
+    {
+      "id": "c08ce3b9-b6f3-4799-9faa-db7043fe1f05",
+      "start": 707.54,
+      "end": 708.78,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "沒有沒有沒有，沒有。"
+    },
+    {
+      "id": "de69381a-f6ee-495a-9495-ef1b64ca585a",
+      "start": 709.09,
+      "end": 711.62,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "欸？ 標案已經開了，還沒結標？"
+    },
+    {
+      "id": "88a48d41-3bf8-44bd-8bbd-3e203c1abc9f",
+      "start": 711.62,
+      "end": 712.81,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "開了，沒有結標，沒有結標。"
+    },
+    {
+      "id": "bee3f4ad-332e-45bc-af8a-7cbe8d1f37dc",
+      "start": 713.22,
+      "end": 716.11,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們現在都只針對 113 年來做答复。"
+    },
+    {
+      "id": "e1b6ad21-f672-4ad3-b77a-a3266ee5006c",
+      "start": 716.11,
+      "end": 717.67,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "等一下等一下，同一個案子，"
+    },
+    {
+      "id": "c2eab258-1e91-4aec-9f27-182401d41296",
+      "start": 718.56,
+      "end": 720.54,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "但是你們做到一半了。"
+    },
+    {
+      "id": "bf0d6aae-2cd4-451c-8521-9c7fa521150e",
+      "start": 721.78,
+      "end": 729.47,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，114 年，可是因為，因為我，我目前大家看起來 114 年的大平台計劃跟 113 年看起來有一點像。"
+    },
+    {
+      "id": "7b3ab991-a443-41da-806a-ee3dfdeb99ad",
+      "start": 730.49,
+      "end": 732.95,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "嗯，因為它是一個其實"
+    },
+    {
+      "id": "87f3d94d-4773-46d6-a738-e46a70a4b7be",
+      "start": 732.95,
+      "end": 734.03,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "然後是 2.3 億。"
+    },
+    {
+      "id": "61266585-d9b7-42e2-ac44-50df47c8c7ad",
+      "start": 734.86,
+      "end": 736.87,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，等一下，呃，對，2.3 億。"
+    },
+    {
+      "id": "f94b61db-745d-437f-a90d-15466fb990b3",
+      "start": 737.6,
+      "end": 738.52,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "你知道這件事嗎？"
+    },
+    {
+      "id": "b80b1217-440b-479a-ae64-df7b25acf150",
+      "start": 738.7,
+      "end": 740.79,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我知道，因為它是一個公開招標案。"
+    },
+    {
+      "id": "4bd09611-1abf-40b2-b604-6e4f1854896f",
+      "start": 740.79,
+      "end": 741.35,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對嘛。"
+    },
+    {
+      "id": "aaea9de4-9284-4887-8937-d3674f9f8b11",
+      "start": 741.7,
+      "end": 743.5,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "114 年公開招標案。"
+    },
+    {
+      "id": "554f2ae2-4efa-4825-8f8e-116a3cf4a979",
+      "start": 741.98,
+      "end": 743.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那"
+    },
+    {
+      "id": "a3a563fe-1b29-475b-b5d1-73b04b9a5208",
+      "start": 744.69,
+      "end": 747.47,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，你們應該會去標吧，因為同一個名字嘛。"
+    },
+    {
+      "id": "4d615cbd-8ffa-4edc-a8d7-8dbfdd4e030d",
+      "start": 747.47,
+      "end": 748.74,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我們也有，我們也有去標。"
+    },
+    {
+      "id": "99689a87-cce7-432c-9fb8-f693b5d220a7",
+      "start": 748.12,
+      "end": 748.74,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對吧？"
+    },
+    {
+      "id": "fc83f775-22a5-45ea-b937-9a5359bab397",
+      "start": 749.21,
+      "end": 751.74,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那這個東西標案的會議開了沒？"
+    },
+    {
+      "id": "dcbf7c99-61bd-4685-90ab-db718fe9c942",
+      "start": 751.96,
+      "end": 752.58,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "開了。"
+    },
+    {
+      "id": "3c96bebb-a6cf-44b9-a43b-8f1fd38db94d",
+      "start": 753.26,
+      "end": 756.81,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，什麼時候公告截止，就是什麼時候公告結果？"
+    },
+    {
+      "id": "c1d54f55-7f67-432c-acd1-36da1f018c2e",
+      "start": 756.81,
+      "end": 757.85,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不是，我是說"
+    },
+    {
+      "id": "0cb33fd1-c0c4-4c47-985e-fd5f55dc4a3f",
+      "start": 757.85,
+      "end": 759.9,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對，他可能不一定，但是已經結，已經那個了，哦，OK。"
+    },
+    {
+      "id": "044af809-a4fd-485e-b484-129bb736920b",
+      "start": 758.84,
+      "end": 759.9,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我是不知道，但是"
+    },
+    {
+      "id": "a0ec45ec-e84d-4997-bf03-97a6a8dc05ec",
+      "start": 800.22,
+      "end": 802.73,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "結標了。 已經結標了。 結標期就八桶點價。"
+    },
+    {
+      "id": "8532c78a-c872-4590-8fe9-597b9c1ba997",
+      "start": 805.71,
+      "end": 808.2,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所說的就不要講了，不要耽誤委員時間。 好，不好意思。"
+    },
+    {
+      "id": "37eab732-cbb3-4b0f-9187-70fb07f94ec5",
+      "start": 808.6,
+      "end": 810.9,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "就抓重點，委員問什麼會回什麼就好。"
+    },
+    {
+      "id": "eea39dcf-79f4-4881-b4c2-ba8d59048a1a",
+      "start": 811.01,
+      "end": 811.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "OK，好。"
+    },
+    {
+      "id": "b7aa136f-b706-4055-a403-2e278fa3f5a0",
+      "start": 813.71,
+      "end": 816.51,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以，OK。"
+    },
+    {
+      "id": "dd0112c4-964b-4d5e-8758-e0f31f925d39",
+      "start": 817.03,
+      "end": 817.76,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "70e756b6-ce3a-4280-a1a7-84504cdc2f0c",
+      "start": 818.85,
+      "end": 826.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那有一個昨天比較特別的狀況是要跟大家確認啦，就是這個 113 年的標案，因為你們也已經送結案報告了。"
+    },
+    {
+      "id": "46fe85b0-b696-4ddb-beb8-0e9bfeb44c2a",
+      "start": 831.12,
+      "end": 832.54,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "雖然還沒有正式結標，那我想確認一下這個"
+    },
+    {
+      "id": "a64ef458-6cd9-4076-952c-8e4bf61e95c8",
+      "start": 834.61,
+      "end": 837.71,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "專案的這個結果，"
+    },
+    {
+      "id": "2f2e2f38-71a5-4c81-9bce-aa3765ab4e45",
+      "start": 839.7,
+      "end": 844.68,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "交付的東西，是有沒有包含這個平台啊？"
+    },
+    {
+      "id": "eeb458ce-73a2-4129-939d-83c6e5c6c978",
+      "start": 845.05,
+      "end": 847.75,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "因為這個平台看起來是一個網站嘛。"
+    },
+    {
+      "id": "91635e61-0c35-44c7-bb9d-89f23103ba04",
+      "start": 848.49,
+      "end": 850.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那網站裡面有程式碼。"
+    },
+    {
+      "id": "1b278865-71f7-472d-a08a-7e389986fdce",
+      "start": 850.88,
+      "end": 854.94,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "程式碼後面可能有一些後端運作的系統。"
+    },
+    {
+      "id": "7433551f-9e55-4db7-89b3-870170ffee88",
+      "start": 855.59,
+      "end": 901.34,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那這個系統後面可能還有一些產出標準的軟體或測試的工具等等。"
+    },
+    {
+      "id": "980b3c37-50f3-41f5-ab95-ac34ecebab1e",
+      "start": 902.09,
+      "end": 906.41,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個 113 年度的計劃有沒有包含這個東西？"
+    },
+    {
+      "id": "d2257a54-bf4c-4e82-ac19-3f62d46a199d",
+      "start": 906.95,
+      "end": 911.69,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "委員問的是說，是剛剛我講那個後端的平台，還是包括，還是講衛服部的那個平台？"
+    },
+    {
+      "id": "d822807f-4598-4d35-8606-4427b9702106",
+      "start": 912.2,
+      "end": 914.9,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該沒有含 GitHub 的這個。"
+    },
+    {
+      "id": "9b1cec79-2206-4cd5-bebc-757907daf412",
+      "start": 915.02,
+      "end": 915.78,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "不是不是不是不是。"
+    },
+    {
+      "id": "80179ee5-0f99-4012-9094-097f649fb5b9",
+      "start": 916.2,
+      "end": 916.93,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該您講的"
+    },
+    {
+      "id": "38b71653-2db5-40d6-8f04-fb6d505d418c",
+      "start": 918.59,
+      "end": 923.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，因為昨天這個處長應該是有回复我啦，在質詢的時候。"
+    },
+    {
+      "id": "1f1bedb9-93b4-4bc8-8654-b6b84e411f85",
+      "start": 925.96,
+      "end": 931.98,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "他有說這個專案，113 年的這個大平台的專案，只有標準。"
+    },
+    {
+      "id": "a09567fa-950a-4a85-851d-a1f933031b0f",
+      "start": 933.46,
+      "end": 936.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "他說只有產出標準。"
+    },
+    {
+      "id": "507377d0-ecf9-4772-a8df-0e7b28b5740f",
+      "start": 936.63,
+      "end": 939.82,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "不包含，我說有沒有軟體，有沒有程式，他說沒有。"
+    },
+    {
+      "id": "4c9bcab9-6b68-4f03-a15d-3477bc0da1d7",
+      "start": 940.3,
+      "end": 941.79,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以我想確認一下這件事情。"
+    },
+    {
+      "id": "37a458f9-8149-42c5-a5e2-2c6b3d72f695",
+      "start": 942.28,
+      "end": 955.91,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該是說我們整個計劃的範疇裡面的醫療資訊大平台是屬於其中的一個項目，是我們要對全國去做這個標準，讓大家可以統一這個標準的部分。"
+    },
+    {
+      "id": "52fddadf-7d89-40e1-9759-b7bbc939d7b1",
+      "start": 956.27,
+      "end": 1005.86,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那所以處長講的是這個網站，它事實上是為了跟全民去交代說，我們有這些標準，讓大家都可以共同使用而建立的網站。"
+    },
+    {
+      "id": "4796c7d7-84a7-4f46-b731-9786399c9253",
+      "start": 1006.16,
+      "end": 1009.28,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "它那個網站有點像是，我把我的成果放在上面。"
+    },
+    {
+      "id": "e6f5b846-5b46-4268-9a2f-fba9142fc3db",
+      "start": 1008.92,
+      "end": 1009.28,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "b9f462f9-f601-4daa-abb8-9ddf09706cf2",
+      "start": 1009.57,
+      "end": 1010.85,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "比如說像 SQL。"
+    },
+    {
+      "id": "31e0e410-85b7-41ec-8c74-d761d1805625",
+      "start": 1010.85,
+      "end": 1013.66,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以技術委員會說，我們是把做出來的結果交付。 對對對對對。"
+    },
+    {
+      "id": "4af8949a-bc52-4791-ad10-48fd951819ff",
+      "start": 1014.03,
+      "end": 1016.6,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "做的過程的東西並沒有在契約交。 對對對，現在出來就是"
+    },
+    {
+      "id": "5c773bb8-a6f8-4023-a4c1-ea3155b5c51d",
+      "start": 1017.32,
+      "end": 1025.95,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "因為那個，應該講說我們做的，就是這個地方是我們其中的某一個專案的一部分而已，應該講這個平台是專案一部分而已。"
+    },
+    {
+      "id": "e085399a-7be6-4168-94dc-fd13de0fce70",
+      "start": 1026.48,
+      "end": 1030.94,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，所以才會說您說什麼三點多億這個的範圍啦，那我只是要講說這個，這個網站是把我們 SQL 的這個的這個標準放在上面。"
+    },
+    {
+      "id": "87e73a36-641c-4c47-8f7f-ffb1a2ea563e",
+      "start": 1038.12,
+      "end": 1042.68,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "把 TWcoIG 的標準放上面，讓大家很方便查閱。 對，應該這樣講。"
+    },
+    {
+      "id": "54a20e07-5f74-4824-93ce-aa8ace5bdc4e",
+      "start": 1042.68,
+      "end": 1043.06,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好。"
+    },
+    {
+      "id": "b7c4a8ce-85a4-4071-a0ad-c7bdb6cb319e",
+      "start": 1043.6,
+      "end": 1049.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得別的委員怎麼樣，我不清楚，但是我謝謝你的說明，但是"
+    },
+    {
+      "id": "0e7a98ff-7a60-4653-8191-d8978364ae49",
+      "start": 1050.03,
+      "end": 1107.75,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "因為我可能也有一點點對這個方面的，呃，就是認知，所以，有一個網站，後面必然有伺服器，必然有前端，有後端，有一個儲存的地方，有一個雲端的伺服器。"
+    },
+    {
+      "id": "4180dc53-d85c-4b84-8f54-be81db745e80",
+      "start": 1108.71,
+      "end": 1116.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "然後這個，你要產出 CQL，你必然也有一個產出 CQL 的工具、軟體或測試。"
+    },
+    {
+      "id": "a3cc70ab-4ea8-4c21-b201-4486d32e68e6",
+      "start": 1117.15,
+      "end": 1126.77,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以我們現在講了這個，我現在講了這一堆東西，有沒有算在結案成果裡面？"
+    },
+    {
+      "id": "30b6edc5-d293-46a6-9f6f-388433434b5c",
+      "start": 1127.44,
+      "end": 1132.82,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該算沒有，因為我們是要推廣這個 CQL，讓大家都可以去使用它。"
+    },
+    {
+      "id": "ee5062e5-0d3e-4ba2-94f1-176dabbf7a26",
+      "start": 1133.26,
+      "end": 1142.85,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們在 3 月 12 號那天不是有啟動會議嗎？我們其實有工作方，我們希望全部的，那天參加大概 200 多個人，我們就教大家說，你可以用這個開源軟體。"
+    },
+    {
+      "id": "30014dd3-e0b8-4a23-ab04-aac691eeb879",
+      "start": 1143.11,
+      "end": 1144.91,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "對不起，我可能要打斷你喔。 好。"
+    },
+    {
+      "id": "7fef7d88-0c3d-433e-a656-db9e4c6b545e",
+      "start": 1145.8,
+      "end": 1151.54,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "你們現在結案報告已經交了，請問結案報告裡面有沒有提到任何的程式碼？"
+    },
+    {
+      "id": "7ee4bfeb-065a-43a3-9a60-99b1c59d144e",
+      "start": 1152.64,
+      "end": 1157.85,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "程式碼的部分是，我們有 交付的東西？ 我們有跟他說我們怎麼產生這個內容。"
+    },
+    {
+      "id": "1eb93412-732b-43e5-b01b-06fa204b0439",
+      "start": 1158.02,
+      "end": 1158.94,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他說有權不歸於他。"
+    },
+    {
+      "id": "791d1b90-64a1-4217-afa1-dc43b3c98561",
+      "start": 1159.18,
+      "end": 1159.98,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，對對。"
+    },
+    {
+      "id": "068291f2-3cfe-4cf8-a42c-1e65a2cc2b58",
+      "start": 1200.36,
+      "end": 1207.42,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "等一下，對不起。 然後有沒有交付的東西，成果裡面有沒有網站的截圖？ 網站的截圖？"
+    },
+    {
+      "id": "e20931ff-cd01-47f2-961f-2cfe83083131",
+      "start": 1209.46,
+      "end": 1211.26,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "就是有沒有包含這個網站？"
+    },
+    {
+      "id": "8b1b1b15-2ac1-4719-8de8-c6db01342a4d",
+      "start": 1211.86,
+      "end": 1213.13,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "你是說衛服部的網站？"
+    },
+    {
+      "id": "5357d3cf-6b27-40ca-aa47-963d4227c2d6",
+      "start": 1212.93,
+      "end": 1214.26,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "就是這個大平台這個網站。"
+    },
+    {
+      "id": "5efb6106-5544-483c-ad27-28f22887c325",
+      "start": 1214.63,
+      "end": 1216.93,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "這個是等於是我們 有沒有在結果裡面？"
+    },
+    {
+      "id": "2cb9b34b-4e76-45f3-8eb3-7df857648b4e",
+      "start": 1217.53,
+      "end": 1222.82,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該是說這不算本來我們交付的項目。 但有在結果裡面，有在結案報告書裡面？"
+    },
+    {
+      "id": "f0daa0bf-bd07-448d-bbc4-8448b01a8bbd",
+      "start": 1222.98,
+      "end": 1224.19,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "衛服部的那個網站。"
+    },
+    {
+      "id": "ab074890-edf0-4984-bda4-921cacdad300",
+      "start": 1224.6,
+      "end": 1231.01,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我我看一下，我們有沒有放進去，因為它上契約上沒有算，契約上應該是不算這個平台。 好。"
+    },
+    {
+      "id": "9fe935b4-8fa9-4150-8152-108446b067cc",
+      "start": 1231.48,
+      "end": 1239.79,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那那後面，後面的程式，就是那些軟體，那些測試，所以都沒有在你們的結案報告裡面嗎？"
+    },
+    {
+      "id": "70911070-bb9c-47ea-8bb3-783f514701bd",
+      "start": 1241.03,
+      "end": 1244.77,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我們有寫，但是它不是我們的需要被。 好。"
+    },
+    {
+      "id": "4cf6961f-7c53-41e7-be83-84c504e0d6d3",
+      "start": 1243.96,
+      "end": 1244.77,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "需要交付成果。"
+    },
+    {
+      "id": "9ed814cc-08ec-4718-ba89-8b8996f6340b",
+      "start": 1244.77,
+      "end": 1252.98,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "OK，所以有寫，有寫，你交上去了，當作結案報告書裡面，那你們現在又說這不是契約內容，那我想要問了。"
+    },
+    {
+      "id": "553bbd26-59c9-41a8-bf4d-251a336683b3",
+      "start": 1254.95,
+      "end": 1257.51,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個網站現在到底屬於誰呀？它是，我現在看起來有點薛丁格的狀態啊。"
+    },
+    {
+      "id": "19beed7b-8272-430e-bd2e-a449381e761b",
+      "start": 1300.83,
+      "end": 1305.01,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "他既不是這個工程師個人的，也不是衛福部的，因為你們說這不是內容的裡面嘛。"
+    },
+    {
+      "id": "83f4132c-e59c-4cf3-898b-e8cc7320cbe7",
+      "start": 1308.39,
+      "end": 1310.51,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那那就是公業院的咯。"
+    },
+    {
+      "id": "3ef0aad4-1323-4460-b345-32fc60dc4bf7",
+      "start": 1310.95,
+      "end": 1316.18,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不是，這個平台呢，是完全是為，因為你看他掛的 logo 是衛福部的。 對，是衛福部的。"
+    },
+    {
+      "id": "dd4d9a83-37dc-4142-9e76-6a4099d7e1d7",
+      "start": 1315.03,
+      "end": 1316.18,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "是衛福部的。"
+    },
+    {
+      "id": "fd30cf03-11b9-4999-bdb7-535397925e52",
+      "start": 1316.95,
+      "end": 1318.14,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "是，你讓我說明好不好？"
+    },
+    {
+      "id": "86fde5f2-79e8-4315-8e76-a3f66c990e69",
+      "start": 1318.76,
+      "end": 1322.66,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那個委員份報告哦，這可能不只是衛福部的契約是這樣。"
+    },
+    {
+      "id": "dcf39551-b146-4335-acc1-ff5c4cba73ce",
+      "start": 1323.01,
+      "end": 1324.65,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "因為我們公院是研發機構啦。"
+    },
+    {
+      "id": "189d57fe-4dd7-4d41-a6b3-0f5f12b03989",
+      "start": 1325.25,
+      "end": 1332.07,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們所有幫人家做產出一定都有自己原來就有的基礎，絕對不會是，你付了我錢，我從無到有重新弄。"
+    },
+    {
+      "id": "edaf0fb4-516d-4173-bbbd-77de30de5bef",
+      "start": 1332.55,
+      "end": 1334.16,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "一定是本來就有基礎追容的。"
+    },
+    {
+      "id": "b153ae7f-fe32-46b7-a180-08a9a506a369",
+      "start": 1334.48,
+      "end": 1341.24,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以我們說的合約當中都會去約定，那個智慧產權可能因為你出錢，看你出的比例，甚至有時候我們共同出。"
+    },
+    {
+      "id": "cec7b9cb-1365-4415-8052-9bf6ca7bf81c",
+      "start": 1341.7,
+      "end": 1344.43,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "結果都歸你，但是我們不會把過程都給你。"
+    },
+    {
+      "id": "113736c3-a64a-43e2-b7fb-c1a9640d65a3",
+      "start": 1344.68,
+      "end": 1345.79,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "否則以後就不能複製做別的。"
+    },
+    {
+      "id": "9ebaf862-8ded-4324-8f6f-c567b573891e",
+      "start": 1345.79,
+      "end": 1349.78,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "謝謝，謝謝，謝謝法務長的說明喔。"
+    },
+    {
+      "id": "f0cb2f27-e00c-4c43-8d7d-3c83cfee5a68",
+      "start": 1350.42,
+      "end": 1359.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那現在這個東西你說有交，有放在計劃，有放在結案報告書裡，可是不算在契約成果交付裡面。"
+    },
+    {
+      "id": "bbe2810f-5796-435f-a29d-d2601373b96f",
+      "start": 1401.01,
+      "end": 1408.07,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那現在這個東西，你說，哦，因為成果怎麼樣，有可能有的是他的，有的是我的，有部分是我的，部分，那現在這個，這些網站，這個平台，現在到底是誰的？"
+    },
+    {
+      "id": "a9e15574-e19a-4626-9ad0-f7f53ee5e42d",
+      "start": 1408.5,
+      "end": 1412.23,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，那應該是說這個東西是 這個產權是誰的？ 產權是衛福部的，衛福部的。"
+    },
+    {
+      "id": "b7af6301-ceb4-42bf-bd10-56f26266eb1c",
+      "start": 1415.9,
+      "end": 1416.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "可是你又說不是契約交的一部分，那你幹嘛送他呢？所以你要送他嗎？"
+    },
+    {
+      "id": "be06bf9e-67b3-4a42-9ab9-c15fb562a4f9",
+      "start": 1422.17,
+      "end": 1425.92,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "沒有，城市碼還是我的，只是那個成果網站平台是你的。"
+    },
+    {
+      "id": "4aa922fc-f6a4-4e9a-8b0d-42b65a33d7cf",
+      "start": 1426.24,
+      "end": 1430.6,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "因為網站就是一個 你只要用平台界面就好了啦，不代表那個城市碼是你。"
+    },
+    {
+      "id": "c59cddfc-41b4-4b81-949e-1d2d65d57c9c",
+      "start": 1431.19,
+      "end": 1432.86,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "後面的那個軟體是我們的。"
+    },
+    {
+      "id": "299eb172-be37-42b7-a38d-888b4767101d",
+      "start": 1433.74,
+      "end": 1434.56,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那請問網站"
+    },
+    {
+      "id": "353a6a01-da82-4f93-807c-759e22e2add5",
+      "start": 1435.8,
+      "end": 1436.77,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "你可以用啊。"
+    },
+    {
+      "id": "1dbc94f5-01a9-4b51-b99c-06f0adc7823f",
+      "start": 1438.12,
+      "end": 1443.92,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我們都是這個概念，所有權是歸你，但是裡面怎麼做出來的結果，智慧產權我不能斷送給你。"
+    },
+    {
+      "id": "cc3faec4-3468-4fff-9ae4-d910721ea283",
+      "start": 1444.26,
+      "end": 1445.88,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好好，很好很好，謝謝。"
+    },
+    {
+      "id": "e1cd030c-2c93-4576-9aa2-a7564b95feb8",
+      "start": 1446.4,
+      "end": 1450.99,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那所以這一次的契約內容到底有沒有包含這個網站的開發？"
+    },
+    {
+      "id": "acc90959-2fd5-4636-9ae5-26d0eaf9f8ab",
+      "start": 1452.01,
+      "end": 1452.96,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "網站開發是我們的工作。"
+    },
+    {
+      "id": "b981c0a6-4e0b-4d9c-bc5f-1c6b2b4d891d",
+      "start": 1453.45,
+      "end": 1504.89,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "這個網站的開發，應該不好意思，我我先說一下，這個網站上面是完全是衛福部的，那網站的內容是我們把我們的產出放在上面嘛，那產出只有標準的部分放在上面，那任何的那個軟體的部分事實上沒有在這個上上面，我們例如說 SQL 測試環境，我們事實上只有告訴大家說，這個裡面你如果你自己要做這件事情，你可以怎麼做。"
+    },
+    {
+      "id": "48e4e607-9c1c-46a7-9ffd-fba18ea0fc5c",
+      "start": 1517.19,
+      "end": 1520.61,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對，我比較跟委員講一下，這裡面是沒有程式碼，是教大家說，如果你要做這件事情，你可以去哪邊找到原始的來源，然後開始按照我們的步驟去做。"
+    },
+    {
+      "id": "d492df0a-89eb-4ae7-b55a-ff476f2f84fe",
+      "start": 1527.11,
+      "end": 1530.57,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "它比較像是說我教你怎麼做這件事情的成果，那這些成果都是屬於衛福部，因為它是公開的資訊。"
+    },
+    {
+      "id": "e3e8bf13-91dc-472a-9b59-183e1ed769bb",
+      "start": 1533.6,
+      "end": 1536.86,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "如果打個比方，我們賣個車子，車子裡面所有東西都是 操作手冊。 但是我不會這樣說這個引擎怎麼做。"
+    },
+    {
+      "id": "7608b4cf-b6cc-4b7d-b90f-9aca7fd89276",
+      "start": 1539.3,
+      "end": 1542.71,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "裡面的零件怎麼做，是這個是智慧傳給你。 沒有嘛。"
+    },
+    {
+      "id": "870a6d84-5282-47ff-809a-bddf81e56bc0",
+      "start": 1542.95,
+      "end": 1543.93,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "比較像是這樣，所以這個網站是 owner 就是衛福。 交的是他的，但是怎麼做出來的東西是我們的嘛。"
+    },
+    {
+      "id": "8c174de7-94e6-4e0d-8fc8-7bacc39fe4c1",
+      "start": 1546.05,
+      "end": 1549.37,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "交的是他的，但是怎麼做出來的東西是我們的嗎？ 是吧。"
+    },
+    {
+      "id": "0977f663-ee3a-4d5d-a2a1-d7b04a46c664",
+      "start": 1549.87,
+      "end": 1550.8,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我的認知也是這樣。"
+    },
+    {
+      "id": "143c14d9-edda-4ee4-9dab-83298ed1837a",
+      "start": 1551.33,
+      "end": 1556.16,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以這是其中專案的一小部分的，就是標準。 我們跟所有的合約都是這樣子。"
+    },
+    {
+      "id": "2d048e42-7c56-4c13-ad45-811878755897",
+      "start": 1558.31,
+      "end": 1602.59,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得這部分可能還是要請你們再確認一下，因為今天時間很短啦，但是我們知道的是 113 年度辦這一個專案呢，"
+    },
+    {
+      "id": "ec8a1983-8e54-445b-99ea-e22415df4c0a",
+      "start": 1606.73,
+      "end": 1612.74,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "在執行成果的章節裡面，其實這個專案不只有標準而已。 對是。"
+    },
+    {
+      "id": "32de066f-8747-47cd-b88e-77c1392f1680",
+      "start": 1613.36,
+      "end": 1616.44,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "其實還包含了很多。"
+    },
+    {
+      "id": "b0ee90e1-f78d-49fa-99a2-cd02f32eb839",
+      "start": 1618.09,
+      "end": 1618.99,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "那把小還有哪些可以？"
+    },
+    {
+      "id": "7740d333-5db6-478d-b021-25e3bfed76b5",
+      "start": 1619.47,
+      "end": 1626.96,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，例如說我們這裡面，我從這個，我們跟國科會 321 的報告來講好了，它裡面其實有蠻多的內容的，比如說我們這裡面它必須要解決的問題就是"
+    },
+    {
+      "id": "4adf435a-6e4c-4bf9-b0c4-b644ae20be14",
+      "start": 1631.62,
+      "end": 1634.49,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我們要解決電子病一個問題嘛。"
+    },
+    {
+      "id": "f8b7a4d2-bede-42cc-b107-b85615a0ddb4",
+      "start": 1634.8,
+      "end": 1636.74,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以第一個部分是我們有這三個標準。"
+    },
+    {
+      "id": "b8f94def-dc40-4c91-8cb0-d10beaba49a8",
+      "start": 1637.01,
+      "end": 1643.87,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那這個三個標準的部分，這個這個我們要去做，這個這個部分是我們完全把我們的成果都放在網站上。"
+    },
+    {
+      "id": "231a90c8-5036-45b9-8226-3ef9bd6e39ae",
+      "start": 1643.87,
+      "end": 1648.69,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "你讓委員還有那個 看到整個大綱，看到大概交付些什麼。 是是是。"
+    },
+    {
+      "id": "6c3ab146-e4bb-4bdc-978b-650d5ffdf3fc",
+      "start": 1648.82,
+      "end": 1652.36,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "就是我們把我們計劃可以分成三大步部分。"
+    },
+    {
+      "id": "be52e4b0-669a-4355-9bc6-077823e33378",
+      "start": 1652.63,
+      "end": 1656.61,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "第一部分的話是跟標準有關的，就是全台灣都要對齊這個標準。"
+    },
+    {
+      "id": "82a38bd3-dddd-41ff-ac61-79920253a68b",
+      "start": 1656.91,
+      "end": 1704.92,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不管是你的用 file 的標準，還是剛剛講什麼健保啦、醫療品質、這個 CQL, 這個有另外一種標的，那叫做規則統一的標準。第三個是應用程式的 Smart 的標準。"
+    },
+    {
+      "id": "da2b810f-5177-4a75-aef0-2ac68bc76f64",
+      "start": 1707.75,
+      "end": 1712.65,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們今年度 113 年衛福部他希望把這樣的觀念告訴大家。"
+    },
+    {
+      "id": "dbc19201-3725-4eac-93e6-f24c50d76ef7",
+      "start": 1712.91,
+      "end": 1720.24,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以委員剛剛看到那個平台，它比較像是知識教育的平台，是把我們這些已經盤點完的成果跟標準放上去。"
+    },
+    {
+      "id": "e5d6d951-28d8-4564-ae2d-22395de50493",
+      "start": 1720.61,
+      "end": 1731.98,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以全台灣的人，他就是看到這個標準，他知道說，哦，file 是什麼東西，我等一下可以讓您看到網站上，你可以發現它都是一些比較告訴別人什麼是規則，這可以怎麼做。"
+    },
+    {
+      "id": "2df0a97f-021c-41a6-bf55-9b3596fb5601",
+      "start": 1732.23,
+      "end": 1734.44,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "比較是真的是教學指引的概念啦。"
+    },
+    {
+      "id": "92d58f45-4563-45cd-bc7f-8e6010126e23",
+      "start": 1734.65,
+      "end": 1741.73,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以你剛剛講程式碼的話，跟您講說，那個部分就比較是不是在這個要告訴大家的那個範圍，我們要告訴大家。"
+    },
+    {
+      "id": "03a44ca1-671c-4a75-8687-f72b5cbfca36",
+      "start": 1741.73,
+      "end": 1742.89,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "因為我們的成果還很遠啊。"
+    },
+    {
+      "id": "ce71c977-8912-42bd-97ba-760c1a741a65",
+      "start": 1742.89,
+      "end": 1744.7,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "對對對，這是第一個，第一部分。"
+    },
+    {
+      "id": "06d5c0f7-3312-4397-8ec4-71ce44ff8538",
+      "start": 1745.63,
+      "end": 1750.44,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那第二部分的話是，因為我們現在真的是要去實現台灣的醫療資訊的統一。"
+    },
+    {
+      "id": "69d1cacb-e858-4c6c-868d-60eb9cce5a2a",
+      "start": 1750.8,
+      "end": 1756.93,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以為什麼有很大的轉變的原因是因為，本來是想說，那是不是全台灣我們就一套標準就好了，可是不太可能嘛，就是這個實際上是希望是"
+    },
+    {
+      "id": "15ec5917-2736-465a-a1ce-99e2d03a8967",
+      "start": 1758.88,
+      "end": 1808.07,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "依照醫院不同的資通訊的成熟程度，比如說你要這樣一中，把它 20 幾家醫院全部改成新的資訊系統，是完全不可能的。"
+    },
+    {
+      "id": "081fa65c-a973-4a31-a757-3d19fd09a624",
+      "start": 1808.54,
+      "end": 1810.27,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們才會做一個 file 的中台。"
+    },
+    {
+      "id": "9b98fc23-c9c3-4bcb-9f91-74a0fddf1462",
+      "start": 1810.57,
+      "end": 1815.76,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那你要叫一中做，你前面沒有標準，沒有先定好，那大家每個沒辦法對齊就沒辦法做，所以這是我們這時候的策略。"
+    },
+    {
+      "id": "421821a3-261f-42cd-8e38-a4dfc79f1ce6",
+      "start": 1817.54,
+      "end": 1819.35,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我第一個我們有一條龍工具。"
+    },
+    {
+      "id": "7c8c0a0e-3e62-49a8-ad52-df37b630963c",
+      "start": 1819.54,
+      "end": 1822.32,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "這個是沒有放在網站上，這是我們交給衛福部的。"
+    },
+    {
+      "id": "d45d1531-aa4e-4e61-a8b5-f82d98048cd2",
+      "start": 1822.8,
+      "end": 1827.6,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以這個就是我們一定要做一個工具讓這幾個醫學中心 20 幾家是可以互通的。"
+    },
+    {
+      "id": "ff619b03-231a-4be3-90c2-e8969d1d80be",
+      "start": 1827.92,
+      "end": 1835.52,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以他們現在都已經有三家醫院，現在要拿著一條龍去，就是我們開發這個程式，那這完全是，也是產權自權都是衛福部的。"
+    },
+    {
+      "id": "ccb902a4-47df-4a4d-852b-699f622a6220",
+      "start": 1835.83,
+      "end": 1845.96,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那這是我們其中一個交付的項目是做用 LM 的方式去幫這些醫院做資訊，讓它 file 的，讓它資料可以在共同標準上做交換，這是第一個工作，這個這個第二部分的二之一是做這個。"
+    },
+    {
+      "id": "e170edf9-80f8-4335-a971-6967e3b6ba63",
+      "start": 1849.54,
+      "end": 1852.99,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那二之二的話是針對區域跟地區型醫院。"
+    },
+    {
+      "id": "bbf46e7d-75ab-48d7-b1ad-25d5a75db5ee",
+      "start": 1853.26,
+      "end": 1856.28,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那他們其實資訊系統太舊了，最近很多治安事件嘛。"
+    },
+    {
+      "id": "2cb85024-6808-4d92-ad45-1c35cbfad2db",
+      "start": 1856.63,
+      "end": 1902.32,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以這時候就會希望說我們有一個幫他真的開一個叫數位底盤的內容來做，所以等下可以委員快速看一下那個架構。"
+    },
+    {
+      "id": "8adb8da5-1611-4b63-9e51-ef5ea8a90579",
+      "start": 1904.75,
+      "end": 1906.12,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "第三個是衛生所。"
+    },
+    {
+      "id": "2cdd16a0-0cdc-467e-b85f-b40475cc9308",
+      "start": 1906.31,
+      "end": 1915.85,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那衛生所其實台灣有在做，那只是衛生所他資訊也是很舊，所以我們要做一個公版，讓全台灣的這個衛生所的資訊系統可以獲得升級。"
+    },
+    {
+      "id": "561c677f-39c9-406f-82ac-af4239968c7c",
+      "start": 1916.33,
+      "end": 1920.58,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那這個都會跟廠商一起做，但是第一年就是把規格標準把它訂下來。"
+    },
+    {
+      "id": "2e8621b0-f7ba-4c8a-8c17-b8d10bded2fb",
+      "start": 1920.88,
+      "end": 1931.98,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我覺得第一年的打底啦，所以要跟委員特別說明一下說，會覺得說，為什麼不是程式嘛，因為那個東西是把標準規格都訂好了，那大家在這樣的標準上面才會往上再。"
+    },
+    {
+      "id": "17e73e2e-f8dd-4f89-84de-0d7ae6e07606",
+      "start": 1932.46,
+      "end": 1934.47,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好，所以成果就是這兩頁，還有第三頁嗎？還有還有第三頁，有有，還有一個是還有一個是五大願景。"
+    },
+    {
+      "id": "c955f5b9-7c27-4a53-b002-57c466b15538",
+      "start": 1937.02,
+      "end": 1939.3,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "因為很多醫院問我們說，其實為什麼要改？"
+    },
+    {
+      "id": "77e57153-2c48-4303-bebd-6d0276601fcb",
+      "start": 1939.65,
+      "end": 1944.82,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我們都現在都好好的，台灣有沒有什麼特別狀況，當的治安事件還沒出來之前，他們都覺得不需要改。"
+    },
+    {
+      "id": "17b0d66b-3bc7-4ab9-8921-fcaac3ba93b3",
+      "start": 1945.33,
+      "end": 1951.64,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "所以我們必須要做這五件事情是去示範說，這件事情你用 file 標準做交換，有得到什麼好處。"
+    },
+    {
+      "id": "b68e64d5-c5a7-44dc-ba85-0e1a232e4472",
+      "start": 1952.22,
+      "end": 1958.19,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "比如說第一個委員應該有看到我們什麼三大 AI 中心，那這個全台灣的醫院都進來幫一起做這件事情，就是因為我們要告訴別人，"
+    },
+    {
+      "id": "44e13e14-3de7-4e04-8b29-ee6307045db2",
+      "start": 1958.72,
+      "end": 2005.29,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "你用 AI, 你你的 file 標準，你能能夠做交換的時候，這個 AI 的產業才快速發展。"
+    },
+    {
+      "id": "313f30e7-c477-4b6c-853b-49aabe798f9d",
+      "start": 2005.75,
+      "end": 2012.9,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那現在人力不足啊，他才可以趕快有這個工具 AI 幫助大家升級，所以我覺得那個在示範一個用 AI 的好處。"
+    },
+    {
+      "id": "bca305b9-70d0-405f-8759-e2e3adee1742",
+      "start": 2013.38,
+      "end": 2015.52,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "好，可是它背後是 file 標準上能夠互動的。"
+    },
+    {
+      "id": "c5f211f0-43c0-4820-9aea-a91a7f7ccb70",
+      "start": 2015.93,
+      "end": 2020.51,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那再做醫療品質，也是把醫院什麼評鑑指標啦，品質指標把它放進來。"
+    },
+    {
+      "id": "34224024-17af-4c72-84c1-db11ce6830c1",
+      "start": 2020.81,
+      "end": 2027.99,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那當然這裡面都會有啦，就是臨床試驗啦，這些標準，我們都有一些初步的成果，那成果是完全屬於衛福部的。"
+    },
+    {
+      "id": "c3ecab5d-225d-484a-bb29-777990a0617b",
+      "start": 2028.54,
+      "end": 2032.97,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "那我們去國科會其實有 demo 我們這些成果啦，所以要讓委員知道說他標準是，所以為什麼昨天昨天衛福部講說標準只有一小塊，是因為它比較像是定一個規範，讓大家說我做任何事情可以跟這個去。 沒有啊，我我覺得這一點我覺得還是跟我的認知有點差距，就大家為什麼這麼關注是因為覺得那一天的這個工作，這個所謂的 CQL 的 project template 是屬於整個專案的一部分。"
+    },
+    {
+      "id": "9cb5ec36-3932-4469-8308-447a53af9b5b",
+      "start": 2243.64,
+      "end": 2100.84,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "沒有啊，我我覺得這一點我覺得還是跟我的認知有點差距，就大家為什麼這麼關注是因為覺得那一天的這個工作，這個所謂的 CQL 的 project template 是屬於整個專案的一部分。 一部分。"
+    },
+    {
+      "id": "2220b7e1-75a3-45f3-b90d-930cd33c0dcd",
+      "start": 2301.4,
+      "end": 2114.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "然後，可是我們在對話質詢的時候呢，又聽到公院這裡資訊處處長是衛福部的資訊處處長，講說只有標準，那可是您剛剛的這個投影片就很清楚啊，就是說第一是"
+    },
+    {
+      "id": "15a6fdd1-6133-4463-8913-211533199aca",
+      "start": 2318.54,
+      "end": 2122.88,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "其實第一頁的畫面裡面，你切回去，對不起，謝謝。 就是 CQL 的語言，"
+    },
+    {
+      "id": "8083d237-4638-4ea3-ab5d-b99d40c43f62",
+      "start": 2325.73,
+      "end": 2132.97,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "程式語言就是算在交付的成果之一啊，那你 SQL 的程式語言就是要這個 template 啊。"
+    },
+    {
+      "id": "5662f034-9246-403f-a98d-75d4244ed9b3",
+      "start": 2333.17,
+      "end": 2139.35,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以這個 template 本來就是這個專案的的的的的工作內容之一啊。"
+    },
+    {
+      "id": "187a3a5b-8a21-4a09-9c81-00ffc6fd5e98",
+      "start": 2339.79,
+      "end": 2141.97,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這並並不是沒有啊，然後再來下一頁。"
+    },
+    {
+      "id": "844bb50c-b555-4236-9ec9-fb838fb80372",
+      "start": 2342.64,
+      "end": 2149.55,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "其實你這個 file 的資料中台也是你要交付的東西啊，數位底盤也是要交付的東西啊。"
+    },
+    {
+      "id": "7a73b881-5ab5-4f9e-94c1-de02fea50f70",
+      "start": 2349.85,
+      "end": 2157.51,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以這裡面有很多程式開發的的過程啊，但是為什麼我們昨天聽到這中間有什麼誤會？對衛福部的資訊處處長，總總有一個人講的東西讓我們誤會了。"
+    },
+    {
+      "id": "1ab4e35e-681c-48a0-bcbf-e82a601c57d2",
+      "start": 2356.96,
+      "end": 2157.51,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "對。"
+    },
+    {
+      "id": "a2acdb51-52a4-4c91-9883-cb8060914b79",
+      "start": 2357.7,
+      "end": 2158.42,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "我覺得他的語意啦。"
+    },
+    {
+      "id": "4e79790b-d0f7-43be-bd61-eada25e08b19",
+      "start": 2359.84,
+      "end": 2210.6,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他一直 他說八億裡面只製作標準，沒有程式碼，沒有軟體，他說對。"
+    },
+    {
+      "id": "0a3f82b2-8eff-4611-9cc7-1f43f5523003",
+      "start": 2411.01,
+      "end": 2214.95,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他是因為相對於程式碼跟軟體的話，那個不包含，只有標準，他是這個意思。"
+    },
+    {
+      "id": "2d6dfe6f-5a33-454e-a276-4d35c4a6a3ad",
+      "start": 2415.67,
+      "end": 2220.06,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "但是其實整個計劃不止不止標準嘛，還有剛剛其他的平台跟網站。"
+    },
+    {
+      "id": "1b9a3187-e414-48fe-8c00-30e3a62c1150",
+      "start": 2420.52,
+      "end": 2226.38,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "所以才會到三點。 他是因為針對您問他說軟體跟程式碼，他說沒有那個部分，所以他說只有專案。"
+    },
+    {
+      "id": "f1d62018-3385-496b-b986-c6c67810557c",
+      "start": 2426.38,
+      "end": 2227.09,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "他以為是只有 SQL 的。"
+    },
+    {
+      "id": "e6e45839-1cc2-48eb-b59a-850d6ac21889",
+      "start": 2427.09,
+      "end": 2228.94,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他是聚焦在那一點而已。"
+    },
+    {
+      "id": "3c7dbc19-f07b-4de1-8a6e-006de50b606b",
+      "start": 2429.5,
+      "end": 2232.94,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "不然您再問他，他應該不會是這個，這都是他要的東西。 對對對。"
+    },
+    {
+      "id": "88176bf8-7802-42cd-9d43-04fb71071bad",
+      "start": 2433.27,
+      "end": 2237.04,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "我們是按照衛福部的規範去做，所以才會說你們。 您說的沒有錯。"
+    },
+    {
+      "id": "9f754241-e128-4e01-aaad-0bd436c10b3f",
+      "start": 2436.64,
+      "end": 2241.07,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那那現在這些什麼資料中台做完以後是誰的？衛福部的。"
+    },
+    {
+      "id": "08e84202-c983-4149-a051-a100c4a86939",
+      "start": 2440.44,
+      "end": 2241.07,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "衛福部的。"
+    },
+    {
+      "id": "6bc2efb6-77be-4f85-92b8-eabcfdba0f69",
+      "start": 2440.88,
+      "end": 2242.07,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "衛福部的。"
+    },
+    {
+      "id": "3b36aa03-a209-4cee-ac74-d9d74bcadc3f",
+      "start": 2442.98,
+      "end": 2245.9,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃 但是他不會放在這個平台上，因為平台是 所以，所以那一個大平台的那一個網頁是你們送的，你們送他的。"
+    },
+    {
+      "id": "b9b2fc8b-d163-4b5d-b577-736d6b212880",
+      "start": 2444.93,
+      "end": 2245.9,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "但是他不會放在這個平台上，因為平台是。"
+    },
+    {
+      "id": "fbd4dd65-e476-424a-bdbc-a9abe51698dc",
+      "start": 2450.88,
+      "end": 2252.79,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "不算送，因為說，因為這樣子講，因為 114 年工作上面有那一塊。"
+    },
+    {
+      "id": "0f4da685-a995-4159-b4c9-fc136dafabe9",
+      "start": 2451.04,
+      "end": 2252.79,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "因為你不是。 114 年還是 113? 100, 應該講說那個平台是 114 年的工作項目，只是說因為我們現在時間延長了，他。"
+    },
+    {
+      "id": "6fbc8740-fc55-4b02-a200-356fcf2a7f01",
+      "start": 2500.42,
+      "end": 2259.81,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "100, 應該講說那個平台是 114 年的工作項目，只是說因為我們現在時間延長了，他 你會發現那個就 有點像是，應該怎麼說？"
+    },
+    {
+      "id": "73af7a3a-5035-4c56-a940-9cfeed493669",
+      "start": 2513.18,
+      "end": 2321.36,
+      "type": "speech",
+      "speaker": "工研院 - 2",
+      "text": "應該講說他是要去跟大家做宣傳的一個一個平台，一個界面啦，應該一個界面，那所以其實也不不能說是不是 那個合約範圍內嗎？如果認知應該是。 本來是因為是 本來是 114 年的合約範圍。 對，但是我們就是我們，你說你說不能說送他，就是說因為我們還是得要宣傳嘛，因為你知道合約變後延後了啦。 我們工常常老師說這樣啦，就業主要有需求，我們就先做。 對啊，因為業主要有需求，我們就先做啊。 對，就是，就是因為幫業先做，即使我沒有 對。 其實不在區約範圍之內。 對，我們還是會。 因為對對有目的有幫助。 對對對，所以把前面先給他。 對，因為其實不然那計劃其實 22, 應該知道 25 就結束了嘛，那只是說這段空檔期，我們還是得會，因為我們有所謂的。 他我要先講，今天這個真實點就是智慧產權可能沒有給哦。"
+    },
+    {
+      "id": "83e55845-eeee-40cb-a78b-27c7d2e088f2",
+      "start": 2559.84,
+      "end": 2328.86,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "他我要先講，今天這個真實點就是智慧產權可能沒有給哦。 只是最後的那個成果界面平台給人家網站。 後面的內涵是我們自己的。 就是完全按。 開發的結果是人家的，開發過程是我們。 我我覺得今天因為時間的關係，待會還有一個會議，那我還是很謝謝你們這麼百忙中來說明。"
+    },
+    {
+      "id": "cc0f3c4d-e8da-463d-b062-64302ada0f8c",
+      "start": 2614.85,
+      "end": 2328.86,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "開發的結果是人家的，開發過程是我們。 我我覺得今天因為時間的關係，待會還有一個會議，那我還是很謝謝你們這麼百忙中來說明。 那有幾個點呢，我覺得我還是要稍微說明一下。 第一個是，我覺得目前這個工作項目在軟體、程式、開發、工具、測試、範本，這個全部中間都頓號啦。"
+    },
+    {
+      "id": "dcba3f11-eab0-4639-bdd3-6ddbea1f18e8",
+      "start": 2641.23,
+      "end": 2353.87,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得產權最終歸屬以及誰負責任，這件事情我認為還是非常模糊的。"
+    },
+    {
+      "id": "271f82ac-4198-4793-9ab8-4ceda02e8fe7",
+      "start": 2654.4,
+      "end": 2402.94,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以這是各位可能接下來還是要理清，否則我覺得剛剛的說明，可能關心的民眾還是會有點一頭霧水，這是第一點。第二點，"
+    },
+    {
+      "id": "3097609b-9a9a-4d40-a29c-e21a7850d0b3",
+      "start": 2706.82,
+      "end": 2413.89,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "呃，我覺得這中間出現了一個很特別的東西，就是說這個網站平台，這個叫大平台的 website。 是。"
+    },
+    {
+      "id": "06812d8a-f5a4-48ee-9aad-736467c84bd3",
+      "start": 2714.6,
+      "end": 2430.62,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個 website 看起來會很容易讓人誤會你們先做了 114 年的內容，可是 114 年的標案是還沒有就是還沒有公告得標者的。"
+    },
+    {
+      "id": "ed762a5e-e9f7-4b6c-8167-ca2d5122bd0f",
+      "start": 2731.63,
+      "end": 2441.46,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以這一點也可能會讓人誤會，這會不會有標案上的一些程序問題也好，或者是我就點到這裡。"
+    },
+    {
+      "id": "bc49605b-94a7-448c-97cb-a25d5f3a19a0",
+      "start": 2741.61,
+      "end": 2443.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "所以我覺得這是，這是另外一點。"
+    },
+    {
+      "id": "b4d56f12-5a3e-48bb-bece-7bc040d9e17b",
+      "start": 2744.18,
+      "end": 2445.63,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "那第三點呢是"
+    },
+    {
+      "id": "76cd7988-ceae-48e5-995b-0dc79da683ba",
+      "start": 2746.92,
+      "end": 2450.9,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "這個可能是法務的專業，所以我只是提出來，就是說"
+    },
+    {
+      "id": "13f36d0b-2685-4d1b-87be-7892d5435bb2",
+      "start": 2751.56,
+      "end": 2455.37,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "一個包含了開發，程式開發的專案，"
+    },
+    {
+      "id": "a8240014-eebf-4875-8dbb-ed264e661b35",
+      "start": 2756.69,
+      "end": 2524.11,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "裡面在開發的過程中，如果有法尊或版權或商業競爭，違反商業競爭，或者甚至有這種所謂的法人，公法人封鎖私法人，限制私法人的行為等等，然後甚至有部分挪用這個國外的公版軟體等等。 這個過程中，就也許有一些東西並不是最終交付成果，可是是他在開發的過程當中，違反了規定或違約了。"
+    },
+    {
+      "id": "8c46cc65-610b-413a-ad98-07d63b0edd21",
+      "start": 2833.45,
+      "end": 2524.11,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "是。"
+    },
+    {
+      "id": "c3a20e9c-40af-4ed0-952c-7c7856716c4f",
+      "start": 2836.23,
+      "end": 2543.99,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得不能說因為他的工作過程不在交付成果之內，所有事情就都免責了。 這個是你的法務專業，我只是要提醒這個可能是。 你說對。 要注意的，那因為那一天處資訊處處長有提到，他都處理處理了，根據這個 Apache-2.0 的四條都處理了，可是實際上有一條就是不能有商業競爭。"
+    },
+    {
+      "id": "e834a06c-59c7-46fa-adee-618d38e5b17f",
+      "start": 2844.19,
+      "end": 2543.99,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "是，委員你說對。"
+    },
+    {
+      "id": "4cb9eff5-7c42-45a8-b973-5184ab5502b8",
+      "start": 2859.54,
+      "end": 2548.74,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "因為我們同這樣做。 所以，所以我的意思是說，我覺得還是，我覺得如果是個人問題，"
+    },
+    {
+      "id": "66edcedc-486e-4d83-b446-4ed88373299e",
+      "start": 2859.09,
+      "end": 2548.74,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "當你公法人去去限制到私法人，甚至底下還寫了一個他的公司名稱的時候，這難道不是牽涉到商業競爭嗎？"
+    },
+    {
+      "id": "536c758b-02cf-4d8c-850d-b1dfe9a74e77",
+      "start": 2915.8,
+      "end": 2618.28,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我覺得不能這樣子來切割啦。 就是那這樣子的話，我們要不要讓這個個人來結案就好，我不要用公院來結案啊，我覺得不能這樣子。 所以，所以我我覺得網路上也有不同這個一直形態的人，大家看到這件事也都有評論，也有人不是我講的，說這可能不是個案，所以我。"
+    },
+    {
+      "id": "2b1bab1e-b063-4ae8-bfce-a462d5445163",
+      "start": 2938.56,
+      "end": 2649.67,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "覺得這部分真的要請各位要回去很明確的調查，了解一下，那甚至有沒有其他的專案可能也會面臨同樣的風險，我可能要請你們關注，所以這可能是我們第一次交換意見，這份可以留下來嗎？"
+    },
+    {
+      "id": "7001150b-23cf-4bc0-92ad-b226ec326587",
+      "start": 2952.78,
+      "end": 2653.51,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "這是我們的公告。 好，那那因為我們下一個會議"
+    },
+    {
+      "id": "df8e75e4-988f-4649-9d06-d5a95a535874",
+      "start": 2955.61,
+      "end": 2659.66,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "還有我們對約內內部的那個，我們對約內的要求那個 好。 我讓你知道我們 這個是你們的，我看到了啦，這是公告過了啦。 我們對內的要求，你剛剛說的，我們的機制要怎麼改進？這個可以公開嗎？"
+    },
+    {
+      "id": "31631b4f-adad-4a1e-8bed-584bfa262793",
+      "start": 2959.8,
+      "end": 2659.66,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "我讓你知道我們 這個是你們的，我看到了啦，這是公告過了啦。 我們對內的要求，你剛剛說的，我們的機制要怎麼改進？這個可以公開嗎？"
+    },
+    {
+      "id": "e66622e0-9d84-4141-add4-022f7b695abd",
+      "start": 3007.5,
+      "end": 2700.35,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "可以啊。 這你們內部的文件？"
+    },
+    {
+      "id": "30a86cdf-dd36-434c-960a-c8fb3a201d53",
+      "start": 3010.47,
+      "end": 2702.1,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "可以嘛？可以。 好，保長都說了。 這個是我們公告。 好，很好。 讓大家。 我們哪裡做錯了，要怎麼改進？我我其實是還是一句話，我希望，我希望這個反而因為這件事未來，大家也不要害怕開源，反而開源是方向，然後也我覺得處理上一定要很有智慧啦，不然以後底下的人會很害怕，什麼都不敢做，好不好？所以這個拜託，好，那因為時間的關係，我可能要處理後面的。"
+    },
+    {
+      "id": "9e8abfb0-eb79-4fa2-bcbb-72ec7314ec5a",
+      "start": 3012.04,
+      "end": 2702.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "好，保長都說了。 好，很好。 我們哪裡做錯了，要怎麼改進？我我其實是還是一句話，我希望，我希望這個反而因為這件事未來，大家也不要害怕開源，反而開源是方向，然後也我覺得處理上一定要很有智慧啦，不然以後底下的人會很害怕，什麼都不敢做，好不好？所以這個拜託，好，那因為時間的關係，我可能要處理後面的。"
+    },
+    {
+      "id": "bc0db08a-888e-48b4-9537-b3d357751f8e",
+      "start": 3038.87,
+      "end": 2739.72,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "謝謝委員，謝謝你的，謝謝你給我們的機會。"
+    },
+    {
+      "id": "67b51b08-59ec-4376-9006-30629bfb664a",
+      "start": 3041.86,
+      "end": 2741.77,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "沒有沒有沒有。 謝謝委員我最高，最後一句話，那個如果幾千個員工，絕大多數都是奉公守法的。"
+    },
+    {
+      "id": "41e888fd-abab-469e-9cff-b1fee999f7cc",
+      "start": 3043.47,
+      "end": 2748.34,
+      "type": "speech",
+      "speaker": "工研院 - 1",
+      "text": "謝謝委員我最高，最後一句話，那個如果幾千個員工，絕大多數都是奉公守法的。"
+    }
+  ]
+}
