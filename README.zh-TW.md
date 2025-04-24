@@ -1,8 +1,6 @@
 [繁體中文](README.zh-TW.md) |
 [English](README.md)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDrJuChunKoO%2FTransPal-website)
-
 # TransPal
 
 會議逐字稿紀錄網站
@@ -13,7 +11,7 @@ TransPal 由三個部分組成
 
 - 轉錄工具：https://github.com/DrJuChunKoO/TransPal-transcriber
 - 編輯器：https://github.com/DrJuChunKoO/TransPal-editor
-- 網站：https://github.com/DrJuChunKoO/TransPal-website
+- 網站：https://github.com/DrJuChunKoO/TransPal
 
 ## 開發
 

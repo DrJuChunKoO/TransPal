@@ -1,8 +1,6 @@
 [繁體中文](README.zh-TW.md) |
 [English](README.md)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FDrJuChunKoO%2FTransPal-website)
-
 # TransPal
 
 Meeting Transcript Recording Website
@@ -13,7 +11,7 @@ TransPal consists of three parts
 
 - Transcription tool: https://github.com/DrJuChunKoO/TransPal-transcriber
 - Editor: https://github.com/DrJuChunKoO/TransPal-editor
-- Website: https://github.com/DrJuChunKoO/TransPal-website
+- Website: https://github.com/DrJuChunKoO/TransPal
 
 ## Development
 
