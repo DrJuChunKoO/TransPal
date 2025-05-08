@@ -65,7 +65,7 @@ export default function SpeechContent({
           >
             <Avatar name={item.speaker} />
             <div>
-              <div className="font-bold text-gray-800 dark:text-blue-400">
+              <div className="font-bold text-gray-800 dark:text-gray-200">
                 {item.speaker}
               </div>
             </div>

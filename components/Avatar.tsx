@@ -8,11 +8,9 @@ function genColor(name: string) {
     .split("")
     .reduce((acc, char) => acc + char.charCodeAt(0), 0);
   let color = Math.floor(Math.abs(Math.sin(randomSeed) * 16777215));
-  let resultColor = color.toString(16);
-  while (color.toString().length < 6) {
-    resultColor = "0" + color;
-  }
-  return "#" + resultColor;
+  let resultColor = color.toString(16).padStart(6, "0");
+  // 回傳帶有 50% 透明度的顏色 (hex with alpha)
+  return `#${resultColor}`;
 }
 
 export default function Avatar({
@@ -45,7 +43,7 @@ export default function Avatar({
     );
   }
 
-  const bgColor = genColor(name);
+  const avatarColor = genColor(name);
   return (
     <div
       className={twMerge(
@@ -53,10 +51,11 @@ export default function Avatar({
         className,
       )}
       style={{
-        backgroundColor: bgColor,
+        backgroundColor: `${avatarColor}20`,
+        color: avatarColor,
       }}
     >
-      <UserIcon className="size-8" />
+      <UserIcon className="size-8" strokeWidth={1} />
     </div>
   );
 }

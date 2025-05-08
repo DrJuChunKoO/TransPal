@@ -89,7 +89,7 @@ export default async function Page({ params }: { params: Params }) {
           <a
             href={`https://transpal-editor.juchunko.com/?file=${filename}`}
             target="_blank"
-            className="inline-flex items-center gap-2 rounded-lg bg-gray-100 p-2 text-sm text-gray-700 transition-colors hover:bg-gray-200 sm:px-3 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-gray-100 p-2 text-sm text-gray-700 transition-colors hover:bg-gray-200 sm:px-3 dark:bg-white/5 dark:text-gray-200 dark:hover:bg-white/10"
           >
             <Pen size={16} />
             <span className="hidden sm:inline">編輯</span>
