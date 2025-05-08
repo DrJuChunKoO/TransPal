@@ -250,7 +250,7 @@ function ChatInput({
 interface ChatWindowProps {
   y: MotionValue<number>;
   messages: MessageData[];
-  isLoading: boolean;
+  status: "submitted" | "streaming" | "ready" | "error";
   input: string;
   handleInputChange: (
     e:
@@ -269,7 +269,7 @@ interface ChatWindowProps {
 function ChatWindow({
   y,
   messages,
-  isLoading,
+  status,
   input,
   handleInputChange,
   handleSubmit,
@@ -321,13 +321,13 @@ function ChatWindow({
       >
         <MessageList
           messages={messages}
-          isLoading={isLoading}
+          isLoading={status === "streaming"}
           containerRef={containerRef}
           onSendDefaultMessage={onSendDefaultMessage}
         />
         <ChatInput
           input={input}
-          isLoading={isLoading}
+          isLoading={status === "submitted" || status === "streaming"}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
           submitButtonRef={submitButtonRef}
@@ -443,9 +443,9 @@ export default function SpeechAI({ filename }: { filename: string | null }) {
     input,
     setMessages,
     setInput,
-    isLoading,
     handleInputChange,
     handleSubmit: originalHandleSubmit,
+    status,
   } = useChat({
     api: "/api/completion",
     body: { filename },
@@ -467,7 +467,7 @@ export default function SpeechAI({ filename }: { filename: string | null }) {
       originalHandleSubmit(e);
       setInput("");
       if (textareaRef.current) {
-        textareaRef.current.style.height = "44px";
+        textareaRef.current.style.height = "48px";
       }
     },
     [originalHandleSubmit, setInput],
@@ -508,7 +508,7 @@ export default function SpeechAI({ filename }: { filename: string | null }) {
       messageContainerRef.current.scrollTop =
         messageContainerRef.current.scrollHeight;
     }
-  }, [messages, active, isLoading]);
+  }, [messages, active, status]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -534,7 +534,7 @@ export default function SpeechAI({ filename }: { filename: string | null }) {
           key="chat-window"
           y={y}
           messages={messages}
-          isLoading={isLoading}
+          status={status}
           input={input}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
