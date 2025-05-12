@@ -67,6 +67,9 @@ export default function Footer() {
           <NavLink href="/about" className="text-sm">
             關於
           </NavLink>
+          <NavLink href="/edit-guide" className="text-sm">
+            編輯指南
+          </NavLink>
 
           <NavLink asChild className="text-sm">
             <a

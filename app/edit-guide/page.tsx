@@ -1,0 +1,99 @@
+export default function Page() {
+  return (
+    <div className="container my-10">
+      <article className="prose dark:prose-invert">
+        <h1>TransPal 逐字稿修改教學</h1>
+
+        <p>
+          你發現逐字稿裡有錯字或想修正內容嗎？只要幾個步驟，你也可以幫忙更新
+          TransPal 的紀錄
+        </p>
+
+        <h2>✅ 你會用到的工具</h2>
+        <ul>
+          <li>TransPal 網站上的編輯器</li>
+          <li>
+            <a href="https://github.com/signup" target="_blank" rel="noopener">
+              GitHub 帳號
+            </a>
+            （需要先註冊好）
+          </li>
+          <li>瀏覽器就夠，不需要安裝額外工具！</li>
+        </ul>
+
+        <h2>🧾 步驟一：在 TransPal 編輯逐字稿</h2>
+        <ol>
+          <li>打開你要修改的逐字稿頁面。</li>
+          <li>
+            點選右上角的 <strong>✏️ 編輯</strong> 按鈕，進入編輯器。
+          </li>
+          <li>修改你想要的內容：錯字、標點、講者名字、斷行都可以。</li>
+          <li>
+            完成後，點選選單 <strong>檔案 → 複製 JSON</strong>，會把內容轉成
+            JSON 並自動複製。
+          </li>
+        </ol>
+
+        <h2>📂 步驟二：前往 GitHub 找到對應的逐字稿檔案</h2>
+        <ol>
+          <li>
+            開啟 TransPal 專案的{" "}
+            <a
+              href="https://github.com/DrJuChunKoO/TransPal/tree/main/public/speeches"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub 網址
+            </a>
+            。
+          </li>
+          <li>登入 GitHub。</li>
+          <li>
+            點選你要修改的那一份 <code>.json</code> 檔案。
+          </li>
+        </ol>
+
+        <h2>✏️ 步驟三：貼上新的內容</h2>
+        <ol>
+          <li>點進檔案後，按右上角鉛筆圖示（✏️）進入編輯模式。</li>
+          <li>
+            <strong>全選</strong>原本內容，刪除，<strong>貼上</strong>剛剛複製的
+            JSON（Ctrl+V 或右鍵貼上）。
+          </li>
+        </ol>
+
+        <h2>💬 步驟四：提交修改（Commit）</h2>
+        <ol>
+          <li>點選右上角「Commit changes...」。</li>
+          <li>
+            在第一欄輸入你這次的修改說明，例如「修正錯字」、「調整講者名稱」等。
+          </li>
+          <li>
+            選擇「
+            <strong>
+              Create a new branch for this commit and start a pull request
+            </strong>
+            」。
+          </li>
+          <li>
+            點 <strong>Propose changes</strong>。
+          </li>
+        </ol>
+
+        <h2>🚀 步驟五：建立 Pull Request（送出修改申請）</h2>
+        <ol>
+          <li>
+            點下 <strong>Create pull request</strong>。
+          </li>
+          <li>可以補充說明（選填）。</li>
+          <li>完成後，專案維護者會看到，幾天內會合併你的貢獻 🎉</li>
+        </ol>
+
+        <h2>💡 附註</h2>
+        <ul>
+          <li>貼上的 JSON 要完整且格式正確，否則網站會壞掉。</li>
+        </ul>
+      </article>
+    </div>
+  );
+}
