@@ -65,7 +65,7 @@ export async function POST(req: Request) {
   4. 在分析議題時，若有不同觀點，請多方參考並總結`;
 
     const result = streamText({
-      model: openai("gpt-4.1-mini"),
+      model: openai.responses("gpt-4.1-mini"),
       experimental_transform: smoothStream({
         delayInMs: 10,
         chunking: /[\u4E00-\u9FFF]|\S+\s+/,
