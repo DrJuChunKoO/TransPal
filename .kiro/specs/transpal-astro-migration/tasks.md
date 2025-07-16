@@ -1,6 +1,6 @@
 # Implementation Plan
 
-- [ ] 1. 建立 Astro 專案基礎架構
+- [x] 1. 建立 Astro 專案基礎架構
   - 初始化 Astro 專案並配置基本設定
   - 安裝必要的依賴套件 (React, Tailwind CSS, TypeScript)
   - 設定 Astro 配置檔案支援靜態輸出
