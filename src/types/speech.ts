@@ -3,7 +3,7 @@ export interface SpeechContentItem {
   id: string;
   speaker: string;
   text: string;
-  type: 'speech' | 'divider' | 'markdown';
+  type: "speech" | "divider" | "markdown";
   start?: number;
   end?: number;
 }
@@ -44,7 +44,7 @@ export interface SearchData {
   }[];
 }
 
-// Avatar map structure
+// Avatar map structure - maps speaker names to avatar image URLs
 export interface AvatarMap {
-  [speakerName: string]: boolean;
+  [speakerName: string]: string;
 }
