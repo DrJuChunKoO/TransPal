@@ -8,9 +8,10 @@ export interface Props {
   speech: SpeechDetail;
   targetMessage: SpeechContentItem;
   contextMessages: SpeechContentItem[];
+  filename: string;
 }
 
-const { speech, targetMessage, contextMessages } = Astro.props;
+const { speech, targetMessage, contextMessages, filename } = Astro.props;
 
 // Format date for display
 function formatDate(dateString: string): string {
@@ -27,7 +28,7 @@ function formatDate(dateString: string): string {
   <!-- Back to speech link -->
   <div class="mb-4 sm:mb-6">
     <a 
-      href={`/speeches/${speech.info.filename}`}
+      href={`/speeches/${filename}`}
       class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors touch-manipulation min-h-[44px] px-2 -mx-2"
     >
       <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
