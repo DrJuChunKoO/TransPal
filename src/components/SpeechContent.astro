@@ -1,0 +1,101 @@
+---
+import type { SpeechDetail } from '../types/speech';
+import Avatar from './Avatar.astro';
+import MessageText from './MessageText.astro';
+
+export interface Props {
+  speech: SpeechDetail;
+  filename?: string; // Add filename prop for correct URL generation
+}
+
+const { speech, filename } = Astro.props;
+
+// Add debug logging to help diagnose the issue
+console.log('SpeechContent received speech type:', typeof speech);
+console.log('SpeechContent speech info:', speech?.info);
+console.log('SpeechContent speech content length:', speech?.content?.length || 0);
+
+// Ensure speech content is an array before filtering
+const speechContent = Array.isArray(speech?.content) ? speech.content : [];
+
+// Filter out non-speech content for the timeline
+const speechItems = speechContent.filter(item => item && item.type === 'speech');
+---
+
+<div class="space-y-6">
+  {speechContent.map((item, index) => {
+    if (item.type === 'divider') {
+      return (
+        <div class="flex items-center my-8">
+          <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
+          <div class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
+            {item.text || '---'}
+          </div>
+          <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
+        </div>
+      );
+    }
+
+    if (item.type === 'markdown') {
+      return (
+        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+          <div class="text-blue-800 dark:text-blue-200 text-sm">
+            <MessageText content={item.text} />
+          </div>
+        </div>
+      );
+    }
+
+    if (item.type === 'speech') {
+      return (
+        <div 
+          id={item.id}
+          class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group"
+        >
+          <!-- Avatar -->
+          <div class="flex-shrink-0">
+            <Avatar speakerName={item.speaker} />
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1 min-w-0">
+            <!-- Speaker and time -->
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                  {item.speaker}
+                </h3> 
+              </div>
+              
+              <!-- Share link (visible on hover) -->
+              <a 
+                href={`/speeches/${filename || speech.info.slug}/${item.id}`}
+                class="opacity-0 group-hover:opacity-100 transition-opacity text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                title="分享此發言"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Message text -->
+            <div class="text-gray-700 dark:text-gray-300">
+              <MessageText content={item.text} />
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
+  })}
+
+  {speechItems.length === 0 && (
+    <div class="text-center py-12">
+      <div class="text-gray-500 dark:text-gray-400 text-lg">
+        此會議記錄暫無內容
+      </div>
+    </div>
+  )}
+</div>

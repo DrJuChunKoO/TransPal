@@ -1,0 +1,334 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SpeechContent from "../../components/SpeechContent.astro";
+import ShareButton from "../../components/ShareButton";
+import { getSpeech, getSpeeches } from "../../utils/speeches";
+import type { SpeechDetail } from "../../types/speech";
+
+export async function getStaticPaths() {
+  const speeches = await getSpeeches();
+  return speeches.map((speech) => ({
+    params: { filename: speech.filename },
+  }));
+}
+
+const { filename } = Astro.params;
+
+// Validate filename parameter
+if (!filename || typeof filename !== "string") {
+  console.warn("Invalid filename parameter:", filename);
+  return Astro.redirect("/404");
+}
+
+// Sanitize filename to prevent path traversal
+const sanitizedFilename = filename.replace(/[^a-zA-Z0-9\-_.]/g, "");
+if (sanitizedFilename !== filename) {
+  console.warn("Filename contains invalid characters:", filename);
+  return Astro.redirect("/404");
+}
+
+let speech: SpeechDetail | null = null;
+
+try {
+  // Add debug logging to help diagnose the issue
+  console.log("Fetching speech data for:", filename);
+
+  const speechResult = await getSpeech(filename);
+  console.log("Speech result type:", typeof speechResult);
+
+  if (!speechResult) {
+    console.warn("Speech not found:", filename);
+    return Astro.redirect("/404");
+  }
+
+  // Ensure we have a proper speech object
+  if (typeof speechResult === "function") {
+    console.error("Speech data is a function, not an object:", speechResult);
+    return Astro.redirect("/404");
+  }
+
+  speech = speechResult;
+
+  // Add additional debug logging
+  console.log("Speech info:", speech.info);
+  console.log("Speech content length:", speech.content?.length || 0);
+
+  // Validate speech data structure with detailed logging
+  if (!speech.info) {
+    console.error("Speech missing info object for:", filename);
+    return Astro.redirect("/404");
+  }
+
+  if (!speech.content) {
+    console.error("Speech missing content for:", filename);
+    return Astro.redirect("/404");
+  }
+
+  if (!Array.isArray(speech.content)) {
+    console.error(
+      "Speech content is not an array for:",
+      filename,
+      "type:",
+      typeof speech.content,
+    );
+    return Astro.redirect("/404");
+  }
+
+  // Validate required info fields with fallbacks
+  if (!speech.info.name || typeof speech.info.name !== "string") {
+    console.warn(
+      "Speech missing name field, using filename as fallback:",
+      filename,
+    );
+    speech.info.name = filename;
+  }
+
+  if (!speech.info.date || typeof speech.info.date !== "string") {
+    console.warn(
+      "Speech missing date field, using current date as fallback:",
+      filename,
+    );
+    speech.info.date = new Date().toISOString();
+  }
+
+  // Validate and filter content array
+  const validContent = speech.content.filter((item) => {
+    if (!item || typeof item !== "object") return false;
+    if (!item.id || typeof item.id !== "string") return false;
+    if (!item.type || typeof item.type !== "string") return false;
+    return true;
+  });
+
+  if (validContent.length === 0) {
+    console.error(
+      "Speech has no valid content items:",
+      filename,
+      "total items:",
+      speech.content.length,
+    );
+    return Astro.redirect("/404");
+  }
+
+  // Update speech with filtered content if needed
+  if (validContent.length !== speech.content.length) {
+    console.warn(
+      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`,
+    );
+    speech.content = validContent;
+  }
+} catch (error) {
+  console.error("Error loading speech:", filename, error);
+
+  // Log detailed error information for debugging
+  if (error instanceof Error) {
+    if (
+      error.message.includes("Cannot find module") ||
+      error.message.includes("Failed to fetch dynamically imported module")
+    ) {
+      console.warn("Speech file not found:", filename);
+    } else {
+      console.error("Unexpected error loading speech:", error.message);
+    }
+  }
+
+  return Astro.redirect("/404");
+}
+
+// Format date for display
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString("zh-TW", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+// Format time for display
+function formatTime(timeString?: string): string {
+  if (!timeString) return "";
+  return timeString;
+}
+
+const pageTitle = `${speech.info.name} - TransPal`;
+const pageDescription =
+  speech.info.description ||
+  `${speech.info.name} 會議記錄，日期：${formatDate(speech.info.date)}`;
+
+// Generate canonical URL
+const canonicalUrl = new URL(`speeches/${filename}`, Astro.site).href;
+
+// Open Graph data
+const ogTitle = speech.info.name;
+const ogDescription = pageDescription;
+
+// Generate enhanced structured data for the speech
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: speech.info.name,
+  description: pageDescription,
+  datePublished: speech.info.date,
+  dateModified: speech.info.date,
+  url: canonicalUrl,
+  inLanguage: "zh-TW",
+  publisher: {
+    "@type": "Organization",
+    name: "TransPal",
+    url: new URL("/", Astro.site).href,
+    logo: {
+      "@type": "ImageObject",
+      url: new URL("/favicon.svg", Astro.site).href,
+    },
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": canonicalUrl,
+  },
+  articleSection: "政府會議記錄",
+  keywords: ["會議記錄", "逐字稿", "政府會議", "公開透明"],
+  about: {
+    "@type": "Event",
+    name: speech.info.name,
+    startDate: speech.info.date,
+    description: speech.info.description || pageDescription,
+    eventStatus: "https://schema.org/EventCompleted",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  },
+  isPartOf: {
+    "@type": "WebSite",
+    name: "TransPal",
+    url: new URL("/", Astro.site).href,
+  },
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogUrl={canonicalUrl}
+  ogType="article"
+  structuredData={structuredData}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <!-- Back to list link -->
+    <nav class="mb-4 sm:mb-6" aria-label="麵包屑導航">
+      <a
+        href="/"
+        class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors touch-manipulation min-h-[44px] px-2 -mx-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded"
+        aria-label="返回會議列表"
+      >
+        <svg
+          class="w-4 h-4 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"></path>
+        </svg>
+        返回會議列表
+      </a>
+    </nav>
+
+    <!-- Speech header -->
+    <header
+      class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 mb-6 sm:mb-8"
+    >
+      <h1
+        class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight"
+      >
+        {speech.info.name}
+      </h1>
+
+      <div
+        class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600 dark:text-gray-400"
+        role="group"
+        aria-label="會議資訊"
+      >
+        <div class="flex items-center">
+          <svg
+            class="w-4 h-4 mr-2 flex-shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h3a2 2 0 012 2v1a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h2z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M16 17v2a2 2 0 01-2 2H10a2 2 0 01-2-2v-2"></path>
+          </svg>
+          <time datetime={speech.info.date}>
+            {formatDate(speech.info.date)}
+          </time>
+        </div>
+
+        {
+          speech.info.time && (
+            <div class="flex items-center">
+              <svg
+                class="w-4 h-4 mr-2 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+              <time datetime={speech.info.time}>
+                {formatTime(speech.info.time)}
+              </time>
+            </div>
+          )
+        }
+      </div>
+
+      {
+        speech.info.description && (
+          <div class="mt-3 sm:mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p>{speech.info.description}</p>
+          </div>
+        )
+      }
+    </header>
+
+    <!-- Speech content -->
+    <section aria-labelledby="speech-content-heading">
+      <h2 id="speech-content-heading" class="sr-only">會議內容</h2>
+      <SpeechContent speech={speech} filename={filename} />
+    </section>
+
+    <!-- Share section -->
+    <aside
+      class="mt-6 sm:mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6"
+      aria-labelledby="share-heading"
+    >
+      <h2 id="share-heading" class="sr-only">分享此會議</h2>
+      <ShareButton
+        client:load
+        url={canonicalUrl}
+        title={speech.info.name}
+        speechName={speech.info.name}
+      />
+    </aside>
+  </div>
+</Layout>

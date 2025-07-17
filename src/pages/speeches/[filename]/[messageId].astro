@@ -1,0 +1,220 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MessageShare from '../../../components/MessageShare.astro';
+import { getSpeechMessageWithContext, getSpeeches, getSpeech } from '../../../utils/speeches';
+
+export async function getStaticPaths() {
+  try {
+    const speeches = await getSpeeches();
+    const paths = [];
+    
+    // Generate paths for all messages in all speeches
+    for (const speechMeta of speeches) {
+      try {
+        const speech = await getSpeech(speechMeta.filename);
+        if (speech && speech.content && Array.isArray(speech.content)) {
+          // Only include speech type messages for sharing
+          const speechMessages = speech.content.filter(item => 
+            item && 
+            typeof item === 'object' && 
+            item.type === 'speech' && 
+            item.id && 
+            typeof item.id === 'string'
+          );
+          
+          for (const message of speechMessages) {
+            paths.push({
+              params: { 
+                filename: speechMeta.filename,
+                messageId: message.id
+              }
+            });
+          }
+        }
+      } catch (speechError) {
+        console.warn(`Error loading speech ${speechMeta.filename} for static paths:`, speechError);
+        // Continue with other speeches
+      }
+    }
+    
+    console.log(`Generated ${paths.length} message paths for static generation`);
+    return paths;
+  } catch (error) {
+    console.error('Error generating static paths for messages:', error);
+    return []; // Return empty array to prevent build failure
+  }
+}
+
+const { filename, messageId } = Astro.params;
+
+// Validate parameters
+if (!filename || !messageId || typeof filename !== 'string' || typeof messageId !== 'string') {
+  console.warn('Invalid parameters:', { filename, messageId });
+  return Astro.redirect('/404');
+}
+
+// Sanitize parameters to prevent path traversal
+const sanitizedFilename = filename.replace(/[^a-zA-Z0-9\-_.]/g, '');
+const sanitizedMessageId = messageId.replace(/[^a-zA-Z0-9\-_.]/g, '');
+
+if (sanitizedFilename !== filename || sanitizedMessageId !== messageId) {
+  console.warn('Parameters contain invalid characters:', { filename, messageId });
+  return Astro.redirect('/404');
+}
+
+let messageData;
+
+try {
+  // Add debug logging to help diagnose the issue
+  console.log('Fetching message data for:', filename, messageId);
+  
+  const messageResult = await getSpeechMessageWithContext(filename, messageId, 2);
+  console.log('Message result type:', typeof messageResult);
+  
+  if (!messageResult) {
+    console.warn('Message not found:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+  
+  // Ensure we have a proper message data object
+  if (typeof messageResult === 'function') {
+    console.error('Message data is a function, not an object:', messageResult);
+    return Astro.redirect('/404');
+  }
+  
+  messageData = messageResult;
+
+  // Validate message data structure
+  if (!messageData.speech || !messageData.targetMessage || !messageData.contextMessages) {
+    console.error('Invalid message data structure:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+
+  // Validate speech data
+  if (!messageData.speech.info || !messageData.speech.content || !Array.isArray(messageData.speech.content)) {
+    console.error('Invalid speech data in message context:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+
+  // Validate target message
+  if (!messageData.targetMessage.id || !messageData.targetMessage.speaker || !messageData.targetMessage.text) {
+    console.error('Invalid target message data:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+
+  // Validate context messages array
+  if (!Array.isArray(messageData.contextMessages) || messageData.contextMessages.length === 0) {
+    console.error('Invalid context messages data:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+
+  // Ensure target message is included in context messages
+  const targetMessageInContext = messageData.contextMessages.find(msg => msg.id === messageId);
+  if (!targetMessageInContext) {
+    console.error('Target message not found in context messages:', { filename, messageId });
+    return Astro.redirect('/404');
+  }
+
+} catch (error) {
+  console.error('Error loading message data:', { filename, messageId }, error);
+  
+  // Log detailed error information for debugging
+  if (error instanceof Error) {
+    if (error.message.includes('Cannot find module') || 
+        error.message.includes('Failed to fetch dynamically imported module')) {
+      console.warn('Speech file not found for message:', { filename, messageId });
+    } else {
+      console.error('Unexpected error loading message data:', error.message);
+    }
+  }
+  
+  return Astro.redirect('/404');
+}
+
+const { speech, targetMessage, contextMessages } = messageData;
+
+// Format date for display
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('zh-TW', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+
+// Generate page title and description for SEO
+const pageTitle = `${targetMessage.speaker} 在 ${speech.info.name} 中的發言 - TransPal`;
+const pageDescription = targetMessage.text.length > 150 
+  ? targetMessage.text.substring(0, 150) + '...'
+  : targetMessage.text;
+
+// Generate canonical URL
+const canonicalUrl = new URL(`speeches/${filename}/${messageId}`, Astro.site).href;
+
+// Open Graph data
+const ogTitle = `${targetMessage.speaker} 的發言`;
+const ogDescription = pageDescription;
+
+// Generate enhanced structured data for the message
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": `${targetMessage.speaker} 在 ${speech.info.name} 中的發言`,
+  "description": pageDescription,
+  "datePublished": speech.info.date,
+  "dateModified": speech.info.date,
+  "url": canonicalUrl,
+  "inLanguage": "zh-TW",
+  "author": {
+    "@type": "Person",
+    "name": targetMessage.speaker
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TransPal",
+    "url": new URL('/', Astro.site).href,
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL('/favicon.svg', Astro.site).href
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": canonicalUrl
+  },
+  "articleSection": "會議發言",
+  "keywords": ["會議發言", "逐字稿", targetMessage.speaker, "政府會議"],
+  "isPartOf": {
+    "@type": "Article",
+    "name": speech.info.name,
+    "url": new URL(`speeches/${filename}`, Astro.site).href,
+    "about": {
+      "@type": "Event",
+      "name": speech.info.name,
+      "startDate": speech.info.date
+    }
+  },
+  "citation": {
+    "@type": "CreativeWork",
+    "name": speech.info.name,
+    "url": new URL(`speeches/${filename}`, Astro.site).href
+  }
+};
+---
+
+<Layout 
+  title={pageTitle} 
+  description={pageDescription}
+  ogTitle={ogTitle}
+  ogDescription={ogDescription}
+  ogUrl={canonicalUrl}
+  ogType="article"
+  structuredData={structuredData}
+>
+  <MessageShare 
+    speech={speech}
+    targetMessage={targetMessage}
+    contextMessages={contextMessages}
+  />
+</Layout>

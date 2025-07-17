@@ -1,0 +1,62 @@
+---
+// Get current path for active link styling
+const currentPath = Astro.url.pathname;
+
+interface NavLinkProps {
+  href?: string;
+  external?: boolean;
+  children: any;
+}
+---
+
+<footer class="flex flex-col gap-4 py-4 shadow-[0_-2px_4px_rgba(0,0,0,.02),0_-1px_0_rgba(0,0,0,.06)] dark:bg-[#232323]/90 dark:shadow-[0_-1px_0_rgba(255,255,255,.1)]" role="contentinfo">
+  <div class="container mx-auto flex flex-col items-center justify-between gap-4 px-4 sm:px-6 sm:flex-row-reverse">
+    <nav aria-label="頁腳導航" role="navigation">
+      <ul class="flex flex-col items-center gap-2 text-sm text-gray-600 dark:text-gray-400 sm:flex-row sm:gap-0" role="list">
+        <li>
+          <a 
+            href="/about" 
+            class={`relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+              currentPath === '/about' 
+                ? 'bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white' 
+                : 'hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200'
+            }`}
+            aria-current={currentPath === '/about' ? 'page' : undefined}
+          >
+            關於
+          </a>
+        </li>
+        <li>
+          <a 
+            href="/edit-guide" 
+            class={`relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+              currentPath === '/edit-guide' 
+                ? 'bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white' 
+                : 'hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200'
+            }`}
+            aria-current={currentPath === '/edit-guide' ? 'page' : undefined}
+          >
+            編輯指南
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://github.com/DrJuChunKoO/TransPal"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200 flex items-center gap-1 touch-manipulation min-h-[44px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            aria-label="在 GitHub 上查看 TransPal 原始碼（開啟新視窗）"
+          >
+            GitHub
+            <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="text-xs sm:text-sm text-gray-600 dark:text-white/50 text-center sm:text-left">
+      <p>TransPal 程式碼以 MIT 授權釋出</p>
+    </div>
+  </div>
+</footer>

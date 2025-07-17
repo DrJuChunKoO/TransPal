@@ -1,0 +1,187 @@
+---
+import { getAvatarPath, hasAvatar } from '../utils/speeches';
+
+export interface Props {
+  speakerName: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  priority?: boolean; // For above-the-fold images
+  className?: string;
+}
+
+const { speakerName, size = 'md', priority = false, className = '' } = Astro.props;
+
+// Get avatar path if it exists
+const avatarPath = await getAvatarPath(speakerName);
+const hasAvatarFile = await hasAvatar(speakerName);
+
+// Size classes with improved responsive design
+const sizeClasses = {
+  sm: 'w-6 h-6 sm:w-8 sm:h-8',
+  md: 'w-8 h-8 sm:w-10 sm:h-10',
+  lg: 'w-10 h-10 sm:w-12 sm:h-12',
+  xl: 'w-12 h-12 sm:w-16 sm:h-16'
+};
+
+const textSizeClasses = {
+  sm: 'text-xs',
+  md: 'text-xs sm:text-sm',
+  lg: 'text-sm sm:text-base',
+  xl: 'text-base sm:text-lg'
+};
+
+// Enhanced initials generation with better Chinese/English support
+function getInitials(name: string): string {
+  if (!name || name.trim() === '') return '?';
+  
+  // Remove common titles and prefixes (expanded list)
+  const cleanName = name
+    .replace(/^(部長|署長|委員|主委|院長|局長|主任|教授|博士|先生|女士|小姐|總統|副總統|市長|縣長|立委|議員|理事長|會長|董事長|執行長|總經理|經理|主管|專員|助理|秘書|顧問|律師|醫師|工程師|研究員|分析師)\s*/, '')
+    .replace(/\s*(部長|署長|委員|主委|院長|局長|主任|教授|博士|先生|女士|小姐|總統|副總統|市長|縣長|立委|議員|理事長|會長|董事長|執行長|總經理|經理|主管|專員|助理|秘書|顧問|律師|醫師|工程師|研究員|分析師)$/, '')
+    .trim();
+  
+  // Handle English names
+  if (/^[A-Za-z\s]+$/.test(cleanName)) {
+    const words = cleanName.split(/\s+/).filter(word => word.length > 0);
+    if (words.length >= 2) {
+      return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+    } else if (words.length === 1) {
+      return words[0].substring(0, 2).toUpperCase();
+    }
+  }
+  
+  // Handle Chinese names and mixed content
+  const finalName = cleanName || name;
+  if (finalName.length >= 2) {
+    return finalName.substring(0, 2);
+  } else if (finalName.length === 1) {
+    return finalName;
+  } else {
+    return name.substring(0, 1) || '?';
+  }
+}
+
+// Enhanced color generation with better distribution
+function getBackgroundColor(name: string): string {
+  const colors = [
+    'bg-red-500 dark:bg-red-600',
+    'bg-blue-500 dark:bg-blue-600',
+    'bg-green-500 dark:bg-green-600',
+    'bg-yellow-500 dark:bg-yellow-600',
+    'bg-purple-500 dark:bg-purple-600',
+    'bg-pink-500 dark:bg-pink-600',
+    'bg-indigo-500 dark:bg-indigo-600',
+    'bg-teal-500 dark:bg-teal-600',
+    'bg-orange-500 dark:bg-orange-600',
+    'bg-cyan-500 dark:bg-cyan-600',
+    'bg-emerald-500 dark:bg-emerald-600',
+    'bg-violet-500 dark:bg-violet-600',
+    'bg-rose-500 dark:bg-rose-600',
+    'bg-amber-500 dark:bg-amber-600',
+    'bg-lime-500 dark:bg-lime-600',
+    'bg-sky-500 dark:bg-sky-600'
+  ];
+  
+  // Improved hash function for better color distribution
+  let hash = 0;
+  for (let i = 0; i < name.length; i++) {
+    const char = name.charCodeAt(i);
+    hash = ((hash << 5) - hash) + char;
+    hash = hash & hash; // Convert to 32-bit integer
+  }
+  
+  return colors[Math.abs(hash) % colors.length];
+}
+
+const initials = getInitials(speakerName);
+const backgroundColor = getBackgroundColor(speakerName);
+
+// Generate unique ID for this avatar instance (for error handling)
+const avatarId = `avatar-${speakerName.replace(/[^a-zA-Z0-9]/g, '-')}-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<div class={`${sizeClasses[size]} rounded-full overflow-hidden flex-shrink-0 ${className}`} id={avatarId} role="img" aria-label={`${speakerName} 的頭像`}>
+  {avatarPath ? (
+    <img 
+      src={avatarPath} 
+      alt=""
+      role="presentation"
+      class="w-full h-full object-cover transition-opacity duration-200"
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      fetchpriority={priority ? "high" : "auto"}
+      onerror={`document.getElementById('${avatarId}').innerHTML = '<div class="w-full h-full ${backgroundColor} flex items-center justify-center text-white font-semibold ${textSizeClasses[size]} transition-all duration-200" role="presentation" aria-hidden="true">${initials}</div>'`}
+    />
+  ) : (
+    <div class={`w-full h-full ${backgroundColor} flex items-center justify-center text-white font-semibold ${textSizeClasses[size]} transition-all duration-200`} role="presentation" aria-hidden="true">
+      {initials}
+    </div>
+  )}
+</div>
+
+<script>
+  // Enhanced avatar loading with intersection observer for better performance
+  document.addEventListener('DOMContentLoaded', function() {
+    const avatars = document.querySelectorAll('[id^="avatar-"] img');
+    
+    // Create intersection observer for lazy loading optimization
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          
+          // Add loading state
+          img.style.opacity = '0.7';
+          
+          // Handle successful load
+          img.addEventListener('load', function() {
+            img.style.opacity = '1';
+          });
+          
+          // Stop observing this image
+          observer.unobserve(img);
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.1
+    });
+    
+    // Observe all avatar images
+    avatars.forEach(img => {
+      if (img.loading === 'lazy') {
+        imageObserver.observe(img);
+      }
+    });
+  });
+</script>
+
+<style>
+  /* Ensure smooth transitions and proper aspect ratio */
+  [id^="avatar-"] {
+    aspect-ratio: 1;
+  }
+  
+  [id^="avatar-"] img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Improve text rendering in fallback avatars */
+  [id^="avatar-"] div {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Add subtle shadow for better visual hierarchy */
+  [id^="avatar-"] {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Dark mode adjustments */
+  @media (prefers-color-scheme: dark) {
+    [id^="avatar-"] {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
+</style>

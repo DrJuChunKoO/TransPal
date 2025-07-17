@@ -1,28 +1,50 @@
-export interface Message {
+// Speech content item structure
+export interface SpeechContentItem {
   id: string;
   speaker: string;
-  content: string;
-  timestamp?: string;
-  translation?: string;
+  text: string;
+  type: 'speech' | 'divider' | 'markdown';
+  start?: number;
+  end?: number;
 }
 
-export interface Speech {
-  id: string;
-  title: string;
+// Speech info structure
+export interface SpeechInfo {
+  name: string;
+  date: string;
+  time?: string;
+  description?: string;
+  filename: string;
+  slug: string;
+}
+
+// Complete speech detail structure
+export interface SpeechDetail {
+  version: string;
+  info: SpeechInfo;
+  content: SpeechContentItem[];
+}
+
+// Speech metadata for lists
+export interface SpeechMetadata {
+  name: string;
   date: string;
   filename: string;
-  description?: string;
-  participants: string[];
-  messages: Message[];
-  metadata?: {
-    duration?: number;
-    location?: string;
-    event?: string;
-  };
 }
 
-export interface Avatar {
+// Search data structure
+export interface SearchData {
   name: string;
-  image: string;
-  description?: string;
+  date: string;
+  filename: string;
+  contentSummary: {
+    id: string;
+    text: string;
+    speaker: string;
+  }[];
+}
+
+// Avatar map structure
+export interface AvatarMap {
+  [speakerName: string]: boolean;
 }

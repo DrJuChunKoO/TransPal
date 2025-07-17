@@ -1,0 +1,53 @@
+---
+export interface Props {
+  content: string;
+}
+
+const { content } = Astro.props;
+
+// Simple text processing to handle basic formatting
+function processText(text: string): string {
+  // Replace line breaks with <br> tags
+  let processed = text.replace(/\n/g, '<br>');
+  
+  // Handle basic markdown-like formatting
+  // Bold text: **text** or __text__
+  processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+  processed = processed.replace(/__(.*?)__/g, '<strong>$1</strong>');
+  
+  // Italic text: *text* or _text_
+  processed = processed.replace(/\*(.*?)\*/g, '<em>$1</em>');
+  processed = processed.replace(/_(.*?)_/g, '<em>$1</em>');
+  
+  // Code text: `text`
+  processed = processed.replace(/`(.*?)`/g, '<code class="bg-gray-100 dark:bg-gray-700 px-1 py-0.5 rounded text-sm">$1</code>');
+  
+  return processed;
+}
+
+const processedContent = processText(content);
+---
+
+<div class="prose prose-sm max-w-none dark:prose-invert">
+  <Fragment set:html={processedContent} />
+</div>
+
+<style>
+  .prose {
+    color: inherit;
+  }
+  
+  .prose strong {
+    color: inherit;
+    font-weight: 600;
+  }
+  
+  .prose em {
+    color: inherit;
+  }
+  
+  .prose code {
+    color: inherit;
+    font-size: 0.875em;
+  }
+</style>

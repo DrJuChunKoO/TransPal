@@ -4,12 +4,25 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "npm run generate-data && astro build",
+    "build:analyze": "npm run generate-data && astro build --verbose",
+    "build:production": "NODE_ENV=production npm run generate-data && astro build --config astro.config.production.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "generate-data": "node scripts/generate-data.mjs",
+    "check": "astro check",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf dist .astro node_modules/.astro",
+    "optimize": "npm run clean && npm run build:production",
+    "build:monitor": "node scripts/build-monitor.mjs",
+    "build:analyze-bundle": "npm run build && node scripts/optimize-build.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
@@ -17,5 +30,14 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitest/ui": "^3.2.4",
+    "happy-dom": "^18.0.1",
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
   }
 }

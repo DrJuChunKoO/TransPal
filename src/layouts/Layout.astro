@@ -1,34 +1,107 @@
 ---
 import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+
 export interface Props {
-  title: string;
+  title?: string;
+  description?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogUrl?: string;
+  ogType?: string;
+  ogImage?: string;
+  structuredData?: object;
 }
 
-const { title } = Astro.props;
+const { 
+  title = "TransPal", 
+  description = "會議記錄網站",
+  ogTitle,
+  ogDescription,
+  ogUrl,
+  ogType = "website",
+  ogImage,
+  structuredData
+} = Astro.props;
+
+// Generate canonical URL if not provided
+const canonicalUrl = ogUrl || new URL(Astro.url.pathname, Astro.site).href;
+
+// Default Open Graph image
+const defaultOgImage = new URL('/favicon.svg', Astro.site).href;
+const finalOgImage = ogImage || defaultOgImage;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="TransPal - 政治人物演講翻譯平台" />
+    <meta charset="utf-8" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1C1C1C" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Favicon and app icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- SEO meta tags -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="TransPal" />
+    <meta name="keywords" content="會議記錄, 逐字稿, 政府會議, 公開透明, 會議紀錄" />
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={ogTitle || title} />
+    <meta property="og:description" content={ogDescription || description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={finalOgImage} />
+    <meta property="og:image:alt" content={ogTitle || title} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="TransPal" />
+    <meta property="og:locale" content="zh_TW" />
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={ogTitle || title} />
+    <meta name="twitter:description" content={ogDescription || description} />
+    <meta name="twitter:image" content={finalOgImage} />
+    <meta name="twitter:image:alt" content={ogTitle || title} />
+    <meta name="twitter:site" content="@TransPal" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl} />
+    
+    <!-- Structured Data -->
+    {structuredData && (
+      <script type="application/ld+json" is:inline set:html={JSON.stringify(structuredData)} />
+    )}
+    
     <title>{title}</title>
   </head>
-  <body>
-    <slot />
+  <body class="text-gray-950 dark:bg-[#1C1C1C] dark:text-gray-50 flex min-h-screen flex-col font-inter">
+    <!-- Skip to main content link for screen readers -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+      跳至主要內容
+    </a>
+    
+    <Nav />
+    <main id="main-content" class="flex-1" role="main">
+      <slot />
+    </main>
+    <Footer />
   </body>
 </html>
 
 <style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+  .font-inter {
+    font-family: 'Inter', system-ui, sans-serif;
   }
 </style>

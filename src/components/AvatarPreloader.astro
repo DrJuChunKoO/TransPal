@@ -1,0 +1,53 @@
+---
+import { getAvailableAvatarNames } from '../utils/speeches';
+
+export interface Props {
+  speakerNames?: string[];
+  preloadAll?: boolean;
+}
+
+const { speakerNames = [], preloadAll = false } = Astro.props;
+
+// Get avatar names to preload
+let avatarsToPreload: string[] = [];
+
+if (preloadAll) {
+  avatarsToPreload = await getAvailableAvatarNames();
+} else if (speakerNames.length > 0) {
+  avatarsToPreload = speakerNames;
+}
+---
+
+{avatarsToPreload.length > 0 && (
+  <script define:vars={{ avatarsToPreload }}>
+    // Preload avatar images for better performance
+    document.addEventListener('DOMContentLoaded', function() {
+      const preloadAvatars = async () => {
+        const { getAvatarPath } = await import('/src/utils/speeches.ts');
+        
+        for (const speakerName of avatarsToPreload) {
+          try {
+            const avatarPath = await getAvatarPath(speakerName);
+            if (avatarPath) {
+              const link = document.createElement('link');
+              link.rel = 'preload';
+              link.as = 'image';
+              link.href = avatarPath;
+              link.crossOrigin = 'anonymous';
+              document.head.appendChild(link);
+            }
+          } catch (error) {
+            console.warn(`Failed to preload avatar for ${speakerName}:`, error);
+          }
+        }
+      };
+      
+      // Use requestIdleCallback if available, otherwise setTimeout
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(preloadAvatars);
+      } else {
+        setTimeout(preloadAvatars, 100);
+      }
+    });
+  </script>
+)}

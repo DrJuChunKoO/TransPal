@@ -23,3 +23,5 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 TransPal
+src/utils/generated
+public/search-data.json

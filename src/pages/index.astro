@@ -1,10 +1,55 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import SpeechesList from '../components/SpeechesList.astro';
 import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "TransPal - 會議記錄網站";
+const pageDescription = "瀏覽所有會議記錄和逐字稿內容，搜尋特定發言和討論內容";
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+
+// Enhanced structured data for the homepage
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "TransPal",
+  "alternateName": "TransPal 會議記錄網站",
+  "description": pageDescription,
+  "url": canonicalUrl,
+  "inLanguage": "zh-TW",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TransPal",
+    "url": canonicalUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": new URL('/favicon.svg', Astro.site).href
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": `${canonicalUrl}?q={search_term_string}`
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "會議記錄列表",
+    "description": "政府會議逐字稿記錄集合",
+    "numberOfItems": "多個會議記錄"
+  }
+};
 ---
 
-<Layout title="TransPal - 政治人物演講翻譯平台">
-  <main class="min-h-screen bg-gray-50">
-    <Welcome />
+<Layout 
+  title={pageTitle} 
+  description={pageDescription}
+  ogTitle={pageTitle}
+  ogDescription={pageDescription}
+  ogUrl={canonicalUrl}
+  structuredData={structuredData}
+>
+  <main>
+    <SpeechesList />
   </main>
 </Layout>
