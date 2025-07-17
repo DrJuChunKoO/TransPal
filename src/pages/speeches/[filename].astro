@@ -50,10 +50,6 @@ try {
 
   speech = speechResult;
 
-  // Add additional debug logging
-  console.log("Speech info:", speech.info);
-  console.log("Speech content length:", speech.content?.length || 0);
-
   // Validate speech data structure with detailed logging
   if (!speech.info) {
     console.error("Speech missing info object for:", filename);
@@ -70,7 +66,7 @@ try {
       "Speech content is not an array for:",
       filename,
       "type:",
-      typeof speech.content,
+      typeof speech.content
     );
     return Astro.redirect("/404");
   }
@@ -79,7 +75,7 @@ try {
   if (!speech.info.name || typeof speech.info.name !== "string") {
     console.warn(
       "Speech missing name field, using filename as fallback:",
-      filename,
+      filename
     );
     speech.info.name = filename;
   }
@@ -87,7 +83,7 @@ try {
   if (!speech.info.date || typeof speech.info.date !== "string") {
     console.warn(
       "Speech missing date field, using current date as fallback:",
-      filename,
+      filename
     );
     speech.info.date = new Date().toISOString();
   }
@@ -105,7 +101,7 @@ try {
       "Speech has no valid content items:",
       filename,
       "total items:",
-      speech.content.length,
+      speech.content.length
     );
     return Astro.redirect("/404");
   }
@@ -113,7 +109,7 @@ try {
   // Update speech with filtered content if needed
   if (validContent.length !== speech.content.length) {
     console.warn(
-      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`,
+      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`
     );
     speech.content = validContent;
   }
