@@ -31,11 +31,7 @@ if (sanitizedFilename !== filename) {
 let speech: SpeechDetail | null = null;
 
 try {
-  // Add debug logging to help diagnose the issue
-  console.log("Fetching speech data for:", filename);
-
   const speechResult = await getSpeech(filename);
-  console.log("Speech result type:", typeof speechResult);
 
   if (!speechResult) {
     console.warn("Speech not found:", filename);

@@ -1,27 +1,27 @@
 ---
-import { processMarkdown } from '../utils/markdownCache';
+import { processMarkdown } from "../utils/markdownCache";
 
 export interface Props {
   content: string;
   className?: string;
-  size?: 'sm' | 'base' | 'lg';
+  size?: "sm" | "base" | "lg";
   cacheKey?: string;
 }
 
-const { content, className = '', size = 'base', cacheKey } = Astro.props;
+const { content, className = "", size = "base", cacheKey } = Astro.props;
 
 // Process markdown with caching
 const processedContent = processMarkdown(content, cacheKey);
 
 // Size classes for responsive design
 const sizeClasses = {
-  sm: 'prose-sm',
-  base: 'prose',
-  lg: 'prose-lg'
+  sm: "prose-sm",
+  base: "prose",
+  lg: "prose-lg",
 };
 ---
 
-<div 
-  class={`${sizeClasses[size]} prose-gray dark:prose-invert max-w-none ${className}`}
+<div
+  class={`${sizeClasses[size]} prose prose-gray dark:prose-invert max-w-none ${className}`}
   set:html={processedContent}
 />
