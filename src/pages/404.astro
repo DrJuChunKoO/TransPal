@@ -1,19 +1,21 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-const pageTitle = '頁面未找到 - TransPal';
-const pageDescription = '抱歉，您要找的頁面不存在。請檢查網址是否正確，或返回首頁瀏覽其他內容。';
+const pageTitle = "頁面未找到 - TransPal";
+const pageDescription =
+  "抱歉，您要找的頁面不存在。請檢查網址是否正確，或返回首頁瀏覽其他內容。";
 
 // Check if this is a speech-related 404 based on URL
 const url = Astro.url.pathname;
-const isSpeechNotFound = url.startsWith('/speeches/');
-const isMessageNotFound = url.includes('/speeches/') && url.split('/').length >= 4;
+const isSpeechNotFound = url.startsWith("/speeches/");
+const isMessageNotFound =
+  url.includes("/speeches/") && url.split("/").length >= 4;
 
 // Extract filename and messageId if available for better error messaging
-let filename = '';
-let messageId = '';
+let filename = "";
+let messageId = "";
 if (isSpeechNotFound) {
-  const pathParts = url.split('/').filter(part => part);
+  const pathParts = url.split("/").filter((part) => part);
   if (pathParts.length >= 2) {
     filename = decodeURIComponent(pathParts[1]);
   }
@@ -23,20 +25,20 @@ if (isSpeechNotFound) {
 }
 
 // Customize error message based on context
-let contextualTitle = '頁面未找到';
-let contextualMessage = '抱歉，您要找的頁面不存在。';
+let contextualTitle = "頁面未找到";
+let contextualMessage = "抱歉，您要找的頁面不存在。";
 
 if (isMessageNotFound && filename && messageId) {
-  contextualTitle = '訊息未找到';
+  contextualTitle = "訊息未找到";
   contextualMessage = `抱歉，在會議「${filename}」中找不到指定的訊息。該訊息可能已被移除或網址有誤。`;
 } else if (isSpeechNotFound && filename) {
-  contextualTitle = '會議記錄未找到';
+  contextualTitle = "會議記錄未找到";
   contextualMessage = `抱歉，找不到會議記錄「${filename}」。該會議可能尚未發布或網址有誤。`;
 }
 ---
 
-<Layout 
-  title={pageTitle} 
+<Layout
+  title={pageTitle}
   description={pageDescription}
   ogTitle="頁面未找到"
   ogDescription={pageDescription}
@@ -46,40 +48,72 @@ if (isMessageNotFound && filename && messageId) {
     <div class="text-center max-w-md mx-auto">
       <!-- 404 Icon -->
       <div class="mb-6 sm:mb-8">
-        <div class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 dark:bg-gray-800 rounded-full">
-          <svg class="w-10 h-10 sm:w-12 sm:h-12 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.691-2.709M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+        <div
+          class="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-gray-100 dark:bg-gray-800 rounded-full"
+        >
+          <svg
+            class="w-10 h-10 sm:w-12 sm:h-12 text-gray-400 dark:text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.291-1.007-5.691-2.709M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+            ></path>
           </svg>
         </div>
       </div>
 
       <!-- Error Message -->
-      <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4">
+      <h1
+        class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4"
+      >
         404
       </h1>
-      
-      <h2 class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-3 sm:mb-4">
+
+      <h2
+        class="text-lg sm:text-xl font-semibold text-gray-700 dark:text-gray-300 mb-3 sm:mb-4"
+      >
         {contextualTitle}
       </h2>
-      
-      <p class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 leading-relaxed">
+
+      <p
+        class="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 leading-relaxed"
+      >
         {contextualMessage}
-        {!isSpeechNotFound && (
-          <>
-            <br>
-            可能是網址輸入錯誤，或是該頁面已被移除。
-          </>
-        )}
+        {
+          !isSpeechNotFound && (
+            <>
+              <br />
+              可能是網址輸入錯誤，或是該頁面已被移除。
+            </>
+          )
+        }
       </p>
 
       <!-- Action Buttons -->
-      <div class="space-y-3 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
-        <a 
-          href="/" 
+      <div
+        class="space-y-3 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center"
+      >
+        <a
+          href="/"
           class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 touch-manipulation"
         >
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+          <svg
+            class="w-4 h-4 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
           </svg>
           返回首頁
         </a>
