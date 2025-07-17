@@ -1,0 +1,217 @@
+---
+export interface Props {
+  size?: 'sm' | 'base' | 'lg';
+  className?: string;
+}
+
+const { size = 'base', className = '' } = Astro.props;
+
+// Size classes for responsive prose styling
+const sizeClasses = {
+  sm: 'prose-sm',
+  base: 'prose',
+  lg: 'prose-lg'
+};
+
+// Base prose classes with dark mode support
+const baseClasses = `${sizeClasses[size]} prose-gray dark:prose-invert max-w-none`;
+
+// Custom prose styling for TransPal
+const customClasses = 'prose-transpal';
+
+const combinedClasses = `${baseClasses} ${customClasses} ${className}`.trim();
+---
+
+<div class={combinedClasses}>
+  <slot />
+</div>
+
+<style>
+  /* Custom prose styling for TransPal */
+  :global(.prose-transpal) {
+    /* Ensure consistent text colors */
+    --tw-prose-body: #374151; /* gray-700 */
+    --tw-prose-headings: #111827; /* gray-900 */
+    --tw-prose-links: #2563eb; /* blue-600 */
+    --tw-prose-bold: #111827; /* gray-900 */
+    --tw-prose-counters: #6b7280; /* gray-500 */
+    --tw-prose-bullets: #d1d5db; /* gray-300 */
+    --tw-prose-hr: #e5e7eb; /* gray-200 */
+    --tw-prose-quotes: #111827; /* gray-900 */
+    --tw-prose-quote-borders: #e5e7eb; /* gray-200 */
+    --tw-prose-captions: #6b7280; /* gray-500 */
+    --tw-prose-code: #111827; /* gray-900 */
+    --tw-prose-pre-code: #e5e7eb; /* gray-200 */
+    --tw-prose-pre-bg: #f9fafb; /* gray-50 */
+    --tw-prose-th-borders: #d1d5db; /* gray-300 */
+    --tw-prose-td-borders: #e5e7eb; /* gray-200 */
+  }
+
+  /* Dark mode colors */
+  :global(.dark .prose-transpal) {
+    --tw-prose-body: #d1d5db; /* gray-300 */
+    --tw-prose-headings: #f3f4f6; /* gray-100 */
+    --tw-prose-links: #60a5fa; /* blue-400 */
+    --tw-prose-bold: #f3f4f6; /* gray-100 */
+    --tw-prose-counters: #9ca3af; /* gray-400 */
+    --tw-prose-bullets: #4b5563; /* gray-600 */
+    --tw-prose-hr: #374151; /* gray-700 */
+    --tw-prose-quotes: #f3f4f6; /* gray-100 */
+    --tw-prose-quote-borders: #374151; /* gray-700 */
+    --tw-prose-captions: #9ca3af; /* gray-400 */
+    --tw-prose-code: #f3f4f6; /* gray-100 */
+    --tw-prose-pre-code: #d1d5db; /* gray-300 */
+    --tw-prose-pre-bg: #111827; /* gray-900 */
+    --tw-prose-th-borders: #4b5563; /* gray-600 */
+    --tw-prose-td-borders: #374151; /* gray-700 */
+  }
+
+  /* Enhanced code styling */
+  :global(.prose-transpal code) {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    padding: 0.125rem 0.25rem; /* px-1 py-0.5 */
+    border-radius: 0.25rem; /* rounded */
+    font-size: 0.875rem; /* text-sm */
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* font-mono */
+    color: var(--tw-prose-code);
+  }
+
+  :global(.dark .prose-transpal code) {
+    background-color: #1f2937; /* dark:bg-gray-800 */
+  }
+
+  :global(.prose-transpal pre) {
+    border-width: 1px; /* border */
+    border-color: #e5e7eb; /* border-gray-200 */
+    border-radius: 0.5rem; /* rounded-lg */
+    background-color: var(--tw-prose-pre-bg);
+  }
+
+  :global(.dark .prose-transpal pre) {
+    border-color: #374151; /* dark:border-gray-700 */
+  }
+
+  :global(.prose-transpal pre code) {
+    background-color: transparent; /* bg-transparent */
+    padding: 0; /* p-0 */
+    color: var(--tw-prose-pre-code);
+  }
+
+  /* Enhanced table styling */
+  :global(.prose-transpal table) {
+    border-collapse: collapse; /* border-collapse */
+    border-width: 1px; /* border */
+    border-color: #e5e7eb; /* border-gray-200 */
+  }
+
+  :global(.dark .prose-transpal table) {
+    border-color: #374151; /* dark:border-gray-700 */
+  }
+
+  :global(.prose-transpal th),
+  :global(.prose-transpal td) {
+    border-width: 1px; /* border */
+    border-color: #e5e7eb; /* border-gray-200 */
+    padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  }
+
+  :global(.dark .prose-transpal th),
+  :global(.dark .prose-transpal td) {
+    border-color: #374151; /* dark:border-gray-700 */
+  }
+
+  :global(.prose-transpal th) {
+    background-color: #f9fafb; /* bg-gray-50 */
+    font-weight: 600; /* font-semibold */
+  }
+
+  :global(.dark .prose-transpal th) {
+    background-color: #1f2937; /* dark:bg-gray-800 */
+  }
+
+  /* Enhanced blockquote styling */
+  :global(.prose-transpal blockquote) {
+    border-left-width: 4px; /* border-l-4 */
+    border-color: #d1d5db; /* border-gray-300 */
+    padding-left: 1rem; /* pl-4 */
+    font-style: italic; /* italic */
+  }
+
+  :global(.dark .prose-transpal blockquote) {
+    border-color: #4b5563; /* dark:border-gray-600 */
+  }
+
+  /* Link hover effects */
+  :global(.prose-transpal a:hover) {
+    text-decoration: underline; /* underline */
+    text-decoration-thickness: 2px; /* decoration-2 */
+    text-underline-offset: 2px; /* underline-offset-2 */
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    :global(.prose-transpal) {
+      font-size: 0.875rem; /* text-sm */
+      line-height: 1.5; /* tighter line height for mobile */
+      padding: 0 0.5rem; /* add side padding on small screens */
+    }
+    
+    :global(.prose-transpal h1) {
+      font-size: 1.25rem; /* text-xl */
+      margin-top: 1.5em;
+      margin-bottom: 0.75em;
+    }
+    
+    :global(.prose-transpal h2) {
+      font-size: 1.125rem; /* text-lg */
+      margin-top: 1.25em;
+      margin-bottom: 0.625em;
+    }
+    
+    :global(.prose-transpal h3) {
+      font-size: 1rem; /* text-base */
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+    }
+    
+    :global(.prose-transpal img) {
+      margin: 1rem auto; /* center images on mobile */
+      max-width: 100%;
+      height: auto;
+    }
+    
+    :global(.prose-transpal pre) {
+      padding: 0.75rem; /* smaller padding on code blocks */
+      margin: 1rem -0.5rem; /* extend code blocks to edges */
+      border-radius: 0.25rem;
+      overflow-x: auto; /* ensure code doesn't break layout */
+      -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    }
+    
+    :global(.prose-transpal table) {
+      display: block;
+      overflow-x: auto; /* make tables scrollable on mobile */
+      -webkit-overflow-scrolling: touch;
+    }
+    
+    :global(.prose-transpal blockquote) {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  
+  /* Medium screens */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    :global(.prose-transpal) {
+      font-size: 0.9375rem; /* between sm and base */
+    }
+    
+    :global(.prose-transpal pre) {
+      overflow-x: auto;
+    }
+    
+    :global(.prose-transpal table) {
+      overflow-x: auto;
+    }
+  }
+</style>

@@ -123,7 +123,12 @@ function formatDate(dateString: string): string {
                   ? 'text-yellow-800 dark:text-yellow-200' 
                   : 'text-gray-700 dark:text-gray-300'
               }`}>
-                <MessageText content={message.text} />
+                <MessageText 
+                  content={message.text} 
+                  type="auto" 
+                  size="sm"
+                  className={message.id === targetMessage.id ? 'prose-yellow' : ''}
+                />
               </div>
             </div>
           </div>

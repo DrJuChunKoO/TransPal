@@ -133,15 +133,7 @@ try {
 
 const { speech, targetMessage, contextMessages } = messageData;
 
-// Format date for display
-function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  return date.toLocaleDateString('zh-TW', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-}
+// Format date for display is handled in MessageShare component
 
 // Generate page title and description for SEO
 const pageTitle = `${targetMessage.speaker} 在 ${speech.info.name} 中的發言 - TransPal`;

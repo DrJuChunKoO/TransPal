@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SpeechContent from "../../components/SpeechContent.astro";
+import MarkdownContent from "../../components/MarkdownContent.astro";
 import ShareButton from "../../components/ShareButton";
 import { getSpeech, getSpeeches } from "../../utils/speeches";
 import type { SpeechDetail } from "../../types/speech";
@@ -305,7 +306,11 @@ const structuredData = {
       {
         speech.info.description && (
           <div class="mt-3 sm:mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-            <p>{speech.info.description}</p>
+            <MarkdownContent
+              content={speech.info.description}
+              size="sm"
+              cacheKey={`speech-desc-${filename}`}
+            />
           </div>
         )
       }
