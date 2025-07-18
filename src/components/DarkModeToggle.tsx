@@ -8,30 +8,46 @@ export default function DarkModeToggle() {
     setMounted(true);
 
     // Check for saved theme preference or default to system preference
-    const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
+    try {
+      const savedTheme = localStorage.getItem("theme") as
+        | "light"
+        | "dark"
+        | null;
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
 
-    const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
-    setTheme(initialTheme);
+      const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
+      setTheme(initialTheme);
 
-    // Apply theme to document
-    if (initialTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+      // Apply theme to document
+      if (initialTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
 
-    // Update theme color meta tag on initial load
-    const themeColorMeta = document.querySelector(
-      'meta[name="theme-color"]#theme-color-dynamic'
-    );
-    if (themeColorMeta) {
-      themeColorMeta.setAttribute(
-        "content",
-        initialTheme === "dark" ? "#1C1C1C" : "#ffffff"
+      // Update theme color meta tag on initial load
+      const themeColorMeta = document.querySelector(
+        'meta[name="theme-color"]#theme-color-dynamic'
       );
+      if (themeColorMeta) {
+        themeColorMeta.setAttribute(
+          "content",
+          initialTheme === "dark" ? "#1C1C1C" : "#ffffff"
+        );
+      }
+    } catch (error) {
+      // Fallback for test environments where localStorage might not be available
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const initialTheme = prefersDark ? "dark" : "light";
+      setTheme(initialTheme);
+
+      if (initialTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
     }
   }, []);
 
