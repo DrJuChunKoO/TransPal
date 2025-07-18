@@ -74,11 +74,7 @@ async function generateSearchData() {
     searchData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // 寫入搜尋資料檔案
-    await fs.writeFile(
-      outputPath,
-      JSON.stringify(searchData, null, 2),
-      "utf-8"
-    );
+    await fs.writeFile(outputPath, JSON.stringify(searchData), "utf-8");
 
     console.log(`🎉 搜尋資料產生完成！共 ${searchData.length} 筆資料`);
     console.log(`📄 檔案已儲存至: ${outputPath}`);
