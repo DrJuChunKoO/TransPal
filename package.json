@@ -4,21 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
-    "build:analyze": "astro build --verbose",
-    "build:production": "NODE_ENV=production astro build --config astro.config.production.mjs",
+    "build": "pnpm run generate-data && astro build",
+    "build:production": "pnpm run generate-data && NODE_ENV=production astro build --config astro.config.production.mjs",
     "preview": "astro preview",
-    "astro": "astro",
     "check": "astro check",
     "test": "vitest",
-    "test:run": "vitest run",
-    "test:ui": "vitest --ui",
-    "test:coverage": "vitest run --coverage",
-    "test:markdown": "node scripts/test-markdown.mjs",
     "clean": "rm -rf dist .astro node_modules/.astro",
-    "optimize": "npm run clean && npm run build:production",
-    "build:monitor": "node scripts/build-monitor.mjs",
-    "build:analyze-bundle": "npm run build && node scripts/optimize-build.mjs"
+    "generate-data": "node scripts/generate-data.mjs",
+    "optimize": "pnpm run clean && pnpm run build:production"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
