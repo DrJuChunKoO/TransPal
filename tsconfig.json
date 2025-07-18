@@ -1,5 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "src/**/*", "astro.config.mjs"],
-  "exclude": ["dist", "TransPal", "node_modules"]
+  "include": [
+    ".astro/types.d.ts",
+    "src/**/*",
+    "astro.config.mjs",
+    "vitest.config.ts"
+  ],
+  "exclude": [
+    "dist",
+    "TransPal",
+    "node_modules",
+    ".git",
+    ".cache"
+  ]
 }
