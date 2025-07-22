@@ -176,8 +176,8 @@ const structuredData = {
     "@type": "WebPage",
     "@id": canonicalUrl,
   },
-  articleSection: "政府會議記錄",
-  keywords: ["會議記錄", "逐字稿", "政府會議", "公開透明"],
+  articleSection: "對話",
+  keywords: ["對話", "逐字稿", "公開透明"],
   about: {
     "@type": "Event",
     name: speech.info.name,
@@ -216,7 +216,7 @@ if (speech.info.time) {
       <a
         href="/"
         class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors touch-manipulation min-h-[44px] px-2 -mx-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded"
-        aria-label="返回會議列表"
+        aria-label="返回對話列表"
       >
         <svg
           class="w-4 h-4 mr-2"
@@ -231,7 +231,7 @@ if (speech.info.time) {
             stroke-width="2"
             d="M15 19l-7-7 7-7"></path>
         </svg>
-        返回會議列表
+        返回對話列表
       </a>
     </nav>
 
@@ -248,7 +248,7 @@ if (speech.info.time) {
       <div
         class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600 dark:text-gray-400"
         role="group"
-        aria-label="會議資訊"
+        aria-label="對話資訊"
       >
         <div class="flex items-center">
           <svg
@@ -299,7 +299,7 @@ if (speech.info.time) {
 
     <!-- Speech content -->
     <section aria-labelledby="speech-content-heading">
-      <h2 id="speech-content-heading" class="sr-only">會議內容</h2>
+      <h2 id="speech-content-heading" class="sr-only">對話內容</h2>
       <SpeechContent speech={speech} filename={filename} />
     </section>
 
@@ -308,7 +308,7 @@ if (speech.info.time) {
       class="mt-6 sm:mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6"
       aria-labelledby="share-heading"
     >
-      <h2 id="share-heading" class="sr-only">分享此會議</h2>
+      <h2 id="share-heading" class="sr-only">分享此對話</h2>
       <ShareButton
         client:load
         url={canonicalUrl}

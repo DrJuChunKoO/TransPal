@@ -27,14 +27,14 @@ function formatDate(dateString: string): string {
 <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
   <!-- Back to speech link -->
   <div class="mb-4 sm:mb-6">
-    <a 
+    <a
       href={`/speeches/${filename}`}
       class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors touch-manipulation min-h-[44px] px-2 -mx-2"
     >
       <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
       </svg>
-      返回完整會議記錄
+      返回完整對話
     </a>
   </div>
 
@@ -43,7 +43,7 @@ function formatDate(dateString: string): string {
     <h1 class="text-xl sm:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 sm:mb-3 leading-tight">
       {speech.info.name}
     </h1>
-    
+
     <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-4">
       <div class="flex items-center">
         <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -52,7 +52,7 @@ function formatDate(dateString: string): string {
         </svg>
         {formatDate(speech.info.date)}
       </div>
-      
+
       {speech.info.time && (
         <div class="flex items-center">
           <svg class="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,13 +84,13 @@ function formatDate(dateString: string): string {
       <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">
         對話內容
       </h2>
-      
+
       <div class="space-y-3 sm:space-y-4">
         {contextMessages.map((message) => (
-          <div 
+          <div
             class={`flex gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg transition-colors ${
-              message.id === targetMessage.id 
-                ? 'bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-200 dark:border-yellow-800' 
+              message.id === targetMessage.id
+                ? 'bg-yellow-50 dark:bg-yellow-900/20 border-2 border-yellow-200 dark:border-yellow-800'
                 : 'hover:bg-gray-50 dark:hover:bg-gray-700/50'
             }`}
           >
@@ -104,12 +104,12 @@ function formatDate(dateString: string): string {
               <!-- Speaker and time -->
               <div class="flex flex-wrap items-center gap-2 mb-2">
                 <h3 class={`font-semibold text-sm sm:text-base ${
-                  message.id === targetMessage.id 
-                    ? 'text-yellow-900 dark:text-yellow-100' 
+                  message.id === targetMessage.id
+                    ? 'text-yellow-900 dark:text-yellow-100'
                     : 'text-gray-900 dark:text-gray-100'
                 }`}>
                   {message.speaker}
-                </h3> 
+                </h3>
                 {message.id === targetMessage.id && (
                   <span class="text-xs text-yellow-700 dark:text-yellow-300 bg-yellow-100 dark:bg-yellow-800 px-2 py-1 rounded font-medium">
                     重點發言
@@ -119,13 +119,13 @@ function formatDate(dateString: string): string {
 
               <!-- Message text -->
               <div class={`text-sm sm:text-base leading-relaxed ${
-                message.id === targetMessage.id 
-                  ? 'text-yellow-800 dark:text-yellow-200' 
+                message.id === targetMessage.id
+                  ? 'text-yellow-800 dark:text-yellow-200'
                   : 'text-gray-700 dark:text-gray-300'
               }`}>
-                <MessageText 
-                  content={message.text} 
-                  type="auto" 
+                <MessageText
+                  content={message.text}
+                  type="auto"
                   size="sm"
                   className={message.id === targetMessage.id ? 'prose-yellow' : ''}
                 />
@@ -139,7 +139,7 @@ function formatDate(dateString: string): string {
 
   <!-- Share actions -->
   <div class="mt-6 sm:mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6">
-    <ShareButton 
+    <ShareButton
       client:load
       url={Astro.url.href}
       title={`${targetMessage.speaker} 在 ${speech.info.name} 中的發言`}

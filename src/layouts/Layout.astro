@@ -17,7 +17,7 @@ export interface Props {
 const { url, site } = Astro;
 const {
   title = "TransPal",
-  description = "會議記錄網站",
+  description = "對話逐字稿網站",
   ogTitle,
   ogDescription,
   ogUrl,
@@ -86,10 +86,7 @@ const openGraphImageUrl = getImagePath({ url, site });
     <!-- SEO meta tags -->
     <meta name="robots" content="index, follow" />
     <meta name="author" content="TransPal" />
-    <meta
-      name="keywords"
-      content="會議記錄, 逐字稿, 政府會議, 公開透明, 會議紀錄"
-    />
+    <meta name="keywords" content="對話, 逐字稿, 公開透明, 對話紀錄" />
 
     <!-- Open Graph meta tags -->
     <meta property="og:type" content={ogType} />

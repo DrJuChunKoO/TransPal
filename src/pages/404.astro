@@ -30,10 +30,10 @@ let contextualMessage = "抱歉，您要找的頁面不存在。";
 
 if (isMessageNotFound && filename && messageId) {
   contextualTitle = "訊息未找到";
-  contextualMessage = `抱歉，在會議「${filename}」中找不到指定的訊息。該訊息可能已被移除或網址有誤。`;
+  contextualMessage = `抱歉，在對話「${filename}」中找不到指定的訊息。該訊息可能已被移除或網址有誤。`;
 } else if (isSpeechNotFound && filename) {
-  contextualTitle = "會議記錄未找到";
-  contextualMessage = `抱歉，找不到會議記錄「${filename}」。該會議可能尚未發布或網址有誤。`;
+  contextualTitle = "對話未找到";
+  contextualMessage = `抱歉，找不到對話「${filename}」。該對話可能尚未發布或網址有誤。`;
 }
 ---
 

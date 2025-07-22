@@ -1,33 +1,34 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import ProseWrapper from '../components/ProseWrapper.astro';
+import Layout from "../layouts/Layout.astro";
+import ProseWrapper from "../components/ProseWrapper.astro";
 
 const pageTitle = "關於 - TransPal";
-const pageDescription = "TransPal 是一個會議記錄網站，透過文字記錄會議內容，並且提供搜尋功能，讓使用者可以快速找到自己需要的內容。";
+const pageDescription =
+  "TransPal 是對話逐字稿網站，透過文字記錄對話內容，並且提供搜尋功能，讓使用者可以快速找到自己需要的內容。";
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
 // Structured data for the about page
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "name": pageTitle,
-  "description": pageDescription,
-  "url": canonicalUrl,
-  "inLanguage": "zh-TW",
-  "publisher": {
+  name: pageTitle,
+  description: pageDescription,
+  url: canonicalUrl,
+  inLanguage: "zh-TW",
+  publisher: {
     "@type": "Organization",
-    "name": "TransPal",
-    "url": new URL('/', Astro.site).href,
-    "logo": {
+    name: "TransPal",
+    url: new URL("/", Astro.site).href,
+    logo: {
       "@type": "ImageObject",
-      "url": new URL('/favicon.svg', Astro.site).href
-    }
-  }
+      url: new URL("/favicon.svg", Astro.site).href,
+    },
+  },
 };
 ---
 
-<Layout 
-  title={pageTitle} 
+<Layout
+  title={pageTitle}
   description={pageDescription}
   ogTitle={pageTitle}
   ogDescription={pageDescription}
@@ -37,10 +38,18 @@ const structuredData = {
   <div class="container mx-auto px-4 py-8 max-w-4xl">
     <ProseWrapper size="lg">
       <h1>關於</h1>
-      <p>TransPal 是一個會議記錄網站，透過文字記錄會議內容，並且提供搜尋功能，讓使用者可以快速找到自己需要的內容。</p>
-      
+      <p>
+        TransPal
+        是對話逐字稿網站，透過文字記錄對話內容，並且提供搜尋功能，讓使用者可以快速找到自己需要的內容。
+      </p>
+
       <h2>原始碼</h2>
-      <p>你可以在 <a href="https://github.com/DrJuChunKoO/TransPal" target="_blank">GitHub</a> 中，找到這個網站的原始碼和相關部署說明。</p>
+      <p>
+        你可以在 <a
+          href="https://github.com/DrJuChunKoO/TransPal"
+          target="_blank">GitHub</a
+        > 中，找到這個網站的原始碼和相關部署說明。
+      </p>
     </ProseWrapper>
   </div>
 </Layout>

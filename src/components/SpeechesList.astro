@@ -1,6 +1,6 @@
 ---
-import type { SpeechMetadata } from '../types/speech';
-import { getSpeeches } from '../utils/speeches';
+import type { SpeechMetadata } from "../types/speech";
+import { getSpeeches } from "../utils/speeches";
 
 // Get all speeches and sort by date (newest first)
 const speeches = await getSpeeches();
@@ -13,68 +13,76 @@ const sortedSpeeches = speeches.sort((a, b) => {
 // Format date for display
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
-  return date.toLocaleDateString('zh-TW', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+  return date.toLocaleDateString("zh-TW", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 }
 ---
 
-<section class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8" aria-labelledby="speeches-heading">
-  <h1 id="speeches-heading" class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 sm:mb-8">
-    會議記錄
+<section
+  class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8"
+  aria-labelledby="speeches-heading"
+>
+  <h1
+    id="speeches-heading"
+    class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 sm:mb-8"
+  >
+    對話
   </h1>
-  
-  {sortedSpeeches.length === 0 ? (
-    <div class="text-center py-12" role="status" aria-live="polite">
-      <div class="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
-        目前沒有會議記錄
+
+  {
+    sortedSpeeches.length === 0 ? (
+      <div class="text-center py-12" role="status" aria-live="polite">
+        <div class="text-gray-500 dark:text-gray-400 text-base sm:text-lg">
+          目前沒有對話
+        </div>
       </div>
-    </div>
-  ) : (
-    <nav aria-label="會議記錄列表">
-      <ul class="space-y-3 sm:space-y-4" role="list">
-        {sortedSpeeches.map((speech) => (
-          <li>
-            <a 
-              href={`/speeches/${speech.filename}/`}
-              class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-200 p-4 sm:p-6 touch-manipulation active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-              aria-describedby={`speech-date-${speech.filename}`}
-            >
-              <article class="flex items-center justify-between gap-3">
-                <div class="flex-1 min-w-0">
-                  <h2 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 line-clamp-2">
-                    {speech.name}
-                  </h2>
-                  <time 
-                    id={`speech-date-${speech.filename}`}
-                    datetime={speech.date}
-                    class="text-sm text-gray-600 dark:text-gray-400"
-                  >
-                    {formatDate(speech.date)}
-                  </time>
-                </div>
-                <div class="flex-shrink-0" aria-hidden="true">
-                  <svg 
-                    class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 dark:text-gray-500" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      stroke-linecap="round" 
-                      stroke-linejoin="round" 
-                      stroke-width="2" 
-                      d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                    />
-                  </svg>
-                </div>
-              </article>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
-  )}
+    ) : (
+      <nav aria-label="對話列表">
+        <ul class="space-y-3 sm:space-y-4" role="list">
+          {sortedSpeeches.map((speech) => (
+            <li>
+              <a
+                href={`/speeches/${speech.filename}/`}
+                class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-200 p-4 sm:p-6 touch-manipulation active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                aria-describedby={`speech-date-${speech.filename}`}
+              >
+                <article class="flex items-center justify-between gap-3">
+                  <div class="flex-1 min-w-0">
+                    <h2 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 line-clamp-2">
+                      {speech.name}
+                    </h2>
+                    <time
+                      id={`speech-date-${speech.filename}`}
+                      datetime={speech.date}
+                      class="text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      {formatDate(speech.date)}
+                    </time>
+                  </div>
+                  <div class="flex-shrink-0" aria-hidden="true">
+                    <svg
+                      class="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 dark:text-gray-500"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                      />
+                    </svg>
+                  </div>
+                </article>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    )
+  }
 </section>
