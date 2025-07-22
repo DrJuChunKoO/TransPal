@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/react": "^4.3.0",
-    "@openfonts/noto-sans-tc_chinese-traditional": "^1.44.8",
+    "@expo-google-fonts/noto-sans-tc": "^0.4.1",
     "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^19.1.8",

@@ -14,10 +14,11 @@ export default async function OGImageTemplate({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        background: "linear-gradient(135deg, #1e293b 0%, #334155 100%)",
+        backgroundColor: "#182848",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         color: "white",
-        padding: "60px",
-        fontFamily: "system-ui, -apple-system, sans-serif",
+        padding: "80px",
       }}
     >
       <div
@@ -30,13 +31,25 @@ export default async function OGImageTemplate({
           maxWidth: "1000px",
         }}
       >
+        <div
+          style={{
+            color: "#a0aec0",
+            textAlign: "center",
+            fontSize: "30px",
+            opacity: 0.85,
+            marginBottom: "10px",
+          }}
+        >
+          TransPal
+        </div>
         <h1
           style={{
-            fontSize: "64px",
+            fontSize: "72px",
             fontWeight: "bold",
             marginBottom: "24px",
-            lineHeight: "1.2",
+            lineHeight: "1.1",
             color: "#f8fafc",
+            textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
           }}
         >
           {title}
@@ -45,29 +58,17 @@ export default async function OGImageTemplate({
         {description && (
           <p
             style={{
-              fontSize: "32px",
+              fontSize: "36px",
               opacity: 0.9,
-              lineHeight: "1.4",
-              color: "#cbd5e1",
+              lineHeight: "1.3",
+              color: "#a0aec0",
               maxWidth: "800px",
+              marginBottom: "30px",
             }}
           >
             {description}
           </p>
         )}
-
-        <div
-          style={{
-            marginTop: "40px",
-            padding: "16px 32px",
-            backgroundColor: "#3b82f6",
-            borderRadius: "8px",
-            fontSize: "24px",
-            fontWeight: "600",
-          }}
-        >
-          TransPal
-        </div>
       </div>
     </div>
   );

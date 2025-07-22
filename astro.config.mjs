@@ -24,7 +24,15 @@ export default defineConfig({
             weight: 400,
             style: "normal",
             data: fs.readFileSync(
-              "node_modules/@openfonts/noto-sans-tc_chinese-traditional/files/noto-sans-tc-chinese-traditional-400.woff"
+              "node_modules/@expo-google-fonts/noto-sans-tc/400Regular/NotoSansTC_400Regular.ttf"
+            ),
+          },
+          {
+            name: "IBM Plex Sans TC",
+            weight: 700,
+            style: "normal",
+            data: fs.readFileSync(
+              "node_modules/@expo-google-fonts/noto-sans-tc/700Bold/NotoSansTC_700Bold.ttf"
             ),
           },
         ],

@@ -14,15 +14,9 @@ importers:
       '@astrojs/react':
         specifier: ^4.3.0
         version: 4.3.0(@types/node@24.0.14)(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(jiti@2.4.2)(lightningcss@1.30.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(yaml@2.8.0)
-      '@fontsource-variable/noto-sans-tc':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@fontsource/noto-sans-tc':
-        specifier: ^5.2.6
-        version: 5.2.6
-      '@openfonts/noto-sans-tc_chinese-traditional':
-        specifier: ^1.44.8
-        version: 1.44.8
+      '@expo-google-fonts/noto-sans-tc':
+        specifier: ^0.4.1
+        version: 0.4.1
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.11)
@@ -452,11 +446,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/noto-sans-tc@5.2.6':
-    resolution: {integrity: sha512-wxihjg46OEh/ncEwYUyUXmhc02ooctSaxBcdZVL1x3AQrrIbPeqC1HUihk3msJqkqfH+XSbYkTUwlGPhpGqQTQ==}
-
-  '@fontsource/noto-sans-tc@5.2.6':
-    resolution: {integrity: sha512-cXpi78o0adtqz/7/3Onpp2u/O8G2XC4WufuT8EQjEu2Mvdq2WRgLZk/KOrhh7kH/3BSijbKnYUwQ5mTEvaSF5A==}
+  '@expo-google-fonts/noto-sans-tc@0.4.1':
+    resolution: {integrity: sha512-8RpJMsJ8VIKld1MsjnvIyGd5Isgvoa4qNFhmZQXKM2q5DAMFminNh4LeCVTKylBKqbZrzrhCEpeu48HRHTM5vg==}
 
   '@img/sharp-darwin-arm64@0.33.5':
     resolution: {integrity: sha512-UT4p+iz/2H4twwAoLCqfA9UH5pI6DggwKEGuaPy7nCVQ8ZsiY5PIcrRvD1DzuY3qYL07NtIQcWnBSY/heikIFQ==}
@@ -595,9 +586,6 @@ packages:
   '@nodelib/fs.walk@1.2.8':
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
-
-  '@openfonts/noto-sans-tc_chinese-traditional@1.44.8':
-    resolution: {integrity: sha512-6nGUpi67ICfamaodeTXZl9lVAK6+1LngYJPlcL9LRlfHY1ivPkKMAjw2FGINM0ZF7FcgbffA9Cm0Iq/qREC/Ng==}
 
   '@oslojs/encoding@1.1.0':
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
@@ -3494,9 +3482,7 @@ snapshots:
   '@esbuild/win32-x64@0.25.6':
     optional: true
 
-  '@fontsource-variable/noto-sans-tc@5.2.6': {}
-
-  '@fontsource/noto-sans-tc@5.2.6': {}
+  '@expo-google-fonts/noto-sans-tc@0.4.1': {}
 
   '@img/sharp-darwin-arm64@0.33.5':
     optionalDependencies:
@@ -3611,8 +3597,6 @@ snapshots:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
-
-  '@openfonts/noto-sans-tc_chinese-traditional@1.44.8': {}
 
   '@oslojs/encoding@1.1.0': {}
 

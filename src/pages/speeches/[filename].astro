@@ -144,9 +144,7 @@ function formatTime(timeString?: string): string {
 }
 
 const pageTitle = `${speech.info.name} - TransPal`;
-const pageDescription =
-  speech.info.description ||
-  `${speech.info.name} 會議記錄，日期：${formatDate(speech.info.date)}`;
+const pageDescription = `${formatDate(speech.info.date)}`;
 
 // Generate canonical URL
 const canonicalUrl = new URL(`speeches/${filename}`, Astro.site).href;
