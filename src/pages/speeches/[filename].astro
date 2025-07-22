@@ -192,6 +192,13 @@ const structuredData = {
     url: new URL("/", Astro.site).href,
   },
 };
+
+// Add start time to structured data if available
+if (speech.info.time) {
+  // Combine date and time into ISO format
+  const dateTime = `${speech.info.date}T${speech.info.time}:00`;
+  structuredData.about.startDate = dateTime;
+}
 ---
 
 <Layout
@@ -266,31 +273,15 @@ const structuredData = {
           <time datetime={speech.info.date}>
             {formatDate(speech.info.date)}
           </time>
-        </div>
-
-        {
-          speech.info.time && (
-            <div class="flex items-center">
-              <svg
-                class="w-4 h-4 mr-2 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
+          {speech.info.time && <span class="mx-1">•</span>}
+          {
+            speech.info.time && (
               <time datetime={speech.info.time}>
                 {formatTime(speech.info.time)}
               </time>
-            </div>
-          )
-        }
+            )
+          }
+        </div>
       </div>
 
       {
