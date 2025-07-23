@@ -121,6 +121,21 @@ const openGraphImageUrl = getImagePath({ url, site });
       )
     }
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      is:inline
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-N8CTYQPL0W"></script>
+    <script is:inline type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-N8CTYQPL0W");
+    </script>
+
     <title>{title}</title>
   </head>
   <body

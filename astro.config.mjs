@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import partytown from "@astrojs/partytown";
 import tailwindcss from "@tailwindcss/vite";
 import opengraphImages from "astro-opengraph-images";
 import OGImageTemplate from "./src/components/OGImageTemplate.tsx";
@@ -39,6 +40,7 @@ export default defineConfig({
       },
       render: OGImageTemplate,
     }),
+    partytown({ config: { forward: ["dataLayer.push"] } }),
   ],
   output: "static",
   build: {
