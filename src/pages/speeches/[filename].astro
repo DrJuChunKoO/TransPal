@@ -5,6 +5,7 @@ import MarkdownContent from "../../components/MarkdownContent.astro";
 import ShareButton from "../../components/ShareButton";
 import { getSpeech, getSpeeches } from "../../utils/speeches";
 import type { SpeechDetail } from "../../types/speech";
+import ChatBot from "../../components/ChatBot";
 
 export async function getStaticPaths() {
   const speeches = await getSpeeches();
@@ -292,4 +293,5 @@ if (speech.info.time) {
       />
     </aside>
   </div>
+  <ChatBot client:only="react" />
 </Layout>
