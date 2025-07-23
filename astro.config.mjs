@@ -78,7 +78,6 @@ export default defineConfig({
     },
     // Optimize dependencies
     optimizeDeps: {
-      include: ["react", "react-dom"],
       exclude: ["@resvg/resvg-js", "jsdom"],
     },
     ssr: {
