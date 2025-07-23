@@ -8,31 +8,58 @@ const isIndex = currentPath === "/";
 const isMessage = /\/speeches\/[^/]+\/[^/]+/.test(currentPath);
 ---
 
-<nav class="sticky top-0 z-10 bg-white/90 shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] backdrop-blur-xl dark:bg-[#232323]/90 dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset]" role="navigation" aria-label="主要導航">
-  <div class="relative container mx-auto flex flex-col gap-2 py-2 px-4 sm:px-6">
+<nav
+  class="sticky top-0 z-10 bg-white/90 shadow-[0_2px_4px_rgba(0,0,0,.02),0_1px_0_rgba(0,0,0,.06)] backdrop-blur-xl dark:bg-[#232323]/90 dark:shadow-[0_-1px_0_rgba(255,255,255,.1)_inset]"
+  role="navigation"
+  aria-label="主要導航"
+>
+  <div class="relative mx-auto flex flex-col gap-2 py-2 px-4 sm:px-6">
     <div class="flex min-h-[2rem] items-center justify-between gap-2 sm:gap-4">
       <div class="flex items-center min-w-0">
-        {!isIndex && (
-          <button 
-            id="back-button"
-            class="mr-2 rounded-lg p-2 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-white/5 dark:active:bg-white/10 touch-manipulation focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 min-h-[44px] min-w-[44px] flex items-center justify-center"
-            data-is-message={isMessage}
-            data-current-path={currentPath}
-            aria-label="返回上一頁"
-            type="button"
+        {
+          !isIndex && (
+            <button
+              id="back-button"
+              class="mr-2 rounded-lg p-2 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-white/5 dark:active:bg-white/10 touch-manipulation focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              data-is-message={isMessage}
+              data-current-path={currentPath}
+              aria-label="返回上一頁"
+              type="button"
+            >
+              <svg
+                class="size-5 sm:size-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+          )
+        }
+        <a
+          href="/"
+          class="flex items-center gap-2 min-w-0 rounded-lg p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+          aria-label="TransPal 首頁"
+        >
+          <div
+            class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white truncate tracking-tighter"
           >
-            <svg class="size-5 sm:size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-        )}
-        <a href="/" class="flex items-center gap-2 min-w-0 rounded-lg p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800" aria-label="TransPal 首頁">
-          <div class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white truncate">
             TransPal
           </div>
         </a>
       </div>
-      <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0" role="toolbar" aria-label="搜尋和設定工具">
+      <div
+        class="flex items-center gap-1 sm:gap-2 flex-shrink-0"
+        role="toolbar"
+        aria-label="搜尋和設定工具"
+      >
         <Search client:load />
         <DarkModeToggle client:load />
       </div>
@@ -42,21 +69,21 @@ const isMessage = /\/speeches\/[^/]+\/[^/]+/.test(currentPath);
 
 <script>
   // Handle back button navigation
-  const backButton = document.getElementById('back-button');
+  const backButton = document.getElementById("back-button");
   if (backButton) {
-    backButton.addEventListener('click', () => {
-      const isMessage = backButton.getAttribute('data-is-message') === 'true';
-      const currentPath = backButton.getAttribute('data-current-path');
-      
+    backButton.addEventListener("click", () => {
+      const isMessage = backButton.getAttribute("data-is-message") === "true";
+      const currentPath = backButton.getAttribute("data-current-path");
+
       if (isMessage && currentPath) {
         // For message pages, go back to the speech page with anchor
-        const pathParts = currentPath.split('/');
+        const pathParts = currentPath.split("/");
         const messageId = pathParts[pathParts.length - 1];
-        const speechPath = pathParts.slice(0, -1).join('/');
+        const speechPath = pathParts.slice(0, -1).join("/");
         window.location.href = `${speechPath}#${messageId}`;
       } else {
         // For other pages, go back to home
-        window.location.href = '/';
+        window.location.href = "/";
       }
     });
   }

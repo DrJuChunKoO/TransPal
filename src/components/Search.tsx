@@ -284,7 +284,7 @@ export default function Search() {
           aria-describedby={error ? "search-error" : undefined}
           aria-label="搜尋會議內容"
           autoComplete="off"
-          className="w-48 sm:w-64 rounded-lg border border-gray-300 bg-white px-3 sm:px-4 py-2 text-sm placeholder-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-white/5 dark:bg-white/5 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-400 dark:focus:ring-blue-400 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation min-h-[44px]"
+          className="w-48 sm:w-64 rounded-lg bg-gray-100 px-3 sm:px-4 py-2 text-sm placeholder-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-white/5 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-400 dark:focus:ring-blue-400 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation min-h-[44px]"
         />
         <svg
           className="absolute right-2 sm:right-3 top-1/2 size-4 -translate-y-1/2 text-gray-400 pointer-events-none"
