@@ -20,7 +20,7 @@ export default defineConfig({
         height: 630,
         fonts: [
           {
-            name: "IBM Plex Sans TC",
+            name: "Noto Sans TC",
             weight: 400,
             style: "normal",
             data: fs.readFileSync(
@@ -28,7 +28,7 @@ export default defineConfig({
             ),
           },
           {
-            name: "IBM Plex Sans TC",
+            name: "Noto Sans TC",
             weight: 700,
             style: "normal",
             data: fs.readFileSync(
