@@ -62,19 +62,7 @@ export default defineConfig({
       // Optimize chunk splitting
       rollupOptions: {
         external: ["@resvg/resvg-js", "jsdom"],
-        output: {
-          // Create separate chunks for vendor libraries
-          manualChunks: {
-            "react-vendor": ["react", "react-dom"],
-          },
-        },
       },
-      // Enable minification
-      minify: "esbuild",
-      // Optimize CSS
-      cssMinify: true,
-      // Set chunk size warning limit
-      chunkSizeWarningLimit: 1000,
     },
     // Optimize dependencies
     optimizeDeps: {
