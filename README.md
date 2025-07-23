@@ -1,4 +1,4 @@
-# TransPal Astro - 立委葛如鈞會議記錄搜尋系統
+# TransPal Astro
 
 高效能會議記錄搜尋與管理系統，使用 Astro 框架建構，專為靜態部署優化。
 
