@@ -163,7 +163,7 @@ export default function ChatBot() {
                         {m.content === "" ? (
                           <div className="flex items-center gap-1">
                             <span className="text-sm text-gray-500">
-                              載入中...
+                              載入中
                             </span>
                             <LoadingDots />
                           </div>

@@ -74,29 +74,40 @@ current page: https://transpal.juchunko.com/speeches/${filename}
             description: "Get the current page content",
             parameters: z.object({}).strict(),
             execute: async () => {
-              const date = new Date().toLocaleDateString();
-              const fileData = await fetch(
-                // remove last slash
-                `https://raw.githubusercontent.com/DrJuChunKoO/TransPal/refs/heads/main/public/speeches/${filename.replace(
-                  /\/$/,
-                  ""
-                )}.json`
-              )
-                .then((res) => res.text())
-                .then((x) =>
-                  x.content.map(
-                    ({ speaker, text }: { speaker: string; text: string }) => ({
-                      speaker,
-                      text,
-                    })
-                  )
+              try {
+                const fileData = await fetch(
+                  // remove last slash
+                  `https://raw.githubusercontent.com/DrJuChunKoO/TransPal/refs/heads/main/public${filename.replace(
+                    /\/$/,
+                    ""
+                  )}.json`
                 )
-                .map((x: { speaker: string; text: string }) => {
-                  return `${x.speaker}：${x.text}`;
-                })
-                .join("\n");
+                  .then((res) => res.json())
+                  .then((x) =>
+                    x.content
+                      .map(
+                        ({
+                          speaker,
+                          text,
+                        }: {
+                          speaker: string;
+                          text: string;
+                        }) => ({
+                          speaker,
+                          text,
+                        })
+                      )
+                      .map((x: { speaker: string; text: string }) => {
+                        return `${x.speaker}：${x.text}`;
+                      })
+                      .join("\n")
+                  );
 
-              return `base: https://transpal.juchunko.com/\n目前頁面內容：\n${fileData}`;
+                return `base: https://transpal.juchunko.com/\n目前頁面內容：\n${fileData}`;
+              } catch (error) {
+                console.error("Error fetching file data:", error);
+                return `base: https://transpal.juchunko.com/\n目前頁面內容：\n無法讀取目前頁面內容，請稍後再試。`;
+              }
             },
           }),
         },
@@ -110,18 +121,22 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       response.headers.set("transfer-encoding", "chunked");
       return response;
     }
-
-    // 處理帶訊息ID的演講頁面重定向 (格式: /speeches/{filename}/{messageId})
-    const speechWithMessagePattern = /^\/speeches\/([^\/]+)\/([^\/]+)$/;
-    const speechMatch = pathname.match(speechWithMessagePattern);
-    if (speechMatch) {
-      const filename = speechMatch[1];
-      const location = `https://${request.headers.get(
-        "host"
-      )}/speeches/${filename}`;
-      return Response.redirect(location, 301);
+    if (
+      new URL(request.url).pathname.startsWith("/speeches/") &&
+      new URL(request.url).pathname.split("/").length > 4
+    ) {
+      const pathname = new URL(request.url).pathname;
+      // 處理帶訊息ID的演講頁面重定向 (格式: /speeches/{filename}/{messageId})
+      const speechWithMessagePattern = /^\/speeches\/([^\/]+)\/([^\/]+)$/;
+      const speechMatch = pathname.match(speechWithMessagePattern);
+      if (speechMatch) {
+        const filename = speechMatch[1];
+        const location = `https://${request.headers.get(
+          "host"
+        )}/speeches/${filename}`;
+        return Response.redirect(location, 301);
+      }
     }
-
     // 非上述路由 – 直接回傳靜態檔 (免費 CDN)
     return env.ASSETS.fetch(request);
   },

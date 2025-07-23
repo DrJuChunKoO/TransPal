@@ -225,6 +225,40 @@
   }
 }
 
+@utility prose-tight {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li,
+  img,
+  blockquote,
+  code {
+    margin: 0.25rem 0;
+    line-height: 1.5;
+  }
+
+  hr {
+    margin: 1rem 0;
+  }
+  ul,
+  ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  :where(ul > li):not(
+      :where([class~="not-prose"], [class~="not-prose"] *)
+    )::marker {
+    color: color-mix(in srgb, currentColor 50%, transparent) !important;
+  }
+}
+
 @keyframes loading-dots {
   0%,
   100% {

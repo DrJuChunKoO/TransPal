@@ -25,3 +25,4 @@ pnpm-debug.log*
 TransPal
 src/utils/generated
 public/search-data.json
+.dev.vars
