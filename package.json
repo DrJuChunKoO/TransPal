@@ -29,11 +29,11 @@
     "astro": "^5.11.1",
     "astro-opengraph-images": "^1.13.1",
     "dompurify": "^3.2.6",
+    "markdown-to-jsx": "^7.7.12",
     "marked": "^16.0.0",
     "motion": "^12.23.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-markdown": "^10.1.0",
     "tailwindcss": "^4.1.11",
     "typescript": "^5.8.3",
     "zod": "^3.23.8"

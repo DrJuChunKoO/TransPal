@@ -6,7 +6,7 @@ import LucideSend from "~icons/lucide/send";
 import LucideX from "~icons/lucide/x";
 import LucideArrowRight from "~icons/lucide/arrow-right";
 import { useChat } from "@ai-sdk/react";
-import Markdown from "react-markdown";
+import Markdown from "markdown-to-jsx";
 import LoadingDots from "./LoadingDots.tsx";
 
 export default function ChatBot() {
