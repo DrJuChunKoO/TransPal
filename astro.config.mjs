@@ -61,6 +61,7 @@ export default defineConfig({
     build: {
       // Optimize chunk splitting
       rollupOptions: {
+        external: ["@resvg/resvg-js", "jsdom"],
         output: {
           // Create separate chunks for vendor libraries
           manualChunks: {
@@ -78,9 +79,10 @@ export default defineConfig({
     // Optimize dependencies
     optimizeDeps: {
       include: ["react", "react-dom"],
+      exclude: ["@resvg/resvg-js", "jsdom"],
     },
     ssr: {
-      noExternal: ["@resvg/resvg-js", "@resvg/resvg-js-linux-x64-musl"],
+      external: ["@resvg/resvg-js", "jsdom"],
     },
   },
   // Enable prefetch for better navigation performance
