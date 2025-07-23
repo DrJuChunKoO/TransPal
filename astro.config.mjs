@@ -10,7 +10,7 @@ import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://transpal.pages.dev", // Default Cloudflare Pages URL, can be overridden
+  site: "https://transpal.juchunko.com",
   integrations: [
     react({
       // Only include React runtime for interactive components
@@ -78,6 +78,9 @@ export default defineConfig({
     // Optimize dependencies
     optimizeDeps: {
       include: ["react", "react-dom"],
+    },
+    ssr: {
+      noExternal: ["@resvg/resvg-js", "@resvg/resvg-js-linux-x64-musl"],
     },
   },
   // Enable prefetch for better navigation performance
