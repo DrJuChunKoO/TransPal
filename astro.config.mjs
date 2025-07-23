@@ -6,6 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 import opengraphImages from "astro-opengraph-images";
 import OGImageTemplate from "./src/components/OGImageTemplate.tsx";
 import * as fs from "fs";
+import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
@@ -49,7 +50,14 @@ export default defineConfig({
   },
   compressHTML: true,
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [
+      tailwindcss(),
+      Icons({
+        autoInstall: true,
+        compiler: "jsx",
+        jsx: "react",
+      }),
+    ],
     build: {
       // Optimize chunk splitting
       rollupOptions: {

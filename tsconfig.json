@@ -2,15 +2,23 @@
   "extends": "astro/tsconfigs/strict",
   "include": [
     ".astro/types.d.ts",
-    "src/**/*",
-    "astro.config.mjs",
-    "vitest.config.ts"
+    "**/*"
   ],
   "exclude": [
-    "dist",
-    "TransPal",
-    "node_modules",
-    ".git",
-    ".cache"
-  ]
+    "dist"
+  ],
+  "compilerOptions": {
+    "types": [
+      "unplugin-icons/types/react"
+    ],
+    "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  }
 }
