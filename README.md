@@ -51,7 +51,6 @@ TransPal-astro/
 ├── public/
 │   ├── speeches/          # 會議記錄 JSON 檔案
 │   ├── avatars/          # 發言者頭像圖片
-│   └── favicon.svg       # 網站圖標
 ├── src/
 │   ├── components/       # Astro 和 React 元件
 │   │   ├── Search.tsx    # 搜尋功能元件
