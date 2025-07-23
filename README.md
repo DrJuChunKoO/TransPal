@@ -77,22 +77,6 @@ TransPal-astro/
 - **Vitest** - 單元測試框架
 - **Cloudflare Pages** - 全球 CDN 部署
 
-## 📊 效能表現
-
-### Core Web Vitals 目標
-
-- **LCP (Largest Contentful Paint)**: < 2.5 秒
-- **FID (First Input Delay)**: < 100 毫秒
-- **CLS (Cumulative Layout Shift)**: < 0.1
-- **FCP (First Contentful Paint)**: < 1.8 秒
-
-### 建構效能
-
-- **建構時間**: < 60 秒
-- **總打包大小**: < 2MB
-- **JavaScript 主要包**: < 200KB
-- **CSS 檔案**: < 50KB
-
 ## 🚀 部署指南
 
 ### 自動部署 (推薦)
