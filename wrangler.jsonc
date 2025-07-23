@@ -1,0 +1,23 @@
+{
+  "name": "transpal-juchunko",
+  "compatibility_date": "2025-06-17",
+  "main": "./src/worker/index.ts",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
+  },
+  "placement": {
+    "mode": "smart"
+  },
+  "routes": [
+    {
+      "pattern": "transpal.juchunko.com",
+      "custom_domain": true
+    }
+  ]
+}
