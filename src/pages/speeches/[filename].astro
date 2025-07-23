@@ -211,33 +211,9 @@ if (speech.info.time) {
   structuredData={structuredData}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
-    <!-- Back to list link -->
-    <nav class="mb-4 sm:mb-6" aria-label="麵包屑導航">
-      <a
-        href="/"
-        class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors touch-manipulation min-h-[44px] px-2 -mx-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 rounded"
-        aria-label="返回對話列表"
-      >
-        <svg
-          class="w-4 h-4 mr-2"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M15 19l-7-7 7-7"></path>
-        </svg>
-        返回對話列表
-      </a>
-    </nav>
-
     <!-- Speech header -->
     <header
-      class="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6 mb-6 sm:mb-8"
+      class="bg-white dark:bg-white/5 rounded-lg shadow-sm border border-gray-200 dark:border-white/5 p-4 sm:p-6 mb-6 sm:mb-8"
     >
       <h1
         class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight"
@@ -252,28 +228,27 @@ if (speech.info.time) {
       >
         <div class="flex items-center">
           <svg
-            class="w-4 h-4 mr-2 flex-shrink-0"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4h3a2 2 0 012 2v1a2 2 0 01-2 2H6a2 2 0 01-2-2V9a2 2 0 012-2h2z"
-            ></path>
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M16 17v2a2 2 0 01-2 2H10a2 2 0 01-2-2v-2"></path>
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="w-4 h-4 mr-2 flex-shrink-0"
+            ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+              width="18"
+              height="18"
+              x="3"
+              y="4"
+              rx="2"></rect><path d="M3 10h18"></path>
           </svg>
           <time datetime={speech.info.date}>
             {formatDate(speech.info.date)}
           </time>
-          {speech.info.time && <span class="mx-1">•</span>}
+          {speech.info.time && <span class="mx-1" />}
           {
             speech.info.time && (
               <time datetime={speech.info.time}>
@@ -305,7 +280,7 @@ if (speech.info.time) {
 
     <!-- Share section -->
     <aside
-      class="mt-6 sm:mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 sm:p-6"
+      class="mt-6 sm:mt-8 bg-white dark:bg-white/5 rounded-lg shadow-sm border border-gray-200 dark:border-white/5 p-4 sm:p-6"
       aria-labelledby="share-heading"
     >
       <h2 id="share-heading" class="sr-only">分享此對話</h2>

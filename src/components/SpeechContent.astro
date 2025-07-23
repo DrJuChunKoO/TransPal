@@ -34,10 +34,8 @@ const speechItems = speechContent.filter(item => item && item.type === 'speech')
 
     if (item.type === 'markdown') {
       return (
-        <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
-          <div class="text-blue-800 dark:text-blue-200">
-            <MarkdownContent content={item.text} size="base" className="prose-blue" />
-          </div>
+        <div class="bg-blue-50 dark:bg-white/5 border border-blue-200 dark:border-white/5 rounded-lg p-4">
+          <MarkdownContent content={item.text} size="base" />
         </div>
       );
     }
