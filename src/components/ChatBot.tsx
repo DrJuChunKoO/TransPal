@@ -11,6 +11,12 @@ import LoadingDots from "./LoadingDots.tsx";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const handleDialogKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setIsOpen(false);
+    }
+  };
 
   // Preserve scroll position and always scroll to the latest message.
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
@@ -69,7 +75,9 @@ export default function ChatBot() {
         {!isOpen && (
           <motion.button
             className="fixed right-4 bottom-4 block w-max cursor-pointer rounded-full bg-gray-100/90 p-3 px-4 text-base shadow-sm backdrop-blur-sm hover:bg-gray-200 active:bg-gray-300 md:m-auto md:p-2 md:px-4 md:text-sm dark:bg-gray-800/80 dark:text-gray-100 dark:hover:bg-gray-700 dark:active:bg-gray-600"
-            aria-label="開始討論"
+            aria-label="開始討論對話視窗"
+            aria-expanded={isOpen}
+            aria-controls="chat-bot-panel"
             onClick={() => setIsOpen(true)}
             layoutId="chat-bot"
             whileHover={{ scale: 1.05 }}
@@ -88,9 +96,14 @@ export default function ChatBot() {
         {isOpen && (
           <motion.div
             layoutId="chat-bot"
-            className="fixed right-2 bottom-2 w-90 max-w-[90vw] overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-900"
+            className="fixed right-2 bottom-2 w-90 max-w-[90vw] overflow-hidden rounded-xl z-10 bg-white shadow-lg dark:bg-gray-900"
           >
-            <div className="rounded-xl border border-gray-200 bg-gray-50 text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100">
+            <div
+              id="chat-bot-panel"
+              className="rounded-xl border border-gray-200 bg-gray-50 text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100"
+              role="dialog"
+              aria-labelledby="chat-bot-title"
+            >
               <div className="flex justify-between gap-1 p-2 pl-4">
                 <motion.div
                   layoutId="chat-bot-title"
@@ -109,7 +122,11 @@ export default function ChatBot() {
                 </motion.button>
               </div>
               {/* Message list */}
-              <div className="h-120 max-h-[60vh] border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
+              <div
+                className="h-120 max-h-[60vh] border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950"
+                role="log"
+                aria-live="polite"
+              >
                 <motion.div
                   className="flex h-full flex-col space-y-3 overflow-y-auto p-4 text-sm"
                   initial={{ opacity: 0, y: 10 }}
@@ -143,6 +160,10 @@ export default function ChatBot() {
                             ? "prose-invert origin-right bg-blue-500 text-white"
                             : "dark:prose-invert origin-left bg-gray-100 dark:bg-gray-800",
                         ].join(" ")}
+                        role="article"
+                        aria-label={
+                          m.role === "user" ? "使用者訊息" : "助理訊息"
+                        }
                         initial={{
                           opacity: 0,
                           x: m.role === "user" ? 10 : -10,
@@ -193,6 +214,10 @@ export default function ChatBot() {
                             <button
                               key={qp.text}
                               onClick={() => sendQuickPrompt(qp.prompt)}
+                              aria-label={`快速提示: ${qp.text}`}
+                              aria-pressed={false}
+                              role="button"
+                              tabIndex={0}
                               className="group flex cursor-pointer items-center gap-0.5 rounded p-1 text-left text-sm text-gray-500 transition-all hover:font-medium hover:tracking-wide hover:text-gray-700 disabled:opacity-50 dark:text-gray-400 dark:hover:text-gray-200"
                             >
                               {qp.text}
@@ -208,6 +233,8 @@ export default function ChatBot() {
 
               {/* Input area */}
               <form
+                role="form"
+                aria-label="聊天表單"
                 onSubmit={(e) => {
                   handleSubmit(e);
                   setInput("");
@@ -226,18 +253,29 @@ export default function ChatBot() {
                       if (e.key === "Enter" && !e.shiftKey && !isComposing) {
                         e.preventDefault();
                         handleSubmit();
-                        // Clear the textarea AFTER submission when not composing
                         setInput("");
                       }
                     }}
+                    tabIndex={0}
+                    aria-describedby="chat-bot-instructions"
+                    ref={textareaRef}
                   />
                   <button
                     type="submit"
                     disabled={status === "streaming" || input.trim() === ""}
+                    aria-label="送出訊息"
+                    aria-disabled={
+                      status === "streaming" || input.trim() === ""
+                        ? "true"
+                        : "false"
+                    }
                     className="flex h-10 w-14 cursor-pointer items-center justify-center rounded-br-lg bg-blue-500 text-white hover:bg-blue-600 disabled:bg-gray-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:disabled:bg-gray-800"
                   >
                     <LucideSend className="h-4 w-4" />
                   </button>
+                  <div id="chat-bot-instructions" className="sr-only">
+                    按下 Enter 鍵送出訊息
+                  </div>
                 </div>
               </form>
             </div>
