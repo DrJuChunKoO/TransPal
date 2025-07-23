@@ -26,6 +26,9 @@ importers:
       '@expo-google-fonts/noto-sans-tc':
         specifier: ^0.4.1
         version: 0.4.1
+      '@resvg/resvg-js':
+        specifier: ^2.6.2
+        version: 2.6.2
       '@tailwindcss/typography':
         specifier: ^0.5.16
         version: 0.5.16(tailwindcss@4.1.11)
