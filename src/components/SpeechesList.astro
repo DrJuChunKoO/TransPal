@@ -25,13 +25,6 @@ function formatDate(dateString: string): string {
   class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8"
   aria-labelledby="speeches-heading"
 >
-  <h1
-    id="speeches-heading"
-    class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 sm:mb-8"
-  >
-    對話
-  </h1>
-
   {
     sortedSpeeches.length === 0 ? (
       <div class="text-center py-12" role="status" aria-live="polite">
@@ -51,7 +44,7 @@ function formatDate(dateString: string): string {
               >
                 <article class="flex items-center justify-between gap-3">
                   <div class="flex-1 min-w-0">
-                    <h2 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2 line-clamp-2">
+                    <h2 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-gray-100 mb-0.5 line-clamp-2">
                       {speech.name}
                     </h2>
                     <time

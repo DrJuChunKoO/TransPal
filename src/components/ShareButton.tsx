@@ -194,7 +194,7 @@ export default function ShareButton({
       ? [
           {
             name: "native",
-            label: "系統分享",
+            label: "分享",
             icon: ShareIcons.native,
             color: "bg-gradient-to-r from-green-500 to-green-600",
             hoverColor: "hover:from-green-600 hover:to-green-700",
