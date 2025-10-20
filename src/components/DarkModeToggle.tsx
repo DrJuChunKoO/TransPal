@@ -14,7 +14,7 @@ export default function DarkModeToggle() {
         | "dark"
         | null;
       const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
 
       const initialTheme = savedTheme || (prefersDark ? "dark" : "light");
@@ -29,18 +29,18 @@ export default function DarkModeToggle() {
 
       // Update theme color meta tag on initial load
       const themeColorMeta = document.querySelector(
-        'meta[name="theme-color"]#theme-color-dynamic'
+        'meta[name="theme-color"]#theme-color-dynamic',
       );
       if (themeColorMeta) {
         themeColorMeta.setAttribute(
           "content",
-          initialTheme === "dark" ? "#1C1C1C" : "#ffffff"
+          initialTheme === "dark" ? "#1C1C1C" : "#ffffff",
         );
       }
     } catch (error) {
       // Fallback for test environments where localStorage might not be available
       const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
+        "(prefers-color-scheme: dark)",
       ).matches;
       const initialTheme = prefersDark ? "dark" : "light";
       setTheme(initialTheme);
@@ -67,12 +67,12 @@ export default function DarkModeToggle() {
 
     // Update theme color meta tag
     const themeColorMeta = document.querySelector(
-      'meta[name="theme-color"]#theme-color-dynamic'
+      'meta[name="theme-color"]#theme-color-dynamic',
     );
     if (themeColorMeta) {
       themeColorMeta.setAttribute(
         "content",
-        newTheme === "dark" ? "#1C1C1C" : "#ffffff"
+        newTheme === "dark" ? "#1C1C1C" : "#ffffff",
       );
     }
   };
@@ -81,12 +81,12 @@ export default function DarkModeToggle() {
   if (!mounted) {
     return (
       <button
-        className="rounded-lg p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
+        className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg p-2"
         aria-label="載入中"
         type="button"
         disabled
       >
-        <div className="size-5 sm:size-6 animate-pulse bg-gray-200 dark:bg-gray-700 rounded-full" />
+        <div className="size-5 animate-pulse rounded-full bg-gray-200 sm:size-6 dark:bg-gray-700" />
       </button>
     );
   }
@@ -94,14 +94,14 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={handleThemeChange}
-      className="rounded-lg p-2 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-white/5 dark:active:bg-white/10 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition-colors"
+      className="flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-lg p-2 transition-colors hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none active:bg-gray-200 dark:hover:bg-white/5 dark:focus:ring-offset-gray-800 dark:active:bg-white/10"
       aria-label={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       title={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       type="button"
     >
       {theme === "dark" ? (
         <svg
-          className="size-5 sm:size-6 text-gray-800 dark:text-gray-200"
+          className="size-5 text-gray-800 sm:size-6 dark:text-gray-200"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ export default function DarkModeToggle() {
         </svg>
       ) : (
         <svg
-          className="size-5 sm:size-6 text-gray-800 dark:text-gray-200"
+          className="size-5 text-gray-800 sm:size-6 dark:text-gray-200"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

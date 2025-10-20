@@ -65,7 +65,7 @@ export default function Search() {
           console.warn(
             `Filtered out ${
               data.length - validData.length
-            } invalid search entries`
+            } invalid search entries`,
           );
         }
 
@@ -136,7 +136,7 @@ export default function Search() {
     const regex = new RegExp(`(${escapedTerm})`, "gi");
     return text.replace(
       regex,
-      '<mark class="bg-yellow-200 dark:bg-yellow-600 px-1 rounded">$1</mark>'
+      '<mark class="bg-yellow-200 dark:bg-yellow-600 px-1 rounded">$1</mark>',
     );
   };
 
@@ -181,7 +181,7 @@ export default function Search() {
 
         // Check title match (higher score)
         const titleMatches = searchTerms.filter((term) =>
-          item.name.toLowerCase().includes(term)
+          item.name.toLowerCase().includes(term),
         );
         score += titleMatches.length * 10;
 
@@ -190,7 +190,7 @@ export default function Search() {
           const textMatches = searchTerms.some(
             (term) =>
               content.text.toLowerCase().includes(term) ||
-              content.speaker.toLowerCase().includes(term)
+              content.speaker.toLowerCase().includes(term),
           );
 
           if (textMatches) {
@@ -273,7 +273,7 @@ export default function Search() {
             } else if (e.key === "ArrowDown" && results.length > 0) {
               e.preventDefault();
               const firstResult = document.querySelector(
-                '[data-search-result="0"]'
+                '[data-search-result="0"]',
               ) as HTMLElement;
               firstResult?.focus();
             }
@@ -284,10 +284,10 @@ export default function Search() {
           aria-describedby={error ? "search-error" : undefined}
           aria-label="搜尋會議內容"
           autoComplete="off"
-          className="w-48 sm:w-64 rounded-lg bg-gray-100 px-3 sm:px-4 py-2 text-sm placeholder-gray-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-white/5 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-400 dark:focus:ring-blue-400 disabled:opacity-50 disabled:cursor-not-allowed touch-manipulation min-h-[44px]"
+          className="min-h-[44px] w-48 touch-manipulation rounded-lg bg-gray-100 px-3 py-2 text-sm placeholder-gray-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 sm:w-64 sm:px-4 dark:bg-white/5 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-400 dark:focus:ring-blue-400"
         />
         <svg
-          className="absolute right-2 sm:right-3 top-1/2 size-4 -translate-y-1/2 text-gray-400 pointer-events-none"
+          className="pointer-events-none absolute top-1/2 right-2 size-4 -translate-y-1/2 text-gray-400 sm:right-3"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -302,10 +302,10 @@ export default function Search() {
         </svg>
         {isLoading && (
           <div
-            className="absolute right-8 sm:right-10 top-1/2 -translate-y-1/2"
+            className="absolute top-1/2 right-8 -translate-y-1/2 sm:right-10"
             aria-hidden="true"
           >
-            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>
+            <div className="h-4 w-4 animate-spin rounded-full border-b-2 border-blue-500"></div>
           </div>
         )}
       </div>
@@ -314,17 +314,17 @@ export default function Search() {
       {error && isOpen && (
         <div
           id="search-error"
-          className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-red-200 bg-red-50 p-4 shadow-lg dark:border-red-700 dark:bg-red-900"
+          className="absolute top-full right-0 left-0 z-50 mt-1 rounded-lg border border-red-200 bg-red-50 p-4 shadow-lg dark:border-red-700 dark:bg-red-900"
           role="alert"
           aria-live="polite"
         >
-          <div className="text-sm text-red-600 dark:text-red-400 mb-3">
+          <div className="mb-3 text-sm text-red-600 dark:text-red-400">
             {error}
           </div>
           <div className="flex gap-2">
             <button
               onClick={() => window.location.reload()}
-              className="text-xs bg-red-100 dark:bg-red-800 text-red-800 dark:text-red-200 px-2 py-1 rounded hover:bg-red-200 dark:hover:bg-red-700 transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 touch-manipulation min-h-[32px]"
+              className="min-h-[32px] touch-manipulation rounded bg-red-100 px-2 py-1 text-xs text-red-800 transition-colors hover:bg-red-200 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:outline-none dark:bg-red-800 dark:text-red-200 dark:hover:bg-red-700 dark:focus:ring-offset-gray-900"
             >
               重新載入頁面
             </button>
@@ -333,7 +333,7 @@ export default function Search() {
                 setError(null);
                 setIsOpen(false);
               }}
-              className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 touch-manipulation min-h-[32px]"
+              className="min-h-[32px] touch-manipulation rounded bg-gray-100 px-2 py-1 text-xs text-gray-700 transition-colors hover:bg-gray-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:focus:ring-offset-gray-900"
             >
               關閉
             </button>
@@ -344,14 +344,14 @@ export default function Search() {
       {/* Search results */}
       {isOpen && !error && results.length > 0 && (
         <div
-          className="absolute top-full left-0 right-0 z-50 mt-1 max-h-80 sm:max-h-96 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg dark:border-white/5 dark:bg-[#262626]"
+          className="absolute top-full right-0 left-0 z-50 mt-1 max-h-80 overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg sm:max-h-96 dark:border-white/5 dark:bg-[#262626]"
           role="listbox"
           aria-label="搜尋結果"
         >
           {results.map((result, index) => (
             <div
               key={result.filename}
-              className="border-b border-gray-100 dark:bg-[#262626] last:border-b-0"
+              className="border-b border-gray-100 last:border-b-0 dark:bg-[#262626]"
             >
               <button
                 data-search-result={index}
@@ -360,7 +360,7 @@ export default function Search() {
                   if (e.key === "ArrowDown") {
                     e.preventDefault();
                     const nextResult = document.querySelector(
-                      `[data-search-result="${index + 1}"]`
+                      `[data-search-result="${index + 1}"]`,
                     ) as HTMLElement;
                     nextResult?.focus();
                   } else if (e.key === "ArrowUp") {
@@ -369,7 +369,7 @@ export default function Search() {
                       document.getElementById("search-input")?.focus();
                     } else {
                       const prevResult = document.querySelector(
-                        `[data-search-result="${index - 1}"]`
+                        `[data-search-result="${index - 1}"]`,
                       ) as HTMLElement;
                       prevResult?.focus();
                     }
@@ -378,14 +378,14 @@ export default function Search() {
                     document.getElementById("search-input")?.focus();
                   }
                 }}
-                className="w-full text-left p-3 sm:p-4 hover:bg-gray-50 dark:hover:bg-[#393939] focus:outline-none focus:bg-gray-50 dark:focus:bg-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-inset touch-manipulation cursor-pointer"
+                className="w-full cursor-pointer touch-manipulation p-3 text-left hover:bg-gray-50 focus:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-inset sm:p-4 dark:hover:bg-[#393939] dark:focus:bg-gray-700"
                 role="option"
                 aria-selected="false"
               >
-                <div className="font-medium text-gray-900 dark:text-white mb-1 text-sm sm:text-base line-clamp-2">
+                <div className="mb-1 line-clamp-2 text-sm font-medium text-gray-900 sm:text-base dark:text-white">
                   {result.name}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-2">
+                <div className="mb-2 text-xs text-gray-500 sm:text-sm dark:text-gray-400">
                   {result.date}
                 </div>
 
@@ -394,7 +394,7 @@ export default function Search() {
                   ? result.highlightedContent.slice(0, 2).map((content) => (
                       <div
                         key={content.id}
-                        className="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300"
+                        className="mt-1 text-xs text-gray-600 sm:text-sm dark:text-gray-300"
                       >
                         <span className="font-medium">{content.speaker}:</span>{" "}
                         <HighlightedText
@@ -409,7 +409,7 @@ export default function Search() {
                     result.contentSummary.slice(0, 2).map((content) => (
                       <div
                         key={content.id}
-                        className="mt-1 text-xs sm:text-sm text-gray-600 dark:text-gray-300"
+                        className="mt-1 text-xs text-gray-600 sm:text-sm dark:text-gray-300"
                       >
                         <span className="font-medium">{content.speaker}:</span>{" "}
                         {content.text.slice(0, 80)}...
@@ -423,11 +423,11 @@ export default function Search() {
 
       {/* No results state */}
       {isOpen && !error && query && results.length === 0 && !isLoading && (
-        <div className="absolute top-full left-0 right-0 z-50 mt-1 rounded-lg border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-700 dark:bg-gray-800">
+        <div className="absolute top-full right-0 left-0 z-50 mt-1 rounded-lg border border-gray-200 bg-white p-4 shadow-lg dark:border-gray-700 dark:bg-gray-800">
           <div className="text-sm text-gray-500 dark:text-gray-400">
             沒有找到包含「{query}」的相關結果
           </div>
-          <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">
+          <div className="mt-1 text-xs text-gray-400 dark:text-gray-500">
             請嘗試使用不同的關鍵字或檢查拼寫
           </div>
         </div>

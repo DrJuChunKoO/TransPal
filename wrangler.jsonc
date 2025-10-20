@@ -4,20 +4,20 @@
   "main": "./src/worker/index.ts",
   "assets": {
     "directory": "./dist",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
   },
   "observability": {
     "logs": {
-      "enabled": true
-    }
+      "enabled": true,
+    },
   },
   "placement": {
-    "mode": "smart"
+    "mode": "smart",
   },
   "routes": [
     {
       "pattern": "transpal.juchunko.com",
-      "custom_domain": true
-    }
-  ]
+      "custom_domain": true,
+    },
+  ],
 }

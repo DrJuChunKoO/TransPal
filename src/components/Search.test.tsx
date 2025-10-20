@@ -47,7 +47,7 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容...")
+        screen.getByPlaceholderText("搜尋會議內容..."),
       ).toBeInTheDocument();
     });
   });
@@ -59,7 +59,7 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容...")
+        screen.getByPlaceholderText("搜尋會議內容..."),
       ).toBeInTheDocument();
     });
 
@@ -70,7 +70,7 @@ describe("Search Component", () => {
       () => {
         expect(screen.getByText("Audrey First Visit")).toBeInTheDocument();
       },
-      { timeout: 3000 }
+      { timeout: 3000 },
     );
   });
 
@@ -81,7 +81,7 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容...")
+        screen.getByPlaceholderText("搜尋會議內容..."),
       ).toBeInTheDocument();
     });
 
@@ -91,10 +91,10 @@ describe("Search Component", () => {
     await waitFor(
       () => {
         expect(
-          screen.getByText(/沒有找到.*nonexistent.*的相關結果/i)
+          screen.getByText(/沒有找到.*nonexistent.*的相關結果/i),
         ).toBeInTheDocument();
       },
-      { timeout: 3000 }
+      { timeout: 3000 },
     );
   });
 
@@ -105,7 +105,7 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容...")
+        screen.getByPlaceholderText("搜尋會議內容..."),
       ).toBeInTheDocument();
     });
 
@@ -116,7 +116,7 @@ describe("Search Component", () => {
       () => {
         expect(screen.getByText("Audrey First Visit")).toBeInTheDocument();
       },
-      { timeout: 3000 }
+      { timeout: 3000 },
     );
 
     await user.clear(searchInput);
@@ -124,10 +124,10 @@ describe("Search Component", () => {
     await waitFor(
       () => {
         expect(
-          screen.queryByText("Audrey First Visit")
+          screen.queryByText("Audrey First Visit"),
         ).not.toBeInTheDocument();
       },
-      { timeout: 3000 }
+      { timeout: 3000 },
     );
   });
 });

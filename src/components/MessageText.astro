@@ -1,24 +1,24 @@
 ---
-import MarkdownContent from './MarkdownContent.astro';
-import ProseWrapper from './ProseWrapper.astro';
-import { analyzeContent, validateContent } from '../utils/contentTypeDetection';
+import MarkdownContent from "./MarkdownContent.astro";
+import ProseWrapper from "./ProseWrapper.astro";
+import { analyzeContent, validateContent } from "../utils/contentTypeDetection";
 
 export interface Props {
   content: string;
-  type?: 'text' | 'markdown' | 'auto';
+  type?: "text" | "markdown" | "auto";
   className?: string;
-  size?: 'sm' | 'base' | 'lg';
+  size?: "sm" | "base" | "lg";
 }
 
-const { content, type = 'auto', className = '', size = 'sm' } = Astro.props;
+const { content, type = "auto", className = "", size = "sm" } = Astro.props;
 
 // Use the enhanced content analysis
 const contentAnalysis = analyzeContent(content);
 
 // Determine the actual content type
-let actualType: 'text' | 'markdown';
+let actualType: "text" | "markdown";
 
-if (type === 'auto') {
+if (type === "auto") {
   // Auto-detect content type using the analysis result
   actualType = contentAnalysis.type;
 } else {
@@ -31,39 +31,40 @@ const isValidContent = validateContent(content, actualType);
 // Simple text processing for backward compatibility
 function processText(text: string): string {
   // Replace line breaks with <br> tags
-  let processed = text.replace(/\n/g, '<br>');
-  
+  let processed = text.replace(/\n/g, "<br>");
+
   // Handle basic markdown-like formatting
   // Bold text: **text** or __text__
-  processed = processed.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-  processed = processed.replace(/__(.*?)__/g, '<strong>$1</strong>');
-  
+  processed = processed.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+  processed = processed.replace(/__(.*?)__/g, "<strong>$1</strong>");
+
   // Italic text: *text* or _text_ (but avoid conflicts with markdown)
-  processed = processed.replace(/\*([^*\n]+)\*/g, '<em>$1</em>');
-  processed = processed.replace(/_([^_\n]+)_/g, '<em>$1</em>');
-  
+  processed = processed.replace(/\*([^*\n]+)\*/g, "<em>$1</em>");
+  processed = processed.replace(/_([^_\n]+)_/g, "<em>$1</em>");
+
   // Code text: `text`
-  processed = processed.replace(/`([^`\n]+)`/g, '<code class="bg-gray-100 dark:bg-gray-700 px-1 py-0.5 rounded text-sm">$1</code>');
-  
+  processed = processed.replace(
+    /`([^`\n]+)`/g,
+    '<code class="bg-gray-100 dark:bg-gray-700 px-1 py-0.5 rounded text-sm">$1</code>',
+  );
+
   return processed;
 }
 
 // Use markdown processing for complex content, simple processing for basic content
-const shouldUseMarkdown = actualType === 'markdown' && isValidContent;
+const shouldUseMarkdown = actualType === "markdown" && isValidContent;
 const processedContent = shouldUseMarkdown ? null : processText(content);
 ---
 
-{shouldUseMarkdown ? (
-  <MarkdownContent 
-    content={content} 
-    size={size} 
-    className={className}
-  />
-) : (
-  <ProseWrapper size={size} className={className}>
-    <Fragment set:html={processedContent} />
-  </ProseWrapper>
-)}
+{
+  shouldUseMarkdown ? (
+    <MarkdownContent content={content} size={size} className={className} />
+  ) : (
+    <ProseWrapper size={size} className={className}>
+      <Fragment set:html={processedContent} />
+    </ProseWrapper>
+  )
+}
 
 <style>
   /* These styles are now handled by ProseWrapper */

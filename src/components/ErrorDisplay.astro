@@ -2,7 +2,7 @@
 export interface Props {
   title?: string;
   message?: string;
-  type?: 'error' | 'warning' | 'info';
+  type?: "error" | "warning" | "info";
   showRetry?: boolean;
   showHome?: boolean;
   showBack?: boolean;
@@ -11,52 +11,58 @@ export interface Props {
 }
 
 const {
-  title = '發生錯誤',
-  message = '抱歉，發生了未預期的錯誤。',
-  type = 'error',
+  title = "發生錯誤",
+  message = "抱歉，發生了未預期的錯誤。",
+  type = "error",
   showRetry = true,
   showHome = true,
   showBack = true,
   context,
-  details
+  details,
 } = Astro.props;
 
 // Icon and color mapping based on error type
 const typeConfig = {
   error: {
-    icon: 'M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z',
-    bgColor: 'bg-red-50 dark:bg-red-900/20',
-    borderColor: 'border-red-200 dark:border-red-800',
-    iconColor: 'text-red-400',
-    titleColor: 'text-red-800 dark:text-red-200',
-    textColor: 'text-red-700 dark:text-red-300'
+    icon: "M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z",
+    bgColor: "bg-red-50 dark:bg-red-900/20",
+    borderColor: "border-red-200 dark:border-red-800",
+    iconColor: "text-red-400",
+    titleColor: "text-red-800 dark:text-red-200",
+    textColor: "text-red-700 dark:text-red-300",
   },
   warning: {
-    icon: 'M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z',
-    bgColor: 'bg-yellow-50 dark:bg-yellow-900/20',
-    borderColor: 'border-yellow-200 dark:border-yellow-800',
-    iconColor: 'text-yellow-400',
-    titleColor: 'text-yellow-800 dark:text-yellow-200',
-    textColor: 'text-yellow-700 dark:text-yellow-300'
+    icon: "M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z",
+    bgColor: "bg-yellow-50 dark:bg-yellow-900/20",
+    borderColor: "border-yellow-200 dark:border-yellow-800",
+    iconColor: "text-yellow-400",
+    titleColor: "text-yellow-800 dark:text-yellow-200",
+    textColor: "text-yellow-700 dark:text-yellow-300",
   },
   info: {
-    icon: 'M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z',
-    bgColor: 'bg-blue-50 dark:bg-blue-900/20',
-    borderColor: 'border-blue-200 dark:border-blue-800',
-    iconColor: 'text-blue-400',
-    titleColor: 'text-blue-800 dark:text-blue-200',
-    textColor: 'text-blue-700 dark:text-blue-300'
-  }
+    icon: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z",
+    bgColor: "bg-blue-50 dark:bg-blue-900/20",
+    borderColor: "border-blue-200 dark:border-blue-800",
+    iconColor: "text-blue-400",
+    titleColor: "text-blue-800 dark:text-blue-200",
+    textColor: "text-blue-700 dark:text-blue-300",
+  },
 };
 
 const config = typeConfig[type];
 ---
 
-<div class={`${config.bgColor} ${config.borderColor} border rounded-lg p-4 sm:p-6 my-4`}>
+<div
+  class={`${config.bgColor} ${config.borderColor} border rounded-lg p-4 sm:p-6 my-4`}
+>
   <div class="flex items-start">
     <div class="flex-shrink-0">
-      <svg class={`h-5 w-5 ${config.iconColor}`} viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d={config.icon} clip-rule="evenodd" />
+      <svg
+        class={`h-5 w-5 ${config.iconColor}`}
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path fill-rule="evenodd" d={config.icon} clip-rule="evenodd"></path>
       </svg>
     </div>
     <div class="ml-3 flex-1">
@@ -65,53 +71,61 @@ const config = typeConfig[type];
       </h3>
       <div class={`text-sm ${config.textColor} mb-4`}>
         <p>{message}</p>
-        {context && (
-          <p class="mt-2 text-xs opacity-75">
-            內容：{context}
-          </p>
-        )}
+        {context && <p class="mt-2 text-xs opacity-75">內容：{context}</p>}
       </div>
 
       <!-- Error details for development -->
-      {details && import.meta.env.DEV && (
-        <details class="mt-3">
-          <summary class={`text-xs ${config.textColor} cursor-pointer hover:opacity-80`}>
-            顯示技術詳情
-          </summary>
-          <div class={`mt-2 p-2 ${config.bgColor} rounded text-xs font-mono ${config.textColor} overflow-auto max-h-32`}>
-            <pre class="whitespace-pre-wrap">{details}</pre>
-          </div>
-        </details>
-      )}
+      {
+        details && import.meta.env.DEV && (
+          <details class="mt-3">
+            <summary
+              class={`text-xs ${config.textColor} cursor-pointer hover:opacity-80`}
+            >
+              顯示技術詳情
+            </summary>
+            <div
+              class={`mt-2 p-2 ${config.bgColor} rounded font-mono text-xs ${config.textColor} max-h-32 overflow-auto`}
+            >
+              <pre class="whitespace-pre-wrap">{details}</pre>
+            </div>
+          </details>
+        )
+      }
 
       <!-- Action buttons -->
       <div class="mt-4 flex flex-wrap gap-2">
-        {showRetry && (
-          <button
-            onclick="window.location.reload()"
-            class={`text-sm ${config.bgColor} ${config.titleColor} px-3 py-1 rounded-md hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 touch-manipulation`}
-          >
-            重新載入
-          </button>
-        )}
-        
-        {showBack && (
-          <button
-            onclick="history.back()"
-            class={`text-sm ${config.bgColor} ${config.titleColor} px-3 py-1 rounded-md hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 touch-manipulation`}
-          >
-            返回上頁
-          </button>
-        )}
-        
-        {showHome && (
-          <a
-            href="/"
-            class="text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 touch-manipulation"
-          >
-            返回首頁
-          </a>
-        )}
+        {
+          showRetry && (
+            <button
+              onclick="window.location.reload()"
+              class={`text-sm ${config.bgColor} ${config.titleColor} touch-manipulation rounded-md px-3 py-1 transition-opacity hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none`}
+            >
+              重新載入
+            </button>
+          )
+        }
+
+        {
+          showBack && (
+            <button
+              onclick="history.back()"
+              class={`text-sm ${config.bgColor} ${config.titleColor} touch-manipulation rounded-md px-3 py-1 transition-opacity hover:opacity-80 focus:ring-2 focus:ring-offset-2 focus:outline-none`}
+            >
+              返回上頁
+            </button>
+          )
+        }
+
+        {
+          showHome && (
+            <a
+              href="/"
+              class="touch-manipulation rounded-md bg-gray-100 px-3 py-1 text-sm text-gray-700 transition-colors hover:bg-gray-200 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600 dark:focus:ring-offset-gray-900"
+            >
+              返回首頁
+            </a>
+          )
+        }
       </div>
     </div>
   </div>

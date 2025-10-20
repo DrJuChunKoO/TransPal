@@ -82,7 +82,6 @@ TransPal-astro/
 ### 自動部署 (推薦)
 
 1. **連接 Git 儲存庫**
-
    - 登入 [Cloudflare Dashboard](https://dash.cloudflare.com)
    - 前往 Pages > Create a project
    - 連接您的 GitHub/GitLab 儲存庫
@@ -143,7 +142,6 @@ npx wrangler pages deploy dist --project-name transpal-astro
    ```
 
 2. **檔案放置**
-
    - 將 JSON 檔案放入 `public/speeches/`
    - 檔名格式：`YYYY-MM-DD-description.json`
    - 頭像圖片放入 `public/avatars/`（檔名需與發言者姓名一致）

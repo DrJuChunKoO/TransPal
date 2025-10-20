@@ -63,7 +63,7 @@ try {
       "Speech content is not an array for:",
       filename,
       "type:",
-      typeof speech.content
+      typeof speech.content,
     );
     return Astro.redirect("/404");
   }
@@ -72,7 +72,7 @@ try {
   if (!speech.info.name || typeof speech.info.name !== "string") {
     console.warn(
       "Speech missing name field, using filename as fallback:",
-      filename
+      filename,
     );
     speech.info.name = filename;
   }
@@ -80,7 +80,7 @@ try {
   if (!speech.info.date || typeof speech.info.date !== "string") {
     console.warn(
       "Speech missing date field, using current date as fallback:",
-      filename
+      filename,
     );
     speech.info.date = new Date().toISOString();
   }
@@ -98,7 +98,7 @@ try {
       "Speech has no valid content items:",
       filename,
       "total items:",
-      speech.content.length
+      speech.content.length,
     );
     return Astro.redirect("/404");
   }
@@ -106,7 +106,7 @@ try {
   // Update speech with filtered content if needed
   if (validContent.length !== speech.content.length) {
     console.warn(
-      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`
+      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`,
     );
     speech.content = validContent;
   }
@@ -212,22 +212,22 @@ if (speech.info.time) {
   structuredData={structuredData}
 >
   <div
-    class="absolute top-0 left-0 w-full h-[100vh] bg-gradient-to-b from-gray-100 to-transparent dark:from-black/10"
+    class="absolute top-0 left-0 h-[100vh] w-full bg-gradient-to-b from-gray-100 to-transparent dark:from-black/10"
   >
   </div>
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 relative">
+  <div class="relative mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
     <!-- Speech header -->
     <header
-      class="from-white dark:from-white/5 bg-gradient-to-b to-transparent rounded-lg p-4 sm:p-6 mb-6 sm:mb-8"
+      class="mb-6 rounded-lg bg-gradient-to-b from-white to-transparent p-4 sm:mb-8 sm:p-6 dark:from-white/5"
     >
       <h1
-        class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-3 sm:mb-4 leading-tight"
+        class="mb-3 text-xl leading-tight font-bold text-gray-900 sm:mb-4 sm:text-2xl lg:text-3xl dark:text-gray-100"
       >
         {speech.info.name}
       </h1>
 
       <div
-        class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600 dark:text-gray-400"
+        class="flex flex-col gap-2 text-sm text-gray-600 sm:flex-row sm:flex-wrap sm:gap-4 dark:text-gray-400"
         role="group"
         aria-label="對話資訊"
       >
@@ -242,7 +242,7 @@ if (speech.info.time) {
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="w-4 h-4 mr-2 flex-shrink-0"
+            class="mr-2 h-4 w-4 flex-shrink-0"
             ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
               width="18"
               height="18"
@@ -266,7 +266,7 @@ if (speech.info.time) {
 
       {
         speech.info.description && (
-          <div class="mt-3 sm:mt-4 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed break-all">
+          <div class="mt-3 text-sm leading-relaxed break-all text-gray-700 sm:mt-4 sm:text-base dark:text-gray-300">
             <MarkdownContent
               content={speech.info.description}
               size="sm"
@@ -285,7 +285,7 @@ if (speech.info.time) {
 
     <!-- Share section -->
     <aside
-      class="mt-6 sm:mt-8 bg-white dark:bg-white/5 rounded-lg border border-gray-200 dark:border-white/5 p-4 sm:p-6"
+      class="mt-6 rounded-lg border border-gray-200 bg-white p-4 sm:mt-8 sm:p-6 dark:border-white/5 dark:bg-white/5"
       aria-labelledby="share-heading"
     >
       <h2 id="share-heading" class="sr-only">分享此對話</h2>

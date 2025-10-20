@@ -96,7 +96,7 @@ export default function ChatBot() {
         {isOpen && (
           <motion.div
             layoutId="chat-bot"
-            className="fixed right-2 bottom-2 w-90 max-w-[90vw] overflow-hidden rounded-xl z-20 bg-white shadow-lg dark:bg-gray-900"
+            className="fixed right-2 bottom-2 z-20 w-90 max-w-[90vw] overflow-hidden rounded-xl bg-white shadow-lg dark:bg-gray-900"
           >
             <div
               id="chat-bot-panel"
@@ -208,7 +208,7 @@ export default function ChatBot() {
                           // filter is in messages
                           .filter(
                             (qp) =>
-                              !messages.some((m) => m.content === qp.prompt)
+                              !messages.some((m) => m.content === qp.prompt),
                           )
                           .map((qp) => (
                             <button

@@ -13,14 +13,14 @@ const isMessage = /\/speeches\/[^/]+\/[^/]+/.test(currentPath);
   role="navigation"
   aria-label="主要導航"
 >
-  <div class="relative mx-auto flex flex-col gap-2 py-2 px-4 sm:px-6">
+  <div class="relative mx-auto flex flex-col gap-2 px-4 py-2 sm:px-6">
     <div class="flex min-h-[2rem] items-center justify-between gap-2 sm:gap-4">
-      <div class="flex items-center min-w-0">
+      <div class="flex min-w-0 items-center">
         {
           !isIndex && (
             <button
               id="back-button"
-              class="mr-2 rounded-lg p-2 hover:bg-gray-100 active:bg-gray-200 dark:hover:bg-white/5 dark:active:bg-white/10 touch-manipulation focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              class="mr-2 flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-lg p-2 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none active:bg-gray-200 dark:hover:bg-white/5 dark:focus:ring-offset-gray-800 dark:active:bg-white/10"
               data-is-message={isMessage}
               data-current-path={currentPath}
               aria-label="返回上一頁"
@@ -45,18 +45,18 @@ const isMessage = /\/speeches\/[^/]+\/[^/]+/.test(currentPath);
         }
         <a
           href="/"
-          class="flex items-center gap-2 min-w-0 rounded-lg p-2 -m-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+          class="-m-2 flex min-w-0 items-center gap-2 rounded-lg p-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:focus:ring-offset-gray-800"
           aria-label="TransPal 首頁"
         >
           <div
-            class="text-lg sm:text-xl font-semibold text-gray-800 dark:text-white truncate tracking-tighter"
+            class="truncate text-lg font-semibold tracking-tighter text-gray-800 sm:text-xl dark:text-white"
           >
             TransPal
           </div>
         </a>
       </div>
       <div
-        class="flex items-center gap-1 sm:gap-2 flex-shrink-0"
+        class="flex flex-shrink-0 items-center gap-1 sm:gap-2"
         role="toolbar"
         aria-label="搜尋和設定工具"
       >

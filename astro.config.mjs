@@ -26,7 +26,7 @@ export default defineConfig({
             weight: 400,
             style: "normal",
             data: fs.readFileSync(
-              "node_modules/@expo-google-fonts/noto-sans-tc/400Regular/NotoSansTC_400Regular.ttf"
+              "node_modules/@expo-google-fonts/noto-sans-tc/400Regular/NotoSansTC_400Regular.ttf",
             ),
           },
           {
@@ -34,7 +34,7 @@ export default defineConfig({
             weight: 700,
             style: "normal",
             data: fs.readFileSync(
-              "node_modules/@expo-google-fonts/noto-sans-tc/700Bold/NotoSansTC_700Bold.ttf"
+              "node_modules/@expo-google-fonts/noto-sans-tc/700Bold/NotoSansTC_700Bold.ttf",
             ),
           },
         ],

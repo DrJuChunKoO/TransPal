@@ -79,8 +79,8 @@ current page: https://transpal.juchunko.com/speeches/${filename}
                   // remove last slash
                   `https://raw.githubusercontent.com/DrJuChunKoO/TransPal/refs/heads/main/public${filename.replace(
                     /\/$/,
-                    ""
-                  )}.json`
+                    "",
+                  )}.json`,
                 )
                   .then((res) => res.json())
                   .then((x) =>
@@ -95,12 +95,12 @@ current page: https://transpal.juchunko.com/speeches/${filename}
                         }) => ({
                           speaker,
                           text,
-                        })
+                        }),
                       )
                       .map((x: { speaker: string; text: string }) => {
                         return `${x.speaker}：${x.text}`;
                       })
-                      .join("\n")
+                      .join("\n"),
                   );
 
                 return `base: https://transpal.juchunko.com/\n目前頁面內容：\n${fileData}`;
@@ -132,7 +132,7 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       if (speechMatch) {
         const filename = speechMatch[1];
         const location = `https://${request.headers.get(
-          "host"
+          "host",
         )}/speeches/${filename}`;
         return Response.redirect(location, 301);
       }

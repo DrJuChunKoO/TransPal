@@ -45,7 +45,7 @@ export async function getSpeeches(): Promise<SpeechMetadata[]> {
 
           // Sort by date descending
           speeches.sort(
-            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
           );
 
           speechListCache = speeches;
@@ -54,14 +54,14 @@ export async function getSpeeches(): Promise<SpeechMetadata[]> {
           logError(
             error as Error,
             { component: "getSpeeches", action: "loadSpeechesList" },
-            "medium"
+            "medium",
           );
           return [];
         }
       },
       2,
       1000,
-      { component: "getSpeeches" }
+      { component: "getSpeeches" },
     )) || []
   );
 }
@@ -70,7 +70,7 @@ export async function getSpeeches(): Promise<SpeechMetadata[]> {
  * Gets the details of a specific speech by filename
  */
 export async function getSpeech(
-  filename: string
+  filename: string,
 ): Promise<SpeechDetail | null> {
   try {
     // Input validation and sanitization
@@ -82,7 +82,7 @@ export async function getSpeech(
           filename,
           action: "validateInput",
         },
-        "low"
+        "low",
       );
       return null;
     }
@@ -99,7 +99,7 @@ export async function getSpeech(
           sanitizedFilename,
           action: "sanitizeFilename",
         },
-        "medium"
+        "medium",
       );
       return null;
     }
@@ -121,7 +121,7 @@ export async function getSpeech(
             filename: decodedFilename,
             action: "findSpeechFile",
           },
-          "medium"
+          "medium",
         );
         return null;
       }
@@ -157,7 +157,7 @@ export async function getSpeech(
           filename: decodedFilename,
           action: "loadSpeechFile",
         },
-        "medium"
+        "medium",
       );
       return null;
     }
@@ -173,7 +173,7 @@ export async function getSpeech(
 export async function getSpeechMessageWithContext(
   filename: string,
   messageId: string,
-  contextSize: number = 2
+  contextSize: number = 2,
 ): Promise<{
   speech: SpeechDetail;
   targetMessage: SpeechContentItem;
@@ -187,7 +187,7 @@ export async function getSpeechMessageWithContext(
 
     // Find the target message
     const targetMessage = speech.content.find(
-      (item) => item && item.id === messageId && item.type === "speech"
+      (item) => item && item.id === messageId && item.type === "speech",
     );
 
     if (!targetMessage) {
@@ -196,7 +196,7 @@ export async function getSpeechMessageWithContext(
 
     // Find the index of the target message
     const targetIndex = speech.content.findIndex(
-      (item) => item && item.id === messageId
+      (item) => item && item.id === messageId,
     );
 
     if (targetIndex === -1) {
@@ -207,7 +207,7 @@ export async function getSpeechMessageWithContext(
     const startIndex = Math.max(0, targetIndex - contextSize);
     const endIndex = Math.min(
       speech.content.length,
-      targetIndex + contextSize + 1
+      targetIndex + contextSize + 1,
     );
 
     // Get context messages
@@ -229,7 +229,7 @@ export async function getSpeechMessageWithContext(
         messageId,
         contextSize,
       },
-      "medium"
+      "medium",
     );
     return null;
   }
@@ -285,14 +285,14 @@ export async function getAvatarMap(): Promise<AvatarMap> {
           logError(
             error as Error,
             { component: "getAvatarMap", action: "loadAvatarMap" },
-            "medium"
+            "medium",
           );
           return {};
         }
       },
       2,
       1000,
-      { component: "getAvatarMap" }
+      { component: "getAvatarMap" },
     )) || {}
   );
 }
@@ -301,7 +301,7 @@ export async function getAvatarMap(): Promise<AvatarMap> {
  * Gets a specific avatar URL for a participant
  */
 export async function getAvatarForParticipant(
-  name: string
+  name: string,
 ): Promise<string | null> {
   try {
     const avatarMap = await getAvatarMap();
@@ -314,7 +314,7 @@ export async function getAvatarForParticipant(
         name,
         action: "getAvatar",
       },
-      "low"
+      "low",
     );
     return null;
   }
@@ -324,7 +324,7 @@ export async function getAvatarForParticipant(
  * Gets the avatar path for a speaker (legacy function for backward compatibility)
  */
 export async function getAvatarPath(
-  speakerName: string
+  speakerName: string,
 ): Promise<string | null> {
   return await getAvatarForParticipant(speakerName);
 }
@@ -397,7 +397,7 @@ export function getAllSpeeches(): any[] {
 
   // Sort by date descending to match test expectations
   speeches.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
 
   return speeches;
@@ -429,8 +429,8 @@ export function searchSpeeches(query: string): any[] {
       speech.title.toLowerCase().includes(lowerQuery) ||
       speech.messages.some(
         (msg: any) =>
-          msg.content && msg.content.toLowerCase().includes(lowerQuery)
-      )
+          msg.content && msg.content.toLowerCase().includes(lowerQuery),
+      ),
   );
 }
 

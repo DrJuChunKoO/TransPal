@@ -4,15 +4,15 @@ const currentPath = Astro.url.pathname;
 ---
 
 <footer
-  class="flex flex-col gap-4 py-4 shadow-[0_-2px_4px_rgba(0,0,0,.02),0_-1px_0_rgba(0,0,0,.06)] dark:bg-[#232323] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)] bg-white z-10"
+  class="z-10 flex flex-col gap-4 bg-white py-4 shadow-[0_-2px_4px_rgba(0,0,0,.02),0_-1px_0_rgba(0,0,0,.06)] dark:bg-[#232323] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)]"
   role="contentinfo"
 >
   <div
-    class="w-full mx-auto flex flex-col items-center justify-between gap-4 px-4 sm:px-6 sm:flex-row-reverse"
+    class="mx-auto flex w-full flex-col items-center justify-between gap-4 px-4 sm:flex-row-reverse sm:px-6"
   >
     <nav aria-label="頁腳導航" role="navigation">
       <ul
-        class="flex flex-col items-center gap-2 text-sm text-gray-600 dark:text-gray-400 sm:flex-row sm:gap-0"
+        class="flex flex-col items-center gap-2 text-sm text-gray-600 sm:flex-row sm:gap-0 dark:text-gray-400"
         role="list"
       >
         <li>
@@ -44,7 +44,7 @@ const currentPath = Astro.url.pathname;
         <li>
           <a
             href="/rss.xml"
-            class="relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200 flex items-center gap-1 touch-manipulation min-h-[44px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
             aria-label="訂閱 RSS 動態"
           >
             RSS
@@ -70,7 +70,7 @@ const currentPath = Astro.url.pathname;
             href="https://github.com/DrJuChunKoO/TransPal"
             target="_blank"
             rel="noopener noreferrer"
-            class="relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200 flex items-center gap-1 touch-manipulation min-h-[44px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
             aria-label="在 GitHub 上查看 TransPal 原始碼（開啟新視窗）"
           >
             GitHub
@@ -93,7 +93,7 @@ const currentPath = Astro.url.pathname;
       </ul>
     </nav>
     <div
-      class="text-xs sm:text-sm text-gray-600 dark:text-white/50 text-center sm:text-left"
+      class="text-center text-xs text-gray-600 sm:text-left sm:text-sm dark:text-white/50"
     >
       <p>TransPal 程式碼以 MIT 授權釋出</p>
     </div>

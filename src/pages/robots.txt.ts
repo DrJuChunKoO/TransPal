@@ -1,8 +1,9 @@
-import type { APIRoute } from 'astro';
+import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async ({ site }) => {
-  const baseUrl = site?.href.replace(/\/$/, '') || 'https://transpal.example.com';
-  
+  const baseUrl =
+    site?.href.replace(/\/$/, "") || "https://transpal.example.com";
+
   const robotsTxt = `# TransPal Robots.txt
 # 允許所有搜尋引擎爬取網站內容
 
@@ -56,8 +57,8 @@ Allow: /`;
 
   return new Response(robotsTxt, {
     headers: {
-      'Content-Type': 'text/plain; charset=utf-8',
-      'Cache-Control': 'public, max-age=86400'
-    }
+      "Content-Type": "text/plain; charset=utf-8",
+      "Cache-Control": "public, max-age=86400",
+    },
   });
 };

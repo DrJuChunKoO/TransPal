@@ -45,7 +45,7 @@ describe("speeches utilities", () => {
     it("should return speeches sorted by date descending", () => {
       const speeches = getAllSpeeches();
       expect(new Date(speeches[0].date) >= new Date(speeches[1].date)).toBe(
-        true
+        true,
       );
     });
   });

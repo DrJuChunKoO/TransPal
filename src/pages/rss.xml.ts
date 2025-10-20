@@ -46,7 +46,7 @@ export const GET: APIRoute = async ({ site }) => {
       } catch (error) {
         console.warn(
           `Error processing speech ${speechMeta.filename} for RSS:`,
-          error
+          error,
         );
         // Continue with other speeches
       }

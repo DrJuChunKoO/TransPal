@@ -24,7 +24,7 @@ if (preloadAll) {
     document.addEventListener('DOMContentLoaded', function() {
       const preloadAvatars = async () => {
         const { getAvatarPath } = await import('/src/utils/speeches.ts');
-        
+
         for (const speakerName of avatarsToPreload) {
           try {
             const avatarPath = await getAvatarPath(speakerName);
@@ -41,7 +41,7 @@ if (preloadAll) {
           }
         }
       };
-      
+
       // Use requestIdleCallback if available, otherwise setTimeout
       if ('requestIdleCallback' in window) {
         requestIdleCallback(preloadAvatars);

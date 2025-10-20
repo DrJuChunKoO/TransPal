@@ -25,7 +25,7 @@ function generateLargeMarkdown(size: number): string {
     .fill(0)
     .map(
       (_, i) =>
-        `This is paragraph ${i + 1} with **bold** and *italic* text.\n\n`
+        `This is paragraph ${i + 1} with **bold** and *italic* text.\n\n`,
     )
     .join("");
   const lists = Array(Math.floor(size / 5))
