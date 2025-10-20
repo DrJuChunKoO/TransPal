@@ -262,7 +262,7 @@ export default function ShareButton({
         id="share-heading"
         className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4"
       >
-        分享此發言
+        分享此對話
       </h3>
 
       <div
