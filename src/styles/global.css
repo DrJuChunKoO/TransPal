@@ -268,3 +268,7 @@
     opacity: 1;
   }
 }
+
+:root {
+  text-autospace: normal;
+}
