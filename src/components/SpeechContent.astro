@@ -16,63 +16,110 @@ const speechContent = Array.isArray(speech?.content) ? speech.content : [];
 
 // Filter out non-speech content for the timeline
 const speechItems = speechContent.filter(item => item && item.type === 'speech');
+
+// Helper function to group consecutive speech items by speaker
+interface GroupedSpeech {
+  type: 'grouped-speech' | 'divider' | 'markdown';
+  speaker?: string;
+  texts?: string[]; // Array of texts from consecutive speeches
+  text?: string; // For divider and markdown
+  id?: string; // For divider
+}
+
+function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech[] {
+  const grouped: GroupedSpeech[] = [];
+
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+
+    if (item.type !== 'speech') {
+      // Keep non-speech items as-is
+      grouped.push({
+        type: item.type as 'divider' | 'markdown',
+        text: item.text,
+        id: item.id,
+      });
+      continue;
+    }
+
+    // Check if this is the start of a group
+    const lastGrouped = grouped[grouped.length - 1];
+    if (lastGrouped?.type === 'grouped-speech' && lastGrouped.speaker === item.speaker) {
+      // Add to existing group
+      lastGrouped.texts?.push(item.text);
+    } else {
+      // Start new group
+      grouped.push({
+        type: 'grouped-speech',
+        speaker: item.speaker,
+        texts: [item.text],
+      });
+    }
+  }
+
+  return grouped;
+}
 ---
 
 <div>
-  {speechContent.map((item) => {
-    if (item.type === 'divider') {
-      return (
-        <div class="flex items-center my-8">
-          <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
-          <div class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
-            {item.text || '---'}
+  {(() => {
+    const groupedItems = groupConsecutiveSpeechItems(speechContent);
+
+    return groupedItems.map((item) => {
+      if (item.type === 'divider') {
+        return (
+          <div class="flex items-center my-8">
+            <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
+            <div class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
+              {item.text || '---'}
+            </div>
+            <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
           </div>
-          <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
-        </div>
-      );
-    }
+        );
+      }
 
-    if (item.type === 'markdown') {
-      return (
-        <div class="bg-blue-50 dark:bg-white/5 border border-blue-200 dark:border-white/5 rounded-lg p-4">
-          <MarkdownContent content={item.text} size="base" />
-        </div>
-      );
-    }
-
-    if (item.type === 'speech') {
-      return (
-        <div
-          id={item.id}
-          class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group"
-        >
-          <!-- Avatar -->
-          <div class="flex-shrink-0">
-            <Avatar speakerName={item.speaker} />
+      if (item.type === 'markdown') {
+        return (
+          <div class="bg-blue-50 dark:bg-white/5 border border-blue-200 dark:border-white/5 rounded-lg p-4">
+            <MarkdownContent content={item.text || ''} size="base" />
           </div>
+        );
+      }
 
-          <!-- Content -->
-          <div class="flex-1 min-w-0">
-            <!-- Speaker and time -->
-            <div class="flex items-center justify-between mb-2">
-              <div class="flex items-center gap-2">
-                <h3 class="font-semibold text-gray-900 dark:text-gray-100">
-                  {item.speaker}
-                </h3>
+      if (item.type === 'grouped-speech') {
+        // Merge multiple texts with line breaks
+        const mergedText = item.texts?.join('\n\n') || '';
+
+        return (
+          <div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group relative">
+            <!-- Avatar -->
+            <div class="flex-shrink-0 sticky top-20 self-start">
+              <Avatar speakerName={item.speaker || ''} />
+            </div>
+
+            <!-- Content -->
+            <div class="flex-1 min-w-0">
+              <!-- Speaker name -->
+              <div class="flex items-center justify-between mb-2">
+                <div class="flex items-center gap-2">
+                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                    {item.speaker}
+                  </h3>
+                </div>
+              </div>
+
+              <!-- Message text -->
+              <div class="text-gray-700 dark:text-gray-300">
+                <MessageText content={mergedText} type="auto" size="sm" />
               </div>
             </div>
-
-            <!-- Message text -->
-            <div class="text-gray-700 dark:text-gray-300">
-              <MessageText content={item.text} type="auto" size="sm" />
-            </div>
           </div>
-        </div>
-      );
-    }
+        );
+      }
 
-    return null;
-  })}
+      return null;
+    });
+  })()}
 
   {speechItems.length === 0 && (
     <div class="text-center py-12">
