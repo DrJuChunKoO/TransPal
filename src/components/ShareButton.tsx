@@ -99,35 +99,31 @@ export default function ShareButton({
     }
   }, [url, onShare]);
 
-  // 分享選項配置（僅兩個按鈕：複製、LINE）
+  // 分享選項配置（實心色）
   const shareOptions: ShareOption[] = [
     {
       name: "copy",
       label: "複製連結",
       icon: ShareIcons.copy,
-      color: "bg-gradient-to-r from-blue-500 to-blue-600",
-      hoverColor: "hover:from-blue-600 hover:to-blue-700",
+      color: "bg-blue-600",
+      hoverColor: "hover:bg-blue-700",
       action: handleCopyLink,
     },
     {
       name: "line",
       label: "LINE",
       icon: ShareIcons.line,
-      color: "bg-gradient-to-r from-green-500 to-green-600",
-      hoverColor: "hover:from-green-600 hover:to-green-700",
-      url: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(
-        url
-      )}&text=${encodeURIComponent(shareText)}`,
+      color: "bg-green-600",
+      hoverColor: "hover:bg-green-700",
+      url: `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(url)}&text=${encodeURIComponent(shareText)}`,
     },
     {
       name: "facebook",
       label: "Facebook",
       icon: ShareIcons.facebook,
-      color: "bg-gradient-to-r from-blue-700 to-blue-800",
-      hoverColor: "hover:from-blue-800 hover:to-blue-900",
-      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-        url
-      )}`,
+      color: "bg-blue-700",
+      hoverColor: "hover:bg-blue-800",
+      url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(shareText)}`,
     },
   ];
 
@@ -145,7 +141,7 @@ export default function ShareButton({
       </h3>
 
       <div
-        className="grid grid-cols-3 gap-3"
+        className="flex flex-wrap gap-3"
         role="group"
         aria-label="分享選項"
       >
@@ -153,6 +149,7 @@ export default function ShareButton({
           const isLink = !!option.url;
           const buttonClassName = cn(
             "relative flex items-center justify-center px-4 py-3",
+            "w-full sm:flex-1",
             "text-white font-medium rounded-lg",
             "transition-all duration-200",
             "focus:outline-none focus:ring-2 focus:ring-offset-2",
@@ -164,6 +161,8 @@ export default function ShareButton({
               ? "focus:ring-green-500"
               : option.name === "copy"
               ? "focus:ring-blue-500"
+              : option.name === "facebook"
+              ? "focus:ring-blue-600"
               : ""
           );
 
