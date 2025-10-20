@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import ToasterHost from "../components/ToasterHost.tsx";
 import { getImagePath } from "astro-opengraph-images";
 export interface Props {
   title?: string;
@@ -162,6 +163,7 @@ const openGraphImageUrl = getImagePath({ url, site });
       <slot />
     </main>
     <Footer />
+    <ToasterHost client:load />
   </body>
 </html>
 
