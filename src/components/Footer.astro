@@ -1,12 +1,6 @@
 ---
 // Get current path for active link styling
 const currentPath = Astro.url.pathname;
-
-interface NavLinkProps {
-  href?: string;
-  external?: boolean;
-  children: any;
-}
 ---
 
 <footer
@@ -45,6 +39,30 @@ interface NavLinkProps {
             aria-current={currentPath === "/edit-guide" ? "page" : undefined}
           >
             編輯指南
+          </a>
+        </li>
+        <li>
+          <a
+            href="/rss.xml"
+            class="relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200 flex items-center gap-1 touch-manipulation min-h-[44px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+            aria-label="訂閱 RSS 動態"
+          >
+            RSS
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-rss-icon lucide-rss size-4"
+              ><path d="M4 11a9 9 0 0 1 9 9"></path><path
+                d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"
+              ></circle></svg
+            >
           </a>
         </li>
         <li>
