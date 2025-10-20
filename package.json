@@ -53,6 +53,9 @@
     "@vitest/ui": "^3.2.4",
     "happy-dom": "^18.0.1",
     "jsdom": "^26.1.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "unplugin-icons": "^22.1.0",
     "vitest": "^3.2.4",
     "wrangler": "^4.20.0"
