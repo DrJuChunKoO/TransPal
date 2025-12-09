@@ -14,11 +14,9 @@ interface Env {
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
+    const url = new URL(request.url);
     // API 端點 -------------------------------------------------------------
-    if (
-      request.method === "POST" &&
-      new URL(request.url).pathname === "/api/chat"
-    ) {
+    if (request.method === "POST" && url.pathname === "/api/chat") {
       // --------------------------------------------------------------
       // 初始化 OpenAI provider – 放在 handler 內才能拿到正確 env
       // --------------------------------------------------------------
@@ -121,7 +119,6 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       response.headers.set("transfer-encoding", "chunked");
       return response;
     }
-    const url = new URL(request.url);
     if (
       url.pathname.startsWith("/speeches/") &&
       url.pathname.split("/").length > 4
@@ -137,25 +134,6 @@ current page: https://transpal.juchunko.com/speeches/${filename}
         )}/speeches/${filename}`;
         return Response.redirect(location, 301);
       }
-    }
-    // 處理 /speeches/*.json 的 CORS
-    if (
-      url.pathname.startsWith("/speeches/") &&
-      url.pathname.endsWith(".json")
-    ) {
-      if (request.method === "OPTIONS") {
-        return new Response(null, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
-            "Access-Control-Allow-Headers": "*",
-          },
-        });
-      }
-      const response = await env.ASSETS.fetch(request);
-      const newResponse = new Response(response.body, response);
-      newResponse.headers.set("Access-Control-Allow-Origin", "*");
-      return newResponse;
     }
 
     // 非上述路由 – 直接回傳靜態檔 (免費 CDN)

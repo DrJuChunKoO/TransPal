@@ -1,0 +1,4 @@
+/speeches/*.json
+  Access-Control-Allow-Origin: *
+/*
+  x-powered-by: TransPal
