@@ -63,7 +63,7 @@ try {
       "Speech content is not an array for:",
       filename,
       "type:",
-      typeof speech.content,
+      typeof speech.content
     );
     return Astro.redirect("/404");
   }
@@ -72,7 +72,7 @@ try {
   if (!speech.info.name || typeof speech.info.name !== "string") {
     console.warn(
       "Speech missing name field, using filename as fallback:",
-      filename,
+      filename
     );
     speech.info.name = filename;
   }
@@ -80,7 +80,7 @@ try {
   if (!speech.info.date || typeof speech.info.date !== "string") {
     console.warn(
       "Speech missing date field, using current date as fallback:",
-      filename,
+      filename
     );
     speech.info.date = new Date().toISOString();
   }
@@ -98,7 +98,7 @@ try {
       "Speech has no valid content items:",
       filename,
       "total items:",
-      speech.content.length,
+      speech.content.length
     );
     return Astro.redirect("/404");
   }
@@ -106,7 +106,7 @@ try {
   // Update speech with filtered content if needed
   if (validContent.length !== speech.content.length) {
     console.warn(
-      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`,
+      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`
     );
     speech.content = validContent;
   }
@@ -211,15 +211,9 @@ if (speech.info.time) {
   ogType="article"
   structuredData={structuredData}
 >
-  <div
-    class="absolute top-0 left-0 h-[100vh] w-full bg-gradient-to-b from-gray-100 to-transparent dark:from-black/10"
-  >
-  </div>
   <div class="relative mx-auto max-w-4xl px-4 py-6 sm:px-6 sm:py-8">
     <!-- Speech header -->
-    <header
-      class="mb-6 rounded-lg bg-gradient-to-b from-white to-transparent p-4 sm:mb-8 sm:p-6 dark:from-white/5"
-    >
+    <header class="mb-6 rounded-3xl bg-gray-50 p-6 sm:mb-8 dark:bg-white/5">
       <h1
         class="mb-3 text-xl leading-tight font-bold text-gray-900 sm:mb-4 sm:text-2xl lg:text-3xl dark:text-gray-100"
       >
@@ -262,6 +256,30 @@ if (speech.info.time) {
             )
           }
         </div>
+
+        <a
+          href={`https://transpal-editor.juchunko.com/?file=${filename}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center transition-colors hover:text-gray-900 dark:hover:text-gray-200"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="mr-2 h-4 w-4 flex-shrink-0"
+          >
+            <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path>
+            <path d="m15 5 4 4"></path>
+          </svg>
+          編輯此對話
+        </a>
       </div>
 
       {
@@ -285,7 +303,7 @@ if (speech.info.time) {
 
     <!-- Share section -->
     <aside
-      class="mt-6 rounded-lg border border-gray-200 bg-white p-4 sm:mt-8 sm:p-6 dark:border-white/5 dark:bg-white/5"
+      class="mt-6 rounded-3xl bg-gray-50 p-6 sm:mt-8 dark:bg-white/5"
       aria-labelledby="share-heading"
     >
       <h2 id="share-heading" class="sr-only">分享此對話</h2>

@@ -137,6 +137,18 @@ current page: https://transpal.juchunko.com/speeches/${filename}
         return Response.redirect(location, 301);
       }
     }
+    // 處理 /speeches/*.json 的 CORS
+    if (
+      request.method === "GET" &&
+      new URL(request.url).pathname.startsWith("/speeches/") &&
+      new URL(request.url).pathname.endsWith(".json")
+    ) {
+      const response = await env.ASSETS.fetch(request);
+      const newResponse = new Response(response.body, response);
+      newResponse.headers.set("Access-Control-Allow-Origin", "*");
+      return newResponse;
+    }
+
     // 非上述路由 – 直接回傳靜態檔 (免費 CDN)
     return env.ASSETS.fetch(request);
   },

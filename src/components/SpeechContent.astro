@@ -69,18 +69,18 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
       if (item.type === 'divider') {
         return (
           <div class="flex items-center my-8">
-            <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
-            <div class="px-4 text-sm text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-900">
+            <div class="flex-1 border-t border-gray-200 dark:border-white/10"></div>
+            <div class="px-4 text-sm text-gray-500 dark:text-gray-400">
               {item.text || '---'}
             </div>
-            <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
+            <div class="flex-1 border-t border-gray-200 dark:border-white/10"></div>
           </div>
         );
       }
 
       if (item.type === 'markdown') {
         return (
-          <div class="bg-blue-50 dark:bg-white/5 border border-blue-200 dark:border-white/5 rounded-lg p-4">
+          <div class="bg-gray-50 dark:bg-white/5 rounded-2xl p-6 my-4">
             <MarkdownContent content={item.text || ''} size="base" />
           </div>
         );
@@ -91,9 +91,9 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
         const mergedText = item.texts?.join('\n\n') || '';
 
         return (
-          <div class="flex gap-4 p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group relative">
+          <div class="flex gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group relative">
             <!-- Avatar -->
-            <div class="flex-shrink-0 sticky top-20 self-start">
+            <div class="flex-shrink-0 sticky top-24 self-start">
               <Avatar speakerName={item.speaker || ''} />
             </div>
 

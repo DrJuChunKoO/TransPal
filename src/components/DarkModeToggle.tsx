@@ -94,7 +94,7 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={handleThemeChange}
-      className="flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-lg p-2 transition-colors hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none active:bg-gray-200 dark:hover:bg-white/5 dark:focus:ring-offset-gray-800 dark:active:bg-white/10"
+      className="flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none active:bg-gray-200 dark:hover:bg-white/5 dark:focus:ring-offset-gray-800 dark:active:bg-white/10"
       aria-label={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       title={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       type="button"

@@ -1,101 +1,98 @@
 ---
-// Get current path for active link styling
 const currentPath = Astro.url.pathname;
+const currentYear = new Date().getFullYear();
 ---
 
-<footer
-  class="z-10 flex flex-col gap-4 bg-white py-4 shadow-[0_-2px_4px_rgba(0,0,0,.02),0_-1px_0_rgba(0,0,0,.06)] dark:bg-[#232323] dark:shadow-[0_-1px_0_rgba(255,255,255,.1)]"
-  role="contentinfo"
->
-  <div
-    class="mx-auto flex w-full flex-col items-center justify-between gap-4 px-4 sm:flex-row-reverse sm:px-6"
-  >
-    <nav aria-label="頁腳導航" role="navigation">
-      <ul
-        class="flex flex-col items-center gap-2 text-sm text-gray-600 sm:flex-row sm:gap-0 dark:text-gray-400"
-        role="list"
-      >
-        <li>
-          <a
-            href="/about"
-            class={`relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
-              currentPath === "/about"
-                ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
-            }`}
-            aria-current={currentPath === "/about" ? "page" : undefined}
-          >
-            關於
-          </a>
-        </li>
-        <li>
-          <a
-            href="/edit-guide"
-            class={`relative rounded px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
-              currentPath === "/edit-guide"
-                ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
-                : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
-            }`}
-            aria-current={currentPath === "/edit-guide" ? "page" : undefined}
-          >
-            編輯指南
-          </a>
-        </li>
-        <li>
-          <a
-            href="/rss.xml"
-            class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
-            aria-label="訂閱 RSS 動態"
-          >
-            RSS
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-rss-icon lucide-rss size-4"
-              ><path d="M4 11a9 9 0 0 1 9 9"></path><path
-                d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"
-              ></circle></svg
+<footer class="bg-white py-8 dark:bg-[#1C1C1C]">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-0">
+    <div
+      class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row"
+    >
+      <div class="text-sm text-gray-500 dark:text-gray-400">
+        © {currentYear} JUCHUNKO.COM All rights reserved.
+      </div>
+      <nav aria-label="頁腳導航" role="navigation">
+        <ul
+          class="flex flex-wrap items-center gap-2 text-sm text-gray-600 sm:gap-[1px] dark:text-gray-400"
+          role="list"
+        >
+          <li>
+            <a
+              href="/about"
+              class={`relative rounded-full px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+                currentPath === "/about"
+                  ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
+                  : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
+              }`}
+              aria-current={currentPath === "/about" ? "page" : undefined}
             >
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/DrJuChunKoO/TransPal"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
-            aria-label="在 GitHub 上查看 TransPal 原始碼（開啟新視窗）"
-          >
-            GitHub
-            <svg
-              class="size-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
+              關於
+            </a>
+          </li>
+          <li>
+            <a
+              href="/edit-guide"
+              class={`relative rounded-full px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+                currentPath === "/edit-guide"
+                  ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
+                  : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
+              }`}
+              aria-current={currentPath === "/edit-guide" ? "page" : undefined}
             >
-              <path
+              編輯指南
+            </a>
+          </li>
+          <li>
+            <a
+              href="/rss.xml"
+              class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
+              aria-label="訂閱 RSS 動態"
+            >
+              RSS
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              ></path>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <div
-      class="text-center text-xs text-gray-600 sm:text-left sm:text-sm dark:text-white/50"
-    >
-      <p>TransPal 程式碼以 MIT 授權釋出</p>
+                class="lucide lucide-rss-icon lucide-rss size-4"
+                ><path d="M4 11a9 9 0 0 1 9 9"></path><path
+                  d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"
+                ></circle></svg
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/DrJuChunKoO/TransPal"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
+              aria-label="在 GitHub 上查看 TransPal 原始碼（開啟新視窗）"
+            >
+              GitHub
+              <svg
+                class="size-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                ></path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </footer>

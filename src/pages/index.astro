@@ -1,6 +1,7 @@
 ---
 import SpeechesList from "../components/SpeechesList.astro";
 import Layout from "../layouts/Layout.astro";
+import Search from "../components/Search";
 
 const pageTitle = "TransPal - 對話網站";
 const pageDescription = "瀏覽所有對話和逐字稿內容，搜尋特定發言和討論內容";
@@ -49,7 +50,10 @@ const structuredData = {
   ogUrl={canonicalUrl}
   structuredData={structuredData}
 >
-  <main>
+  <main
+    class="mx-auto flex min-h-screen max-w-4xl flex-col gap-4 px-4 sm:px-6 lg:px-0"
+  >
+    <Search client:load />
     <SpeechesList />
   </main>
 </Layout>
