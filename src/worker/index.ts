@@ -121,11 +121,12 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       response.headers.set("transfer-encoding", "chunked");
       return response;
     }
+    const url = new URL(request.url);
     if (
-      new URL(request.url).pathname.startsWith("/speeches/") &&
-      new URL(request.url).pathname.split("/").length > 4
+      url.pathname.startsWith("/speeches/") &&
+      url.pathname.split("/").length > 4
     ) {
-      const pathname = new URL(request.url).pathname;
+      const pathname = url.pathname;
       // 處理帶訊息ID的演講頁面重定向 (格式: /speeches/{filename}/{messageId})
       const speechWithMessagePattern = /^\/speeches\/([^\/]+)\/([^\/]+)$/;
       const speechMatch = pathname.match(speechWithMessagePattern);
@@ -139,10 +140,18 @@ current page: https://transpal.juchunko.com/speeches/${filename}
     }
     // 處理 /speeches/*.json 的 CORS
     if (
-      request.method === "GET" &&
-      new URL(request.url).pathname.startsWith("/speeches/") &&
-      new URL(request.url).pathname.endsWith(".json")
+      url.pathname.startsWith("/speeches/") &&
+      url.pathname.endsWith(".json")
     ) {
+      if (request.method === "OPTIONS") {
+        return new Response(null, {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+            "Access-Control-Allow-Headers": "*",
+          },
+        });
+      }
       const response = await env.ASSETS.fetch(request);
       const newResponse = new Response(response.body, response);
       newResponse.headers.set("Access-Control-Allow-Origin", "*");
