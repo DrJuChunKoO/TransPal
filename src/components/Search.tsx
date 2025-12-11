@@ -280,7 +280,7 @@ export default function Search() {
             if (query) setIsOpen(true);
           }}
           placeholder="搜尋對話內容..."
-          className="w-full rounded-full border-0 bg-gray-100 px-4 py-2 pl-10 text-sm text-gray-900 placeholder-gray-500 ring-0 outline-0 transition-all focus:bg-gray-200 sm:text-base dark:bg-white/10 dark:text-white dark:placeholder-gray-400 dark:focus:bg-black"
+          className="w-full rounded-xl border-0 bg-gray-100 px-4 py-2 pl-10 text-sm text-gray-900 placeholder-gray-500 ring-0 outline-0 transition-all focus:bg-gray-200 sm:text-base dark:bg-white/10 dark:text-white dark:placeholder-white/50 dark:focus:bg-white/20"
           role="searchbox"
           aria-label="搜尋對話內容"
           aria-expanded={isOpen}

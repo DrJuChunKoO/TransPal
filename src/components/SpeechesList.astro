@@ -30,44 +30,31 @@ function formatDate(dateString: string): string {
         </div>
       </div>
     ) : (
-      <div class="flex h-full flex-col rounded-3xl bg-gray-50 p-6 dark:bg-white/5">
-        <div class="mb-6 flex items-center justify-between">
-          <div>
-            <h2 class="text-lg font-bold text-gray-900 dark:text-white">
-              對話列表
-            </h2>
-            <p class="text-sm text-gray-500 dark:text-white/50">
-              瀏覽所有對話和逐字稿內容
-            </p>
-          </div>
-        </div>
+      <div class="flex flex-col gap-2">
+        {sortedSpeeches.map((speech) => (
+          <a
+            href={`/speeches/${speech.filename}/`}
+            class="group relative flex items-center justify-between overflow-hidden rounded-xl bg-gray-50 p-4 transition-colors hover:bg-gray-100 dark:bg-white/5 dark:hover:bg-white/10"
+            aria-describedby={`speech-date-${speech.filename}`}
+          >
+            <div>
+              <h3 class="line-clamp-2 text-base font-semibold text-gray-900 dark:text-white">
+                {speech.name}
+              </h3>
+              <time
+                id={`speech-date-${speech.filename}`}
+                datetime={speech.date}
+                class="text-xs text-gray-500 dark:text-white/50"
+              >
+                {formatDate(speech.date)}
+              </time>
+            </div>
 
-        <div class="flex flex-col gap-2">
-          {sortedSpeeches.map((speech) => (
-            <a
-              href={`/speeches/${speech.filename}/`}
-              class="group relative flex items-center justify-between overflow-hidden rounded-xl bg-white p-4 shadow-sm transition-all hover:shadow-md dark:bg-white/5 dark:hover:bg-white/10"
-              aria-describedby={`speech-date-${speech.filename}`}
-            >
-              <div>
-                <h3 class="line-clamp-2 text-base font-semibold text-gray-900 dark:text-white">
-                  {speech.name}
-                </h3>
-                <time
-                  id={`speech-date-${speech.filename}`}
-                  datetime={speech.date}
-                  class="text-xs text-gray-400 dark:text-white/50"
-                >
-                  {formatDate(speech.date)}
-                </time>
-              </div>
-
-              <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-50 text-gray-400 group-hover:bg-gray-100 group-hover:text-gray-600 dark:bg-white/5 dark:text-gray-500 dark:group-hover:bg-white/10 dark:group-hover:text-gray-300">
-                <LucideArrowRight />
-              </div>
-            </a>
-          ))}
-        </div>
+            <div class="flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-gray-400 transition-colors group-hover:bg-gray-200 group-hover:text-gray-600 dark:bg-white/5 dark:text-gray-500 dark:group-hover:bg-white/10 dark:group-hover:text-gray-300">
+              <LucideArrowRight />
+            </div>
+          </a>
+        ))}
       </div>
     )
   }
