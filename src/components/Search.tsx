@@ -260,7 +260,22 @@ export default function Search() {
           id="search-input"
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={(e) => {
+            const newValue = e.target.value;
+            setQuery(newValue);
+            handleSearch(newValue); // 立即觸發搜尋
+          }}
+          onKeyDown={(e) => {
+            if (e.key === "ArrowDown" && results.length > 0) {
+              e.preventDefault();
+              const firstResult = document.querySelector(
+                `[data-search-result="0"]`,
+              ) as HTMLElement;
+              firstResult?.focus();
+            } else if (e.key === "Escape") {
+              setIsOpen(false);
+            }
+          }}
           onFocus={() => {
             if (query) setIsOpen(true);
           }}
@@ -359,6 +374,9 @@ export default function Search() {
                       ) as HTMLElement;
                       prevResult?.focus();
                     }
+                  } else if (e.key === "Enter") {
+                    e.preventDefault();
+                    navigateToMessage(result.filename);
                   } else if (e.key === "Escape") {
                     setIsOpen(false);
                     document.getElementById("search-input")?.focus();
