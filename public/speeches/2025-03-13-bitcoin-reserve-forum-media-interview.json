@@ -4,977 +4,824 @@
     "name": "比特幣儲備論壇－會後記者聯訪",
     "slug": "bitcoin-reserve-forum-media-interview",
     "date": "2025-03-13",
-    "description": "為 Whisper 轉錄，有錯誤歡迎留言分享\n\n錄音：[bafybeifzqgbz2oz6vkfrzden2ivuhealh4ief5cjhzzyly7a6qfggwnqie](https://ipfs.juchunko.com/ipfs/bafybeifzqgbz2oz6vkfrzden2ivuhealh4ief5cjhzzyly7a6qfggwnqie)\n\n對話主題是**台灣虛擬貨幣的法規與產業發展**\n\n1. **比特幣保存與產業化潛力**  \n   葛如鈞委員指出，比特幣的保存不應被視為過於複雜，台灣擁有足夠的技術和人才來支持加密貨幣的產業化。\n\n2. **金融產業的角色**  \n   台灣的既有金融產業有潛力成為數位貨幣的託管者，政府應鼓勵金融業提供相關服務。\n\n3. **虛擬貨幣課稅問題**  \n   葛如鈞委員強調，課稅應以促進產業發展為目的，而非僅僅為了政府分一杯羹，並指出政府對產業的理解和支持是關鍵。\n\n4. **立法與政府態度**  \n   討論中提到，立法院的立法需要與行政單位的執行相配合，政府應持開放態度，避免過於嚴苛的法規扼殺產業發展。\n\n5. **自律模式與國際比較**  \n   台灣在虛擬貨幣的管理上採取自律模式，與其他地區如日本和香港的做法不同，並強調政府應理解技術並與產業合作。\n\n6. **未來法規的挑戰與機會**  \n   葛如鈞委員表示，未來的法規應考慮全球趨勢的變化，並在制定過程中與產業保持良好溝通，以減少新法規帶來的震動期。"
+    "description": "### 討論內容摘要\n\n* **數位資產保存與人才優勢**：強調台灣具備世界級的密碼學與資安人才，數位資產保存並不比儲存個資困難，應鼓勵既有金融業投入比特幣保管服務，打造「護幣神山」。\n* **課稅應以發展為前提**：主張政府課稅的目的應是協助產業成長而非單純瓜分利潤。若政府只提供阻力而非助力，在產業發展初期討論課稅是不負責任的。\n* **對 VASP 專法的審慎立場**：認為在政府缺乏專業人才、先進工具及開放心態前，不應急於推動專法，以免嚴苛監管扼殺創新，重蹈 PayPal 退出台灣市場的覆轍。\n* **自律模式與執法的權衡**：在法規未完善前，傾向延續產業自律模式，並擔憂政府若以傳統官僚思維解釋法令，恐會對 KOL 推廣或健康的數位資產交易造成誤傷。\n* **掌握國際趨勢及公私協力**：指出國際趨勢已從嚴格監管轉向創新開放（如美國），台灣法規不應僅沿用數年前的舊觀念，立法院應透過質詢督促政府完善金融創新處的職能。\n\n為 Gemini 轉錄，有錯誤歡迎留言分享\n\n錄音：[bafybeifzqgbz2oz6vkfrzden2ivuhealh4ief5cjhzzyly7a6qfggwnqie](https://ipfs.juchunko.com/ipfs/bafybeifzqgbz2oz6vkfrzden2ivuhealh4ief5cjhzzyly7a6qfggwnqie)"
   },
   "content": [
     {
-      "id": "FMIgOE",
-      "start": 6.493,
-      "end": 17.978,
+      "id": "aa23777f-f301-4991-90b8-0e98378ca016",
+      "start": 0,
+      "end": 13.92,
       "type": "speech",
-      "speaker": "記者 - 1",
-      "text": "麻煩請看，但你覺得以台灣的法規來說，怎麼做是最好的？就是考量到什麼戰略或是波動性或是爆槌這件事情。"
+      "speaker": "記者",
+      "text": "這個，你覺得怎麼樣成為一個國家的儲備的時候，因為我們都知道數位資產的保全其實是蠻麻煩且困難的一件事，那你覺得以台灣的法規來說，台灣怎麼做是最好的？就是考量到比如戰略啊，或是波動性，或者是保存這件事情。這是第一。然後第二個就是之前那個報稅的問題，加密資產報稅是大家引起很大的討論。那你覺得繳稅這件事情對於產業是好的嗎？還是你有什麼看法？台灣應該怎麼做比較好？"
     },
     {
-      "id": "BBhUqr",
-      "start": 17.978,
-      "end": 29.394,
+      "id": "23713f06-ad8e-42ae-a727-8c17371a2b8c",
+      "start": 13.92,
+      "end": 30.12,
       "type": "speech",
-      "speaker": "記者 - 1",
-      "text": "然後第二個就是之前那個報稅的問題，交易資產報稅是大家以前在討論的。那你覺得講稅這件事情對於產業是好的嗎？你有什麼看法？台灣應該怎麼做比較好？"
+      "speaker": "葛如鈞",
+      "text": "好，謝謝。很好的問題。第一個是我覺得保存的部分先不要把它想得太複雜。事實上我認為要保存這個比特幣，對一個國家來講並不會比保存我們的個人資料要來得更困難。所以這個該保密的、該隱藏的，如果我們的政府都能夠做得很好的話，那理論上要保存比特幣也不是什麼問題。這是第一點，不要把它想得太難。"
     },
     {
-      "id": "aAcXhW",
-      "start": 29.394,
-      "end": 33.353,
+      "id": "8110a9e0-4c48-4efb-86b5-4fc164d282b0",
+      "start": 30.12,
+      "end": 55.44,
       "type": "speech",
-      "speaker": "記者 - 1",
-      "text": "好，謝謝，很好的問題。"
+      "speaker": "葛如鈞",
+      "text": "第二點呢，是產業化是勢在必行的。那台灣其實已經存在能夠保管比特幣的技術跟人才。那因為比特幣它其實叫「加密貨幣」（Cryptocurrency），Crypto 就是 Cryptography，密碼學跟資安的人才在台灣是盛產的。所以我們去看每年的這個所謂的加密貨幣的競賽也好，或者是密碼學的駭客大賽也好，台灣的團隊或資安的白帽駭客競賽，台灣團隊都是名列前茅的。所以台灣在這塊的研發跟產業化的能量是非常有潛力的。"
     },
     {
-      "id": "hvPFFP",
-      "start": 33.353,
-      "end": 61.22,
+      "id": "aa586699-3c02-47e1-875d-ba87b1e1c0c2",
+      "start": 55.44,
+      "end": 105.12,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "第一個是我覺得保存的部分先不要把它想得太複雜。事實上我認為要保存這個比特幣對一個國家來講並不會比保存我的個人資料要來得困難。所以這個該保密的、該隱藏的，如果我們的政府都能夠做得很好的話，那理論上要保存比特幣也不是什麼問題。這是第一點，不要把它想得太難。"
+      "speaker": "葛如鈞",
+      "text": "也已經有一個具體的案例，就是台灣一家叫 Cybavo 的公司，也被 Circle 給併購了，那成為他們的整個生態系裡面非常重要的這個能量。所以台灣是可以的。那第三個是既有的金融產業是不是也可以成為這個所謂的「護幣神山」或「護幣群山」，也是有可能的。因為我們現在一直在看到政府也開始逐漸地對這個概念接受度越來越高。所以也開始在提說我們的銀行、我們的金控也有可能可以用他們過去在面對過去的傳統金融資產的這種管理的方式跟經驗，也來幫忙做所謂的數位貨幣的託管。所以我們也非常樂見我們的政府去鼓勵既有、既存的這個金融業來做這方面的服務。"
     },
     {
-      "id": "fBphhJ",
-      "start": 61.22,
-      "end": 101.51,
+      "id": "7187eb47-d6c0-4017-b13e-c118f8edd256",
+      "start": 105.12,
+      "end": 115.68,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "第二點是產業化是勢在必行。那台灣其實已經存在能夠保管比特幣的技術跟人才。因為比特幣其實叫加密貨幣，Cryptocurrency 的 Crypto 就是 Cryptography，密碼學跟資安的人才在台灣是盛產的。所以我們去看每年的所謂加密貨幣的競賽也好，或者是密碼學的駭客大賽也好，台灣的團隊或資安的這個白帽駭客競賽，台灣團隊都是名列前茅的。所以台灣在這塊的研發跟這個產業化的能量是非常有潛力的。那也已經有一個具體的案例，就是台灣一家叫 Sybubble 的公司也被 Circle 給併購了，成為他們的整個生態系裡面非常重要的能量。所以台灣是可以的。"
+      "speaker": "葛如鈞",
+      "text": "所以我想這三點是我主要的口音。就是第一點是這個，不要把保存、保管想得太難；第二個，我們有這個人才跟新創是可以被鼓勵的；第三個，我們既有的金融產業是有潛力的。所以這是三個。"
     },
     {
-      "id": "WDGhGv",
-      "start": 111.374,
-      "end": 154.48,
+      "id": "a7052cc8-9348-40d2-80a2-6bdfc34fbe4e",
+      "start": 115.68,
+      "end": 150.36,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "第三個是既有的金融產業是不是也可以成為這個所謂的護幣神山或護幣群山，也是有可能的。因為我們現在也一直在看到政府也開始逐漸地對這個概念接受度越來越高，所以也開始在提說我們的銀行、我們的金控也有可能可以用他們過去在面對過去的傳統的金融資產的這種管理的方式跟經驗，也來幫忙做所謂的數位貨幣的託管。所以我們也非常樂見我們的政府去鼓勵既有既存的金融業來做這方面的服務。"
+      "speaker": "葛如鈞",
+      "text": "那另外一個，你剛剛提到的是除了保存以外，第二個問題是那個報稅。很好，保存跟報稅。報稅這個問題也很好，就是如果一個國家的政策在管理跟發展上都兼具，並且有足夠的這個理解產業的人在進行管理的話，那等於是...是這個產業發展的助力嘛。如果一個政府對於這個產業的發展是提供助力，那當然我們要付給他一些費用，這是很正常的。繳稅。"
     },
     {
-      "id": "Vgklbo",
-      "start": 154.48,
-      "end": 170.469,
+      "id": "e6d76298-1dbb-49bc-a2af-ad97db9a0266",
+      "start": 150.36,
+      "end": 182.52,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我想這三點是我主要的回應。就是第一點是不要把保存比特幣想得太難。第二個，我們有這個人才跟新創是可以被鼓勵的。第三個，我們既有的金融產業是很有潛力的。所以這是三個。"
+      "speaker": "葛如鈞",
+      "text": "可是如果一個政府給這個產業只帶來阻力，也就是只管而不發展，只監管、監控而不發展，那我為什麼要付錢給他自己掐自己脖子呢？所以我覺得這個是。第一，討論虛擬貨幣的課稅並不是不可以，但是它的目的應該是課稅的目的，是要讓產業發展，而不是看到產業有錢賺、政府要分一杯羹。邏輯是這樣的。"
     },
     {
-      "id": "HohNpT",
-      "start": 170.708,
-      "end": 177.278,
+      "id": "6d4064cd-67bd-459c-94ab-8ffa01ec5f44",
+      "start": 182.52,
+      "end": 213.96,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "那另外一個你剛剛提到的是，除了保存以外，第二個問題是那個報稅。"
+      "speaker": "葛如鈞",
+      "text": "人民為什麼要繳稅給政府？人民繳稅給政府是要為了讓我們生活變得更好。所以產業要付稅、要有稅負，也應該是要讓產業發展得更好。如果沒有這樣的條件的前提，我認為去討論課稅是太早而且是不負責任的。這是第一點。第二點呢，是目前我自己在質詢的過程裡跟政府的官員，我的對話是一樣。不是不可以課稅，但是你的態度，你對這個產業的理解、你的積極度、你的發展要做出來。"
     },
     {
-      "id": "wOCtqT",
-      "start": 177.278,
-      "end": 204.053,
+      "id": "7a55ca71-6fbb-4725-82f7-c7dd2212aa8f",
+      "start": 213.96,
+      "end": 232.08,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "很好，保存跟報稅，報稅這個問題也很好。就是如果一個國家的政策在管理跟發展上都兼具，並且有足夠的理解產業的人在進行管理的話，那等於是這個產業發展的助力嗎？如果一個政府對於這個產業的發展是提供助力，那當然我們要付給他一些費用，這是很正常的。可是如果一個政府給這個產業只帶來阻力，也就是只管而不發展，只監管監控而不發展，那我為什麼要付錢給他自己掐自己脖子呢？"
+      "speaker": "葛如鈞",
+      "text": "而不是說，熊市的時候就只是說這是一個沒有價值的東西，甚至央行還自己發文去讓民眾覺得這個是 no value。可是等到牛市來了，川普要把他變戰略儲備了，你突然覺得一夕之間你覺得他有價值了，你要課稅。如果他沒有價值，你為什麼要課稅呢？"
     },
     {
-      "id": "wCZqQE",
-      "start": 229.582,
-      "end": 266.954,
+      "id": "50474504-ae37-45e0-81e0-7d4822f78665",
+      "start": 232.08,
+      "end": 242.4,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我覺得這個是第一，討論虛擬貨幣的課稅並不是不可以，但是他的目的應該是課稅的目的是要讓產業發展，而不是看到產業有錢賺政府要分一杯羹。邏輯是這樣的，人民為什麼要繳稅給政府？人民繳稅給政府是要為了讓我們的生活變得更好。所以產業要付稅，要有稅賦，也應該是要讓產業發展得更好。如果沒有這樣的條件的前提，我認為去討論課稅是太早而且是不負責任。這是第一點。"
+      "speaker": "葛如鈞",
+      "text": "那是不是接下來又回到熊市了，政府是不是又不想課稅了？我覺得政府不能這樣用這種往復的方式來看待一個產業，這也會讓人民覺得非常的困惑，也會很困擾。所以我覺得這是兩個口音。謝謝。"
     },
     {
-      "id": "aCfvMU",
-      "start": 270.503,
-      "end": 326.681,
+      "id": "be2f754a-bd97-4989-8da2-ca19fe486102",
+      "start": 242.4,
+      "end": 258.96,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "第二點是，目前我自己在質詢的過程裡跟政府的官員我的對話是一樣。不是不可以課稅，但是你的態度、你對這個產業的理解、你的積極度、你的發展要做出來。而不是說熊市的時候就只是說這是一個沒有價值的東西，甚至央行自己發文去讓民眾覺得這個是沒有價值的。可是等到牛市來了，突然覺得一夕之間你覺得它有價值了你要課稅。如果它沒有價值你為什麼要課稅呢？那是不是接下來又回到熊市了，政府是不是又不想。我覺得政府不能這樣子用這種往復的方式來看待一個產業，這也會讓人民覺得非常的困惑，也會很困擾。所以我覺得這是兩個回應。"
+      "speaker": "記者",
+      "text": "那延續問一個問題。就是... sorry, Mandarin is fine. OK, perfect. Thank you. 就是接續就是這個產業要發展的話，如果課稅跟之類的都有在做，作為一個立法者，如果要真的完全推動在台灣區塊鏈方面的應用，因為我們知道在等很多區塊鏈那種消費性的應用，可以讓民眾真的普及去使用這個服務，那作為立法者，你有沒有一個，譬如說推動產業發展的一個框架或是預算案的規劃？"
     },
     {
-      "id": "KgmiKf",
-      "start": 326.681,
-      "end": 330.674,
+      "id": "689cded2-fd5b-4fa4-a6f5-4fe0acb85eae",
+      "start": 258.96,
+      "end": 261.36,
       "type": "speech",
-      "speaker": "記者 - 2",
-      "text": "接續問一個問題，就是這個產業要發展的話，如果課稅之類的都有在做，作為一個立法者，要真的完全推動台灣在區塊鏈方面的發展，因為我們知道在很多區塊鏈消費性的應用，能夠繼續使用這個服務，那庫茲威爾法則有沒有一個譬如說推動產業發展的框架或預算案的規劃？"
+      "speaker": "葛如鈞",
+      "text": "嗯，好。"
     },
     {
-      "id": "bIEWaH",
-      "start": 366.084,
-      "end": 370.06,
+      "id": "b910c06a-7991-44ba-8505-beffda4e7efd",
+      "start": 261.36,
+      "end": 265.44,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "好，這個問題。"
+      "speaker": "記者",
+      "text": "委員，剛剛您在台上提到的那個是你們會想要，預計可能會提案的嗎？"
     },
     {
-      "id": "KsXbNW",
-      "start": 370.06,
-      "end": 373.882,
+      "id": "aafd34c0-4488-47d5-b65a-a26af52215ef",
+      "start": 265.44,
+      "end": 272.5,
       "type": "speech",
-      "speaker": "記者 - 2",
-      "text": "在台上提到那個是你們預計可能會提案的嗎？"
+      "speaker": "葛如鈞",
+      "text": "嗯，你這問題很好。下一個，下一個好不好？你排隊、你排隊、你排隊。我也已經幫你排下來了。你幫我 Draft 也不錯啊，我們那個公私協力、我們公私協力。"
     },
     {
-      "id": "uDmuqX",
-      "start": 373.882,
-      "end": 379.923,
+      "id": "4249127b-b573-4338-b862-498b72f80bc2",
+      "start": 272.5,
+      "end": 296.88,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "你這個問題很好。下一個，下一個好不好？你排隊，你排隊。還對，你幫我 drive 的也不錯。"
+      "speaker": "葛如鈞",
+      "text": "好。所以你剛剛的問題就是有沒有一個框架對吧？現在是這樣的，因為我們立法院做的是立法的規劃跟法案的三讀。通過了以後，必須要由行政單位來推行。也就是所謂的「執行」，Executive。如果我們這...這之間，人民、立院、行政跟法條有一個東西沒有準備處理好，它就會失衡。"
     },
     {
-      "id": "NDgrWH",
-      "start": 379.923,
-      "end": 387.807,
+      "id": "7861ada3-9ce4-41d3-9e53-14ea5bdff15d",
+      "start": 296.88,
+      "end": 319.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我們那個公司協力。所以你剛剛的問題是？"
+      "speaker": "葛如鈞",
+      "text": "所以我們也不能說單方面的去做。如果我們單方面的去做了，譬如說郭克律師跟我一起公私協力，做了一個戰略儲備的法案提出了，就算三讀通過了，我們中華民國 114 年來 18 次覆議案，今年就發生了 5 次。所以他有可能會覆議啊，他有可能會說「資案難行」啊對吧？所以這過程當中其實需要很多的溝通。"
     },
     {
-      "id": "ZnaRzF",
-      "start": 387.807,
-      "end": 391.698,
+      "id": "7a14b5e7-72ca-4bdc-a9e4-cf64c20af817",
+      "start": 319.2,
+      "end": 334.4,
       "type": "speech",
-      "speaker": "記者 - 2",
-      "text": "就是有沒有一個框架。"
+      "speaker": "葛如鈞",
+      "text": "所以我覺得我現在也很高興有這樣的一個論壇嘛。所以我們就可以把我們從人民這裡，或者是從產業端、研發者或者是從技術的角度，來把我們的想法可以多傳遞出去，讓我們的政府官員呢，可以先有一個正向的思維跟理解。他不要覺得這是一個跟他敵對的狀態。"
     },
     {
-      "id": "lkAWMg",
-      "start": 391.698,
-      "end": 408.336,
+      "id": "f3a4af59-ea6d-4367-a675-685b6c700237",
+      "start": 334.4,
+      "end": 349.56,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "現在是這樣的，因為我們立法院做的是立法的規劃跟法案的三讀。通過了以後必須要由行政單位來推行，就是所謂的執行。"
+      "speaker": "葛如鈞",
+      "text": "如果有這樣的一個 balance，那人民也不要覺得比特幣是詐騙，那也不要覺得是牛市來了就趕快 All-in，熊市來了就快逃。那我覺得如果是能夠有一個好的 balance，我覺得是比較適合推動法案的時候。"
     },
     {
-      "id": "nvHojr",
-      "start": 409.838,
-      "end": 420.316,
+      "id": "07e641ab-1615-4487-a896-5383c86353ae",
+      "start": 349.56,
+      "end": 361.32,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "如果我們自知這之間人民、立院、行政跟法條有一個東西沒有處理好，他就會適得其反。"
+      "speaker": "葛如鈞",
+      "text": "那你說那是是不是就這樣子不做事了呢？我覺得我自己作為一個公僕，我能做的事情是這樣的。三點。"
     },
     {
-      "id": "LmRJJX",
-      "start": 420.913,
-      "end": 433.012,
+      "id": "fcdb7dff-85d7-43ac-ac3a-f28a42bee148",
+      "start": 361.32,
+      "end": 381.12,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我們也不能說單方面地去做。如果我們單方面地去做了，比如說果殼這個律師跟我們一起公司協力做了一個戰略儲備的法案，提出來就算三讀通過了。"
+      "speaker": "葛如鈞",
+      "text": "第一個，立法院有所謂的專案報告跟質詢。那我們會從監督的立場來督促政府應該要在這裡再更抱持著開放的心態，再更往前一些。那具體的做法呢，是目前金管會應該已經規劃要成立所謂的「金融創新處」吧？是不是金融創新處？"
     },
     {
-      "id": "BJjdyS",
-      "start": 435.845,
-      "end": 445.333,
+      "id": "1f3d11b0-5afe-4743-b54f-b0b9425f847d",
+      "start": 381.12,
+      "end": 381.84,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我們中華民國 114 年來 18 次赴議案，今年就發生了五次。所以他有可能會複製啊，他有可能會說自愛難行啊，對吧？"
+      "speaker": "記者",
+      "text": "對。"
     },
     {
-      "id": "EOqaZe",
-      "start": 445.333,
-      "end": 462.363,
+      "id": "97f0b78b-307d-4339-be26-7e25520fb55d",
+      "start": 381.84,
+      "end": 412,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以這個過程當中其實需要很多的溝通。所以我覺得我現在也很高興有這樣的一個論壇。所以我們就可以把我們從人民這裡或者是從產業者、研發者，或者是從技術的角度來把我們的想法可以多傳遞出去，讓我們的政府官員可以先有一個正向的思維跟理解。"
+      "speaker": "葛如鈞",
+      "text": "對吧。那金融創新處裡面就應該要負責金融的創新發展。那只不過有點可惜，金融創新處裡面並沒有虛擬貨幣的專責人員跟單位。虛擬貨幣的專責人員跟單位呢，還在金管會證期局。所以呢，目前虛擬貨幣的戰略或者是政策，在政府內部是有點碎片化的。而且這個碎片化呢，會有一點發展跟管理會互相牴觸。"
     },
     {
-      "id": "PmpXaf",
-      "start": 466.323,
-      "end": 485.333,
+      "id": "a5fa0064-45e5-4871-8b3a-48741fc6386f",
+      "start": 412,
+      "end": 427.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "他不要覺得這是一個跟他敵對的狀態。如果有這樣的一個平衡，那人民也不要覺得比特幣是詐騙，也不要覺得是牛市來了就趕快 all in，熊市來了就快逃。那我覺得如果是能夠有一個好的平衡，是比較適合推動法案的時候。"
+      "speaker": "葛如鈞",
+      "text": "而且呢，在定義上面會有所不明。它到底是證券、還是它是一個所謂的資產？所以這個其實也很微妙。還是它是一個外匯、它是一個外國貨幣？其實我覺得金管會，我也希望說金管會能夠在金融創新處成立的過程裡面也持續地完善他們內部的定義架構。"
     },
     {
-      "id": "ZmuqZL",
-      "start": 485.794,
-      "end": 510.026,
+      "id": "2a0416fb-b6d3-4333-8a23-17101cfcfa12",
+      "start": 427.8,
+      "end": 444.6,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "那你說那可是是不是就這樣子不做事了呢？我覺得我自己作為一個公僕我能做的事情是這樣的。三點，第一個立法院有所謂的專案報告跟諮詢，那我們會從監督的立場來督促政府應該要在這裡再更抱持著開放的心態再更往前一些。"
+      "speaker": "葛如鈞",
+      "text": "那如果沒有定義架構完善的話，我們再幫他做更多的條例跟法規也是沒有意義的。我覺得這是目前。那另外最後一個就是能不能提法案？可以。但是在沒有完善的社會溝通跟這個政府部會的這個互動的情況之下，冒然地去推法案反而有可能胎死腹中啦。那我想這個也不會是我們這個比特幣的支持者希望看到的。而且如果一旦推動失敗了，其實這會有所謂的後座力嘛，因為你可能..."
     },
     {
-      "id": "jyXFGa",
-      "start": 510.026,
-      "end": 542.278,
+      "id": "db5e068a-fb94-4004-833e-3ae31b614b2e",
+      "start": 600,
+      "end": 612,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "那具體的做法是目前金管會應該已經規劃成立所謂的金融創新處吧？是不是？是不是金融創新處？那金融創新處裡面就應該要負責金融的創新發展。那只不過有點可惜金融創新處裡面並沒有虛擬貨幣的專責人員跟單位。虛擬貨幣的專責人員跟單位還在金管會政企局。所以目前虛擬貨幣的戰略或者是政策在政府內部是有一點破碎化。而且這個破碎化會有一點發展跟管理會互相抵觸。而且在定義上面會有所不明。"
+      "speaker": "葛如鈞",
+      "text": "這個你就很難在一個會期裡面，因為台灣的狀況是...是屆期不連續。這四年如果你沒立完的法，它就算一讀了、它就算二讀了，只要沒過三讀，它到下一個會期、下一個四年就是重來。"
     },
     {
-      "id": "vHQJlM",
-      "start": 545.384,
-      "end": 563.729,
+      "id": "700ad28a-863a-4027-be16-1e18439b23bf",
+      "start": 612,
+      "end": 617,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "它到底是證券還是它是一個所謂的資產？還是它是一個外匯？它是一個外國貨幣？其實我覺得今晚我也希望說會能夠在這個金融創新處成立的過程也持續地完善他們自己內部的定義架構。"
+      "speaker": "葛如鈞",
+      "text": "所以你前面所花的所有力氣，你的社會溝通、你的政策溝通的力氣全部都白費。這個叫屆期不連續。"
     },
     {
-      "id": "DuThfM",
-      "start": 563.729,
-      "end": 584.633,
+      "id": "0821cbac-6f77-4783-81f5-4869699f47ef",
+      "start": 617,
+      "end": 624.3,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "那如果沒有定義架構完善的話，我們再幫他做更多的條例跟法規也是沒有意義的。我覺得這個是目前。另外最後一個就是能不能提法案，可以。但是在沒有完善的社會溝通跟政府部會的這個互動的情況下，貿然地去推法案反而有可能開始負重勞。"
+      "speaker": "葛如鈞",
+      "text": "台灣是這樣子的，所以我覺得是必須在萬事具備、只欠法案的時候再來做這件事情，我覺得它的成功機率會高一點，它在推行的過程裡面可能也會少一點阻力。"
     },
     {
-      "id": "qzJrNE",
-      "start": 586.647,
-      "end": 622.09,
+      "id": "181af657-9027-4c95-8d69-d3e3aef38757",
+      "start": 624.3,
+      "end": 636.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我想這個也不會是我們這個比特幣的支持者希望看到的。而且如果一旦推動失敗了，其實這個會有所謂的後座力，因為你可能就很難在一個會期裡面。因為台灣的狀況是屆期不連續，就這四年如果沒立完的法，它就算一讀了，它就算二讀了，只要沒過三讀，他到下一個會期，下一個四年就是重來。"
+      "speaker": "記者",
+      "text": "Yes. Just want to ask, how popular is Bitcoin in Taiwan? You know, is it like... because it's really popular in places like financial centers like Hong Kong and Singapore."
     },
     {
-      "id": "MgzuCJ",
-      "start": 615.145,
-      "end": 635.401,
+      "id": "4c0d627e-8cb1-4214-884f-2df34f3a7dab",
+      "start": 636.8,
+      "end": 643,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以你前面所花的所有的力氣，你的社會溝通、政策溝通的利息全部都白費。這個叫屆期不連續，台灣是這樣子的。我覺得是在必須萬事俱備只欠法案的時候再來做這件事情，我覺得它的成功機率會高一點，它在推行的過程裡面可能會少一點阻力。"
+      "speaker": "記者",
+      "text": "And secondly, what the law... what the legal framework? You know, are you creating some sort of a new legal framework in the parliament?"
     },
     {
-      "id": "KuGpBJ",
-      "start": 636.51,
-      "end": 641.954,
+      "id": "d56278af-9232-4996-b2ab-4ab40ab84102",
+      "start": 643,
+      "end": 648,
       "type": "speech",
-      "speaker": "記者 - 3",
-      "text": "是，請問台灣的比特幣有多受歡迎？"
+      "speaker": "葛如鈞",
+      "text": "Yes, thank you. Use Mandarin or English?"
     },
     {
-      "id": "RSJLsW",
-      "start": 641.954,
-      "end": 649.428,
+      "id": "60692684-7e44-4d36-b059-743496507db7",
+      "start": 648,
+      "end": 648.8,
       "type": "speech",
-      "speaker": "記者 - 3",
-      "text": "因為它很受歡迎，在香港和新加坡的金融中心。"
+      "speaker": "記者",
+      "text": "English is fine."
     },
     {
-      "id": "HxogCx",
-      "start": 649.428,
-      "end": 656.288,
+      "id": "5ab0dfdb-4f36-4d0f-b562-156ded4f6e13",
+      "start": 648.8,
+      "end": 649.6,
       "type": "speech",
-      "speaker": "記者 - 3",
-      "text": "第二，什麼是法律規則？你會創造什麼？"
+      "speaker": "葛如鈞",
+      "text": "English is fine."
     },
     {
-      "id": "zHCwsJ",
-      "start": 656.288,
-      "end": 660.282,
+      "id": "ed742db9-203e-4b93-ad32-22f22cf4323c",
+      "start": 649.6,
+      "end": 660.5,
       "type": "speech",
-      "speaker": "記者 - 3",
-      "text": "謝謝。"
+      "speaker": "葛如鈞",
+      "text": "Yeah, basically, in Taiwan, many people really kind of fascinating on investing into the financial market. Not only stock, but the other type of choice."
     },
     {
-      "id": "yakMLc",
-      "start": 660.282,
-      "end": 663.353,
+      "id": "9202b6d1-868b-42d9-aadd-42a0896483c6",
+      "start": 660.5,
+      "end": 676.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "使用台灣中文還是英文？"
+      "speaker": "葛如鈞",
+      "text": "So Bitcoin is kind of well-known in Taiwan in the general public. And not only because of people like to learn how to invest or allocate their assets, but also the Taiwan we have a lot of developers who create a lot of platform."
     },
     {
-      "id": "QmpdXt",
-      "start": 663.353,
-      "end": 666.067,
+      "id": "542d61a2-5d2c-4172-87f9-7f36763746a7",
+      "start": 676.5,
+      "end": 687,
       "type": "speech",
-      "speaker": "記者 - 3",
-      "text": "英文英文"
+      "speaker": "葛如鈞",
+      "text": "Digital finance platform. For example, like BitoPro, or MaiCoin, or like Cybavo, they kind of create early days infrastructure in Taiwan like many many years ago."
     },
     {
-      "id": "cGRmpC",
-      "start": 666.067,
-      "end": 668.37,
+      "id": "6822fc84-1e59-4ac8-b257-c318a781aba1",
+      "start": 687,
+      "end": 696,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "OK。"
+      "speaker": "葛如鈞",
+      "text": "For example, like back to 2016, you can easily buy a Bitcoin in convenience store, which is the world-leading breakthrough."
     },
     {
-      "id": "NrseKL",
-      "start": 668.37,
-      "end": 683.37,
+      "id": "61f373b8-32c3-4433-bc96-aa8f6b94f404",
+      "start": 696,
+      "end": 708.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "基本上在台灣，很多人有趣和投資的進入金融市場。"
+      "speaker": "葛如鈞",
+      "text": "So... and also we have a lot of like technology team here working on the blockchain technology. That's why Vitalik Buterin really like to visit to Taiwan. And this year we will have ETHGlobal in Taipei."
     },
     {
-      "id": "GvJZeb",
-      "start": 683.729,
-      "end": 692.637,
+      "id": "8e00c3a5-aa3d-4456-8dfc-9e16cd88325f",
+      "start": 708.5,
+      "end": 719.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "不僅是股票，還有其他選擇。所以比特幣是一個很知名的在台灣的普羅大眾中。"
+      "speaker": "葛如鈞",
+      "text": "So, we have talent, we have infrastructure, and we have a public that really like some ideas about financial market."
     },
     {
-      "id": "aPKZtL",
-      "start": 693.131,
-      "end": 702.108,
+      "id": "2a02f30c-08e0-4ba5-8eb9-74103d7ea55a",
+      "start": 719.2,
+      "end": 728.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "不僅是因為人們想學習如何投資或分析他們的資產。"
+      "speaker": "葛如鈞",
+      "text": "So, not only Bitcoin, but also like Doge or like Pi Coin, a lot of meme coin are kind of famous in Taiwan."
     },
     {
-      "id": "TarmSx",
-      "start": 702.5,
-      "end": 711.749,
+      "id": "80fb2d38-e6dd-4d73-968d-1cca445d783d",
+      "start": 728.8,
+      "end": 740.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "但是台灣也有很多開發者們創造很多平台，例如比特幣或其他數位金融。"
+      "speaker": "葛如鈞",
+      "text": "But that's also why as a legislator, we would like to work with the government and public to make sure that the people can really understand the risk and opportunity about this technology but not only to chase its market value."
     },
     {
-      "id": "pUQqVY",
-      "start": 715.742,
-      "end": 725.111,
+      "id": "ef0456a5-b249-49a1-a292-e9ac3a847cd1",
+      "start": 740.5,
+      "end": 743.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "他們創造了一個很早期在台灣的設施中，在過去的很多年。例如 2016 年，你可以輕易購買一個比特幣。"
+      "speaker": "葛如鈞",
+      "text": "There's one more thing, right? The framework. Okay."
     },
     {
-      "id": "CVDUws",
-      "start": 730.981,
-      "end": 737.5,
+      "id": "92f83c39-741a-4de7-a2e4-9b79c80fa46d",
+      "start": 743.2,
+      "end": 756.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "為世界領導的便利商店。所以，嗯。"
+      "speaker": "葛如鈞",
+      "text": "Originally, we have no regulation at all. However, because a lot of a kind of some fraud group or scam they're using virtual currency to you know doing some bad thing."
     },
     {
-      "id": "nbHnhV",
-      "start": 737.5,
-      "end": 747.824,
+      "id": "258eaac7-cfcd-41e9-a40c-6a946d18b74f",
+      "start": 756.8,
+      "end": 764.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "而且我們也有很多就像是科技隊伍在區塊鏈技術上工作。這就是為何 Vitalik Buterin 我真的很喜歡來台灣。"
+      "speaker": "葛如鈞",
+      "text": "So, and Taiwan we kind of like a late follower on the legislation or like regulation on the virtual assets."
     },
     {
-      "id": "lXzuVP",
-      "start": 750.998,
-      "end": 758.797,
+      "id": "09033b8b-3039-4233-a2a4-9edd88aa762f",
+      "start": 764.5,
+      "end": 774.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "今年我們將會舉行在台北。所以我們有才華，我們有基礎設備。"
+      "speaker": "葛如鈞",
+      "text": "So our government work with work with the industry the business really closely and create a really great result on self-regulation at first."
     },
     {
-      "id": "omlEjS",
-      "start": 758.797,
-      "end": 773.712,
+      "id": "9816e8c7-193a-4326-b2a3-3a0d14f5a10b",
+      "start": 774.5,
+      "end": 784.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "而我們有為了提供公眾提供一些金融市場的想法。不僅僅是比特幣，但也有像是 Doge 或是 PiCoin。"
+      "speaker": "葛如鈞",
+      "text": "So now we have 公會 (industry association), and also they have their own like self-regulation policy, and the policy have to need to be reviewed by the government."
     },
     {
-      "id": "JUFnGp",
-      "start": 773.712,
-      "end": 784.991,
+      "id": "85ef8f89-6d28-4a17-a6d3-53aa311b8988",
+      "start": 784.8,
+      "end": 800.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "台灣有很多名貨幣，但這也是為什麼。所以之後我們想與政府和公眾合作。"
+      "speaker": "葛如鈞",
+      "text": "So it's kind of like a co-work situation right now in Taiwan. And our government is also trying to really understand the technology and have their own and the latest VASP regulation or like new kind of VASP special law to do the regulation well."
     },
     {
-      "id": "UehnDW",
-      "start": 784.991,
-      "end": 796.954,
+      "id": "83cb7d6a-e823-462f-beaf-de9f535ec60b",
+      "start": 800.2,
+      "end": 815.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "以確保人們可以能夠理解危險和機會，並不僅要追蹤它的市場，我會保持這個態度。"
+      "speaker": "葛如鈞",
+      "text": "So my point of view is... Taiwan is kind of kind of like an outlier. We we have a great developer, great business here running here, and self-regulate really well."
     },
     {
-      "id": "RTRvFp",
-      "start": 797.381,
-      "end": 817.619,
+      "id": "b8eab41e-08b1-4971-908d-8400c4afcc95",
+      "start": 815.8,
+      "end": 826.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "還有一個問題，就是標準。Originally，我們沒有任何規則。然而，因為某種偵測或是他們在使用虛擬貨幣做一些背景的事情。"
+      "speaker": "葛如鈞",
+      "text": "And then our government is trying to understand the technology by kind of more in the whole aspects, not only to see the fraud or criminal, but also the opportunities in the business."
     },
     {
-      "id": "GTqpAl",
-      "start": 817.619,
-      "end": 829.275,
+      "id": "f2cc3676-1446-42cf-8f2b-358d8d01ccd0",
+      "start": 826.5,
+      "end": 836.4,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以在台灣，這是一個比較遲的追蹤，並採取法規定虛擬資產。"
+      "speaker": "葛如鈞",
+      "text": "So now we are looking forward to have a kind of open-minded VASP special law in Taiwan, and we hope that it could be kind of a new model for the others to take as a reference."
     },
     {
-      "id": "BopzrB",
-      "start": 829.718,
-      "end": 842.79,
+      "id": "6f13dfe9-e627-4eaa-9df8-1701f4845e5b",
+      "start": 836.4,
+      "end": 849,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我們的政府與生產業合作非常嚴謹，會造成很好的自制定結果。"
+      "speaker": "記者",
+      "text": "Thank you. So follow up questions on you in the process of drafting this, will you modeling a legislation from other regions and jurisdiction? Did you study that up in you know Hong Kong? Hong Kong's going through this other things and Singapore and others, right?"
     },
     {
-      "id": "gQtLYo",
-      "start": 842.79,
-      "end": 854.411,
+      "id": "2bfd817d-ef27-4376-a1b1-6fa53cfa81ca",
+      "start": 849,
+      "end": 860.6,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "現在我們有公會、社群組織，他們也擁有自己的自制度政策。"
+      "speaker": "葛如鈞",
+      "text": "Yeah, you got a really good point and a great question. Thank you. First of all, Taiwan is kind of a really weird kids or like outlier in in this field."
     },
     {
-      "id": "jutjSl",
-      "start": 854.411,
-      "end": 867.517,
+      "id": "a6c130a7-998d-406e-9999-34764a748915",
+      "start": 860.6,
+      "end": 872.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "而政策必須被評估，所以這就像是一個合作。現在在台灣的情況下，我們政府也在研究科技。"
+      "speaker": "葛如鈞",
+      "text": "We have a proactive market and excellent developers, and early days we have a platform here in Taiwan, but the without any with without any regulation at all."
     },
     {
-      "id": "AYhqWJ",
-      "start": 867.517,
-      "end": 878.063,
+      "id": "d8186a94-014d-4d44-b89c-0748666b15fc",
+      "start": 872.5,
+      "end": 881,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "並擁有他們自己的最新的 VSP 或是新的制定，VSP 的特別規則去做這個規定。"
+      "speaker": "葛如鈞",
+      "text": "And then we going to a path about the self-regulation, which is kind of special compare with the other place."
     },
     {
-      "id": "KnPfDk",
-      "start": 878.063,
-      "end": 888.575,
+      "id": "0e3817f9-f782-455f-95d4-a4e336392447",
+      "start": 881,
+      "end": 898,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我的觀點是，台灣是一個我們有一個很好的發展者，這裡是一個很好的公司，並自律得非常好。"
+      "speaker": "葛如鈞",
+      "text": "For example, like Japan they kind of like a licensee, or like for Hong Kong also licensee, right? And also, so I really looking forward to see a totally different type of path and especially for Taiwan and also be able to take as a reference for the other country or places."
     },
     {
-      "id": "jjRPkx",
-      "start": 891.408,
-      "end": 906.596,
+      "id": "1d72f8aa-f4a1-450a-8940-0aea2f57dac9",
+      "start": 898,
+      "end": 900,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "然後政府會嘗試理解，將技術改善為不僅視乎犯罪或犯罪，並且提供生意的機會。"
+      "speaker": "記者",
+      "text": "So what will be the ideal?"
     },
     {
-      "id": "hEHqYK",
-      "start": 906.596,
-      "end": 923.012,
+      "id": "7bbe8583-30fc-46e5-bb25-76103771e9ce",
+      "start": 900,
+      "end": 915.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "現在我們很期待作為一個公開的 VSP，台灣中文特殊項目。我們希望這能成為一個新的模式，為其他人作為參考。"
+      "speaker": "葛如鈞",
+      "text": "Yes, so now, it's it's just my idea. Because now the the drafting version of VASP special law by our government is kind of they putting a lot of punishment and kind of serious punishment on some activities."
     },
     {
-      "id": "eNbrGN",
-      "start": 923.012,
-      "end": 936.152,
+      "id": "e71f31bf-73a4-44d6-9534-efa986130d6b",
+      "start": 915.8,
+      "end": 928.6,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "請問一下，在這裡的製作過程中，你們是否在模仿從其他地區學習過嗎？"
+      "speaker": "葛如鈞",
+      "text": "And we think it might of might be a little discourage, too harsh, and it might kind of like might kill the the technology the whole industry in Taiwan we just going going up."
     },
     {
-      "id": "CjPtDe",
-      "start": 936.152,
-      "end": 939.991,
+      "id": "cd6234c3-86a4-41e7-95f3-2edb6613f709",
+      "start": 928.6,
+      "end": 934.8,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "在香港和新加坡之間。"
+      "speaker": "葛如鈞",
+      "text": "And if they going that way, I think it's we will have no benefit in Taiwan."
     },
     {
-      "id": "ukvwYs",
-      "start": 939.991,
-      "end": 944.701,
+      "id": "fb15ca37-6633-4e05-b199-028b06586a32",
+      "start": 934.8,
+      "end": 941.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "對，非常好的提問，謝謝。"
+      "speaker": "葛如鈞",
+      "text": "So my idea is actually self-regulation is a good model."
     },
     {
-      "id": "cbZSHr",
-      "start": 944.701,
-      "end": 960.998,
+      "id": "31936492-d924-4063-b203-50df9b92551f",
+      "start": 941.5,
+      "end": 971.4,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "首先，台灣是一個或是出外人在這個領域。我們有一個積極的市場，成功的開發者。"
+      "speaker": "葛如鈞",
+      "text": "So before our government can have their open-minded and good understanding on the technology and enough tools for them to do the regulate, and also they have to have talent in government as government officials. If they have all these conditions, I prefer to keep going on the self-regulation model for longer time."
     },
     {
-      "id": "rmeUHN",
-      "start": 960.998,
-      "end": 973.029,
+      "id": "cb37c0ef-aadf-4577-b566-2d3594025f81",
+      "start": 971.4,
+      "end": 989.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "早期我們在台灣有一個平台，但沒有任何規範。然後我們走進一個路線，關於自律，這是很特別的。"
+      "speaker": "葛如鈞",
+      "text": "So that's my idea. And if one day we need to have a VASP special law, it should be work with the specialties and hackers, white hat, or good hackers, or like crypto or DeFi developers together."
     },
     {
-      "id": "uXIvnA",
-      "start": 976.442,
-      "end": 981.476,
+      "id": "11645e87-766f-43b8-9f6a-27b6d6fb128c",
+      "start": 989.2,
+      "end": 997.6,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "和其他地方相比，例如日本的標點符號，或是香港的 C 字字。"
+      "speaker": "葛如鈞",
+      "text": "Or maybe we just let this like crypto players to involve or maybe lead the drafting on the crypto VASP."
     },
     {
-      "id": "ZiIWaz",
-      "start": 984.94,
-      "end": 996.647,
+      "id": "56f4fd85-6ee0-4762-9f34-06f9f7830029",
+      "start": 997.6,
+      "end": 1001.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "並且我十分期待看到是一個不同的路線，並獲得作為其他國家的代表。"
+      "speaker": "記者",
+      "text": "But is this happening, or this you propose what does the..."
     },
     {
-      "id": "RTeACw",
-      "start": 1003.251,
-      "end": 1013.319,
+      "id": "de8c73e7-522f-4597-9b0f-1009ca98f9dc",
+      "start": 1001.8,
+      "end": 1018.5,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以會是最理想的東西嗎？所以現在，這是我自己的想法。"
+      "speaker": "葛如鈞",
+      "text": "I I hope it might be able to happen because we saw we already saw some place they have a too restrict a licensee model or VASP special law and kill the opportunity and people from all over the world won't come to the place to do the business."
     },
     {
-      "id": "mapOWL",
-      "start": 1013.319,
-      "end": 1023.439,
+      "id": "07b8feb2-45f1-4952-95c9-2a1e04d3acb6",
+      "start": 1018.5,
+      "end": 1025,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "因為現在的招牌版本，VASP 特殊法律法案，這就是他們加上許多判斷。"
+      "speaker": "記者",
+      "text": "So last year the the 公會 issued the first warning to the KOL on Facebook, right? So is do you are you expecting more this is that a way you see that as a ideal self-regulating? Do you prefer that or do you think..."
     },
     {
-      "id": "zkMROk",
-      "start": 1026.425,
-      "end": 1032.176,
+      "id": "5a1d27e9-53fe-4926-89c6-05374db61dd1",
+      "start": 1200,
+      "end": 1201.25,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "這是一個很嚴重的罪行，在某些活動上，我們認為這可能是。"
+      "speaker": "葛如鈞",
+      "text": "What do you mean, the KOL?"
     },
     {
-      "id": "vjJzKA",
-      "start": 1036.169,
-      "end": 1043.046,
+      "id": "86100705-f198-4479-ba8f-2b09f576b261",
+      "start": 1201.25,
+      "end": 1216.03,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "有點令人沮喪，太嚴厲了。"
+      "speaker": "記者",
+      "text": "就是在 Exchange，它在網站上，去年公會有警告 KOL 不能做宣傳。對，就第一個案例，十二月的時候第一次 issue 了第一個 warning。對，但是這個 warning 只是那種 notification，因為最後 KOL 做宣傳好像也沒什麼事，所以這就是妳想要的那種自律的模式嗎？就是說只發警告，但是沒辦法做其他的懲處。"
     },
     {
-      "id": "lnRTyc",
-      "start": 1043.046,
-      "end": 1052.568,
+      "id": "1f5a56b8-52fc-4474-a853-a06d34492500",
+      "start": 1216.03,
+      "end": 1236.65,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "這就像是這可能會殺死在台灣的整個技術業界中，如果他們這樣做的話。"
+      "speaker": "葛如鈞",
+      "text": "OK，這部分容我用中文回答。在台灣現在的問題是，真正能夠抱持著開放跟理解去管理的人在政府內部太少了。所以你只要有任何的規定，都有可能被執法者誤用了。"
     },
     {
-      "id": "qAHdbd",
-      "start": 1056.476,
-      "end": 1061.254,
+      "id": "41107b6d-1fe3-407a-88df-80ed3910ee7a",
+      "start": 1236.65,
+      "end": 1284.82,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我覺得台灣不會有任何利益，是的，是的。"
+      "speaker": "葛如鈞",
+      "text": "那在這種情況之下，我自己的意見是在這個條件沒有齊備之前，不要過快地推動專法。像剛剛這個情況，就是說 KOL 的這件事情。如果有相關的法條說不可以進行一些宣傳或宣傳需要允許，其實這條線、法律並不是一個 thin line，它是 kind of an area、一個有寬度的一條線。執政者可以決定這條線實際上的寬度是多寬。"
     },
     {
-      "id": "AbbawQ",
-      "start": 1062.637,
-      "end": 1068.37,
+      "id": "1da12db0-e62f-48df-b227-d44c7296cd32",
+      "start": 1284.82,
+      "end": 1313.13,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我的主意是，其實自制度是一個很好的模式。"
+      "speaker": "葛如鈞",
+      "text": "如果政府用從嚴的心態，就算同一條法，他也可能會扼殺了台灣的 KOL 去推廣健康的、正確的、正常的交易，或者是數位資產作為選項的這件事情。"
     },
     {
-      "id": "sQWMWE",
-      "start": 1068.37,
-      "end": 1079.036,
+      "id": "f6a4d519-59ec-48b5-ad4f-430858e51b83",
+      "start": 1313.13,
+      "end": 1328.84,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以我們政府可以在開放思想。"
+      "speaker": "葛如鈞",
+      "text": "所以回來就是說，我的意見跟看法就是非常簡單。政府沒有足夠的條件，在台灣有一些說法是說，沒有那個屁股就不要吃那個藥。"
     },
     {
-      "id": "nPwdWf",
-      "start": 1079.036,
-      "end": 1083.012,
+      "id": "cc237956-b358-41f5-b2d2-4b98c8900f9a",
+      "start": 1328.84,
+      "end": 1330.3,
       "type": "speech",
-      "speaker": "記者 - 1",
-      "text": "等。"
+      "speaker": "記者",
+      "text": "吃那個藥，對。"
     },
     {
-      "id": "cEbZpk",
-      "start": 1083.012,
-      "end": 1089.224,
+      "id": "c90e4482-8347-48f9-8868-8b6db891340e",
+      "start": 1330.3,
+      "end": 1382.72,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "有關科技的理解足夠了，為他們進行管理。"
+      "speaker": "葛如鈞",
+      "text": "對。就是說，你沒有那個條件，就不要去做一個你沒有條件的事情。那我剛剛講得很清楚，政府要、尤其台灣，台灣有這麼好的條件。我們有 developer，我們有非常好的公司，我們有非常好的 public 是很喜歡新的東西。台灣有太棒的條件，而且這個所謂 Internet penetration rate 或 mobile 比例，台灣的條件非常好。如果政府沒有 open-minded、沒有 good understanding、沒有 advanced tools，然後沒有一個 good talent。"
     },
     {
-      "id": "ackTVN",
-      "start": 1093.575,
-      "end": 1103.285,
+      "id": "0cfb5375-5fc1-4f03-9fae-d49da431d47d",
+      "start": 1382.72,
+      "end": 1418.66,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "並且他們必須在政府中擁有才能。作為政府官員，如果他們有這些狀況。"
+      "speaker": "葛如鈞",
+      "text": "他們現在若用公務員的薪資、非常 low pay，去想要聘人到政府裡面來管，那你就是讓一個五萬月薪的人去管一個五百萬月薪的產業，那這不是很奇怪嗎？當然我覺得這是一個比喻啦。意思就是說，要管必須要有完整的條件。我覺得去討論那個立法的細節才是有意義的。否則的話我們只討論立法的框架，如果揮動這條鞭子的人，如果是惡意的、它沒有足夠的認識，那這條鞭子怎麼設計它都會是一條很差的鞭子。這是我比較 metaphor 的說法。"
     },
     {
-      "id": "wNibWx",
-      "start": 1103.285,
-      "end": 1113.746,
+      "id": "8687f458-06c2-4463-8b3a-35f7b7064aa7",
+      "start": 1418.66,
+      "end": 1451.35,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "I prefer to keep going on a self-regulation model，為長期使用，這是我的主意。"
+      "speaker": "記者",
+      "text": "好，謝謝。我延伸一下剛的問題，因為我想問的也是這一塊。因為現在看到除了金管會的版本，雖然說一直要出但我們一直看到延後。那多方草案我們有看到黃珊珊委員最近有在召開公聽會，預計四月。感覺她也會出版本。那感覺意志就是，設計不良好的法律之前，立法者能做的好像也只能相對地出一個符合正確環境的一個版本。"
     },
     {
-      "id": "GzELaT",
-      "start": 1116.101,
-      "end": 1127.278,
+      "id": "69c56912-e62e-43be-96fd-0984cd215509",
+      "start": 1451.35,
+      "end": 1500.22,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "If one day we need to have VASP Special Law, it should be work with 的特色，黑客的白髮。"
+      "speaker": "記者",
+      "text": "那國民黨目前有這樣的準備嗎？如果說像委員本身意見認為說目前可能還可以在觀察一下，把時間後移一點。我覺得另外一方面我們受到非常大的社群聲音是，現在金管會的解釋法條已經開始在某些法條已經開始在運作了。例如像 VASP 是登記制，你幣商這件事是一定要去作登記的。而且他有很多限制，例如說你有最低的資本額，然後你要去做洗防登記、你要 KYC 這件事。"
     },
     {
-      "id": "DZtBxJ",
-      "start": 1130.094,
-      "end": 1137.739,
+      "id": "e4a01558-0954-49fe-91c1-8eb5b5b2bde6",
+      "start": 1500.22,
+      "end": 1528.71,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "而 Good Hackers, CRYPTO DEFI DEVELOPERS, together."
+      "speaker": "記者",
+      "text": "其實非常的奇怪，因為妳去針對這樣的一個交易行為，然後你必須好像要一個 license。它目前其實沒有 license 但他要求的其實已經是同等級的東西。但你在虛擬資產上面你還沒有去解釋說這個東西是證券、還是貨幣、還是資產。說真的，便利商店都在賣遊戲的點數啊，那為什麼他們不 KYC 呢？那為什麼我賣迷因幣就要 KYC？這很不合理。"
     },
     {
-      "id": "mcpmTe",
-      "start": 1138.626,
-      "end": 1151.476,
+      "id": "4babf8b6-43fe-4663-9373-0cbc7416444e",
+      "start": 1528.71,
+      "end": 1546.85,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "或許我們只是讓這類型的虛擬玩家去發展或是領導在加密貨幣。"
+      "speaker": "記者",
+      "text": "那我們收到非常大的社群、其實老 OG 都說，金管會這樣搞太誇張，那他們出的版本能看嗎？我們其實有拿到立委們分享的版本啦，我們看一下是覺得，金管會的版本應該還是走這個路線。委員自己是怎麼看這一點？"
     },
     {
-      "id": "LvIkUR",
-      "start": 1151.476,
-      "end": 1155.435,
+      "id": "0b7c2f0d-4618-4ad6-a5a5-a8b90e2c557a",
+      "start": 1546.85,
+      "end": 1572.23,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "這是發生了什麼事嗎？"
+      "speaker": "葛如鈞",
+      "text": "對，我覺得這問題很好。我覺得第一點，作為在野黨，或者是對於數位資產比較開放的政黨，或者是立委，一定會準備相應的版本。如果有必要。所以這一點是第一點，如果有需要一定會準備。"
     },
     {
-      "id": "gYXINj",
-      "start": 1155.435,
-      "end": 1161.084,
+      "id": "812304d1-5a78-4f7a-a314-48fd9cdcc7af",
+      "start": 1572.23,
+      "end": 1603.45,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我希望它能夠，你可能會。"
+      "speaker": "葛如鈞",
+      "text": "那第二個呢，是目前的政府在做虛擬貨幣專法上，我覺得有一個問題。是因為虛擬貨幣專法討論很久了。當他在開始討論跟規劃的時候，其實已經是好幾年前了。那那個時候呢，全球是處在一個所謂監管的態勢。但是呢，在川普當選了以後，其實全世界最重要的金融中心之一，也就是美國，已經轉換態度了。"
     },
     {
-      "id": "WuLcmn",
-      "start": 1161.288,
-      "end": 1168.814,
+      "id": "b5553691-5c22-437c-af42-bb04d693c967",
+      "start": 1603.45,
+      "end": 1635.79,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "因為我們已經看到在某個地方他們有一個規定。"
+      "speaker": "葛如鈞",
+      "text": "正在轉換態度，正在轉換從監管到所謂的開放跟創新。就像我剛講的，很多監管者、被監管者現在變成了監管者。所以我們是可以期待美國是有可能會往另外一條跟開放的道路去做。但是我們現在看到的金管會的草案，很可能是兩年前或三年前做小改去提出來的。他們有沒有意識到這個世界的趨勢正在改變，這個是我們的疑問。"
     },
     {
-      "id": "sMYXRp",
-      "start": 1168.814,
-      "end": 1171.698,
+      "id": "f156dcff-d79a-4878-a24f-16ef544384b8",
+      "start": 1635.79,
+      "end": 1672.93,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "LICENSEE MODEL。"
+      "speaker": "葛如鈞",
+      "text": "所以從這個角度來講，不管最終大家版本合出來是怎麼樣，有開放、有嚴格，對於特定產業來說，確實有可能還是有陣痛期。但是我們作為在野黨，我們能做的是什麼？我們儘可能地在法條裡面去做到產業的鼓勵，做到正向的開放。比如說 DeFi，一個去中心化的東西，難道你 DeFi 要 KYC 嗎？難道你 MetaMask 要 KYC 嗎？"
     },
     {
-      "id": "lLRHOQ",
-      "start": 1171.698,
-      "end": 1183.097,
+      "id": "ba6c5a82-2751-4efd-bcf4-a844e021352b",
+      "start": 1672.93,
+      "end": 1710.87,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Special Law and kill the opportunity，人們從全世界都會看到去做生意，所以去年。"
+      "speaker": "葛如鈞",
+      "text": "台灣法條最不能做的就是什麼，你明明做不到的，明知不可為而為之。這就會造成像 PayPal 離開台灣的一種。你管不了你卻想管，這是最可怕的。因為這樣你就會畫地自限、固步自封，產業就會退化。所以這是我們不願意看到的。所以會有一些開放的想法放進去。"
     },
     {
-      "id": "DdDQQB",
-      "start": 1183.097,
-      "end": 1190.879,
+      "id": "06bf1bc8-8887-4552-9ed8-508f2bc72932",
+      "start": 1710.87,
+      "end": 1746.04,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "公會發出第一次警告。在 Facebook 上的 KOL，你還在期待更多嗎？"
+      "speaker": "葛如鈞",
+      "text": "但是最後過了或沒過，如果政府態度沒有真正的理解，他還是有可能會誤用這個法。他可以去解釋嘛，政府掌握解釋權對吧？所以我自己個人來講是，第一，我正在掌握這個黃金時間去跟政府溝通互動，把正確的觀點告訴他們。第二個呢，如果有一些不符合時宜的草案版本出來，我們一定會有一個比較合時宜的版本去與之協調。"
     },
     {
-      "id": "ooupDu",
-      "start": 1190.879,
-      "end": 1202.312,
+      "id": "e96fab45-807b-4341-98c9-70a728522582",
+      "start": 1746.04,
+      "end": 1751.98,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "你認為這是一個理想的方法？你比較喜歡還是不喜歡？什麼意思？KOL?"
+      "speaker": "葛如鈞",
+      "text": "但是第三個，不管協調成功或失敗，我認為一個新的法律剛推出..."
     },
     {
-      "id": "zqlkCJ",
-      "start": 1202.312,
-      "end": 1205.93,
+      "id": "f4df0847-0203-4b9b-a8ec-9e184d6551a6",
+      "start": 1800,
+      "end": 1801.48,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "在交易中。"
+      "speaker": "葛如鈞",
+      "text": "必然有陣痛期。所以"
     },
     {
-      "id": "LDXOYH",
-      "start": 1205.93,
-      "end": 1211.032,
+      "id": "08409ecf-3145-4b7a-894a-3275234ed648",
+      "start": 1801.48,
+      "end": 1803.73,
       "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "去年公會有警告 KOL 不能做宣傳。"
+      "speaker": "葛如鈞",
+      "text": "所有的產業也必須要忍耐跟，不是忍耐，"
     },
     {
-      "id": "Wjkqbh",
-      "start": 1211.032,
-      "end": 1217.244,
+      "id": "6004f8d6-0f24-431e-9e08-059f09df7b78",
+      "start": 1803.73,
+      "end": 1807.33,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "第一個案例就是他第一次發出了一個警告，去年 11 月還是 12 月。"
+      "speaker": "葛如鈞",
+      "text": "就是說，必須要認知，所有的事物從沒有監管到有監管，"
     },
     {
-      "id": "aOfMub",
-      "start": 1217.244,
-      "end": 1233.251,
+      "id": "f6373a61-6825-4fae-9524-152d7465fbea",
+      "start": 1807.33,
+      "end": 1811.2,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "對，但警告是因為只是警告。讓 K.O.L. 做些什麼宣傳，對，不能做宣傳。"
+      "speaker": "葛如鈞",
+      "text": "它必然有所不同。那這個不同，大家可以用更，"
     },
     {
-      "id": "NOaSMo",
-      "start": 1233.251,
-      "end": 1235.265,
+      "id": "74fb48bc-9fe9-461c-a787-c0aca4d4c2b1",
+      "start": 1811.2,
+      "end": 1815.65,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "所以，這是自我模式嗎？"
+      "speaker": "葛如鈞",
+      "text": "如果政府、民間跟企業，還有立院，可以更良好的溝通，那這個、這個所謂的震盪期就越短。"
     },
     {
-      "id": "ImIvIR",
-      "start": 1237.278,
-      "end": 1243.729,
+      "id": "aa3a815e-8829-4f99-b0b5-c3ff7c0328dd",
+      "start": 1815.65,
+      "end": 1819.33,
       "type": "speech",
-      "speaker": "記者 - 4",
-      "text": "自制的方式讓你看到他們會發出警告。只是警告，他們沒有辦法做任何事情。"
+      "speaker": "葛如鈞",
+      "text": "那如果大家的溝通不良，那震盪期就越長。"
     },
     {
-      "id": "DacJWl",
-      "start": 1243.729,
-      "end": 1247.722,
+      "id": "69e67db1-db53-4509-91bb-0313606f5667",
+      "start": 1819.33,
+      "end": 1822.8,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "在台灣現在的問題是真正能夠抱持著開放跟理解去管理的人在政府內部太少。"
+      "speaker": "葛如鈞",
+      "text": "所以我的整體的觀點就是社會要和諧、溝通要良善，"
     },
     {
-      "id": "SrbNRx",
-      "start": 1263.695,
-      "end": 1271.852,
+      "id": "73294b6f-9763-48ee-957b-23158b110d0a",
+      "start": 1822.8,
+      "end": 1826.25,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以你只要有任何的規定，都有可能被執法者誤用了。"
+      "speaker": "葛如鈞",
+      "text": "那這樣子產業才有發展的機會。所以我覺得大家也可能"
     },
     {
-      "id": "rndARy",
-      "start": 1272.227,
-      "end": 1288.029,
+      "id": "28c82135-5e9b-4b95-b61c-d43371ca505f",
+      "start": 1826.25,
+      "end": 1830.65,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以在這種情況之下，我自己的意見是在這個條件沒有齊備之下，不要過快地推動專法。"
+      "speaker": "葛如鈞",
+      "text": "也不能太過於樂觀的去期待，就是說，政府可以在法規上面全部開綠燈。"
     },
     {
-      "id": "oVCMYW",
-      "start": 1291.152,
-      "end": 1306.852,
+      "id": "a2cdf6c8-b1a7-4d0e-a2b1-d81c638146c8",
+      "start": 1830.65,
+      "end": 1833.7,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "像剛剛這個情況，就是說 KOL 的這件事情，住戶有相關的法條說不可以進行一些宣傳，或宣傳需要允許。"
+      "speaker": "葛如鈞",
+      "text": "也不可能。因為它總是有燈號的。那綠、綠燈還有分"
     },
     {
-      "id": "RbvLIr",
-      "start": 1307.039,
-      "end": 1323.865,
+      "id": "90a75db3-55dc-4891-99fc-a45da0b99915",
+      "start": 1833.7,
+      "end": 1836.33,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "其實這條線法律並不是一個，是一個圖案的範圍，一個有寬度的一條線。所以執政者可以決定這條線實際上的寬度是多寬。"
+      "speaker": "葛如鈞",
+      "text": "很綠跟不那麼綠，那就要看它怎麼去解釋嘛。"
     },
     {
-      "id": "YPgJrR",
-      "start": 1325.657,
-      "end": 1341.92,
+      "id": "afa49548-78a8-458e-a32b-e0e87b5a8618",
+      "start": 1836.33,
+      "end": 1840.23,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "如果政府用從嚴的心態，就算同一條法律，他也可能會扼殺了台灣的 KOL 去推廣健康的、正確的、正常的交易，或者是數位資產作為選項的這件事情。"
+      "speaker": "葛如鈞",
+      "text": "所以我自己是比較，是 first principle。就是說，如果"
     },
     {
-      "id": "WWvfht",
-      "start": 1346.084,
-      "end": 1372.039,
+      "id": "6fb53154-ea44-4dea-b668-4afbf021b0b8",
+      "start": 1840.23,
+      "end": 1844.45,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以回來就是說我的意見跟看法就是非常簡單，政府沒有足夠的條件。在台灣有一些說法是說沒有那個條件，就不要去做一個你沒有條件的事情。"
+      "speaker": "葛如鈞",
+      "text": "政府沒有改變態度，我就是給他一個全綠燈的法，他還是會告訴你，其實這個不夠綠，"
     },
     {
-      "id": "pDPyHh",
-      "start": 1372.568,
-      "end": 1395.538,
+      "id": "a4437953-617c-43a0-b4ad-ce9b4db35f94",
+      "start": 1844.45,
+      "end": 1847.98,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "就是說那我剛剛講得很清楚，政府要，尤其台灣有這麼好的條件，我們有 developer，我們有非常好的公司，我們有非常好的 general public，是很喜歡新的東西。台灣有太棒的條件。"
+      "speaker": "葛如鈞",
+      "text": "你、你、你觸法了。所以這個是我的態度。對。"
     },
     {
-      "id": "wbRHyW",
-      "start": 1387.892,
-      "end": 1405.145,
+      "id": "77064f3f-1ec1-4efb-9c16-b71affd6259c",
+      "start": 1847.98,
+      "end": 1851.52,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "而且這個所謂的 Internet Penetration Rate 或 Mobile 的這些東西，台灣的比例條件非常好。政府沒有 open-minded，沒有 good understanding，沒有 Advanced Tools，然後沒有一個 good talent。"
+      "speaker": "葛如鈞",
+      "text": "不好意思講得比較、比較這個撩繞一點。對。OK"
     },
     {
-      "id": "fmAPUv",
-      "start": 1405.145,
-      "end": 1421.63,
+      "id": "8848e43f-b638-469c-8761-e4dd09194b73",
+      "start": 1851.52,
+      "end": 1852.88,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "就是他們現在如果用公務員的薪資，非常 low pay 去想要拼人到政府裡面來管，那你就是讓一個 5 萬月薪的人去管一個 500 萬月薪的產業，這不是很奇怪嗎？"
+      "speaker": "記者",
+      "text": "了解。謝謝。"
     },
     {
-      "id": "BBDPGx",
-      "start": 1421.63,
-      "end": 1429.565,
+      "id": "5ae31fcf-896c-477d-8287-80a992626207",
+      "start": 1852.88,
+      "end": 1855.43,
       "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我覺得這個是一個比喻啦，但意思是說要管必須要有完整的條件。"
-    },
-    {
-      "id": "Jpycfm",
-      "start": 1429.565,
-      "end": 1451.271,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我覺得去討論那個立法的細節才是有意義的，否則的話我們只討論立法的框架。如果揮動這個，就是說我們討論這條鞭子的形狀、長度，可是揮動這條鞭子的人如果是惡意的，他沒有足夠的認識，那麼這條鞭子怎麼設計，其他都會是一條很差的鞭子。"
-    },
-    {
-      "id": "YdQsQN",
-      "start": 1451.271,
-      "end": 1457.21,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "這個是，對不起，這個有點 Metaphor，謝謝。"
-    },
-    {
-      "id": "NSPMlV",
-      "start": 1457.21,
-      "end": 1469.889,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "我延伸一下剛剛的問題，因為我想問的是這一塊。接下來看到除了金管會的版本，雖然說一直要出但我們看到一直延後。"
-    },
-    {
-      "id": "GybJcR",
-      "start": 1469.889,
-      "end": 1492.5,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "草野有沒有看到黃珊珊委員最近又在召開公聽會，預計是 10 月，感覺他也會出的版本。給你感覺意志就是可能設計不良的法律，之前立法者能做的好像也只能相對的出一個符合正確環境的一個版本。國民黨目前有這樣的準備嗎？"
-    },
-    {
-      "id": "QvnfHs",
-      "start": 1494.923,
-      "end": 1503.319,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "如果說像委員本身意見認為說那目前可能還可以再觀察一下把時間後延。對，那我覺得另外一個。"
-    },
-    {
-      "id": "DUwTpi",
-      "start": 1503.319,
-      "end": 1528.456,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "另外一方面我們收到非常大的社群的聲音是現代金管會的解釋，某些法條已經開始在運作了。例如說像 Vespa 是等級制，你必須這件事是一定要去做登記而且他有很多限制，例如說你有最低的營業額、資本額，然後你要去做房企登記，然後你要 KYC 這樣這件事。那其實非常的奇怪，因為你去針對這樣的一個交易行為，你必須好像要有一個 license。"
-    },
-    {
-      "id": "TAXvbK",
-      "start": 1533.166,
-      "end": 1543.848,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "他目前其實沒有 license，可是他要求的其實已經做好，已經是同等級的東西。但你在虛擬資產上面，你還沒有去解釋說這個東西是證券還是貨幣還是資產。"
-    },
-    {
-      "id": "wzuEUp",
-      "start": 1547.892,
-      "end": 1558.763,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "因為說真的，那別人商店都在賣遊戲的點數啊，那為什麼他們不 KYC 呢？那為什麼我賣 Minecoin 就是要 KYC？這很不合理。"
-    },
-    {
-      "id": "ZdCNGm",
-      "start": 1558.951,
-      "end": 1572.5,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "我們說非常大的社群，其實老歐居都說，哇，金管會這樣搞，太誇張了，那他們推的版本能看嗎？我們其實有拿到立委們分享的版本，我們看一下我們是覺得他應該金管會的版本還是走這個路線。"
-    },
-    {
-      "id": "drveKS",
-      "start": 1572.5,
-      "end": 1596.578,
-      "type": "speech",
-      "speaker": "記者 - 5",
-      "text": "我原本自己是怎麼看這一點的，所以我在避險登記制現在光講，避險其實是因為金管會去確定說有交易行為，跟有宣傳交易行為就算是 B3。這件事情對很多很傳統的 B 圈人來說是很莫名其妙的。我在社群上面講說我發了一個幣，請你們來買，那我就已經成為幣商了。好，我覺得這問題很好，我覺得第一點。"
-    },
-    {
-      "id": "MIMouI",
-      "start": 1599.189,
-      "end": 1618.131,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "作為在野黨或者是對於數位資產比較開放的政黨或者是立委，一定會準備相應的版本。如果有需要，一定會準備，這是第一個。"
-    },
-    {
-      "id": "qIorPd",
-      "start": 1618.131,
-      "end": 1694.155,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "那第二個呢是目前的政府在做虛擬貨幣專法上，我覺得有一個問題。因為虛擬貨幣專法討論很久了，當他在開始討論跟規劃的時候，其實已經是好幾年前。那個時候全球是處在一個所謂的監管的態勢。但是在川普當選以後，其實全世界最重要的金融中心之一，就是所謂的美國已經轉換態度，正在從監管轉換到所謂的開放跟創新。所以就像我剛剛講的，很多被監管者現在成為了監管者。所以我們是可以期待美國有可能會往另外一條更開放的道路去做。但是我們現在看到的金管會的草案很可能是兩年前或三年前做小改去推出來。他們有沒有意識到這個世界的趨勢正在轉變，這是我們的疑問。"
-    },
-    {
-      "id": "GDcKKg",
-      "start": 1697.858,
-      "end": 1711.971,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以從這個角度來講，不管最終大家的版本合出來是怎麼樣，有開放有嚴格，對於特定產業來說，確實有可能還是有震動期。但是我們作為在野黨，我們能做的是什麼？我們盡可能的在法條裡面去做到產業的鼓勵，做到正向的開放。"
-    },
-    {
-      "id": "WgncVT",
-      "start": 1718.473,
-      "end": 1745.759,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "譬如說 DeFi，一個去中心化的東西，難道你要 KYC 嗎？難道你 MetaMask 要 KYC 嗎？台灣的法條最不能做的就是明知不可為而為之。這就會造成什麼？像 PayPal 離開台灣就是一種。你管不了卻想管，這是最可怕的，因為這樣你就會劃地自限，故步自封，產業就會退化。"
-    },
-    {
-      "id": "drJDnJ",
-      "start": 1745.759,
-      "end": 1779.974,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以這個是我們不會看到的，所以會有一些開放的想法放進去。可是最後過了或沒過，如果政府的態度沒有真正的理解，他還是有可能會誤用這個法。他可以去解釋嘛，因為政府掌握解釋權。對吧？所以我自己個人來講，第一，我正在掌握這個黃金時間去跟政府溝通互動，把正確的觀點告訴他們，這是第一個。"
-    },
-    {
-      "id": "LqghQd",
-      "start": 1780.623,
-      "end": 1824.599,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "第二個，如果有一些不符合時宜的法草案的版本出來，我們一定會有一個比較合時宜的版本去與之協調。但是第三，不管協調成功或失敗，我認為一個新的法律剛推出，必然有陣痛期。所以所有的產業也必須要認知，所有的事物從沒有監管到有監管，它必然有所不同。那這個不同，大家可以用更良好的溝通去縮短震動期。"
-    },
-    {
-      "id": "bWXvdS",
-      "start": 1825.282,
-      "end": 1837.09,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "如果政府、民間、企業還有立委可以更良好的溝通，那這個所謂的震動期就越短。如果大家的溝通不良，那震動期就越長。所以我的整體觀點就是社會要和諧，溝通要良善，這樣子產業才有發展的機會。"
-    },
-    {
-      "id": "YGfpoZ",
-      "start": 1837.09,
-      "end": 1869.531,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "我覺得大家也不能太過於樂觀地期待政府可以在法規上面全部開綠燈。也不可能，因為他總是有燈號的。綠燈還有分很綠跟不那麼綠，那就要看他怎麼去解釋嘛。所以我自己是比較遵循第一原則，就是說如果政府沒有改變態度，我就算給了他一個全綠燈的法，他還是會告訴你其實這個不夠綠，你觸法了。"
-    },
-    {
-      "id": "FJValC",
-      "start": 1869.531,
-      "end": 1879.65,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "所以這是我的態度，不好意思講得比較繞一點，謝謝。好，謝謝，可以嗎？"
+      "speaker": "葛如鈞",
+      "text": "好。謝謝。可以嗎？可以嗎？謝謝。"
     }
-  ],
-  "raw": {}
+  ]
 }

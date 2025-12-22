@@ -4,849 +4,1928 @@
     "name": "NPR 記者專訪",
     "slug": "npr-reporter-interview",
     "date": "2025-03-10",
-    "description": "為 Whisper 轉錄，有錯誤歡迎留言分享\n\n錄音：[bafybeiddtpgsbnwqycb76ooltegy7ravazb2zlululepufdzvmhwur2hgi](https://ipfs.juchunko.com/ipfs/bafybeiddtpgsbnwqycb76ooltegy7ravazb2zlululepufdzvmhwur2hgi)\n\n對話主題是**台積電與美國的投資協議及其對台灣的影響**\n\n1. **台積電的重要性**：台積電在台灣經濟中扮演著關鍵角色，其股票交易量佔台灣股市的40%，且政府是其最大單一股東，持股約7%。\n2. **協議的突然性**：台積電與美國的投資協議宣布得突然，台灣政府和公眾事前並不知情，這引發了對國家安全和經濟影響的擔憂。\n3. **技術外流的風險**：協議中提到的技術轉移和設施建設可能會削弱台灣在全球半導體製造中的領先地位，尤其是高端技術的外流。\n4. **政府的透明度和責任**：台灣政府在協議過程中的角色不明確，缺乏透明度和對公眾的責任感，這引發了對政府是否能有效保護國家利益的質疑。\n5. **多元經濟發展的必要性**：除了半導體，台灣應該發展其他產業如AI和網絡安全，以確保經濟的多元化和穩定性。\n6. **美國的壓力**：雖然美國政府未明確表示施壓，但其政策和市場需求可能對台積電的決策產生了影響，這需要台灣政府謹慎應對。"
+    "description": "本場對話主要針對台積電與川普政府達成的 1000 億美元在美投資協議進行探討，重點包含：\n\n1. **決策透明度疑慮**：葛如鈞委員指出臺灣政府在台積電宣布投資案前竟表示不知情，引發對政府監督失職與國家安全評估不足的深深憂慮。\n2. **矽盾與產業外移風險**：討論台積電最先進製程（如 2 奈米、A16）與研發中心若過快移往美國，是否會削弱臺灣的「矽盾」保護，影響地緣政治中的關鍵地位。\n3. **川普交易風格的解讀**：分析川普對臺灣「竊取晶片產業」的言論僅為商業談判修辭，臺灣應關注其具體行動而非僅聚焦於單一字眼。\n4. **產業多元化與 AI 基本法**：強調臺灣不應過度依賴單一產業，呼籲應建立《AI 基本法》並發展資安、軟體與機器人等「多重盾牌」以強化韌性。\n5. **政府與私人企業的義務**：身為公職人員，葛委員強調台積電雖是私營企業，但因政府具持股且關乎民生經濟，有義務向大眾揭露更多影響評估資訊。\n\n為 Gemini 轉錄，有錯誤歡迎留言分享\n\n錄音：[bafybeiddtpgsbnwqycb76ooltegy7ravazb2zlululepufdzvmhwur2hgi](https://ipfs.juchunko.com/ipfs/bafybeiddtpgsbnwqycb76ooltegy7ravazb2zlululepufdzvmhwur2hgi)"
   },
   "content": [
     {
-      "id": "zRzoRH",
-      "start": 5.759,
-      "end": 19.428,
+      "id": "0e644121-1a08-47c3-b4cb-4e53ac6b24ef",
+      "start": 0,
+      "end": 8,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "And I might just check it periodically to make sure it's still recording. Yeah, no problem. I will help you to check. Thank you. Yeah, so before we get started, I just wanted to tell you a little bit more about the story."
+      "text": "All right, so I just need to record your voice as clearly as possible. And I might just check it periodically to make sure it's still recording."
     },
     {
-      "id": "MBhATW",
-      "start": 19.787,
-      "end": 47.261,
+      "id": "76eeab62-c3ad-4b32-ab7a-88a2dd82f960",
+      "start": 8,
+      "end": 13,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, no problem. I will help you to check. Thank you."
+    },
+    {
+      "id": "02bb3074-7726-4f7e-b79e-6f0a529a2b95",
+      "start": 13,
+      "end": 67,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "My name is Ashish. I've been in Taiwan about three years. And so I cover Taiwan for public radio in the US, mainly NPR and shows that are aired on NPR. So this story is about the deal that President Trump announced last week with TSMC, which is like the 100 extra billion dollar investments in the US. So pretty soon after that deal was announced."
+      "text": "Yeah, so before we get started, I just wanted to tell you a little bit more about the story. So my name is Ashish, I've been in Taiwan about three years and so I cover Taiwan for public radio in the US, mainly NPR and shows that are aired on NPR. So this story is about the deal that President Trump announced last week with TSMC, which is like the 100 extra billion dollar investments in the US. So pretty soon after that deal was announced, there was some back and forth in Taiwan about some concerns that the deal was announced by surprise and that there's not yet a consensus on, you know, what what the deal means for Taiwan's economic and national security. So I'm interested in sort of understanding the range of views in Taiwan society and politics around the deal and around how Taiwan should approach this kind of difficult moment, right? So can you start by telling me how did you react when you first heard about about the announcement?"
     },
     {
-      "id": "iQrqzW",
-      "start": 47.261,
-      "end": 76.374,
+      "id": "a1dd7483-8605-4bad-b5cd-891469c993d3",
+      "start": 67,
+      "end": 101,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay, first of all, United States of America is our strong friend, very important friend, our ally. So it's for sure. If anything that we can make our relationship from Republic of China, which is Taiwan, to be have a stronger relationship, stronger connection with USA, that should be a great thing, okay? So a stronger relationship, stronger together is good to Taiwan and Taiwan people and also for the regional security."
+    },
+    {
+      "id": "67734887-92e3-4db9-ac75-c93586a73eac",
+      "start": 101,
+      "end": 157,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And the second is TSMC is one of the most important industry in Taiwan, especially a company in Taiwan is really, really important. How important? First, the trading volume of the TSMC's stock is kind of a proportion in our stock market is kind of like 40%. So it's really high percentage in our economy. And it's revenue is kind of like equal to our GDP or something like that. And we have a lot of employee work with work in TSMC or work for the ecosystem around TSMC. So it's really, really important. And also at the same time our government is the largest single shareholder of TSMC. It's kind of like 6.38 or like it's around 7%. Even BlackRock is only have like 5.38% or something."
+    },
+    {
+      "id": "7cb202ce-0c04-4e9f-9f23-8ae4b9f543b8",
+      "start": 157,
+      "end": 211,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So our government is kind of like invest a lot in TSMC back, you know, to like 40 years and still a really, really important shareholder nowadays. So and we all understand that TSMC is kind of like created a kind of a shield or security situation to kind of like virtually protect Taiwan to make sure that Taiwan is really important to our allies because we develop, our people, our company develop a really important technology for all others in the world."
+    },
+    {
+      "id": "e123be38-6ccd-4ee3-af47-d3ca5bccede2",
+      "start": 211,
+      "end": 240,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And we as the public or as a public servant, we all understand the importance and we believe the strategy and the decision made by TSMC should be mutual benefit and will be mutual benefit not only benefit for its own company but also we would like to make it make sure that it will also benefit to Taiwan."
+    },
+    {
+      "id": "2d367a7a-0484-4d00-8b5c-81b5446a88bf",
+      "start": 240,
+      "end": 274,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And we strongly believe that because TSMC is you know come across and walking along with Taiwan for 40 years, so we strongly believe this type of mutual beneficial relationship with TSMC and the whole ecosystem, the semiconductor with Taiwan will keep going on. Okay, so we don't doubt, we have no doubt with America. We have no doubt with TSMC. However, as an opposition party or as a majority in the parliament, we have the obligation to make sure our government deliver their promise and make sure they protect the benefit of the government which is the benefit of our people."
+    },
+    {
+      "id": "d3cdcee5-2d0a-44a3-bb3b-da6ddac6ebde",
+      "start": 274,
+      "end": 312,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So, so the thing is my first react is kind of a little bit surprise because before this, we don't have any hint or like early information from the government or from the TSMC. By legal, a company which is also a public company under stock market, if they're doing some very important action, they have obligation to kind of like to have a information revealing to the investors and a general public."
+    },
+    {
+      "id": "9e8d3810-fa20-49d7-8a16-38a8622ac374",
+      "start": 312,
+      "end": 350,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And also as a government, they have obligation to have a meeting to discuss whether this type of collaboration will harm to our national security on the technology part or like it make sure it will not damage to our national security. So at the beginning I I kind of surprised because we don't have this, because it's just a surprise, we see CC Wei and Trump, President Trump just make the announcement."
+    },
+    {
+      "id": "a2a6a750-26e7-49bc-a6c5-11bc8b607ab7",
+      "start": 350,
+      "end": 418,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "However, we all understand this type of negotiation is kind of like secretly or under table or in the meeting room, we can understand that. However, afterward, we are we start to questioning or or request our government to reveal the whole process before the TSMC made the announcement with the President Trump. Because before maybe it's secret, but afterward we have to monitor and make sure the whole process is legit and followed by the law and make sure it will be legal. And therefore, our general public, the other private sector, the other, you know, important key industry, can follow the process and then we will not have too much surprise afterward, right? because if if this situation going kind of a surprise and if this decision made by TSMC and in this negotiation brings some 骨牌效應 kind of like some followers or like some following impact, which leads the other private sector or very important company to try to, you know, going forward and going abroad and maybe put their future investment in United States or other country more than Taiwan, it will a kind of a damage to Taiwan, the security and the economy. So the situation right now is at first, so at the beginning a little surprise but understandable. And the secondly, we want to make sure we want to made, we want to know more about the the whole process. And then we found out that the process kind of unclear because our government is kind of their public announcement is kind of a little bit vague, like do they know before, or do they know afterward, and it's the second stage is kind of unclear."
+    },
+    {
+      "id": "6df098c1-35d2-4185-94c0-630a862ded62",
+      "start": 600,
+      "end": 603.73,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Kind of worry about that."
+    },
+    {
+      "id": "a98055d4-b1ff-47da-9b0f-71a0f4a883e0",
+      "start": 603.73,
+      "end": 622.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And the third stage, which is now, yesterday we just got a public kind of information made by the Ministry of Economy, which made very clear the Ministry of Economy and our Executive Yuan, which is the central government leader, the whole leading team and the whole ministry, they didn't know before the announcement."
+    },
+    {
+      "id": "bd59e5f6-7faa-4094-8631-bb2ccff3601c",
+      "start": 622.1,
+      "end": 622.9,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "There was some back and forth in Taiwan about some concerns that the deal was announced by surprise and that there's not yet a consensus on what the deal means for Taiwan's economic and national security. So I'm interested in understanding the range of views in Taiwan society and politics around the deal and around how Taiwan should approach. So can you start by telling me how did you react when you first heard about the announcement?"
+      "text": "Really?"
     },
     {
-      "id": "aDUlbb",
-      "start": 78.78,
-      "end": 98.473,
+      "id": "9cc4387b-2f65-49d4-bec6-5a5681227033",
+      "start": 622.9,
+      "end": 625.5,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Okay. First of all, the United States of America is our strong friend, a very important friend, our ally. So it's for sure."
+      "text": "Quote, quote by their own, 你可以 check 一下。"
     },
     {
-      "id": "csYjYi",
-      "start": 98.814,
-      "end": 128.592,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "If there's anything that we can do to strengthen the relationship between the Republic of China, which is Taiwan, and the USA, that would be a great thing. A stronger relationship is good for Taiwan, the Taiwanese people, and also for regional security."
-    },
-    {
-      "id": "hDlLZz",
-      "start": 129.036,
-      "end": 154.718,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "The second point is that TSMC is one of the most important industries in Taiwan. It's really, really important. How important? First, the trading volume of TSMC stock is about 40% of our stock market."
-    },
-    {
-      "id": "sopmSF",
-      "start": 155.23,
-      "end": 184.94,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "So it's a really high percentage of our economy. Its revenue is kind of like equal to our GDP or something like that. We have a lot of employees working in TSMC or for the ecosystem around TSMC. It's really, really important. At the same time, our government is the largest"
-    },
-    {
-      "id": "GqsWOM",
-      "start": 185.486,
-      "end": 214.411,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "single shareholder of TSMC. It's around 6.38% or like 7%. Even BlackRock only has about 5.38%. Our government has invested a lot in TSMC for about 40 years and is still"
-    },
-    {
-      "id": "naYgtW",
-      "start": 214.957,
-      "end": 259.138,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "a really, really important shareholder nowadays. We all understand that TSMC creates a kind of shield or security situation to virtually protect Taiwan, making sure that Taiwan is important to our allies because we develop really important technology for others in the world. As public servants, we all understand"
-    },
-    {
-      "id": "Yzztbu",
-      "start": 260.06,
-      "end": 284.923,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "the importance, and we believe the strategy and decisions made by TSMC should be mutually beneficial. Not only beneficial for its own company, but also for Taiwan."
-    },
-    {
-      "id": "dbsAof",
-      "start": 285.896,
-      "end": 321.049,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "We strongly believe that because TSMC has been working along with Taiwan for 40 years. We strongly believe this type of mutually beneficial relationship with TSMC and the whole semiconductor ecosystem in Taiwan will continue. We have no doubt about America or TSMC."
-    },
-    {
-      "id": "SYphto",
-      "start": 321.049,
-      "end": 343.046,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "However, as an opposition party or as a majority in the parliament, we have the obligation to make sure our government delivers on their promises and protects the benefit of the government, which is the benefit of our people."
-    },
-    {
-      "id": "wqHoUt",
-      "start": 344.462,
-      "end": 395.759,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "My first reaction was a little bit of surprise because we didn't have any hint or early information from the government or TSMC. As a public company on the stock market, if they're doing something very important, they have an obligation to reveal information to investors and the general public. As a government,"
-    },
-    {
-      "id": "fClTch",
-      "start": 396.305,
-      "end": 425.947,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "they have an obligation to have a meeting to discuss whether this type of collaboration will harm our national security in terms of technology or ensure it will not. So at the beginning, I was kind of surprised because we didn't have this."
-    },
-    {
-      "id": "oPqJpd",
-      "start": 426.135,
-      "end": 450.333,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "It was a surprise to see C.C. Wei and President Trump just make the announcement. However, we understand this type of negotiation is done secretly or under the table or in the meeting room. We can understand that. However, afterward..."
-    },
-    {
-      "id": "qTfTmM",
-      "start": 451.186,
-      "end": 484.838,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "we started to question or request our government to reveal the whole process before TSMC made the announcement with President Trump. Because before, maybe it was secret. But afterward, we have to monitor and make sure the whole process is legitimate and follows the law to ensure it is legal."
-    },
-    {
-      "id": "RTVWly",
-      "start": 484.991,
-      "end": 514.241,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Therefore, our general public, the private sector, and other important key industries can follow the process. Then we will not have too many surprises afterward, right? Because if this situation is a surprise and..."
-    },
-    {
-      "id": "EtqwEG",
-      "start": 515.009,
-      "end": 560.93,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "if this decision made by TSMC in this negotiation brings some kind of following impact, which leads other private sectors or very important companies to try to go forward and go abroad, and maybe put their future investment in the United States or other countries more than Taiwan, it will kind of damage Taiwan's security and economy. So the situation right now is at first"
-    },
-    {
-      "id": "pyyZLj",
-      "start": 561.647,
-      "end": 604.531,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "a little surprising, but understandable. Secondly, we want to know more about the whole process. We found out that the process is kind of unclear because our government's public announcement is a little bit vague. Like, do they know before or afterward? The second stage is kind of unclear, and we're kind of worried about that. The third stage, which is now."
-    },
-    {
-      "id": "wnuBwB",
-      "start": 605.111,
-      "end": 652.5,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Yesterday, we just got public information made by the Minister of Economy, which made it very clear that the Ministry of Economy and our executive branch, which is the central government leader, the whole leading team, and the whole ministry didn't know before the announcement. Really? Quote by their own. You can check it. Yeah, you can send me that link. I appreciate it. You don't know about that? Yeah, it's the latest information. It's yesterday. The Minister of Economy said they were not informed beforehand."
-    },
-    {
-      "id": "hhqDHb",
-      "start": 652.5,
-      "end": 723.302,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "So now it's kind of surprising, understandable, and unclear, a little bit worrying. From my part, it's seriously worrying because if our government, as a government, should protect our economy and some very key technology, it should not be able to easily flow out to other places, even to friendly countries. We should make sure that our government has some control or understanding about it. But now they say they didn't know before, they got the information at the same time as the broadcast. Yeah, that's pretty wild. So let me"
-    },
-    {
-      "id": "Fklnek",
-      "start": 723.609,
-      "end": 768.968,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "make sure I deliver the message again. First, the United States of America is our friend, and we are their friends. A stronger relationship is necessary. Second, TSMC is really important. We are really looking forward to seeing TSMC bring their impact to all over the world. However, at the same time, we have to make sure it will not damage our national security and economy in Taiwan. So my feedback is kind of three steps. Yes, that's great. Yes, that's it. Thank you. And that answers a few questions I wanted to ask in a row, so I appreciate that."
-    },
-    {
-      "id": "BgNwoV",
-      "start": 768.968,
-      "end": 797.176,
+      "id": "e2548c46-285a-400e-968a-3868c8536f39",
+      "start": 625.5,
+      "end": 628.1,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "So, I mean, you talked about your reaction. I'm curious about how you feel about what's actually within the deal, because I think it's going to be about five different facilities in the US and scaling up in terms of making more advanced chips. However, at the press conference, the TSMC CEO still claimed that the most advanced research and development will stay within Taiwan."
+      "text": "Yeah, yeah, if you can send me that link, I'd appreciate that."
     },
     {
-      "id": "YgwxZh",
-      "start": 797.176,
-      "end": 852.261,
+      "id": "cbc2fd47-4df1-45f5-a306-18f6e6000e1a",
+      "start": 628.1,
+      "end": 643.1,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "When you look at what was announced, how does it seem to you in terms of whether Taiwan's leading role as a global semiconductor manufacturer is compromised or not? First of all, I think President Trump, the goal from President Trump is very clear. He wants to make sure the semiconductor manufacturing made in the United States will grow from under 5% to 40%. You know that number, right? And so it's kind of like a huge growth. And we understand what he's thinking. We respect because he's trying to make America great again, right?"
+      "text": "Yeah, yeah, you don't know about that? Yeah, it's the latest information, it's yesterday, they're kind of like, 就是經濟部長說他們事前不知情。Yeah, yeah."
     },
     {
-      "id": "xuaKPR",
-      "start": 853.49,
-      "end": 913.183,
+      "id": "5149f760-daf1-49cd-a915-0fd415e5e787",
+      "start": 643.1,
+      "end": 691.54,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "However, at the same time, we have to make sure Taiwan will be playing an important role again and again to make sure we are safe. So we respect the goal set by President Donald Trump. However, we have to rely on the strategy and decision-making with TSMC and our government, because our government is the single largest shareholder of TSMC. So we understand that the current situation, which is the TSMC, have made a kind of..."
+      "text": "So now it's kind of surprise, understandable, and unclear, a little bit worry, and now from my part, it's kind of a seriously worry about that. Because if our government, as a government, they should protect our economy and to protect some key, very key technology should not be able to very easily to kind of like flowing out to the other place, even though flowing to some friendly country, but we should make sure that our government, you know, have some control or like have some understanding about that. But now it's, they kind of like, they say no, they don't know before that. They got the information at the same time with the broadcast."
     },
     {
-      "id": "BwoTGg",
-      "start": 916.766,
-      "end": 967.227,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "How to say that... Okay, let me explain. So at the beginning, in the press release in the White House, C.C. Wei made it clear we will have a lot of facilities will move to the United States, including Feng Zhuang. Let me check. A co-host, right? You know that? Feng Zhuang is a little too advanced for me. Yeah, I know. Okay. Kind of like... Does it have to do with..."
-    },
-    {
-      "id": "FuGBwJ",
-      "start": 967.807,
-      "end": 1017.722,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Assembly or not, it's not assembly. Is it like a packaging? A packaging, yes, packaging. So not only the manufacturing, but also packaging. Not the packaging, it's like very high-tech packaging. And also a research center, right? And the manufacturing technology is not three nano, it's two nano, and also A16 technology, which is the 1.6 nanometer process. So it's the highest level of the technology which TSMC owns right now. So at the announcement press release in White House, C.C. Wei made it clear this technology."
-    },
-    {
-      "id": "eRTaQb",
-      "start": 1018.029,
-      "end": 1070.674,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Three manufacturing lines and two packaging factories and one research center will be contained in this 100 million project. And his own words, quote from C.C. Wei, after that, the TSMC factory in the United States can make their jobs on their own without contacting Taiwan. The manufacturing in the USA will have their own pace and stand alone and keep going on."
-    },
-    {
-      "id": "qygiHS",
-      "start": 1070.862,
-      "end": 1122.705,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "So we can send you the original quote, but if you check the original announcement, you can see that. So which means he wants to deliver Donald Trump's wish that made in USA purely without a constraint from Taiwan. However, after C.C. Wei came back to Taiwan and had a press release with our President Lai, everything became a little bit vague again because he or President Lai said something like the key manufacturing technology will still be in Taiwan and they will need us."
-    },
-    {
-      "id": "SoJGJp",
-      "start": 1122.705,
-      "end": 1176.8,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Don't worry. So to my point of view, I understand and I respect TSMC. They have their own pressure or they have their own strategy to say something to the different parties or countries or places. However, as a public servant, we are not really clear right now. Will the chips made in the USA still rely on Taiwan? The key manufacturing technology will grow or develop in Taiwan and make sure it will follow our Taiwanese government rules. Like after one or two or three years, it will go abroad or it will sooner and sooner go abroad to the USA or other countries. Now it's unclear."
-    },
-    {
-      "id": "CUXIjN",
-      "start": 1202.056,
-      "end": 1290.094,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "So back to your question, I think if this part is not clear, then we cannot make sure our... How to say that? Silicon shield. Yes, the silicon shield or like... Wait a moment. Yeah, yeah, yeah. Make sure the importance of Taiwan will stay the same importance level in this seriously changing, rapidly changing geopolitical situation and we will not be able to make sure that if we are compromised by this investment and the kind of investment project made by TSMC. Because it's not only the situation or the issue only for a TSMC single company. It's all connected to our stock market, our talent, our technology, and our, you know, the whole ecosystem followed by TSMC. It's all connected. But now it's kind of unclear."
-    },
-    {
-      "id": "gQTScD",
-      "start": 1290.452,
-      "end": 1301.049,
+      "id": "d6adc5eb-306b-4ed9-9bbd-56533b45796b",
+      "start": 691.54,
+      "end": 693.73,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "It makes a lot of sense. Thanks for being so specific with your response too. It's really helpful to think about the concerns that are raised in terms of how the news is delivered and what's still vague."
+      "text": "Yeah, that's pretty wild."
     },
     {
-      "id": "YSXygN",
-      "start": 1308.643,
-      "end": 1338.183,
+      "id": "e2402cf1-e6c2-40fc-b0a0-7ca7170b49c8",
+      "start": 693.73,
+      "end": 718.91,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, so yeah, that's pretty wild. So let me make sure I deliver the message again. First, United States America is our friend, and we are their friends. Stronger relationship is necessary. And second, TSMC is really important. We really looking forward to see TSMC to bring their impact to all over the world. However, at the same time, we have to make sure it will not damage to our national security and economy in Taiwan."
+    },
+    {
+      "id": "126dc56a-1cb2-4185-9db1-4923ed9c1833",
+      "start": 718.91,
+      "end": 722.92,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So my feedback is kind of three steps. And yes, that's it."
+    },
+    {
+      "id": "04b0a985-e3ee-4194-88d6-6c174a214ceb",
+      "start": 722.92,
+      "end": 756.44,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "Even in the past few months, we've seen the current president talk about Taiwan as stealing American jobs. How do you think that Taiwan should approach negotiating with the new administration and still balancing its own economic and security needs in situations like this? Thank you. It's a really good question."
+      "text": "Yes, that's great. Thank you. And that answers a few of the questions I wanted to ask you in a row, so I appreciate that. So I mean we've talked about your reaction, I'm curious about how you feel about what's actually within the deal, because I think it's going to be about five different facilities in the US and scaling up in terms of making more advanced chips. However, at the press conference, the TSMC CEO still claimed that the most advanced research and development will stay within Taiwan. When you look at what was announced, how does it seem to you in terms of whether, you know, Taiwan's leading role as a global semiconductor manufacturer is compromised or not?"
     },
     {
-      "id": "BXBXeW",
-      "start": 1338.575,
-      "end": 1368.575,
+      "id": "8240f956-4043-4499-a1a8-fa87e290cc4b",
+      "start": 756.44,
+      "end": 781.56,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "First, many people in Taiwan are fans of Donald Trump, President Trump. Many people know that he's kind of like a deal maker or a business deal maker. Now he's really good at elections or something like that. So many people are talking about not getting too serious about what he's saying, but we should concentrate on what he's doing."
+      "text": "Um, yeah, first of all, I think President Trump, the goal from President Trump is very clear. He wants to make sure the semiconductor manufacturing proportion in made in United States will come from like under 5% grow to like 40%. You know that number, right? And so it's kind of like a huge growth."
     },
     {
-      "id": "XTKaha",
-      "start": 1369.019,
-      "end": 1409.002,
+      "id": "fb1d9428-7fa3-401e-a07b-b476a6750918",
+      "start": 781.56,
+      "end": 822.86,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "As a deal-making process, what someone says is not equal to what they do, right? For President Trump, we think not to ignore what he's saying, but not to single focus. It's part of his thinking but not the whole. For example, if we check the relationship right now, like the USA with France, Mexico, or Canada, he's saying a lot. However, what he's doing is very important."
+      "text": "And we understand what he thinking. We respect because he's trying to make America great again, right? However, at the same time, we have to make sure Taiwan will be play, playing an important role again and again to make sure we are safe, okay? So we respect the goal set by President Donald Trump. However, we have to respect and we have to rely on the strategy and the moving, kind of like, the strategy and the decision making with the TSMC and our government, because our government is the single largest holder, shareholder of TSMC."
     },
     {
-      "id": "GEXqgb",
-      "start": 1430.828,
-      "end": 1444.991,
+      "id": "d751e0e8-854c-451d-b92c-49c9235160ab",
+      "start": 822.86,
+      "end": 840.23,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Whenever you hear President Trump, or just elected at that time, because he's saying that Taiwan stole the semiconductor business from the United States before he got elected, right?"
+      "text": "So the result, so we understand that the current situation, which is the TSMC have made a kind of, how to say that, not... okay, let me explain."
     },
     {
-      "id": "RjwdvG",
-      "start": 1446.049,
-      "end": 1499.753,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "I always tell my friends and followers not to concentrate too much on the keyword 'steal.' In the United States, in the Western world, the culture behind a single sentence like 'steal' is not too serious. It's just a situation where you take something from me. For example, Steve Jobs has well said that good artists copy, great artists steal. So 'steal' could be a metaphor that you are doing something really good. You did a great job."
-    },
-    {
-      "id": "SwhpZt",
-      "start": 1500.316,
-      "end": 1547.483,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "At that time, President Trump said Taiwan did a great job. They stole the semiconductor business from the United States. So it's understandable, right? We did a great job. After TSMC announced the $100 billion investment, you can see President Donald Trump mentioned the same situation with different or similar words without 'steal,' but only a compliment or something like, okay, they're really good. They're kind of the top in the world."
-    },
-    {
-      "id": "TKZnTw",
-      "start": 1561.254,
-      "end": 1623.763,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "I think saying something is not the true decision point for us. We want to make sure what kind of action he will take. Right now, we know very clearly he wants to make sure that he will help the United States manufacturing business grow and become great again with trusted partners from Taiwan. The greater impact with Taiwan than with the United States was addressed by the announcement with Donald Trump, right? So, that's it. I think we don't need to panic. If the United States keeps trying to stop war and make the economy great again, not only for the United States but also for the global economy, and the Taiwan government plays their role and makes sure they protect the benefit of Taiwan, then everything will be fine."
-    },
-    {
-      "id": "XtPIGC",
-      "start": 1650.862,
-      "end": 1674.718,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Now, the situation is we're a little bit worried about our government in Taiwan. The ruling party is not in the situation because they're kind of delayed and not really clear to their people about what they should do next. This is what we are really worried about."
-    },
-    {
-      "id": "QFZdVJ",
-      "start": 1683.302,
-      "end": 1707.022,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "I think Silicon Shield is something that we talk about too much and wait too much. In a place like Taiwan, we have a plural economy."
-    },
-    {
-      "id": "EPetfj",
-      "start": 1707.722,
-      "end": 1736.937,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "We have AI, software, cybersecurity, a really good team in Taiwan. We have a blockchain startup really proactive in Taiwan. We have a computer vision team. We have an Apple research team. We have the top-notch algorithm team from Meta in Taiwan. So we are kind of like plurals. We have a lot of shields."
-    },
-    {
-      "id": "cesjTy",
-      "start": 1738.473,
-      "end": 1764.906,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "It's just that the silicon shield is more famous. However, the other types of shields also need our government to pay attention instead of just pushing our silicon shield to the front line and making it damaged at the beginning."
-    },
-    {
-      "id": "ltTblG",
-      "start": 1765.452,
-      "end": 1818.422,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "You can say that the silicon shield is just a kind of quote or metaphor for a whole ecosystem of semiconductor manufacturing in Taiwan. It plays a really important role in Taiwan. If TSMC brings their technology to other countries, even our allies, too soon or too much, it will bring damage to our national security for sure."
-    },
-    {
-      "id": "KgVNdP",
-      "start": 1820.23,
-      "end": 1882.807,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "If our government has a really close relationship and significant involvement in this type of collaboration, then it's fine. Now, the situation is our private sector, with a large proportion of government investment and shareholding, is doing their business and making decisions with other countries on their own without a commitment, agreement, or communication with our government. It will be damaging because it may lead other similar companies to follow, bringing damage to the silicon shield."
-    },
-    {
-      "id": "XfAsAY",
-      "start": 1883.063,
-      "end": 1912.346,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "If everything follows the law, because we have a national security law, we have a law to forbid some key manufacturing technology from being brought to other countries easily. We have clear rules. But if our private sector and government are not playing by the rules, then we have a problem."
-    },
-    {
-      "id": "vWWqSl",
-      "start": 1913.899,
-      "end": 1963.609,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "For the United States, they don't have the obligation to warn you that you are crossing the line in your domestic rule. They have to think about their people. So our government has to think differently. Our people and private sector have to grow, survive, and follow the rules. If they are a Taiwan public company on the stock market, they have the obligation to have meetings, follow Taiwan's rules, and have obligations to the public investors."
-    },
-    {
-      "id": "gKxKal",
-      "start": 1964.087,
-      "end": 1997.125,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "The silicon shield is a metaphor connected to many other things, not only TSMC. If we handle it carefully, clearly, and not ambiguously, then even if TSMC goes all over the world like Europe or Japan, it's still fine."
-    },
-    {
-      "id": "UXoFEg",
-      "start": 1997.654,
-      "end": 2013.968,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "Now, the situation is the unclear communication between Taiwan and TSMC, TSMC and the United States, and the Taiwan government with the United States."
-    },
-    {
-      "id": "rUIiYm",
-      "start": 2013.968,
-      "end": 2042.807,
+      "id": "b99b2868-f60c-44ef-b81a-8c4673e04f6b",
+      "start": 840.23,
+      "end": 842.02,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "Yeah. Makes a lot of sense. So the last thing I wanted to ask about is that at the last week's press conference, CC Wei and President Lai claimed that the decision is basically a business decision by TSMC. It's motivated to meet increasing client demand in the US, and there was not some kind of pressure from the US administration to do this. I'm just wondering whether you think that's true."
+      "text": "Take your time."
     },
     {
-      "id": "amFdPd",
-      "start": 2045.179,
-      "end": 2074.906,
+      "id": "320b5e03-6d31-4739-9372-157bfe59adc1",
+      "start": 842.02,
+      "end": 912.44,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "The true situation may only be known by certain people, for example, like C.C. Wei or Tim Cook or the significant client of TSMC. The thing is, C.C. Wei"
+      "text": "Yeah, so at the beginning in the press release in the White House, CC Wei made it clear we will have a lot of facility will move to United States, including CoWoS, right? 封裝, let me check. CoWoS, right? 封裝廠. You know that? 封裝 is a little too advanced for me. Yeah, I know. Okay, kind of like, assembly or, no, it's not assembly. It's like a packaging, yes, packaging. So not only the manufacturing, but also packaging, not the packaging, it's like very high-tech packaging, and also a research center, right? And the manufacturing technology is not 3 nano, it's 2 nano and also A16 technology, which is the 1.6 nanometer process. So it's the highest level of the technology that which TSMC owned right now."
     },
     {
-      "id": "ijovHd",
-      "start": 2076.203,
-      "end": 2103.404,
+      "id": "3eee97db-6950-4770-8858-312bf5bc6ee0",
+      "start": 912.44,
+      "end": 953.94,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "has some obligation to make sure their shareholders and their investors keep believing in this company. So there's something he needs to say. And at the same time, a single situation should not be"
+      "text": "So at the announcement, press release in White House, CC Wei made it clear these three manufacturing line and two packaging factory and one research center will contained in this 100 billion project. And his own word, quote from CC Wei, after that, United States, the TSMC factory in United States can make their jobs by their own without contacting to Taiwan part. And USA, the manufacturing in USA will have their own pace and you know stand alone and walk, you know keep going on. So we can send you the original quote, but if you check the original announcement you can see that."
     },
     {
-      "id": "lCCZII",
-      "start": 2104.36,
-      "end": 2133.166,
+      "id": "0ecf047b-02d3-4339-8af8-83975da6c1d8",
+      "start": 953.94,
+      "end": 981.1800000000001,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "should not have only one voice. Now, the situation right now is when C.C. Wei is in the United States, he's saying that many things will move to the United States and it will be standalone. It will go alone by itself. But when he comes back, our C.C. Wei, President Lai, our government, it all says one thing."
+      "text": "So which means kind of like, which means he want to deliver Donald Trump's wish that made in USA purely without a constraint from Taiwan part will be deliver in this whole project. However, after CC Wei come back to Taiwan and have a press release with our President Lai, everything kind of a little bit vague again because he, or President Lai, has say something like the key manufacturing technology will still in Taiwan and they will need us and don't worry."
     },
     {
-      "id": "iaZnwV",
-      "start": 2133.763,
-      "end": 2156.647,
+      "id": "574b0b12-fcc2-48f6-ac0e-3291e2c3387e",
+      "start": 981.1800000000001,
+      "end": 1035.5,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "It will be safe. Don't worry. Without any formal document and analyzing report by our government, it's not right. C.C. Wei is a president of a private company."
+      "text": "So to my point of view, I understand and I respect the TSMC, they have their own pressure or they have their own strategy to say something to different parties. However, or country or place. However, as a public servant, we are not really clear right now, will the USA, the chips made in USA will still rely on Taiwan. The key manufacturing technology will growing or develop in Taiwan and make sure it will follow by our Taiwanese government rules, like after one or two or three years it will going abroad, or it will sooner and sooner to going abroad to USA or the other country. Now is unclear. So back to your question, I think..."
     },
     {
-      "id": "kMiwQn",
-      "start": 2156.869,
-      "end": 2183.268,
+      "id": "81612d64-f5ac-4251-a9d5-3e6429844611",
+      "start": 1200,
+      "end": 1203.73,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "He needs to say something, and he needs to say something in a particular way. But our government, they have their obligation to try to reveal or deliver the truth to the people. Like the National Security Department, they should..."
+      "text": "I think, um, if this part not clear, then we cannot sure,"
     },
     {
-      "id": "VDrSJE",
-      "start": 2183.66,
-      "end": 2210.179,
+      "id": "913af625-4114-47d9-9887-688067cf8619",
+      "start": 1203.92,
+      "end": 1210.13,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "explore this type of compromise. Will it harm our national security? And they should make a report. And the Ministry of Economy, they have to make it clear what type of process for a private sector to bring their key technology to another place."
+      "text": "we cannot make sure our..."
     },
     {
-      "id": "uiZezq",
-      "start": 2210.776,
-      "end": 2235.162,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "And what's the risk that we have right now? And what's our next step? And President Lai should declare their strategy in all, you know, in whole, right? But now we don't get that. So..."
-    },
-    {
-      "id": "xfiWnq",
-      "start": 2239.735,
-      "end": 2268.404,
+      "id": "e13ea8f6-b66f-4478-bb91-1c10a57ace0f",
+      "start": 1210.45,
+      "end": 1211.23,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "So again, your question is like... I think you basically answered it. It was about... You talked about the lack of transparency and how the deal was explained to the public. And I understand that it's also hard to fully understand what people are thinking behind closed doors. The last thing... The pressure from the United States, right? First of all..."
+      "text": "Silicon shield?"
     },
     {
-      "id": "uniPJC",
-      "start": 2270.111,
-      "end": 2298.848,
+      "id": "a90ac468-6f42-43f0-8017-ff0e7c8586b9",
+      "start": 1211.39,
+      "end": 1215.65,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "President Trump explained many times that Taiwan is doing a great job. We need to bring it to the United States. If you ask Trump whether he is pushing Taiwan or TSMC, he might agree or say something else. It's not important."
+      "text": "Yes, the Silicon shield, or like..."
     },
     {
-      "id": "DrfsLQ",
-      "start": 2300.06,
-      "end": 2325.896,
+      "id": "c00c9b0c-af80-4af3-8826-8fcaa23b4bc6",
+      "start": 1216.09,
+      "end": 1219.33,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "The situation now is that the United States of America, the government, and the majority of their people want to have jobs. They want to have a manufacturing solution in the domestic area."
+      "text": "Wait a moment... yeah, make sure the importance of Taiwan"
     },
     {
-      "id": "oYTwoe",
-      "start": 2326.903,
-      "end": 2352.773,
+      "id": "3d925ecd-ac69-4725-bfeb-a7dc35865b6b",
+      "start": 1219.66,
+      "end": 1225.12,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "So they're using tariffs or other deal-making strategies to ensure their benefits. If we think there is no pressure from the United States of America, and this type of thinking comes from our president, I will be really worried."
+      "text": "will stay the same importance level in this seriously changing, rapidly changing geopolitical situation."
     },
     {
-      "id": "wQGVKE",
-      "start": 2353.677,
-      "end": 2377.841,
+      "id": "fcaf1b75-acd9-448b-a8fc-9ea060a54728",
+      "start": 1225.43,
+      "end": 1231.81,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "But you cannot get concrete information like from Trump, saying, \"Yes, I'm pushing Taiwan,\" or President Lai saying, \"Yes, we got some pressure.\" I don't think so. They will not make it really clear."
+      "text": "And we will not able to make sure that if we are compromised by this investment and the investment project led by TSMC."
     },
     {
-      "id": "lyRmCF",
-      "start": 2378.268,
-      "end": 2406.459,
+      "id": "e062e3a3-80b9-437e-8309-919e802a6ef4",
+      "start": 1232.12,
+      "end": 1241.36,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "However, we have to think about this whole situation rationally. The thing right now is, yes, there is some pressure from the United States, from the client, from Apple, from Trump. It's not very important. There is some pressure to make Taiwan, the most technologically advanced company, go abroad to other countries to de-risk their risk."
+      "text": "Because it's not only the situation or the issue only for a TSMC single company. It's all connected to our stock market, our talent, our technology, and our the whole ecosystem followed by TSMC. It's all connected. But now it's kind of unclear."
     },
     {
-      "id": "ygBGqW",
-      "start": 2429.974,
-      "end": 2457.022,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "From my point of view, if some people in our government ignore the hidden pressure or say there's no pressure in public, I will be really worried. Yeah, but he can say that. But I hope that he will do something else, like holding a lot of meetings."
-    },
-    {
-      "id": "rsnrMm",
-      "start": 2457.022,
-      "end": 2476.8,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "And get a lot of reports made by the government to deliver the message to our people about the current situation and the next steps. He can keep saying there's no pressure, but he should do something really rational."
-    },
-    {
-      "id": "FpxZRG",
-      "start": 2476.869,
-      "end": 2504.821,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "To take control of the whole situation, then it's a better situation. Right now, it's not like this. So are you calling for the whole negotiation process to be made public? No, no, no, no. Of course, it's impossible. I made my point before that it's impossible to get the negotiator to be transparent."
-    },
-    {
-      "id": "pjntUK",
-      "start": 2506.732,
-      "end": 2525.111,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "It's not the key point to listen to what they're saying. The key point is what they're doing. So the situation right now, even if Donald Trump is not speaking loudly that he's pushing Taiwan or TSMC, the actions they're taking will bring some pressure to TSMC or Taiwan because of tariffs or something."
-    },
-    {
-      "id": "osFHIB",
-      "start": 2549.974,
-      "end": 2566.323,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "In Taiwan, the government can say there's no pressure, but at the same time, they should proactively hold a lot of meetings and have a lot of reports analyzing the impact. But now we don't see that."
-    },
-    {
-      "id": "SnRCtd",
-      "start": 2566.527,
-      "end": 2593.677,
+      "id": "6b5fd2a0-4678-454e-a2ff-f5c7d6781a3b",
+      "start": 1241.38,
+      "end": 1244.25,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "The thing that I really worry about. And there's one thing that you mentioned that I just need to clarify, because we talked about the relationship between the various shields and national security in Taiwan. Can you just briefly explain your view on how Taiwan's national security relates to semiconductors and other industries and their continuing presence in Taiwan?"
+      "text": "Yeah, that makes a lot of sense, and thanks for being so specific with your response too."
     },
     {
-      "id": "jMMzXc",
-      "start": 2596.852,
-      "end": 2618.404,
+      "id": "2e845b9f-fba9-4859-ab91-81350ec1c53c",
+      "start": 1244.38,
+      "end": 1249.34,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "It's really helpful to think about the concerns that are raised in terms of how the news is delivered and what's still vague."
+    },
+    {
+      "id": "68ef1108-2d3c-4061-931a-f24d847b7c36",
+      "start": 1249.65,
+      "end": 1255.48,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "So I know you mentioned that the US is a trusted ally, but I mean, in the past few weeks or even in the past few months,"
+    },
+    {
+      "id": "337199ff-7b4e-4319-8df5-808e19ad0823",
+      "start": 1255.72,
+      "end": 1260.33,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "we've seen the current president talk about Taiwan as stealing American jobs."
+    },
+    {
+      "id": "4b3dc70c-6d67-466a-8608-95ebb2d513ca",
+      "start": 1260.59,
+      "end": 1266.82,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "How do you kind of think that Taiwan should approach negotiating with the new administration and still balancing its own economic and security needs in situations like this?"
+    },
+    {
+      "id": "cf0a0ad0-c581-47ef-8096-aaad2bbe330e",
+      "start": 1267.24,
+      "end": 1271.42,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Just make sure we're recording. The thing is, because like everything..."
+      "text": "Yeah, thank you, it's a really good question. First, many people in Taiwan are fans of Donald Trump, President Trump."
     },
     {
-      "id": "EWgUip",
-      "start": 2619.923,
-      "end": 2643.029,
+      "id": "0d1fb32f-7e8e-49be-bf79-f7dc1936671f",
+      "start": 1271.85,
+      "end": 1276.23,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "For example, like now the device you're taking the record or like I'm watch, you know, make sure I'm on time, the Apple Watch or like the drone that we are using in Ukraine war. Everything like the television, the refrigerator, we need IC."
+      "text": "And many people know that he's kind of like a dealmaker or like a business dealmaker or kind of like that."
     },
     {
-      "id": "aXwGwZ",
-      "start": 2643.78,
-      "end": 2673.66,
+      "id": "0f30a9c2-9c1c-49cb-949e-453fcb6f5be6",
+      "start": 1276.53,
+      "end": 1284.15,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "And therefore we need semiconductor being designed and produced. Especially now we have space technology, AI technology, quantum computers. We have a lot of technology improvement and development needs semiconductor, needs IC."
+      "text": "And now it's really good at election, or something like that. So many people are talking about not to get it too serious about what he's saying,"
     },
     {
-      "id": "upApgx",
-      "start": 2675.435,
-      "end": 2703.66,
+      "id": "79aee1c6-ea07-47a8-a4f8-34fca9a2830c",
+      "start": 1284.58,
+      "end": 1291.24,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Maybe like 60, 70, 80, or even 90% of the manufacturing, the whole ecosystem is made by Taiwan company. And also there is other number that we are getting impact from the AI, generative AI, right? Overall, like over 90% of AI warehouse"
+      "text": "but we should concentrate on what he's doing. So as a dealmaking process, something one's speaking is not equal to something one's taking action, right?"
     },
     {
-      "id": "aWKJYQ",
-      "start": 2704.394,
-      "end": 2731.408,
+      "id": "7a67fd10-1367-4e30-b7d4-5184bf9d1467",
+      "start": 1291.48,
+      "end": 1296.65,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "like a warehouse trend AI is established with the help from the Taiwan company. So the silicon shield is not only on the IC or chips. It's like a technology, a lot of technology, the ICT technology, semiconductor IC design is, you know, developed with Taiwan."
+      "text": "So for the President Trump, we kind of like think not to ignore what he's saying."
     },
     {
-      "id": "wpqRxX",
-      "start": 2732.398,
-      "end": 2747.858,
+      "id": "2cd33757-4143-4790-a595-ace4ea9c098b",
+      "start": 1297.45,
+      "end": 1302.32,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "And maybe from Taiwan. So Taiwan is kind of a birthplace of the latest technology driving our world to moving forward."
+      "text": "However, not to single focus. You know, it's part of his thinking, but not whole, right?"
     },
     {
-      "id": "gUunWG",
-      "start": 2748.148,
-      "end": 2777.517,
+      "id": "49197039-092e-4427-aef9-94d0383de5fc",
+      "start": 1302.66,
+      "end": 1309.11,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "That's one of the reason why geopolitical situation should be stable in the Indo-Pacific, especially in Taiwan Strait. Because if Taiwan stop making chips, if Taiwan stop making semiconductor, the latest model or the process, 2 nano or 1.6 nano, then the technology will temporarily"
+      "text": "For example, if we check like the relationship right now, like USA with France or like Mexico or Canada, he's saying a lot."
     },
     {
-      "id": "AKNWwo",
-      "start": 2777.517,
-      "end": 2807.159,
+      "id": "5557fa85-0bcb-45d9-a3a7-4d53b542bedc",
+      "start": 1309.43,
+      "end": 1313.88,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "stop moving forward. It's quote from the other people, it's not me speaking like that. So make sure Taiwan can keep developing great technology with the world and for the world. It's kind of like a consensus of the world"
+      "text": "However, what he's doing is very important. So at the beginning in Taiwan, I always have an saying like,"
     },
     {
-      "id": "BAbRXB",
-      "start": 2807.517,
-      "end": 2830.503,
+      "id": "6ea6c1a5-7888-48b0-9fce-447cca763828",
+      "start": 1314.12,
+      "end": 1318.66,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "to together help Taiwan's trade be safe. So the connection between the Silicon Shield and national security is kind of like maybe hidden or maybe indirect, but"
+      "text": "whenever you hear like President Trump just elected at that time, because he's saying that Taiwan stole the semiconductor business from United States before he got elected, right?"
     },
     {
-      "id": "XeCPaD",
-      "start": 2830.742,
-      "end": 2859.735,
+      "id": "252f9352-4900-4a07-90b5-5710d423878f",
+      "start": 1318.82,
+      "end": 1326.31,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Yeah, in some angle, you can see the direct relationship. For example, like if there's something happen in Taiwan, quote from the Donald Trump, President Trump, there will be a big impact. Yeah, the big impact. So the national security in Taiwan is really important to the other place, national security. Also, there's one more thing is..."
+      "text": "So I always have on my own friends and my own followers that not too much concentrating on the keyword 'steal'."
     },
     {
-      "id": "DQeiGG",
-      "start": 2860.247,
-      "end": 2885.247,
+      "id": "23d64d4f-2c05-4283-a05f-aeb945e4f3d3",
+      "start": 1326.65,
+      "end": 1333.42,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Because Taiwan, we're a place that we inherit and we precious the value of democracy and free speech. And we decline, we forbidden the influence from the CCP."
+      "text": "Because in United States, in the Western world, the culture behind the single sentence like 'steal' is not too, maybe it's just an ordinary speaking, not too serious or not very,"
     },
     {
-      "id": "TEBOuR",
-      "start": 2886.442,
-      "end": 2915.077,
+      "id": "d2552112-4bd2-4817-8626-0e3d54513e81",
+      "start": 1333.72,
+      "end": 1337.94,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "So the Taiwan manufacturing ecosystem is kind of like free. I mean, embrace the free speech, the value of free speech and the democracy. So it will be a trusted tech delivered from us. And if without Taiwan, maybe the second choice or the second source"
+      "text": "you know, it's just a situation that you take something from me, okay? Or like, for example, like Steve Jobs has said a well said,"
     },
     {
-      "id": "vBDBMv",
-      "start": 2915.367,
-      "end": 2942.125,
+      "id": "c66274ff-7739-496a-8e40-04096096f04a",
+      "start": 1338.25,
+      "end": 1342.41,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "that the other country can make or can get is from mainland China, right? So it's also another national security issue, not only for Taiwan, but also for the other country. So that's very important. And... Yeah, so..."
+      "text": "that good artist copy, great artist steal. So steal could be like a metaphor that you're doing something really good."
     },
     {
-      "id": "BzUjJc",
-      "start": 2943.985,
-      "end": 2968.592,
+      "id": "5f5693ee-5c67-4274-9927-d670ce7a8675",
+      "start": 1342.66,
+      "end": 1347.28,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "The thing is, as a party, a position party, and the majority in the parliament right now as a KMT party, we keep shouting out that our government should not only pay attention on single type of business, which is semiconductor."
+      "text": "You did a great job, right? So at that time, President Trump saying Taiwan did a great job,"
     },
     {
-      "id": "MJENOG",
-      "start": 2969.104,
-      "end": 2978.302,
+      "id": "6b8045bc-607b-46c5-a5ea-3737a6be9b92",
+      "start": 1347.45,
+      "end": 1352.12,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "they steal the semiconductor business from United States. So it's understandable, right? We did a great job."
+    },
+    {
+      "id": "13d4faa7-d95b-4277-b733-5a915016a5df",
+      "start": 1352.48,
+      "end": 1357.92,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So after the TSMC announced the 100 billion investment, you can see that President Donald Trump,"
+    },
+    {
+      "id": "31f45e0c-8a04-4d53-8872-71ead4b8644e",
+      "start": 1358.1100000000001,
+      "end": 1361.42,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "he mentioned the same situation with a different or like similar word without steal,"
+    },
+    {
+      "id": "e99737e1-0385-47ea-a88b-bdb846bfc2db",
+      "start": 1361.68,
+      "end": 1367.33,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "but only complement, or something like: okay, they're really good, they're kind of the top in the world."
+    },
+    {
+      "id": "ee1f0ca3-b8f4-4d87-a281-c693c6ff2a1b",
+      "start": 1367.55,
+      "end": 1374.12,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So I think saying something is not the truly decision point for us. We want to make sure that how he... what kind of action he will take."
+    },
+    {
+      "id": "46f4cdaf-0159-4bc3-95c2-c25ff035d131",
+      "start": 1374.45,
+      "end": 1382.23,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So right now, the thing that we know very clear is he wants to make sure that he will kind of help United States manufacturing business will growing and great again"
+    },
+    {
+      "id": "3cf81452-cdc1-425a-84bd-ea7483520e19",
+      "start": 1382.55,
+      "end": 1388.16,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "with trusted partner from Taiwan. And also the greater impact with Taiwan, then greater impact with United States,"
+    },
+    {
+      "id": "257e0154-dbf3-43fd-b132-fecceb4a77ae",
+      "start": 1388.42,
+      "end": 1394.21,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "which addressed by the announcement with Donald Trump, right? So that's it. I think we don't need to get really panic."
+    },
+    {
+      "id": "cd349854-b147-42a6-8f6a-b7438a96743a",
+      "start": 1394.55,
+      "end": 1401.32,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And I think if United States keep make sure they are trying to stop war and make economy great again not only for United States,"
+    },
+    {
+      "id": "ba5dc2bb-13a4-4e0d-baed-5ade2ba97510",
+      "start": 1401.65,
+      "end": 1407.12,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "but also try to take care about the global economy, then and Taiwan government try to play leur role and make sure they protect the benefit of Taiwan, then everything will be fine."
+    },
+    {
+      "id": "8399ced9-a2d9-4ecd-94b6-f20590d1d4c8",
+      "start": 1407.45,
+      "end": 1415.12,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, now the situation is we're kind of a little bit worry about our government in Taiwan, the ruling party, they kind of not in the situation"
+    },
+    {
+      "id": "da366567-2b23-40da-9fd4-c78e895de557",
+      "start": 1415.42,
+      "end": 1421.3600000000001,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "because they're kind of delayed and they kind of like not really clear to their people and they are not clear about what they should do for the next. So this is what we're really worry."
+    },
+    {
+      "id": "0e026d91-32f9-4d40-9f95-9f278a3e5bcf",
+      "start": 1421.65,
+      "end": 1425.48,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "So do you think that there's a risk that Taiwan could lose the Silicon shield under the current administration? And what would happen if that were to happen?"
+    },
+    {
+      "id": "978a3a79-4060-4323-9ec4-abdb439795c9",
+      "start": 1425.85,
+      "end": 1431.54,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "I think Silicon shield is something that we talk too much and wait way too much."
+    },
+    {
+      "id": "dfec55f8-187b-4c22-9fe5-50275fae9261",
+      "start": 1431.78,
+      "end": 1439.3600000000001,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Because a place like Taiwan, we have a plural economy. We have AI, we have software, we have cybersecurity really good team in Taiwan,"
+    },
+    {
+      "id": "188d10b9-7b0f-4ebd-acc6-7b4b9bf99459",
+      "start": 1439.65,
+      "end": 1448.88,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "we have blockchain startup really proactive in Taiwan, we have computer vision team, we have Apple research team, we have the top-notch, you know, the algorithm team from Meta in Taiwan."
+    },
+    {
+      "id": "94fa76f9-5e6e-48cc-b1a6-c4ee6158ad36",
+      "start": 1449.25,
+      "end": 1452.12,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So we're kind of like plural. We have a lot of shield. It's just Silicon shield is more famous."
+    },
+    {
+      "id": "48666169-148e-44e0-9743-4ab7f87db1b1",
+      "start": 1452.33,
+      "end": 1459.48,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "However, the other type of shield also needs our government to pay attention, instead of just push our Silicon shield to the frontline and make it damage at the beginning."
+    },
+    {
+      "id": "f1b3628a-a670-40e0-9b4a-8654008a3034",
+      "start": 1459.65,
+      "end": 1468.42,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So you can say that Silicon shield is just a kind of like a quote or like a metaphor of an whole ecosystem of semiconductor made manufactured in Taiwan."
+    },
+    {
+      "id": "f7ecc8c0-4788-4c1b-b976-9244460d3bd2",
+      "start": 1468.65,
+      "end": 1472.58,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And it play a really important role in Taiwan."
+    },
+    {
+      "id": "2585a0b9-46d1-4f75-b1d4-769b2868b503",
+      "start": 1800,
+      "end": 1817.92,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "If TSMC bring their technology to the other country, even the country are our ally, too soon or too much, then it will bring damage to our national security, for sure. "
+    },
+    {
+      "id": "3c23d41a-71fc-457e-bdcb-8afcbc210636",
+      "start": 1817.92,
+      "end": 1833.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "If our government have a really close relationship and really, you know, have a significant involvement in this type of collaboration, then it's fine. "
+    },
+    {
+      "id": "11bd924f-1811-497d-94a2-f7eeb707b425",
+      "start": 1833.04,
+      "end": 1867.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And and now the situation is our private sector with a large proportion of our government investment and shareholding, they doing their business and made their decision with the other country by their own, without a commit- a commitment, or without an agreement or without a communication, conversation with our government, it it will be a damage because it may lead the other similar company to go follow. Then it will bring a damage to Silicon shield."
+    },
+    {
+      "id": "977a964e-ad89-4012-8738-1b21a08fc673",
+      "start": 1867.04,
+      "end": 1894.72,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So if everything follow by law, because we have a national security law, we we have a law to forbidden some key manufacturing technology not be able to bring to the other country very easily, we have some- we have a clear rule. But if our private sector, our government is not playing with the rule, then we have problem. "
+    },
+    {
+      "id": "f4c451b8-9c5b-416b-9692-b085041249b2",
+      "start": 1894.72,
+      "end": 1919.52,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So and for United States, they don't have the obligation to warn you that you are you know cross the line in your domestic rule. They don't have the obligation to do that. They they have to think about their people. So then we have our government to have to think for our people. "
+    },
+    {
+      "id": "8b0122c2-1c9b-40ac-b47a-d065a750de38",
+      "start": 1919.52,
+      "end": 1964.84,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And private sector they have to grow, they have to survive, they have to, you know, so but however, if they are Taiwan public company on the stock market, they have their obligation to have a meeting, to have a following the Taiwan rule, and also they have their obligation to the the public investor, right? So the silicon- Silicon shield is you know a metaphor, and and it's connect to many many other things, not only TSMC. "
+    },
+    {
+      "id": "0288b500-1e8c-4a51-86e1-54d1cc426d33",
+      "start": 1964.84,
+      "end": 1991.68,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And if we make it very carefully and clearly and not so ambiguous or like vague, then I think even though even TSMC going to all over the world like Europe, or Japan, it's still fine. Yeah, so the now the situation right now is the unclear communication between Taiwan and TSMC and TSMC and United States and United States and and the Taiwan government with United States. Yeah."
+    },
+    {
+      "id": "a6cab48e-b552-4400-9616-4c872b630113",
+      "start": 1991.68,
+      "end": 2012.16,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Makes a lot of sense. Yeah. So last thing I wanted to ask about is that at the last week's press conference, CC Wei and the President Lai claimed that the decision was basically a business decision by TSMC, it's motivated to meet increasing client demand in the US and there was not some kind of pressure from the US administration to do this. And I'm just wondering whether you think that's true."
+    },
+    {
+      "id": "f1fcabe3-dd8f-4c82-914c-96131ca79931",
+      "start": 2012.16,
+      "end": 2035.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay, the the true situation may be only be known by certain people. For example like CC Wei, or Tim Cook, or the significant client of TSMC. "
+    },
+    {
+      "id": "6505717b-b1f5-4b2c-a706-72f70ea3005b",
+      "start": 2035.04,
+      "end": 2051.24,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "The thing is as CC Wei has some obligation to make sure their shareholder and their investment- investor keep believing in this company. So um so there's something he needs to say. "
+    },
+    {
+      "id": "29359840-caec-44e5-aa6b-91d86b7012fd",
+      "start": 2051.24,
+      "end": 2106.92,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And at the same time a single situation should not be have a- should not have only one voice. Now the situation right now is um when CC Wei in United States, he saying that many things will move to United States, and it will be stand alone, it will going along by itself. But when he come back, our- CC Wei, President Lai, our government, it all says one thing: it will be safe, don't worry. Without, without, without any formal document and analyzing re- report by our government. It's not right. "
+    },
+    {
+      "id": "a23dca4c-80dd-45c0-8272-36300b695472",
+      "start": 2106.92,
+      "end": 2132.96,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "CC Wei as a owner, or like a a- not owner, like a president of a private company, he he needs to say something, and he need to say something in particular way. But our government, they have their obligation to try to reveal or deliver the truth to the people. "
+    },
+    {
+      "id": "182ddcbe-3028-450e-a254-f73147ca8cfb",
+      "start": 2132.96,
+      "end": 2165.2799999999997,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Like National Security Department they should explore this type of compromise, will it harm to our national security? And they should make a report. And Ministry of Economy, they have to make it clear what type of process for a private sector to bring their key technology to the other place. And what's the risk that we have right now? And what's our next step? "
+    },
+    {
+      "id": "381949c3-f0c5-442a-8640-b84606180eec",
+      "start": 2165.2799999999997,
+      "end": 2181.16,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And President Lai should declare their strategy in all you know all you know in whole, right? But now we don't get that. "
+    },
+    {
+      "id": "47ce70ac-fdac-4bce-82e4-24260b3043d2",
+      "start": 2181.16,
+      "end": 2186.44,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So um so again what's your your your question is like um..."
+    },
+    {
+      "id": "d6986613-b4de-4924-a274-b37fe392697b",
+      "start": 2186.44,
+      "end": 2205,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "I think you basically answered it. It was about because I you talked about the lack of transparency and how and how the deal was explained to the public, and I understand that it's also hard to fully understand what people are thinking behind closed doors. The the last thing..."
+    },
+    {
+      "id": "149dff0b-ca9f-4fd4-a176-8287224b9058",
+      "start": 2205,
+      "end": 2208.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "The pressure from United States, right? "
+    },
+    {
+      "id": "18bb245b-6a8c-42a4-aa23-82788f34f5ca",
+      "start": 2208.04,
+      "end": 2235,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "First of all, Pres- President Trump explain many time that Taiwan doing a great job, but we need to make it in bring to United States. And if you ask Trump that are you pushing Taiwan or are you pushing TSMC, he might agree or he might say something else. It's not important, right? "
+    },
+    {
+      "id": "b4209ac1-acb5-404b-bda3-8e6f4e95a27f",
+      "start": 2235,
+      "end": 2282.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "The situation now is is um the United States of America, the government they and the the majority of their people, they want to have jobs, they want to have a manufacturing solution in domestic area. Uh so they're using the tariff or like the other dealmaking strategy to try to make their benefit, for sure. "
+    },
+    {
+      "id": "f4e68b5a-999b-48a5-88f3-3329360b6e94",
+      "start": 2282.04,
+      "end": 2318,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So if we think there's no pressure from United States of America, and this type of thinking is come from our president, I will be really worry, you know. And but you cannot get a concrete information like from Trump: yes, I'm pushing Taiwan, or or President Lai: yes, we got some pressure. I I don't think so. They they will they will not you know make it really clear. "
+    },
+    {
+      "id": "68ea0d29-5d4d-4591-aced-2e43e19ebb16",
+      "start": 2318,
+      "end": 2339.04,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So however, we have we we have to rationally, like we have to think this whole situation rational. The thing right now is, yes, there are some pressure from United States, from the client..."
+    },
+    {
+      "id": "316722f0-4c1e-4964-9f40-5eaf16ca2cba",
+      "start": 2400,
+      "end": 2412.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Client from Apple, from Trump, it's not very important. There's some pressure to make Taiwan, at the most technology hold in Taiwan company, to going abroad to the other place, to for the other country, for the other business in the other country to derisk their risk."
+    },
+    {
+      "id": "c4a6496e-ec5f-4d57-85fa-684ebdfb74b6",
+      "start": 2414.2,
+      "end": 2422,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And uh, so you know, um, from my point of view that um, if there's some people in our government to ignore the hidden pressure or, you know, say no pressure in public, I will be really worried."
+    },
+    {
+      "id": "23372369-7403-4a13-a16e-559c2648fee0",
+      "start": 2423,
+      "end": 2436.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, but uh, he can say that. But I hope that he will do something else. Like no pressure, however, hold a lot of meeting and get a lot of report made by the government and to deliver the message to our people what's the situation right now, and what's the next step."
+    },
+    {
+      "id": "e94ea322-f654-4abc-bd55-ed648ac9b9b2",
+      "start": 2437,
+      "end": 2444.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "He can still keep speaking like no pressure, but doing something really rational and, uh, you know, to to take the whole situation in control. Then it's a better situation. Right now it's not like this."
+    },
+    {
+      "id": "6823e62f-4518-444d-8041-33206fdf9e67",
+      "start": 2445,
+      "end": 2448.2,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "So you're calling for the whole negotiation process to be made public?"
+    },
+    {
+      "id": "3b0f89ec-9070-4f19-bad6-df6aea703b90",
+      "start": 2448.5,
+      "end": 2455,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "No, no, no, no. Of course, it's impossible. I made it- I made my point before that it's impossible to get the the negotiate be transparent. However, the thing is,"
+    },
+    {
+      "id": "eea61d72-736a-4f52-8804-2b59262049e2",
+      "start": 2455.3,
+      "end": 2459.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "it's not the key point to listen what they're speaking or talking. The key point is what they're doing."
+    },
+    {
+      "id": "0b274ace-e13d-4a91-ab1f-82b1dd66048f",
+      "start": 2460.5,
+      "end": 2471.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So, um, the situation right now, even Donald Trump not speaking loudly that I'm pushing Taiwan, or I'm pushing TSMC, however the the action they're making is kind of will bring some pressure to TSMC or Taiwan because of tariff, because of something."
+    },
+    {
+      "id": "6f3f2dda-d6c3-4a9c-b578-5d45f22caea7",
+      "start": 2472,
+      "end": 2484,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And in Taiwan, um, they can say that the government they can say that no pressure, but at the same time they have- they should do something proactively: have a lot of meeting to have a lot of report, analyzation about the impact, but now we didn't see that."
+    },
+    {
+      "id": "a31945be-6650-472a-8596-a608e3ab418c",
+      "start": 2484.2,
+      "end": 2487.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So, this is the thing that I really worry about that. Yes."
+    },
+    {
+      "id": "0d2dcc7e-a246-4c7d-ac79-6543caf3c143",
+      "start": 2487.6,
+      "end": 2500,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Yeah. Um, and there's one thing that you mentioned that I just need to clarify, um, because we talked about the relationship between the various shields and national security in Taiwan. Can you just, um, briefly explain your view on how Taiwan's national security relates to semiconductors and other industries and their continuing presence in Taiwan?"
+    },
+    {
+      "id": "5323957a-d738-4844-a0c5-6d30f67af91a",
+      "start": 2500.1,
+      "end": 2501.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay."
+    },
+    {
+      "id": "4b5ecc85-ef34-4083-be8d-47691192a938",
+      "start": 2502.5,
+      "end": 2503.8,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "I'll just make sure we're recording. Yeah, yeah, yeah."
+    },
+    {
+      "id": "c719ec61-de1a-4c2a-9eed-5bd5413025a2",
+      "start": 2504.2,
+      "end": 2504.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay, okay."
+    },
+    {
+      "id": "0d2f888a-d200-476d-a67c-4768568187c3",
+      "start": 2507,
+      "end": 2510,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "The thing the thing is,"
+    },
+    {
+      "id": "35cfab27-7e6b-401d-9eec-f91ec545c1c4",
+      "start": 2511,
+      "end": 2522.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "because like everything, for example, like now the device you're taking the record or like I'm watch, you know, make sure I'm on time, the Apple Watch, or like the drone that we are using in Ukraine war,"
+    },
+    {
+      "id": "bb8ccbcd-2474-4f5c-872f-4c05911d8806",
+      "start": 2523,
+      "end": 2527.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "everything, like the television, the refrigerator, we need IC. And therefore we need like semiconductor being produced and being designed and produced."
+    },
+    {
+      "id": "fce395dd-2ae0-45e4-867e-954792c9b200",
+      "start": 2528,
+      "end": 2536.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And especially now we have space technology, we have AI technology, we have quantum computer, we have a lot of technology improvement and development needs semiconductor, needs IC."
+    },
+    {
+      "id": "292c2515-2bb4-4480-9255-495b40a9d657",
+      "start": 2537,
+      "end": 2545.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And to my understanding that um, maybe like 60, 70, 80, or even 90% of the manufacturing, the whole ecosystem is made by Taiwan company."
+    },
+    {
+      "id": "d7ac2b6f-55dd-4ed5-b144-9adc9ff0a8fb",
+      "start": 2545.8,
+      "end": 2555,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And also there is other number that we are we are getting impact from the AI, generative AI, right? The overall like over 90% of AI warehouse, like a warehouse-trained AI,"
+    },
+    {
+      "id": "5ecc56f1-e6e9-444c-b0c0-b1c0290c4488",
+      "start": 2555.2,
+      "end": 2557.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "is established with the help from the Taiwan company."
+    },
+    {
+      "id": "8d067375-b412-46b0-a97c-1a43f83fd39d",
+      "start": 2558,
+      "end": 2565.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So the Silicon shield is not only on the IC or chips. It's like a technology, a lot of technology, the ICT technology, semiconductor, IC design is, you know, developed with Taiwan."
+    },
+    {
+      "id": "8dedd1ea-2295-4a00-9638-75b2409c2756",
+      "start": 2566,
+      "end": 2568,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And maybe from Taiwan."
+    },
+    {
+      "id": "af1da11e-b44c-425e-8398-7558f2163995",
+      "start": 2568.5,
+      "end": 2574.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So Taiwan is kind of a birthplace of the latest technology driving our world to moving forward."
+    },
+    {
+      "id": "41782c78-7591-4b73-abf6-0b5fe5feb660",
+      "start": 2575,
+      "end": 2588,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So that's one of the reason why geopolitical situation should be stable in the Indo-Pacific, especially in, you know, Taiwan Strait. Because if Taiwan stop making chips, if Taiwan stop making semiconductor, the latest model or the the process, 2 nano or 1.6 nano, then the technology will temporarily stop"
+    },
+    {
+      "id": "37fd38cb-e674-4b2c-9c6d-a0e5c264d62c",
+      "start": 2588.4,
+      "end": 2592.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "moving forward. It's quote from the other people, it's not me speaking like that."
+    },
+    {
+      "id": "7f5aa439-6e6c-43c5-a290-551f8de7c728",
+      "start": 2593,
+      "end": 2604,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So so make sure Taiwan can keep developing great technology with the world and for the world, it's kind of like a consensus of the world to together help Taiwan Strait be safe."
+    },
+    {
+      "id": "926f43ff-0949-4e6f-9c4a-2b5dea6f9638",
+      "start": 2605,
+      "end": 2618,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So the connection between the Silicon shield and national security is kind of like maybe hidden or maybe indirect. But but yeah, some in some angle you can see the direct relationship. For example like if there's something happen in Taiwan,"
+    },
+    {
+      "id": "3e38da23-abc7-4d55-85d0-cd5b60dde55b",
+      "start": 2618.3,
+      "end": 2623.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "quote from the Donald Trump, President Trump, there will be a big impact. Yeah, the big impact."
+    },
+    {
+      "id": "f49a76f2-b6cc-4071-b0bf-05edbfe1b50d",
+      "start": 2624,
+      "end": 2630.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So the national security in Taiwan is really important to the other place national security. Also there one more thing is"
+    },
+    {
+      "id": "e623aa55-7d54-4934-806a-17ea17040f49",
+      "start": 2631,
+      "end": 2637,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "because Taiwan we're a place that we inherit and we precious the value of democracy and free speech."
+    },
+    {
+      "id": "f07644ef-4c67-4457-9abe-7b9075c77a76",
+      "start": 2637.5,
+      "end": 2640.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And we decline, we we forbidden the influence from the CCP."
+    },
+    {
+      "id": "32086bd0-3826-4bb9-be6b-1d4f93906fbf",
+      "start": 2640.5,
+      "end": 2649.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So the Taiwan manufacturing ecosystem is kind of like free, I mean, embrace the free speech, the value of free speech and the democracy. So"
+    },
+    {
+      "id": "b53eeb49-7591-47e4-927f-dc66fc6e905c",
+      "start": 2649.4,
+      "end": 2652.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "it will be a trusted tech deliver from us."
+    },
+    {
+      "id": "07303f2b-cf3a-46b9-aae7-8aed5fd0f2c4",
+      "start": 2653,
+      "end": 2657.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And if without Taiwan, maybe the second choice or the second source that the other country can make or can get is from mainland China,"
+    },
+    {
+      "id": "e6d9013f-4400-492a-a961-de6ab613b44b",
+      "start": 2657.8,
+      "end": 2666,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "right? So it's also another national security issue not only for Taiwan but also for the other country."
+    },
+    {
+      "id": "7386e76b-4373-4724-80ec-b0eb1cc8a8b0",
+      "start": 2666.2,
+      "end": 2668.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So um, that's very important."
+    },
+    {
+      "id": "79a1d312-dfda-4a91-89da-312e981bf97a",
+      "start": 2668.5,
+      "end": 2681,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And, um, yeah. So so the thing is as a party, opposition party and the majority in the parliament right now, as a KMT party, we keep shouting out that our government should not"
+    },
+    {
+      "id": "01f39935-1af0-4089-a042-eeb3cf66f13b",
+      "start": 2681.2,
+      "end": 2685.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "only pay attention on single type of business, which is semiconductor."
+    },
+    {
+      "id": "6eab2dad-c763-4a02-863c-9de1a9745f15",
+      "start": 2686,
+      "end": 2690.5,
       "type": "speech",
       "speaker": "葛如鈞委員",
       "text": "We should also make sure that we have other chicken and eggs in the other basket."
     },
     {
-      "id": "NYRlqM",
-      "start": 2978.933,
-      "end": 3003.575,
+      "id": "6a313f8d-eec3-4792-a44a-101e66190cec",
+      "start": 2691,
+      "end": 2703.8,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Example like software, cyber security, AI, robotics. So if you check my interpolation before, I always shout out that to request our government to pay attention on the other business and our other business needs our government's help a lot. However, for many many years like"
+      "text": "For example like software, cybersecurity, AI, robotics. So if you check my interpolation before, I always shout out that to request our government to pay attention on the other business and our other business needs our government's help a lot."
     },
     {
-      "id": "LTaide",
-      "start": 3003.575,
-      "end": 3025.606,
+      "id": "8025128c-91cd-4102-8ddd-41364f31c5f7",
+      "start": 3000,
+      "end": 3012.91,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "this is maybe the 10th year or the third term of DPP as a ruling party. They only pay attention on green energy as a tech business and also the semiconductor. It's not enough."
+      "text": "However, for many, many years, like this is the, maybe the 10th years or the third term of DPP as a ruling party, they only pay attention on like green energy as a tech business and also the semiconductor. It's not..."
     },
     {
-      "id": "apcjyV",
-      "start": 3026.459,
-      "end": 3050.418,
+      "id": "29bc778d-5b05-4257-80b3-b609cf52569a",
+      "start": 3012.91,
+      "end": 3022.8,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Way not enough. Far more not enough. So that's it. So it's a national security business. It's really important to us. For example, if Taiwan..."
+      "text": "...enough. Way not enough. Far more enough, not enough. So that's it. So it's, it's, it's national security business. It's really important to us."
     },
     {
-      "id": "NhuePO",
-      "start": 3051.561,
-      "end": 3068.507,
+      "id": "619699bf-9d9a-45bb-84c2-83bf868ae241",
+      "start": 3022.8,
+      "end": 3038.3,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "You know, if there's something happening in Taiwan and the world will still going on really smoothly, then who owns Taiwan or will Taiwan be a democracy"
+      "text": "If, if, if our, for example, like if Taiwan, you know, if there's something happen in Taiwan and the world will still going on really smoothly..."
     },
     {
-      "id": "nlANBz",
-      "start": 3069.616,
-      "end": 3087.125,
+      "id": "a078d880-d11b-47f8-9aa1-f8219d562a01",
+      "start": 3038.3,
+      "end": 3054.12,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "like before, will not the issue or the topic that will be discussed by the other leaders of the other country. So that's the situation that we are facing. That makes a lot of sense."
+      "text": "...then who owns Taiwan or will Taiwan be democracy like before will not the issue or the topic that will be discussed by the other leaders of the other country, right? So that's the situation that we're facing."
     },
     {
-      "id": "MPKWyh",
-      "start": 3089.582,
-      "end": 3119.206,
+      "id": "0f801298-8006-4233-8635-f4691286020f",
+      "start": 3054.12,
+      "end": 3063.35,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "Fantastic interview. Thanks for giving me really detailed and well-thought-out responses. Is there anything we didn't get to talk about that you'd also like to mention? Let me think about it. Do you think there's anything I didn't mention? I think basically all the topics we've been focusing on recently are pretty much the same. Wait a moment. Let me check. Thank you very much. Have some water. Very nice coffee, please. And I'll just take a photo of you before I leave too. Please."
+      "text": "Makes a lot of sense. Yeah, well thank you so much, this has been a really fantastic interview and thanks for giving me really detailed and well thought out responses."
     },
     {
-      "id": "KiCoed",
-      "start": 3151.527,
-      "end": 3202.807,
+      "id": "0c465f38-1906-42ca-8b12-dc6ce11997de",
+      "start": 3063.35,
+      "end": 3064.9,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "First, I want to point out that we fully understand this type of negotiation will always be like a surprise, the result. Because it's under the table or like in the meeting room, we fully understand. However, the thing right now is we surprisingly found out that our government officially claimed that they have no clue about what things are going to happen. It's not responsible to our people. So, that's a very important thing. And we, as an opposition party and the majority in the parliament, we will make sure that our government has to reveal the..."
+      "text": "Yes, yes."
     },
     {
-      "id": "FOpxWT",
-      "start": 3203.268,
-      "end": 3246.459,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "the whole process. Do they know before what type of meeting they have with TSMC? Or do they have a national security meeting? Do they have an analysis? Do they have a report? Or did they all start to work after the announcement? We will make sure. Second, we..."
-    },
-    {
-      "id": "aeLKci",
-      "start": 3248.592,
-      "end": 3301.937,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "we would like to say we, as a pro-technology party and a pro-economy party, will rationally think and make decisions regarding the situation of TSMC going to the United States. We will not say it's forbidden or not allowed or not welcome. No. Because something needs to happen, it needs to happen. However, we have to make sure of the process. We need to evaluate the risk and manage the risk. And so..."
-    },
-    {
-      "id": "xcyPJO",
-      "start": 3305.401,
-      "end": 3368.217,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "speaking for our people or speaking for Taiwan, we have to say that TSMC, maybe the final goal is to go to other places to diversify their risk or to grow their business all over the world. We respect that. But the tempo, the speed, the technology, which technology, what kind of speed, and when will be really important. We believe and we hope that TSMC will think really wisely and also think about the benefit of Taiwan. Because Taiwan helped TSMC, the KMT party helped TSMC to found it back 40 years ago, and our government is the single largest shareholder of TSMC even nowadays. And our people invest a lot as shareholders. You know, the general public loves TSMC. So, TSMC, I hope, we believe that they will do things wisely and smartly. The last thing I want to say is about..."
-    },
-    {
-      "id": "JRmwSN",
-      "start": 3399.053,
-      "end": 3446.664,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "making our industry in Taiwan and economy more diverse is the obligation of our government. However, right now, our government is kind of like a lot of red lines, like deep-sea. The model is forbidden in the government sector and not encouraged for businesses to use AI from mainland China. And no, like..."
-    },
-    {
-      "id": "ljwQvt",
-      "start": 3447.142,
-      "end": 3493.37,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "no other grant or reward to, how to say that, to help, to provide help to local AI businesses. So it's not balanced. Now we are losing the kind of Silicon Shield, and now we are setting up a red line. Some technology you cannot get in. Now we have to have another strategy to make it balanced. For example, to cultivate, to advocate, or to boost our local business in other..."
-    },
-    {
-      "id": "Fotvsl",
-      "start": 3493.729,
-      "end": 3558.712,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "areas, not only semiconductor manufacturing. So in my view, and now we don't have an AI Act. So our government's approach to AI is kind of very conservative and, you know, stepping back. And it's not good for our country, our economy, or our national security. Because in the near future, there will be nations enabled by AI competing with or, like, not competing, it's like, yeah, you know, maybe not competing, it's invading or influencing. AI will be an advantage for certain companies. Yes, yes, yes. And now we don't have an AI Act. So it's a huge loophole for Taiwan. So now in this meeting session, I'm the key leader of the Education and Culture Committee in the Legislative Yuan, which is the committee that will make sure AI is being developed well in Taiwan."
-    },
-    {
-      "id": "CCAPnb",
-      "start": 3588.899,
-      "end": 3670.759,
-      "type": "speech",
-      "speaker": "葛如鈞委員",
-      "text": "So I am the key proposer of the AI Act in Taiwan, and my version of the AI Act, working with the think tank of KMT, will make sure the AI Act will help us to diversify our technology business in Taiwan. To make sure that we will take care of the AI hardware, like the semiconductor or the IC design. However, at the same time, we should take care of the software or other businesses. The government should play some role in diversifying the industry and the economy in Taiwan. So my AI Act will also play a role in this to make sure that if there are some glitches or some damage happening to the Silicon Shield, we can have some backup or some glue to make sure it's still strong and make sure our people are safe and also have a great life in Taiwan."
-    },
-    {
-      "id": "VtQGnC",
-      "start": 3670.759,
-      "end": 3697.449,
+      "id": "cd60c965-ad74-4dd0-8235-0e98018b4a8a",
+      "start": 3064.9,
+      "end": 3067.5,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "Foreign companies or foreigners will still be willing to come to Taiwan to do business. Thank you so much. That's really interesting you bring up the act. I may do a story sometime in the future. Yeah, please. Yes, yes. Thank you so much for your time. It's a great conversation. Everything you communicated, you had very concrete examples."
+      "text": "Is there anything we didn't get to talk about you also like to mention?"
     },
     {
-      "id": "IfuEXh",
-      "start": 3697.449,
-      "end": 3718.763,
+      "id": "d7ad8e31-a71a-47d4-ad32-d578ef3e79c5",
+      "start": 3067.5,
+      "end": 3071,
       "type": "speech",
-      "speaker": "Ashish, 葛如鈞委員",
-      "text": "In politics, it's really useful. Yes. As a journalist. So thank you. Yes. Thank you. I'll stop recording now. I'll just take one photo of you. Let's see. All right. I'll just put this up here. Thank you."
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, let me think about. 你覺得我有什麼沒講到嗎？"
     },
     {
-      "id": "BPhQkH",
-      "start": 3722.5,
-      "end": 3749.872,
-      "type": "speech",
-      "speaker": "Ashish, 葛如鈞委員",
-      "text": "Up to you. Sit or stand. Let me see how the light comes in here. Yeah, if you can stand by over here. Oh, sure. Perfect. Okay. One, two, three. And again. One, two, three. Last one. One, two, three."
-    },
-    {
-      "id": "RLeIak",
-      "start": 3750.384,
-      "end": 3767.927,
+      "id": "fa05ed00-c7fd-406a-bbce-8bf77b758684",
+      "start": 3071,
+      "end": 3075.36,
       "type": "speech",
       "speaker": "葛如鈞委員辦公室",
-      "text": "Thank you. Maybe we talk. Oh, yeah. Sure. Okay. One, two, three. One more time. I'll take my mask off. One, two, three. One more time. One, two."
+      "text": "我覺得我們基本上最近關注的議題應該都差不多都講到了。"
     },
     {
-      "id": "RMEOvI",
-      "start": 3768.848,
-      "end": 3806.118,
+      "id": "74013c0d-dc23-4528-80fd-fd7d64af0533",
+      "start": 3075.36,
+      "end": 3079.25,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "Okay, good. Thank you. Yeah, I didn't give you my card. Oh, that's okay. Actually, I ran out. Yeah, it's fine. Thank you. Let's keep connected. Yeah, because we need more discussion and some information from all over the world. Because the situation right now in Taiwan is kind of a little bit messy, you know. Even we as public servants, we didn't get the concrete information from our government. It's kind of a little bit frustrating, you know. I mean, yeah, it's just, I can imagine being blindsided."
+      "text": "Okay, wait a moment. Let me check. Yeah, thank you very much."
     },
     {
-      "id": "ciyfDC",
-      "start": 3807.005,
-      "end": 3836.578,
+      "id": "da62d790-6b82-4c04-a335-486fde651342",
+      "start": 3079.25,
+      "end": 3084.7,
       "type": "speech",
       "speaker": "葛如鈞委員",
-      "text": "It's never a pleasant surprise. Yeah, something like this. Yeah, and I think surprise is fine. However, if after surprise, we still didn't get some concrete information or show some confidence that our government is in control, then people will start worrying about that, right? Yeah."
+      "text": "Yeah, have some water. Very nice coffee, thank you."
     },
     {
-      "id": "upIloQ",
-      "start": 3840.828,
-      "end": 3849.701,
+      "id": "420aa455-fcba-4b17-a177-3c61b6aaba83",
+      "start": 3084.7,
+      "end": 3086.8,
       "type": "speech",
       "speaker": "Ashish",
-      "text": "I'll keep in touch with you. Yes, yes, please. Yes, thank you."
+      "text": "I'll just take a photo of you before I leave."
+    },
+    {
+      "id": "56d082f1-416f-4c0d-ad3f-61327324acd0",
+      "start": 3086.8,
+      "end": 3091,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, please. Yeah."
+    },
+    {
+      "id": "525146cc-65ab-4bcc-98dd-f308e0bb0a7a",
+      "start": 3091,
+      "end": 3096,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "還是要再提一下委員接下來想要提那個 AI 基本法？"
+    },
+    {
+      "id": "8a99dac9-adf4-462e-a252-17233b7ab3ee",
+      "start": 3096,
+      "end": 3098.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Oh okay, yeah, yeah that's good."
+    },
+    {
+      "id": "5d659ac3-45c0-4f70-9168-e1014be7d1f5",
+      "start": 3098.4,
+      "end": 3102.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "或者是那個民生法案的部分，也可以稍微帶到一下。"
+    },
+    {
+      "id": "5b778336-0262-4a2f-9a18-a2b444163f01",
+      "start": 3102.3,
+      "end": 3104.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay, wow."
+    },
+    {
+      "id": "ce417042-1ccc-4e34-928b-3b6ad10059d3",
+      "start": 3104.7,
+      "end": 3115.14,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Okay. First, I want to point out that we fully understand this type of negotiation will be always like a surprise the result."
+    },
+    {
+      "id": "d8cd089c-de63-4237-9e3e-57f6eb71ac59",
+      "start": 3115.14,
+      "end": 3128.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Because it's under table or like in the meeting room, we fully understand. However, the thing right now is we surprisingly found out that our government officially claim that they have no clue about what things are going to happen."
+    },
+    {
+      "id": "1dc70865-794c-4504-89a6-549b6e4b5d15",
+      "start": 3128.5,
+      "end": 3132.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "It's not responsible to our people."
+    },
+    {
+      "id": "53979868-bbd0-430a-988d-23db9d71dc7f",
+      "start": 3132.8,
+      "end": 3145.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So that's a very important thing. And we as an opposition party and the majority in the parliament, we will make sure that our government has to reveal the, the..."
+    },
+    {
+      "id": "f1a46de5-1be1-4091-85cc-ea69110204d9",
+      "start": 3145.4,
+      "end": 3164.55,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "...how to say that, the whole process that if do they know before, what type of meeting they have a meeting with TSMC or do they have a national security meeting and do they have an analyzation, do they have a report, or they all start to work after the announcement? So this we will make sure."
+    },
+    {
+      "id": "9fe5a4fa-1e30-43ef-a2ba-ab7e7d67c8f1",
+      "start": 3164.55,
+      "end": 3178.61,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And, and second, we, we would like to say we, we as a pro-technology party and a pro-economy party, we will be rationally think and make decision to this situation of TSMC going to United States."
+    },
+    {
+      "id": "84ce7b21-9ee4-4a7f-8db8-66b81c54e9d4",
+      "start": 3178.61,
+      "end": 3193.38,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "We will not say it's forbidden or not allowed or not welcome. No, because something needs to happen, it will needs to happen. However, we have to take to make sure the process and we need to evaluate, evaluate the, the risk and manage the risk."
+    },
+    {
+      "id": "a0d9a44b-defc-4977-9c0b-8cc565f22eeb",
+      "start": 3193.38,
+      "end": 3213.62,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So, speaking for our people or speaking for Taiwan, we have to say that TSMC maybe the final goal is to the other place to diverse their risk or to grow their business in all over the world. We respect, but the, the tempo, the speed, the technology..."
+    },
+    {
+      "id": "18102299-e5a9-4fe2-8fc7-decb42be0677",
+      "start": 3213.62,
+      "end": 3232,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "...which technology with what kind of speed and when will be really important. And we believe and we hope that TSMC will think it really wisely and also think about the benefit of Taiwan because Taiwan help TSMC, KMT party help TSMC to found it back to 40 years ago."
+    },
+    {
+      "id": "310ab6f4-e561-4d3e-9022-cbb027f26fff",
+      "start": 3232,
+      "end": 3251.52,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And our government is the single largest shareholder of TSMC even nowadays. And our people invest a lot as a shareholder, you know, general public, they love TSMC. So TSMC I hope, we believe that they will doing, think things wisely and doing things smartly."
+    },
+    {
+      "id": "52a51b1a-eb6a-43a3-9d7a-a663d4690c5f",
+      "start": 3251.52,
+      "end": 3266.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And the last thing I want to say is about the, the, the how the diverse make our industry in Taiwan and economy more diverse is the obligation of our government."
+    },
+    {
+      "id": "db0f11c4-8786-4e9d-bea2-bacc576c725c",
+      "start": 3266.3,
+      "end": 3286.35,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So, however, right now our government is kind of like a lot of, a lot of red line. Like DeepSeek, the model is forbidden in the government sector and not encourage the business to use the AI from mainland China."
+    },
+    {
+      "id": "9756dbd1-3b7f-426f-a496-6a042f33427b",
+      "start": 3286.35,
+      "end": 3302.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And no other grant or reward to how to say that to, to, to help, to provide help to local AI business. So it's not balanced."
+    },
+    {
+      "id": "f9f527bb-d8fb-4764-ab40-638770702eea",
+      "start": 3302.5,
+      "end": 3322.8,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Now we're losing kind of Silicon shield and now we are set up a red line some technology you cannot get in and now we have to have another strategy to, to make it balance."
+    },
+    {
+      "id": "f94f8481-00dd-4a38-8751-b58b494445db",
+      "start": 3322.8,
+      "end": 3341.35,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "For example like to cultivate or to advocate or to, to boost our local business in the other area not only in semiconductor manufacturing. So in my and now we don't have a AI act."
+    },
+    {
+      "id": "4872bad3-4598-4d90-8c36-b231c08da503",
+      "start": 3341.35,
+      "end": 3358.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So our government facing to AI is kind of like a very kind of conservative and how you know step back. And it's not good to our country, to our economy, to our national security."
+    },
+    {
+      "id": "9ca27a3d-ba0a-49c0-ba93-3563f6d6e7de",
+      "start": 3358.5,
+      "end": 3372.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Because in the near future there will be like a nation with, a nation with AI enabled by AI and compete with the other or like not compete it's like..."
+    },
+    {
+      "id": "f1c20f31-accc-4da2-b3f0-322d7c10e931",
+      "start": 3372.5,
+      "end": 3374,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "I know what you mean."
+    },
+    {
+      "id": "15c77470-8eb4-4847-a0d4-de2b0c792ba6",
+      "start": 3374,
+      "end": 3381.56,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, you know, maybe not compete, it's like invade or like influence or like, you know."
+    },
+    {
+      "id": "62600bf9-ef17-460d-a446-c5da9b3a57ba",
+      "start": 3381.56,
+      "end": 3385.4,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "AI will be an advantage for certain countries."
+    },
+    {
+      "id": "1b2eb545-8ff8-4505-a6c6-85417f88a1e0",
+      "start": 3385.4,
+      "end": 3401.55,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yes, yes. And now we don't have AI act. So it's a huge loophole of Taiwan. So now in this meeting session, I'm the key leader of the education and culture committee in the Legislative Yuan."
+    },
+    {
+      "id": "7f4c24d2-6e73-464d-8894-9dd11ff09004",
+      "start": 3401.55,
+      "end": 3412,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Which is the, the committee we will make sure the AI being developed well in Taiwan. So I am the key proposer of AI act in Taiwan and my version of AI act with the think tank of..."
+    },
+    {
+      "id": "e5acf236-db51-4e8b-9675-0659dd986be6",
+      "start": 3600,
+      "end": 3603.75,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "working with think tank of KMT, we will make sure the AI act will help"
+    },
+    {
+      "id": "42f44c9d-bb32-455e-b55d-3157023f47e0",
+      "start": 3603.75,
+      "end": 3607.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "us to diverse our, you know, the business, the technology business in Taiwan."
+    },
+    {
+      "id": "aed6f3f9-2d61-4083-b51d-d4382a8924da",
+      "start": 3607.4,
+      "end": 3612.18,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "To make sure that we will take care about the AI hardware or like the the semiconductor or the IC design."
+    },
+    {
+      "id": "c89991ed-3e5b-4361-a2fa-e00478f13112",
+      "start": 3612.18,
+      "end": 3616.55,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "However, at the same time we should take care about the the software or the other business."
+    },
+    {
+      "id": "04638550-2e50-4b4b-8d8c-ed76b195e926",
+      "start": 3616.55,
+      "end": 3621.05,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And government should play some role in diversifying the the industry and the economy in Taiwan."
+    },
+    {
+      "id": "f6b63576-0c7c-4a9f-8ffe-b237e1a7a42e",
+      "start": 3621.05,
+      "end": 3626.15,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "So my AI act will also play a role in this to make sure the if there are some glitch"
+    },
+    {
+      "id": "1f506dd8-c63e-4845-b97f-f9dee237b6ce",
+      "start": 3626.15,
+      "end": 3630.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "or some broken in happen or, you know, doing some damage on the silicon shield,"
+    },
+    {
+      "id": "6517ab68-4eb5-4827-96a4-1db8a24e4a80",
+      "start": 3630.2,
+      "end": 3634.62,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "we can have a some backup or some glue to make sure it's still strong,"
+    },
+    {
+      "id": "b3f7ce68-fb7d-444d-8f8c-59f271ec0f52",
+      "start": 3634.62,
+      "end": 3638.6,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "and make sure our people be safe and also have a great life in Taiwan."
+    },
+    {
+      "id": "428dd74e-24c7-40db-860c-41c082a1220d",
+      "start": 3638.6,
+      "end": 3643.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "And many foreign company or foreigner will still willing to come to Taiwan to do business. Yeah."
+    },
+    {
+      "id": "0163b260-1b80-412e-806d-960d5bfa0fbb",
+      "start": 3643.1,
+      "end": 3644.5,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "That's the thing. Thank you so much."
+    },
+    {
+      "id": "2c01f5b9-808c-448c-afc7-7dfe6f6effca",
+      "start": 3644.5,
+      "end": 3647.7,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "And it's really interesting you bring up the act and I may do a story sometime in the future about the AI act."
+    },
+    {
+      "id": "012711d1-5591-42b2-a674-982877f96cd2",
+      "start": 3647.7,
+      "end": 3648.65,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, please. Yes, yes."
+    },
+    {
+      "id": "7fec3110-f8a4-47f1-b2ad-676b3d658042",
+      "start": 3648.65,
+      "end": 3651.55,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "But thank you so much for your time today. It was a- it's a great conversation."
+    },
+    {
+      "id": "fcadf2bd-d770-41c5-a6ec-a71485f3e671",
+      "start": 3651.55,
+      "end": 3652.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yes."
+    },
+    {
+      "id": "445414f1-02cb-4f3f-a9d5-08135dbde471",
+      "start": 3652.2,
+      "end": 3656.45,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "And everything you communicated you had very concrete examples. So that's really useful for me as a journalist."
+    },
+    {
+      "id": "caf0beb3-67ad-4989-a913-46a029f5aa78",
+      "start": 3656.45,
+      "end": 3657.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yes."
+    },
+    {
+      "id": "0498e5ab-bfe1-4221-8057-8a4abc0a4eb8",
+      "start": 3657.1,
+      "end": 3657.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yes."
+    },
+    {
+      "id": "4889e9ea-88a2-4258-ad82-2e8da6c82097",
+      "start": 3657.5,
+      "end": 3658.15,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Thank you."
+    },
+    {
+      "id": "51281f38-40d2-4f0d-9b56-64bccf93d5a4",
+      "start": 3658.15,
+      "end": 3659.1,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Thank you, thank you."
+    },
+    {
+      "id": "07073f15-b869-4bc0-b831-803524653cf6",
+      "start": 3659.1,
+      "end": 3660.3,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Stop recording now."
+    },
+    {
+      "id": "de8a2595-cef6-425b-b980-6b125cd11659",
+      "start": 3660.3,
+      "end": 3662,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "And I'll just take one photo of you before I go."
+    },
+    {
+      "id": "79c4a576-16ee-4158-8a05-3dfee1d08772",
+      "start": 3662,
+      "end": 3663.22,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, sure, definitely."
+    },
+    {
+      "id": "3d766ba3-9204-4852-b4bf-2208a2240f49",
+      "start": 3677.3,
+      "end": 3679.52,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, up to you. Up to you."
+    },
+    {
+      "id": "284eae2f-afb5-4608-b421-3945fe467ab7",
+      "start": 3679.52,
+      "end": 3681.3,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Sit or like stand or like..."
+    },
+    {
+      "id": "3ac009e3-8002-446d-8324-347cd5beca5e",
+      "start": 3681.3,
+      "end": 3683.1,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Let me see how the light comes in here."
+    },
+    {
+      "id": "8f9aae6f-c1cb-459b-a216-f5a5125e5654",
+      "start": 3683.1,
+      "end": 3683.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah."
+    },
+    {
+      "id": "b3a1a2ca-0b2f-4ba4-98e9-3f6989b488ce",
+      "start": 3683.4,
+      "end": 3685.8,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Yeah, I think if you can stand by, like, over here."
+    },
+    {
+      "id": "3014939b-ec11-47a0-b1c6-3ede807d26e9",
+      "start": 3685.8,
+      "end": 3686.85,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Oh sure, sure."
+    },
+    {
+      "id": "310dabb5-304a-425b-b212-e4b9c8d4e410",
+      "start": 3688,
+      "end": 3688.4,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "All right, perfect."
+    },
+    {
+      "id": "55b0602f-b088-423f-aa44-bd949bd67499",
+      "start": 3690.02,
+      "end": 3691.55,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Okay, one, two, three."
+    },
+    {
+      "id": "ef7ba74d-8f95-4dc5-9538-4dfd4c989980",
+      "start": 3692.55,
+      "end": 3694.05,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "And again, one, two, three."
+    },
+    {
+      "id": "88d06956-a262-42d1-89b9-1f35de845d72",
+      "start": 3694.85,
+      "end": 3697.55,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Last one. One, two, three."
+    },
+    {
+      "id": "b98e5907-d44d-4786-911f-3311edf949de",
+      "start": 3697.55,
+      "end": 3698.4,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Thank you."
+    },
+    {
+      "id": "16159b77-12de-41f5-932a-d85c0b2cbb57",
+      "start": 3698.4,
+      "end": 3700.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Thank you, thank you. Maybe we take one in the front too?"
+    },
+    {
+      "id": "a7055deb-58a7-40e9-b72e-abc21ef8f959",
+      "start": 3700.5,
+      "end": 3701.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "Yeah, sure, sure."
+    },
+    {
+      "id": "b4182284-9798-466c-91c6-59f76cac0bf2",
+      "start": 3701.4,
+      "end": 3704.7,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "Okay. One, two, three. One, two, three. One more time."
+    },
+    {
+      "id": "3961d90e-0934-401b-99b7-f04f2a168c85",
+      "start": 3704.7,
+      "end": 3705.75,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Wait, I'll take my mask off."
+    },
+    {
+      "id": "8619a8a2-350f-4294-8772-4c1297442f90",
+      "start": 3705.75,
+      "end": 3706.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "Okay."
+    },
+    {
+      "id": "69fce550-472c-49ef-9ce7-1dcf9fd6161e",
+      "start": 3706.2,
+      "end": 3711.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "One, two, three. One, two, three. One more time. One, two, three. Okay, good. Thank you."
+    },
+    {
+      "id": "3646b2a0-afbd-4737-a5b0-82f51a93d3f3",
+      "start": 3711.45,
+      "end": 3714.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Thank you. Yeah, I didn't give you my card. Okay, I actually ran out, but..."
+    },
+    {
+      "id": "c2a9857f-bfd8-45f8-ae6c-4ba1ff4e9346",
+      "start": 3714.5,
+      "end": 3715.55,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Yeah, it's fine. We have each other's..."
+    },
+    {
+      "id": "4c28e332-11d2-4557-8780-068f8bdd5c76",
+      "start": 3715.55,
+      "end": 3717.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, it's fine. Thank you."
+    },
+    {
+      "id": "b9d01885-a9a1-4322-a89f-aa6faec82484",
+      "start": 3717.2,
+      "end": 3721.2,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Let's keep connected. Yeah, because we need more discussion"
+    },
+    {
+      "id": "9ced2883-f70c-4d13-80cd-689a53e513be",
+      "start": 3721.2,
+      "end": 3724.75,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "and some information from all over the world because"
+    },
+    {
+      "id": "a7876e6b-4494-467e-b3eb-848bad869293",
+      "start": 3724.75,
+      "end": 3729.58,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "yeah the situation right now in Taiwan is kind of a little bit messy, you know."
+    },
+    {
+      "id": "fb360ed7-fac1-4183-8c8c-4a022c425b2e",
+      "start": 3729.58,
+      "end": 3733.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Even we as a public servant we didn't get the concrete information from our government."
+    },
+    {
+      "id": "27ae2c3f-6815-4576-a863-a9216a8dbbc0",
+      "start": 3733.5,
+      "end": 3735.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "It's kind of a little bit frustrating, you know."
+    },
+    {
+      "id": "60c939b6-a546-4477-a75c-22869589732e",
+      "start": 3735.5,
+      "end": 3738.8,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Yeah. I- I mean, yeah, I can't imagine being blindsided."
+    },
+    {
+      "id": "d6b7479a-b67a-47c5-b0b3-53da003d7dd1",
+      "start": 3738.8,
+      "end": 3741.2,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "It's never a pleasant surprise, especially on something like this."
+    },
+    {
+      "id": "fc4374b8-a6e0-44e0-b208-cccb6dc0e88d",
+      "start": 3741.2,
+      "end": 3743.5,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah, yeah, and I think surprise is fine."
+    },
+    {
+      "id": "a5377a66-0e28-4617-9310-fdf958793113",
+      "start": 3743.5,
+      "end": 3746.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "However, if after surprise"
+    },
+    {
+      "id": "42aabe34-3c94-4409-a23c-1c478219f997",
+      "start": 3746.4,
+      "end": 3749.85,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "we we we still didn't get some, you know,"
+    },
+    {
+      "id": "2f09c630-a2fa-4e85-82b8-c4214c3fa04b",
+      "start": 3749.85,
+      "end": 3754.25,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "concrete information or like show some confidence that our government is in is in control,"
+    },
+    {
+      "id": "6a3f1994-df31-4d90-ae86-9ea9781659a8",
+      "start": 3754.25,
+      "end": 3758.05,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "then, you know, people will start worry about that, right?"
+    },
+    {
+      "id": "c0bf88b8-60e3-4484-9de3-f0cb400704be",
+      "start": 3758.05,
+      "end": 3760.75,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Definitely. Sounds- sounds like an anxious situation."
+    },
+    {
+      "id": "a207eeb8-d69b-4dd0-ac7e-cd19417434ef",
+      "start": 3760.75,
+      "end": 3761.4,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yeah."
+    },
+    {
+      "id": "149b383f-3b98-40da-845a-3de200c14649",
+      "start": 3761.4,
+      "end": 3764.85,
+      "type": "speech",
+      "speaker": "Ashish",
+      "text": "Well best of luck. Yeah, I'll keep in- I'll keep in touch with you once the stories out."
+    },
+    {
+      "id": "960ec433-53e3-4e6d-b39d-1db96349dbfe",
+      "start": 3764.85,
+      "end": 3766.45,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Yes, yes, please. Yes."
+    },
+    {
+      "id": "91c7d0cc-a769-4646-9e83-fcdd397d9c7b",
+      "start": 3766.45,
+      "end": 3767.35,
+      "type": "speech",
+      "speaker": "葛如鈞委員",
+      "text": "Thank you, thank you. Of course."
+    },
+    {
+      "id": "b27f0934-c051-47c6-8ba6-2ffd20d7a7ca",
+      "start": 3767.35,
+      "end": 3768,
+      "type": "speech",
+      "speaker": "葛如鈞委員辦公室",
+      "text": "這送你，好。"
+    },
+    {
+      "id": "9dc81065-cc80-49dd-8c2d-82f0304ab186",
+      "start": 3768,
+      "end": 3769.5,
+      "type": "speech",
+      "speaker": "Ashish, 葛如鈞, 葛如鈞委員辦公室",
+      "text": "謝謝，謝謝。"
     }
-  ],
-  "raw": {}
+  ]
 }
