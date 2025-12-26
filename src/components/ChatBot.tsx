@@ -39,7 +39,7 @@ export default function ChatBot() {
   const handleSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (input.trim()) {
-      sendMessage({ parts: [{ type: "text", text: input }] });
+      sendMessage({ text: input });
       setInput("");
     }
   };
@@ -54,7 +54,7 @@ export default function ChatBot() {
   ] as { text: string; prompt: string }[];
 
   const sendQuickPrompt = (promptStr: string) => {
-    sendMessage({ parts: [{ type: "text", text: promptStr }] });
+    sendMessage({ text: promptStr });
   };
 
   useEffect(() => {

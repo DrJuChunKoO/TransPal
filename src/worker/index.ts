@@ -1,6 +1,12 @@
 // @ts-nocheck
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
-import { streamText, tool, smoothStream, embed } from "ai";
+import {
+  streamText,
+  tool,
+  smoothStream,
+  convertToModelMessages,
+  type UIMessage,
+} from "ai";
 import z from "zod";
 import type { ExportedHandler, Fetcher } from "@cloudflare/workers-types";
 
@@ -18,7 +24,7 @@ export default {
     // API 端點 -------------------------------------------------------------
     if (request.method === "POST" && url.pathname === "/api/chat") {
       // --------------------------------------------------------------
-      // 初始化 OpenAI provider – 放在 handler 內才能拿到正確 env
+      // 初始化 OpenRouter provider
       // --------------------------------------------------------------
 
       const openrouter = createOpenRouter({
@@ -37,7 +43,10 @@ export default {
         });
       }
 
-      const { messages = [], filename = "/" } = body;
+      const { messages = [], filename = "/" } = body as {
+        messages: UIMessage[];
+        filename: string;
+      };
 
       // 系統提示詞
       const systemPrompt = `你是國民黨立委葛如鈞（寶博士）逐字稿網站的 AI 助手
@@ -57,8 +66,9 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       // 執行 LLM，並注入各種 tool
       // --------------------------------------------------------------
       const result = streamText({
-        model: openrouter.chat("google/gemini-3-flash-preview"),
-        messages: [{ role: "system", content: systemPrompt }, ...messages],
+        model: openrouter.chat("openai/gpt-4o-mini"),
+        system: systemPrompt,
+        messages: await convertToModelMessages(messages),
         maxSteps: 8,
         experimental_transform: smoothStream({
           delayInMs: 10,
@@ -109,13 +119,7 @@ current page: https://transpal.juchunko.com/speeches/${filename}
         },
       });
 
-      const response = result.toDataStreamResponse();
-      // 附加 CORS 標頭 (以及 Vercel AI stream header)
-      response.headers.set("x-vercel-ai-data-stream", "v1");
-      response.headers.set("Content-Type", "text/x-unknown");
-      response.headers.set("content-encoding", "identity");
-      response.headers.set("transfer-encoding", "chunked");
-      return response;
+      return result.toUIMessageStreamResponse();
     }
     if (
       url.pathname.startsWith("/speeches/") &&
