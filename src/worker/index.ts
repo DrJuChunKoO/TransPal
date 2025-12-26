@@ -29,6 +29,8 @@ export default {
 
       const openrouter = createOpenRouter({
         apiKey: env.OPENROUTER_API_KEY,
+        baseURL:
+          "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/transpal/openrouter",
       });
 
       // --------------------------------------------------------------
