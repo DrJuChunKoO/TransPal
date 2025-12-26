@@ -66,7 +66,7 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       // 執行 LLM，並注入各種 tool
       // --------------------------------------------------------------
       const result = streamText({
-        model: openrouter.chat("openai/gpt-oss-120b:exacto"),
+        model: openrouter.chat("google/gemini-3-flash-preview"),
         system: systemPrompt,
         messages: await convertToModelMessages(messages),
         maxSteps: 8,
