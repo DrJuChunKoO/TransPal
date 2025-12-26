@@ -6,62 +6,55 @@ import LucideSend from "~icons/lucide/send";
 import LucideX from "~icons/lucide/x";
 import LucideArrowRight from "~icons/lucide/arrow-right";
 import { useChat } from "@ai-sdk/react";
+import { isTextUIPart, DefaultChatTransport } from "ai";
 import Markdown from "markdown-to-jsx";
 import LoadingDots from "./LoadingDots.tsx";
 
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const [input, setInput] = useState("");
+
   const handleDialogKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
       setIsOpen(false);
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(e.target.value);
+  };
+
   // Preserve scroll position and always scroll to the latest message.
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-  const {
-    messages,
-    input,
-    setInput,
-    handleInputChange,
-    handleSubmit,
-    status,
-    append,
-  } = useChat({
-    api: "/api/chat",
-    body: {
-      filename: typeof window !== "undefined" ? window.location.pathname : "/",
-    },
+  const { messages, status, sendMessage } = useChat({
+    transport: new DefaultChatTransport({
+      body: {
+        filename: typeof window !== "undefined" ? window.location.pathname : "/",
+      },
+    }),
   });
+
+  const handleSubmit = (e?: React.FormEvent) => {
+    e?.preventDefault();
+    if (input.trim()) {
+      sendMessage({ parts: [{ type: "text", text: input }] });
+      setInput("");
+    }
+  };
 
   // Quick prompts definitions
   const quickPrompts = [
-    {
-      text: "重點摘要",
-      prompt: "摘要此對話的重點",
-    },
-    {
-      text: "背景資訊",
-      prompt: "提供此內容的背景資訊",
-    },
-    {
-      text: "主要觀點",
-      prompt: "說明此內容的主要觀點?",
-    },
-    {
-      text: "詳細解釋",
-      prompt: "詳細解釋此內容?",
-    },
-    {
-      text: `生成問答`,
-      prompt: "為此內容生成問答",
-    },
+    { text: "重點摘要", prompt: "摘要此對話的重點" },
+    { text: "背景資訊", prompt: "提供此內容的背景資訊" },
+    { text: "主要觀點", prompt: "說明此內容的主要觀點?" },
+    { text: "詳細解釋", prompt: "詳細解釋此內容?" },
+    { text: `生成問答`, prompt: "為此內容生成問答" },
   ] as { text: string; prompt: string }[];
 
   const sendQuickPrompt = (promptStr: string) => {
-    append({ role: "user", content: promptStr });
+    sendMessage({ parts: [{ type: "text", text: promptStr }] });
   };
 
   useEffect(() => {
@@ -103,6 +96,7 @@ export default function ChatBot() {
               className="rounded-xl border border-gray-200 bg-gray-50 text-sm dark:border-gray-800 dark:bg-gray-900 dark:text-gray-100"
               role="dialog"
               aria-labelledby="chat-bot-title"
+              onKeyDown={handleDialogKeyDown}
             >
               <div className="flex justify-between gap-1 p-2 pl-4">
                 <motion.div
@@ -141,9 +135,13 @@ export default function ChatBot() {
                   {[
                     {
                       id: "system",
-                      role: "assistant",
-                      content:
-                        "嗨，我是 AI 助手，隨時準備回答您的問題！請問有什麼我可以幫助您的？",
+                      role: "assistant" as const,
+                      parts: [
+                        {
+                          type: "text" as const,
+                          text: "嗨，我是 AI 助手，隨時準備回答您的問題！請問有什麼我可以幫助您的？",
+                        },
+                      ],
                     },
                     ...messages,
                   ].map((m) => (
@@ -181,15 +179,19 @@ export default function ChatBot() {
                         }}
                         transition={{ duration: 0.2 }}
                       >
-                        {m.content === "" ? (
+                        {m.parts.map((part, i) => {
+                          if (isTextUIPart(part)) {
+                            return <Markdown key={i}>{part.text}</Markdown>;
+                          }
+                          return null;
+                        })}
+                        {m.role === "assistant" && m.parts.length === 0 && (
                           <div className="flex items-center gap-1">
                             <span className="text-sm text-gray-500">
                               載入中
                             </span>
                             <LoadingDots />
                           </div>
-                        ) : (
-                          <Markdown>{m.content}</Markdown>
                         )}
                       </motion.div>
                     </div>
@@ -205,10 +207,14 @@ export default function ChatBot() {
                         transition={{ duration: 0.2 }}
                       >
                         {quickPrompts
-                          // filter is in messages
                           .filter(
                             (qp) =>
-                              !messages.some((m) => m.content === qp.prompt),
+                              !messages.some((m) =>
+                                m.parts.some(
+                                  (p) =>
+                                    p.type === "text" && p.text === qp.prompt,
+                                ),
+                              ),
                           )
                           .map((qp) => (
                             <button
@@ -235,10 +241,7 @@ export default function ChatBot() {
               <form
                 role="form"
                 aria-label="聊天表單"
-                onSubmit={(e) => {
-                  handleSubmit(e);
-                  setInput("");
-                }}
+                onSubmit={handleSubmit}
                 className="dark:border-gray-800"
               >
                 <div className="flex items-center gap-2 rounded-b-lg border-t border-gray-200 dark:border-gray-800">
@@ -247,13 +250,11 @@ export default function ChatBot() {
                     placeholder="請輸入您的問題..."
                     value={input}
                     onChange={handleInputChange}
-                    // Ignore Enter while the user is still composing (IME)
                     onKeyDown={(e) => {
                       const isComposing = (e.nativeEvent as any).isComposing;
                       if (e.key === "Enter" && !e.shiftKey && !isComposing) {
                         e.preventDefault();
                         handleSubmit();
-                        setInput("");
                       }
                     }}
                     tabIndex={0}
