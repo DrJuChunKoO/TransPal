@@ -8,7 +8,7 @@ interface Env {
   // 靜態資源綁定（wrangler.assets.binding）
   ASSETS: Fetcher;
 
-  // Supabase 與 OpenAI 相關變數，請於 wrangler secret / vars 設定
+  // Supabase 與 OpenRouter 相關變數，請於 wrangler secret / vars 設定
   OPENROUTER_API_KEY: string;
 }
 
@@ -23,8 +23,6 @@ export default {
 
       const openrouter = createOpenRouter({
         apiKey: env.OPENROUTER_API_KEY,
-        baseURL:
-          "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/transpal/openrouter",
       });
 
       // --------------------------------------------------------------
