@@ -99,7 +99,12 @@ TransPal-astro/
    NODE_VERSION=20
    NPM_VERSION=10
    NODE_ENV=production
+   OPENROUTER_API_KEY=your_api_key_here
    ```
+
+### AI 助手設定 (OpenRouter)
+
+本專案的 AI 助手功能使用 OpenRouter 提供服務。部署時請確保已設定 `OPENROUTER_API_KEY` 環境變數。
 
 ### 手動部署
 

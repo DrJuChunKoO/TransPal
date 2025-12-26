@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { createOpenAI, type OpenAI } from "@ai-sdk/openai";
+import { createOpenRouter } from "@openrouter/ai-sdk-provider";
 import { streamText, tool, smoothStream, embed } from "ai";
 import z from "zod";
 import type { ExportedHandler, Fetcher } from "@cloudflare/workers-types";
@@ -9,7 +9,7 @@ interface Env {
   ASSETS: Fetcher;
 
   // Supabase 與 OpenAI 相關變數，請於 wrangler secret / vars 設定
-  OPENAI_API_KEY: string;
+  OPENROUTER_API_KEY: string;
 }
 
 export default {
@@ -21,10 +21,10 @@ export default {
       // 初始化 OpenAI provider – 放在 handler 內才能拿到正確 env
       // --------------------------------------------------------------
 
-      const openai: OpenAI = createOpenAI({
-        apiKey: env.OPENAI_API_KEY,
+      const openrouter = createOpenRouter({
+        apiKey: env.OPENROUTER_API_KEY,
         baseURL:
-          "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/transpal/openai",
+          "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/transpal/openrouter",
       });
 
       // --------------------------------------------------------------
@@ -59,7 +59,7 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       // 執行 LLM，並注入各種 tool
       // --------------------------------------------------------------
       const result = streamText({
-        model: openai.responses("gpt-4.1-mini"),
+        model: openrouter.chat("google/gemini-3-flash-preview"),
         messages: [{ role: "system", content: systemPrompt }, ...messages],
         maxSteps: 8,
         experimental_transform: smoothStream({
