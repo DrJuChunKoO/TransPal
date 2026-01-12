@@ -17,6 +17,14 @@ const speechFiles = import.meta.glob("/public/speeches/*.json", {
   import: "default",
 });
 
+// Use import.meta.glob to get all avatar files at build time
+const avatarFiles = import.meta.glob(
+  "/public/avatars/*.{jpg,jpeg,png,webp,svg}",
+  {
+    eager: false,
+  },
+);
+
 /**
  * Gets the list of all speeches metadata
  */
@@ -251,33 +259,17 @@ export async function getAvatarMap(): Promise<AvatarMap> {
           // based on the available avatar files
           const avatarMap: AvatarMap = {};
 
-          // List of known avatars based on the files in public/avatars/
-          const knownAvatars = [
-            "以色列歷史學家哈拉瑞",
-            "吳宗憲委員",
-            "呂正華署長",
-            "林紘宇（果殼）律師",
-            "金管會彭金隆主委",
-            "金管會黃天牧主委",
-            "唐鳳部長",
-            "徐巧芯委員",
-            "核能安全委員會陳明真主委",
-            "國民黨黨團",
-            "國科會吳誠文主委",
-            "國家實驗研究院蔡宏營院長",
-            "陳建仁院長",
-            "陳耀祥主委",
-            "葛如鈞委員",
-            "韓國瑜院長",
-            "證期局張振山局長",
-            "Legislator KO Ju-Chun",
-            "Prof. Yuval Noah Harari",
-            "UBI Taiwan 台灣無條件基本收入協會",
-          ];
-
-          knownAvatars.forEach((name) => {
-            avatarMap[name] = `/avatars/${name}.jpg`;
-          });
+          // Populate avatar map from found files
+          for (const path of Object.keys(avatarFiles)) {
+            // path example: "/public/avatars/name.jpg"
+            const filename = path.split("/").pop();
+            if (filename) {
+              const name = filename.substring(0, filename.lastIndexOf("."));
+              // Remove /public prefix to get the URL path
+              const url = path.replace("/public", "");
+              avatarMap[name] = url;
+            }
+          }
 
           avatarMapCache = avatarMap;
           return avatarMap;
