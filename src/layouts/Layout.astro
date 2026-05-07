@@ -13,17 +13,21 @@ export interface Props {
   ogType?: string;
   ogImage?: string;
   structuredData?: object;
+  keywords?: string;
+  author?: string;
 }
 
 const { url, site } = Astro;
 const {
-  title = "TransPal",
-  description = "對話逐字稿網站",
+  title = "TransPal — 葛如鈞委員逐字稿平台",
+  description = "TransPal 是立委葛如鈞（寶博士）的公開對話逐字稿平台，收錄質詢、演講與公聽會紀錄，推動政治透明與公民監督。 | Official speech transcript platform of Taiwan Legislator Ju-Chun Ko (JC Ko).",
   ogTitle,
   ogDescription,
   ogUrl,
   ogType = "website",
   structuredData,
+  keywords = "對話, 逐字稿, 公開透明, 對話紀錄, 葛如鈞, 寶博士, 立法委員, 質詢, TransPal, Ju-Chun Ko",
+  author = "葛如鈞 Ju-Chun Ko",
 } = Astro.props;
 
 // Generate canonical URL if not provided
@@ -84,9 +88,9 @@ const openGraphImageUrl = getImagePath({ url, site });
     />
 
     <!-- SEO meta tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="TransPal" />
-    <meta name="keywords" content="對話, 逐字稿, 公開透明, 對話紀錄" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content={author} />
+    <meta name="keywords" content={keywords} />
 
     <!-- Open Graph meta tags -->
     <meta property="og:type" content={ogType} />
@@ -97,7 +101,7 @@ const openGraphImageUrl = getImagePath({ url, site });
     <meta property="og:image:alt" content={ogTitle || title} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="TransPal" />
+    <meta property="og:site_name" content="TransPal — 葛如鈞委員逐字稿" />
     <meta property="og:locale" content="zh_TW" />
 
     <!-- Twitter Card meta tags -->
@@ -106,7 +110,8 @@ const openGraphImageUrl = getImagePath({ url, site });
     <meta name="twitter:description" content={ogDescription || description} />
     <meta name="twitter:image" content={openGraphImageUrl} />
     <meta name="twitter:image:alt" content={ogTitle || title} />
-    <meta name="twitter:site" content="@TransPal" />
+    <meta name="twitter:site" content="@dAAAb" />
+    <meta name="twitter:creator" content="@dAAAb" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalUrl} />
