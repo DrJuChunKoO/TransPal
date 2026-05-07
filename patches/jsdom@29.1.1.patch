@@ -1,0 +1,14 @@
+diff --git a/lib/api.js b/lib/api.js
+index 3c41d626b1a5b4f48b0b00c5f40b617e72239f5e..5f0d5f0dcdc74f81285430fa21472d22c3da890f 100644
+--- a/lib/api.js
++++ b/lib/api.js
+@@ -8,7 +8,8 @@ const sniffHTMLEncoding = require("html-encoding-sniffer");
+ const whatwgURL = require("whatwg-url");
+ const { legacyHookDecode } = require("@exodus/bytes/encoding.js");
+ const { URL } = require("whatwg-url");
+-const { MIMEType } = require("whatwg-mimetype");
++const _whatwgMimetype = require("whatwg-mimetype");
++const MIMEType = _whatwgMimetype.MIMEType || _whatwgMimetype;
+ const { getGlobalDispatcher } = require("undici");
+ const idlUtils = require("./generated/idl/utils.js");
+ const VirtualConsole = require("./jsdom/virtual-console.js");

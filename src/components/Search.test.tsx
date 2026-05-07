@@ -47,7 +47,7 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容..."),
+        screen.getByPlaceholderText("搜尋對話內容..."),
       ).toBeInTheDocument();
     });
   });
@@ -59,11 +59,11 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容..."),
+        screen.getByPlaceholderText("搜尋對話內容..."),
       ).toBeInTheDocument();
     });
 
-    const searchInput = screen.getByPlaceholderText("搜尋會議內容...");
+    const searchInput = screen.getByPlaceholderText("搜尋對話內容...");
     await user.type(searchInput, "audrey");
 
     await waitFor(
@@ -81,11 +81,11 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容..."),
+        screen.getByPlaceholderText("搜尋對話內容..."),
       ).toBeInTheDocument();
     });
 
-    const searchInput = screen.getByPlaceholderText("搜尋會議內容...");
+    const searchInput = screen.getByPlaceholderText("搜尋對話內容...");
     await user.type(searchInput, "nonexistent");
 
     await waitFor(
@@ -105,11 +105,11 @@ describe("Search Component", () => {
     // Wait for component to load
     await waitFor(() => {
       expect(
-        screen.getByPlaceholderText("搜尋會議內容..."),
+        screen.getByPlaceholderText("搜尋對話內容..."),
       ).toBeInTheDocument();
     });
 
-    const searchInput = screen.getByPlaceholderText("搜尋會議內容...");
+    const searchInput = screen.getByPlaceholderText("搜尋對話內容...");
     await user.type(searchInput, "audrey");
 
     await waitFor(

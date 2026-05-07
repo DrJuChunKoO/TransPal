@@ -4,20 +4,23 @@
  */
 
 import { marked } from "marked";
-import DOMPurify from "dompurify";
-import { JSDOM } from "jsdom";
+import sanitizeHtml from "sanitize-html";
 import { logError } from "./errorHandler";
 
 // Cache for processed markdown content
 const markdownCache = new Map<string, string>();
 
-// Server-side DOMPurify setup (once)
-const window = new JSDOM("").window;
-const purify = DOMPurify(window);
+// Configure marked
+marked.setOptions({
+  breaks: true,
+  gfm: true,
+});
 
-// Configure DOMPurify to allow safe HTML elements
-const purifyConfig = {
-  ALLOWED_TAGS: [
+// Configure sanitize-html to allow safe HTML elements.
+// sanitize-html runs natively in Node.js without requiring a DOM environment,
+// making it reliable across SSR, build, and test contexts.
+const sanitizeConfig: sanitizeHtml.IOptions = {
+  allowedTags: [
     "h1",
     "h2",
     "h3",
@@ -46,16 +49,13 @@ const purifyConfig = {
     "hr",
     "img",
   ],
-  ALLOWED_ATTR: ["href", "title", "alt", "src", "class", "id"],
-  ALLOWED_URI_REGEXP:
-    /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i,
+  allowedAttributes: {
+    a: ["href", "title"],
+    img: ["src", "alt", "title"],
+    "*": ["class", "id"],
+  },
+  allowedSchemes: ["http", "https", "mailto", "tel"],
 };
-
-// Configure marked for better security and features
-marked.setOptions({
-  breaks: true,
-  gfm: true,
-});
 
 /**
  * Process markdown content with caching
@@ -65,21 +65,16 @@ marked.setOptions({
  */
 export function processMarkdown(content: string, cacheKey?: string): string {
   try {
-    // Generate cache key if not provided
     const key = cacheKey || generateCacheKey(content);
 
-    // Check cache first
     if (markdownCache.has(key)) {
       return markdownCache.get(key)!;
     }
 
-    // Process markdown if not in cache
     const htmlContent = marked.parse(content) as string;
-    const safeHtml = purify.sanitize(htmlContent, purifyConfig);
+    const safeHtml = sanitizeHtml(htmlContent, sanitizeConfig);
 
-    // Store in cache
     markdownCache.set(key, safeHtml);
-
     return safeHtml;
   } catch (error) {
     logError(
@@ -92,7 +87,7 @@ export function processMarkdown(content: string, cacheKey?: string): string {
       "medium",
     );
 
-    // Graceful degradation: return escaped plain text with basic line breaks
+    // Graceful degradation: return escaped plain text
     return content
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
@@ -105,16 +100,13 @@ export function processMarkdown(content: string, cacheKey?: string): string {
 
 /**
  * Generate a cache key for markdown content
- * @param content Markdown content
- * @returns Cache key string
  */
 function generateCacheKey(content: string): string {
-  // Simple hash function for strings
   let hash = 0;
   for (let i = 0; i < content.length; i++) {
     const char = content.charCodeAt(i);
     hash = (hash << 5) - hash + char;
-    hash = hash & hash; // Convert to 32bit integer
+    hash = hash & hash;
   }
   return `md_${hash}`;
 }
@@ -128,7 +120,6 @@ export function clearMarkdownCache(): void {
 
 /**
  * Get the current cache size
- * @returns Number of cached items
  */
 export function getMarkdownCacheSize(): number {
   return markdownCache.size;
@@ -136,8 +127,6 @@ export function getMarkdownCacheSize(): number {
 
 /**
  * Pre-process and cache markdown content in bulk
- * Useful for build-time optimization
- * @param contentMap Map of content keys to markdown content
  */
 export function bulkProcessMarkdown(contentMap: Record<string, string>): void {
   Object.entries(contentMap).forEach(([key, content]) => {
@@ -147,8 +136,6 @@ export function bulkProcessMarkdown(contentMap: Record<string, string>): void {
 
 /**
  * Check if content is cached
- * @param cacheKey Cache key to check
- * @returns True if content is cached
  */
 export function isMarkdownCached(cacheKey: string): boolean {
   return markdownCache.has(cacheKey);
@@ -156,7 +143,6 @@ export function isMarkdownCached(cacheKey: string): boolean {
 
 /**
  * Get cache statistics
- * @returns Cache statistics object
  */
 export function getMarkdownCacheStats(): {
   size: number;

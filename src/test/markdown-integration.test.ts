@@ -115,7 +115,7 @@ describe("Markdown Integration Tests", () => {
 
       // All items should be cached now
       Object.keys(contentMap).forEach((key) => {
-        expect(processMarkdown(contentMap[key], key)).toBeDefined();
+        expect(processMarkdown(contentMap[key as keyof typeof contentMap], key)).toBeDefined();
       });
     });
   });

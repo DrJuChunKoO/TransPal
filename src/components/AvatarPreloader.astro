@@ -1,5 +1,5 @@
 ---
-import { getAvailableAvatarNames } from '../utils/speeches';
+import { getAvatarMap } from '../utils/speeches';
 
 export interface Props {
   speakerNames?: string[];
@@ -12,7 +12,8 @@ const { speakerNames = [], preloadAll = false } = Astro.props;
 let avatarsToPreload: string[] = [];
 
 if (preloadAll) {
-  avatarsToPreload = await getAvailableAvatarNames();
+  const avatarMap = await getAvatarMap();
+  avatarsToPreload = Object.keys(avatarMap);
 } else if (speakerNames.length > 0) {
   avatarsToPreload = speakerNames;
 }

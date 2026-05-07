@@ -59,17 +59,15 @@ export default defineConfig({
       }),
     ],
     build: {
-      // Optimize chunk splitting
       rollupOptions: {
-        external: ["@resvg/resvg-js", "jsdom"],
+        external: ["@resvg/resvg-js"],
       },
     },
-    // Optimize dependencies
     optimizeDeps: {
-      exclude: ["@resvg/resvg-js", "jsdom"],
+      exclude: ["@resvg/resvg-js"],
     },
     ssr: {
-      external: ["@resvg/resvg-js", "jsdom"],
+      external: ["@resvg/resvg-js"],
     },
   },
   // Enable prefetch for better navigation performance
