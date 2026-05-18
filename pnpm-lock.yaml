@@ -5,9 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  jsdom@29.1.1:
-    hash: a05ef350374d5bafa166efa73cbb3e64a5d95a470e44e7de066d9843cce5770f
-    path: patches/jsdom@29.1.1.patch
+  jsdom@29.1.1: a05ef350374d5bafa166efa73cbb3e64a5d95a470e44e7de066d9843cce5770f
 
 importers:
 

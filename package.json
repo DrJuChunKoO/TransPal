@@ -2,6 +2,10 @@
   "name": "transpal-astro",
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "pnpm@11.1.2",
+  "patchedDependencies": {
+    "jsdom@29.1.1": "patches/jsdom@29.1.1.patch"
+  },
   "scripts": {
     "dev": "astro dev",
     "generate-data": "node scripts/generate-data.mjs",
@@ -57,10 +61,5 @@
     "unplugin-icons": "^23.0.1",
     "vitest": "^4.1.5",
     "wrangler": "^4.88.0"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "jsdom@29.1.1": "patches/jsdom@29.1.1.patch"
-    }
   }
 }

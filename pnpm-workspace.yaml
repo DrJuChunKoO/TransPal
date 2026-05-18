@@ -1,0 +1,10 @@
+packages:
+  - .
+
+patchedDependencies:
+  jsdom@29.1.1: patches/jsdom@29.1.1.patch
+
+allowBuilds:
+  esbuild: true
+  sharp: true
+  workerd: true
