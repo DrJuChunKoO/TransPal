@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { getSpeeches, getSpeech } from "../utils/speeches";
+import { markdownToPlainText } from "../utils/markdownText";
 
 export const GET: APIRoute = async ({ site }) => {
   if (!site) {
@@ -26,7 +27,8 @@ export const GET: APIRoute = async ({ site }) => {
           const pubDate = new Date(speech.info.date).toUTCString();
           const title = speech.info.name || speechMeta.filename;
           const description =
-            speech.info.description || `對話逐字稿 - ${title}`;
+            markdownToPlainText(speech.info.description || "") ||
+            `對話逐字稿 - ${title}`;
 
           // Escape XML special characters
           const escapedTitle = escapeXml(title);

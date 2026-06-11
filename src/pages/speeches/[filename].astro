@@ -6,6 +6,7 @@ import ShareButton from "../../components/ShareButton";
 import { getSpeech, getSpeeches } from "../../utils/speeches";
 import type { SpeechDetail } from "../../types/speech";
 import ChatBot from "../../components/ChatBot";
+import { markdownToPlainText } from "../../utils/markdownText";
 
 export async function getStaticPaths() {
   const speeches = await getSpeeches();
@@ -63,7 +64,7 @@ try {
       "Speech content is not an array for:",
       filename,
       "type:",
-      typeof speech.content
+      typeof speech.content,
     );
     return Astro.redirect("/404");
   }
@@ -72,7 +73,7 @@ try {
   if (!speech.info.name || typeof speech.info.name !== "string") {
     console.warn(
       "Speech missing name field, using filename as fallback:",
-      filename
+      filename,
     );
     speech.info.name = filename;
   }
@@ -80,7 +81,7 @@ try {
   if (!speech.info.date || typeof speech.info.date !== "string") {
     console.warn(
       "Speech missing date field, using current date as fallback:",
-      filename
+      filename,
     );
     speech.info.date = new Date().toISOString();
   }
@@ -98,7 +99,7 @@ try {
       "Speech has no valid content items:",
       filename,
       "total items:",
-      speech.content.length
+      speech.content.length,
     );
     return Astro.redirect("/404");
   }
@@ -106,7 +107,7 @@ try {
   // Update speech with filtered content if needed
   if (validContent.length !== speech.content.length) {
     console.warn(
-      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`
+      `Filtered out ${speech.content.length - validContent.length} invalid content items for: ${filename}`,
     );
     speech.content = validContent;
   }
@@ -147,11 +148,21 @@ function formatTime(timeString?: string): string {
 const pageTitle = `${speech.info.name} - TransPal`;
 
 // Build a meaningful description: prefer speech.info.description, else summarize from title + date + speaker count
-const uniqueSpeakers = [...new Set(speech.content.filter(i => i.type === "speech" && i.speaker).map(i => i.speaker))];
-const speakerSummary = uniqueSpeakers.length > 0 ? `出席者：${uniqueSpeakers.slice(0, 3).join("、")}${uniqueSpeakers.length > 3 ? ` 等 ${uniqueSpeakers.length} 人` : ""}。` : "";
-const pageDescription =
+const uniqueSpeakers = [
+  ...new Set(
+    speech.content
+      .filter((i) => i.type === "speech" && i.speaker)
+      .map((i) => i.speaker),
+  ),
+];
+const speakerSummary =
+  uniqueSpeakers.length > 0
+    ? `出席者：${uniqueSpeakers.slice(0, 3).join("、")}${uniqueSpeakers.length > 3 ? ` 等 ${uniqueSpeakers.length} 人` : ""}。`
+    : "";
+const rawPageDescription =
   speech.info.description ||
   `${speech.info.name}（${formatDate(speech.info.date)}）的公開對話逐字稿，由葛如鈞委員辦公室透過 TransPal 平台釋出。${speakerSummary}`.trim();
+const pageDescription = markdownToPlainText(rawPageDescription);
 
 // Generate canonical URL
 const canonicalUrl = new URL(`speeches/${filename}`, Astro.site).href;
@@ -189,7 +200,7 @@ const structuredData = {
     "@type": "Event",
     name: speech.info.name,
     startDate: speech.info.date,
-    description: speech.info.description || pageDescription,
+    description: pageDescription,
     eventStatus: "https://schema.org/EventCompleted",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
   },
@@ -213,6 +224,7 @@ if (speech.info.time) {
   description={pageDescription}
   ogTitle={ogTitle}
   ogDescription={ogDescription}
+  ogImageDescription={rawPageDescription}
   ogUrl={canonicalUrl}
   ogType="article"
   structuredData={structuredData}
