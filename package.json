@@ -2,6 +2,9 @@
   "name": "transpal-astro",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22"
+  },
   "packageManager": "pnpm@11.1.2",
   "patchedDependencies": {
     "jsdom@29.1.1": "patches/jsdom@29.1.1.patch"
@@ -18,18 +21,18 @@
     "optimize": "pnpm run clean && pnpm run build:production"
   },
   "dependencies": {
-    "@ai-sdk/react": "^3.0.177",
+    "@ai-sdk/openai-compatible": "^3.0.0",
+    "@ai-sdk/react": "^4.0.2",
     "@astrojs/check": "^0.9.9",
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/react": "^5.0.4",
     "@expo-google-fonts/noto-sans-tc": "^0.4.3",
-    "@openrouter/ai-sdk-provider": "^2.9.0",
     "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "ai": "^6.0.175",
+    "ai": "^7.0.2",
     "astro": "^6.2.2",
     "astro-opengraph-images": "^1.16.1",
     "markdown-to-jsx": "^9.7.16",

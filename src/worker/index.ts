@@ -1,10 +1,13 @@
 // @ts-nocheck
-import { createOpenRouter } from "@openrouter/ai-sdk-provider";
+import { createOpenAICompatible } from "@ai-sdk/openai-compatible";
 import {
+  createUIMessageStreamResponse,
   streamText,
   tool,
   smoothStream,
   convertToModelMessages,
+  isStepCount,
+  toUIMessageStream,
   type UIMessage,
 } from "ai";
 import z from "zod";
@@ -27,7 +30,8 @@ export default {
       // 初始化 OpenRouter provider
       // --------------------------------------------------------------
 
-      const openrouter = createOpenRouter({
+      const openrouter = createOpenAICompatible({
+        name: "openrouter",
         apiKey: env.OPENROUTER_API_KEY,
         baseURL:
           "https://gateway.ai.cloudflare.com/v1/3f1f83a939b2fc99ca45fd8987962514/transpal/openrouter",
@@ -68,11 +72,11 @@ current page: https://transpal.juchunko.com/speeches/${filename}
       // 執行 LLM，並注入各種 tool
       // --------------------------------------------------------------
       const result = streamText({
-        model: openrouter.chat("@preset/website-chatbot"),
-        system: systemPrompt,
+        model: openrouter.chatModel("@preset/website-chatbot"),
+        instructions: systemPrompt,
         messages: await convertToModelMessages(messages),
-        maxSteps: 8,
-        experimental_transform: smoothStream({
+        stopWhen: isStepCount(8),
+        transform: smoothStream({
           delayInMs: 10,
           chunking: /[\u4E00-\u9FFF]|\S+\s+/, // 中英分段顯示
         }),
@@ -80,7 +84,7 @@ current page: https://transpal.juchunko.com/speeches/${filename}
           // ----------------- 讀取目前頁面 -----------------
           viewPage: tool({
             description: "Get the current page content",
-            parameters: z.object({}).strict(),
+            inputSchema: z.object({}).strict(),
             execute: async () => {
               try {
                 const fileData = await fetch(
@@ -121,7 +125,9 @@ current page: https://transpal.juchunko.com/speeches/${filename}
         },
       });
 
-      return result.toUIMessageStreamResponse();
+      return createUIMessageStreamResponse({
+        stream: toUIMessageStream({ stream: result.stream }),
+      });
     }
     if (
       url.pathname.startsWith("/speeches/") &&
