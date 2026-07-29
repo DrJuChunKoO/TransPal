@@ -5,6 +5,8 @@
   "compilerOptions": {
     "types": ["unplugin-icons/types/react"],
     "strictNullChecks": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "paths": {
       "@/*": ["./src/*"]
     }
