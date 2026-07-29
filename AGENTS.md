@@ -21,6 +21,17 @@ This document provides essential instructions for AI agents working in this repo
 - **Styling:** Use Tailwind CSS v4. Prefer utility classes over custom CSS. Use `@apply` sparingly.
 - **Icons:** Use `unplugin-icons` via the `~icons/lucide/` prefix (e.g., `import LucideBot from "~icons/lucide/bot"`).
 
+### 1.1 shadcn/ui (Base UI, `base-rhea`)
+
+The project uses shadcn/ui with the **Base UI** primitive library and the `rhea` preset (see `components.json`). Primitives live in `src/components/ui/`, the `cn()` helper in `src/lib/utils.ts`, and the theme in `src/styles/global.css`.
+
+- **Add components with the CLI:** `pnpm dlx shadcn@latest add <component> -c .` The `-c .` is required — the root `pnpm-workspace.yaml` makes the CLI treat this repo as a monorepo root otherwise.
+- **Base UI, not Radix:** use `render={<button />}` for custom trigger elements, **not** `asChild`. Data attributes are Base UI's (`data-panel-open`, `data-starting-style`, `data-ending-style`).
+- **⚠️ Rewrite icon imports after every `add`:** registry components import from `lucide-react`, which this project does **not** install. Replace them with `~icons/lucide/*` (e.g. `ArrowDownIcon` → `import LucideArrowDown from "~icons/lucide/arrow-down"`). Never add `lucide-react` back.
+- **Use semantic colour tokens only:** `bg-background`, `bg-card`, `bg-muted`, `bg-accent`, `text-foreground`, `text-muted-foreground`, `border-border`, `ring-ring`, `text-destructive`, `bg-primary`/`text-primary-foreground`. These flip automatically under the `.dark` class — **never** write a `dark:` variant for a neutral colour.
+- **Exception — accents:** `rhea` is a monochrome palette, so `primary` is near-black. Blue (links, info, CTAs), yellow/amber (warnings) and green (success) are kept as raw Tailwind colours on purpose; do not remap them to `primary`. `Avatar.astro`'s per-speaker colour palette is data-driven — leave it alone.
+- **`prose-tight`:** the custom `@utility` in `global.css` that collapses typography margins. Use it for markdown rendered inside narrow surfaces (e.g. chat bubbles).
+
 ### 2. TypeScript & Types
 
 - **Strict Typing:** Always use TypeScript. Avoid `any`. Use unknown and narrowing where appropriate.
@@ -107,6 +118,8 @@ Breaking changes correlate with SemVer MAJOR. They are indicated in two ways:
 ## 📂 Project Structure
 
 - `/src/components/`: Reusable UI components (Astro & React).
+- `/src/components/ui/`: shadcn/ui primitives (Base UI). Managed by the shadcn CLI — see §1.1 before editing.
+- `/src/lib/`: shadcn helpers (`cn()`).
 - `/src/layouts/`: Base layout components for pages.
 - `/src/pages/`: Astro routing pages.
 - `/src/utils/`: Business logic, data fetching, and error handling.

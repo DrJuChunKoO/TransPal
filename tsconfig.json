@@ -5,7 +5,6 @@
   "compilerOptions": {
     "types": ["unplugin-icons/types/react"],
     "strictNullChecks": true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
