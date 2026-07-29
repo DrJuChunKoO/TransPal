@@ -34,7 +34,7 @@ export default function DarkModeToggle() {
       if (themeColorMeta) {
         themeColorMeta.setAttribute(
           "content",
-          initialTheme === "dark" ? "#1C1C1C" : "#ffffff",
+          initialTheme === "dark" ? "#0a0a0a" : "#ffffff",
         );
       }
     } catch (error) {
@@ -72,7 +72,7 @@ export default function DarkModeToggle() {
     if (themeColorMeta) {
       themeColorMeta.setAttribute(
         "content",
-        newTheme === "dark" ? "#1C1C1C" : "#ffffff",
+        newTheme === "dark" ? "#0a0a0a" : "#ffffff",
       );
     }
   };
@@ -86,7 +86,7 @@ export default function DarkModeToggle() {
         type="button"
         disabled
       >
-        <div className="size-5 animate-pulse rounded-full bg-gray-200 sm:size-6 dark:bg-gray-700" />
+        <div className="bg-accent size-5 animate-pulse rounded-full sm:size-6" />
       </button>
     );
   }
@@ -94,14 +94,14 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={handleThemeChange}
-      className="flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-full p-2 transition-colors hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none active:bg-gray-200 dark:hover:bg-white/5 dark:focus:ring-offset-gray-800 dark:active:bg-white/10"
+      className="hover:bg-muted focus:ring-ring active:bg-accent flex min-h-[44px] min-w-[44px] touch-manipulation items-center justify-center rounded-full p-2 transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:outline-none"
       aria-label={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       title={`切換至${theme === "dark" ? "淺色" : "深色"}模式`}
       type="button"
     >
       {theme === "dark" ? (
         <svg
-          className="size-5 text-gray-800 sm:size-6 dark:text-gray-200"
+          className="text-foreground size-5 sm:size-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ export default function DarkModeToggle() {
         </svg>
       ) : (
         <svg
-          className="size-5 text-gray-800 sm:size-6 dark:text-gray-200"
+          className="text-foreground size-5 sm:size-6"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

@@ -280,7 +280,7 @@ export default function Search() {
             if (query) setIsOpen(true);
           }}
           placeholder="搜尋對話內容..."
-          className="w-full rounded-xl border-0 bg-gray-100 px-4 py-2 pl-10 text-sm text-gray-900 placeholder-gray-500 ring-0 outline-0 transition-all focus:bg-gray-200 sm:text-base dark:bg-white/10 dark:text-white dark:placeholder-white/50 dark:focus:bg-white/20"
+          className="bg-muted text-foreground placeholder-muted-foreground focus:bg-accent w-full rounded-xl border-0 px-4 py-2 pl-10 text-sm ring-0 outline-0 transition-all sm:text-base"
           role="searchbox"
           aria-label="搜尋對話內容"
           aria-expanded={isOpen}
@@ -288,7 +288,7 @@ export default function Search() {
           autoComplete="off"
         />
         <svg
-          className="pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-gray-500 dark:text-gray-400"
+          className="text-muted-foreground pointer-events-none absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -306,7 +306,7 @@ export default function Search() {
             className="absolute top-1/2 right-3 -translate-y-1/2"
             aria-hidden="true"
           >
-            <div className="size-4 animate-spin rounded-full border-2 border-transparent border-b-gray-900 dark:border-white"></div>
+            <div className="border-b-foreground size-4 animate-spin rounded-full border-2 border-transparent"></div>
           </div>
         )}
       </div>
@@ -315,17 +315,15 @@ export default function Search() {
       {error && isOpen && (
         <div
           id="search-error"
-          className="absolute top-full right-0 left-0 z-50 mt-2 rounded-2xl border border-red-200 bg-red-50 p-4 shadow-lg dark:border-red-900/50 dark:bg-red-900/20"
+          className="border-destructive/30 bg-destructive/10 absolute top-full right-0 left-0 z-50 mt-2 rounded-2xl border p-4 shadow-lg"
           role="alert"
           aria-live="polite"
         >
-          <div className="mb-3 text-sm text-red-600 dark:text-red-400">
-            {error}
-          </div>
+          <div className="text-destructive mb-3 text-sm">{error}</div>
           <div className="flex gap-2">
             <button
               onClick={() => window.location.reload()}
-              className="rounded-lg bg-red-100 px-3 py-1.5 text-xs font-medium text-red-800 hover:bg-red-200 dark:bg-red-900/40 dark:text-red-200 dark:hover:bg-red-900/60"
+              className="bg-destructive/20 text-destructive hover:bg-destructive/30 rounded-lg px-3 py-1.5 text-xs font-medium"
             >
               重新載入頁面
             </button>
@@ -334,7 +332,7 @@ export default function Search() {
                 setError(null);
                 setIsOpen(false);
               }}
-              className="rounded-lg bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-200 dark:bg-white/10 dark:text-gray-300 dark:hover:bg-white/20"
+              className="bg-muted text-foreground hover:bg-accent rounded-lg px-3 py-1.5 text-xs font-medium"
             >
               關閉
             </button>
@@ -345,14 +343,14 @@ export default function Search() {
       {/* Search results */}
       {isOpen && !error && results.length > 0 && (
         <div
-          className="absolute top-full right-0 left-0 z-50 mt-2 max-h-96 overflow-y-auto rounded-2xl border border-gray-100 bg-white shadow-xl dark:border-white/10 dark:bg-[#1C1C1C]"
+          className="border-border bg-card absolute top-full right-0 left-0 z-50 mt-2 max-h-96 overflow-y-auto rounded-2xl border shadow-xl"
           role="listbox"
           aria-label="搜尋結果"
         >
           {results.map((result, index) => (
             <div
               key={result.filename}
-              className="border-b border-gray-100 last:border-b-0 dark:border-white/5"
+              className="border-border border-b last:border-b-0"
             >
               <button
                 data-search-result={index}
@@ -382,14 +380,14 @@ export default function Search() {
                     document.getElementById("search-input")?.focus();
                   }
                 }}
-                className="w-full cursor-pointer p-4 text-left transition-colors hover:bg-gray-50 focus:bg-gray-50 focus:outline-none dark:hover:bg-white/5 dark:focus:bg-white/5"
+                className="hover:bg-muted focus:bg-muted w-full cursor-pointer p-4 text-left transition-colors focus:outline-none"
                 role="option"
                 aria-selected="false"
               >
-                <div className="mb-1 line-clamp-1 text-base font-semibold text-gray-900 dark:text-white">
+                <div className="text-foreground mb-1 line-clamp-1 text-base font-semibold">
                   {result.name}
                 </div>
-                <div className="mb-2 text-xs text-gray-500 dark:text-gray-400">
+                <div className="text-muted-foreground mb-2 text-xs">
                   {result.date}
                 </div>
 
@@ -398,9 +396,9 @@ export default function Search() {
                   ? result.highlightedContent.slice(0, 2).map((content) => (
                       <div
                         key={content.id}
-                        className="mt-1 text-sm text-gray-600 dark:text-gray-300"
+                        className="text-muted-foreground mt-1 text-sm"
                       >
-                        <span className="font-medium text-gray-900 dark:text-white">
+                        <span className="text-foreground font-medium">
                           {content.speaker}:
                         </span>{" "}
                         <HighlightedText
@@ -415,9 +413,9 @@ export default function Search() {
                     result.contentSummary.slice(0, 2).map((content) => (
                       <div
                         key={content.id}
-                        className="mt-1 text-sm text-gray-600 dark:text-gray-300"
+                        className="text-muted-foreground mt-1 text-sm"
                       >
-                        <span className="font-medium text-gray-900 dark:text-white">
+                        <span className="text-foreground font-medium">
                           {content.speaker}:
                         </span>{" "}
                         {content.text.slice(0, 80)}...
@@ -431,8 +429,8 @@ export default function Search() {
 
       {/* No results state */}
       {isOpen && !error && query && results.length === 0 && !isLoading && (
-        <div className="absolute top-full right-0 left-0 z-50 mt-2 rounded-2xl border border-gray-100 bg-white p-6 shadow-xl dark:border-white/10 dark:bg-[#1C1C1C]">
-          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+        <div className="border-border bg-card absolute top-full right-0 left-0 z-50 mt-2 rounded-2xl border p-6 shadow-xl">
+          <div className="text-muted-foreground text-center text-sm">
             沒有找到包含「{query}」的相關結果
           </div>
         </div>

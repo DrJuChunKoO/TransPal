@@ -135,7 +135,7 @@ export default function ShareButton({
     >
       <h3
         id="share-heading"
-        className="mb-4 text-lg font-semibold text-gray-900 dark:text-gray-100"
+        className="text-foreground mb-4 text-lg font-semibold"
       >
         分享此對話
       </h3>
@@ -156,9 +156,9 @@ export default function ShareButton({
             option.name === "line"
               ? "focus:ring-green-500"
               : option.name === "copy"
-                ? "focus:ring-blue-500"
+                ? "focus:ring-ring"
                 : option.name === "facebook"
-                  ? "focus:ring-blue-600"
+                  ? "focus:ring-ring"
                   : "",
           );
 

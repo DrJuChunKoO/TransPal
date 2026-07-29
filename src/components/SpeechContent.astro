@@ -69,18 +69,18 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
       if (item.type === 'divider') {
         return (
           <div class="flex items-center my-8">
-            <div class="flex-1 border-t border-gray-200 dark:border-white/10"></div>
-            <div class="px-4 text-sm text-gray-500 dark:text-gray-400">
+            <div class="flex-1 border-t border-border"></div>
+            <div class="px-4 text-sm text-muted-foreground">
               {item.text || '---'}
             </div>
-            <div class="flex-1 border-t border-gray-200 dark:border-white/10"></div>
+            <div class="flex-1 border-t border-border"></div>
           </div>
         );
       }
 
       if (item.type === 'markdown') {
         return (
-          <div class="bg-gray-50 dark:bg-white/5 rounded-2xl p-6 my-4">
+          <div class="bg-muted rounded-2xl p-6 my-4">
             <MarkdownContent content={item.text || ''} size="base" />
           </div>
         );
@@ -91,7 +91,7 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
         const mergedText = item.texts?.join('\n\n') || '';
 
         return (
-          <div class="flex gap-4 p-4 rounded-2xl hover:bg-gray-50 dark:hover:bg-white/5 transition-colors group relative">
+          <div class="flex gap-4 p-4 rounded-2xl hover:bg-muted transition-colors group relative">
             <!-- Avatar -->
             <div class="flex-shrink-0 sticky top-24 self-start">
               <Avatar speakerName={item.speaker || ''} />
@@ -102,14 +102,14 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
               <!-- Speaker name -->
               <div class="flex items-center justify-between mb-2">
                 <div class="flex items-center gap-2">
-                  <h3 class="font-semibold text-gray-900 dark:text-gray-100">
+                  <h3 class="font-semibold text-foreground">
                     {item.speaker}
                   </h3>
                 </div>
               </div>
 
               <!-- Message text -->
-              <div class="text-gray-700 dark:text-gray-300">
+              <div class="text-foreground">
                 <MessageText content={mergedText} type="auto" size="sm" />
               </div>
             </div>
@@ -123,7 +123,7 @@ function groupConsecutiveSpeechItems(items: typeof speechContent): GroupedSpeech
 
   {speechItems.length === 0 && (
     <div class="text-center py-12">
-      <div class="text-gray-500 dark:text-gray-400 text-lg">
+      <div class="text-muted-foreground text-lg">
         此對話暫無內容
       </div>
     </div>

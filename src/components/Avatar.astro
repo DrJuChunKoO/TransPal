@@ -165,12 +165,11 @@ const avatarId = `avatar-${speakerName.replace(/[^a-zA-Z0-9]/g, "-")}-${Math.ran
       0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
-  /* Dark mode adjustments */
-  @media (prefers-color-scheme: dark) {
-    [id^="avatar-"] {
-      box-shadow:
-        0 1px 3px 0 rgba(0, 0, 0, 0.3),
-        0 1px 2px 0 rgba(0, 0, 0, 0.2);
-    }
+  /* Dark mode adjustments. Dark mode is class-based (see Layout.astro), not
+     `prefers-color-scheme`, so this has to match the `.dark` root class. */
+  :global(.dark) [id^="avatar-"] {
+    box-shadow:
+      0 1px 3px 0 rgba(0, 0, 0, 0.3),
+      0 1px 2px 0 rgba(0, 0, 0, 0.2);
   }
 </style>

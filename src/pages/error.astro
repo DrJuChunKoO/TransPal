@@ -81,20 +81,20 @@ const pageDescription = message;
       <!-- Helpful suggestions -->
       {
         recentSpeeches.length > 0 && (
-          <div class="mt-8 rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800">
-            <h3 class="mb-4 text-lg font-semibold text-gray-900 dark:text-gray-100">
+          <div class="border-border bg-card mt-8 rounded-lg border p-4 shadow-sm sm:p-6">
+            <h3 class="text-foreground mb-4 text-lg font-semibold">
               您可能感興趣的對話
             </h3>
             <div class="space-y-3">
               {recentSpeeches.map((speech) => (
                 <a
                   href={`/speeches/${speech.filename}`}
-                  class="block touch-manipulation rounded-lg border border-gray-200 p-3 transition-colors hover:bg-gray-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-offset-gray-900"
+                  class="border-border hover:bg-accent focus:ring-ring focus:ring-offset-background block touch-manipulation rounded-lg border p-3 transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none"
                 >
-                  <div class="text-sm font-medium text-gray-900 sm:text-base dark:text-gray-100">
+                  <div class="text-foreground text-sm font-medium sm:text-base">
                     {speech.name}
                   </div>
-                  <div class="mt-1 text-xs text-gray-500 sm:text-sm dark:text-gray-400">
+                  <div class="text-muted-foreground mt-1 text-xs sm:text-sm">
                     {new Date(speech.date).toLocaleDateString("zh-TW", {
                       year: "numeric",
                       month: "long",
@@ -110,7 +110,7 @@ const pageDescription = message;
 
       <!-- Contact information -->
       <div class="mt-6 text-center">
-        <p class="text-sm text-gray-500 dark:text-gray-400">
+        <p class="text-muted-foreground text-sm">
           如果問題持續發生，請
           <a
             href="mailto:support@transpal.example.com"

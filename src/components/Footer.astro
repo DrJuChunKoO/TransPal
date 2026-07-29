@@ -3,26 +3,26 @@ const currentPath = Astro.url.pathname;
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-white py-8 dark:bg-[#1C1C1C]">
+<footer class="bg-background py-8">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-0">
     <div
       class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row"
     >
-      <div class="text-sm text-gray-500 dark:text-gray-400">
+      <div class="text-muted-foreground text-sm">
         © {currentYear} JUCHUNKO.COM All rights reserved.
       </div>
       <nav aria-label="頁腳導航" role="navigation">
         <ul
-          class="flex flex-wrap items-center gap-2 text-sm text-gray-600 sm:gap-[1px] dark:text-gray-400"
+          class="text-muted-foreground flex flex-wrap items-center gap-2 text-sm sm:gap-[1px]"
           role="list"
         >
           <li>
             <a
               href="/about"
-              class={`relative rounded-full px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+              class={`relative rounded-full px-3 sm:px-4 py-2 text-muted-foreground transition-colors duration-150 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background ${
                 currentPath === "/about"
-                  ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
-                  : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
+                  ? "bg-accent text-foreground"
+                  : "hover:bg-accent hover:text-foreground"
               }`}
               aria-current={currentPath === "/about" ? "page" : undefined}
             >
@@ -32,10 +32,10 @@ const currentYear = new Date().getFullYear();
           <li>
             <a
               href="/edit-guide"
-              class={`relative rounded-full px-3 sm:px-4 py-2 text-gray-500 transition-colors duration-150 dark:text-gray-400 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 ${
+              class={`relative rounded-full px-3 sm:px-4 py-2 text-muted-foreground transition-colors duration-150 text-sm touch-manipulation min-h-[44px] flex items-center focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background ${
                 currentPath === "/edit-guide"
-                  ? "bg-gray-100 text-gray-900 dark:bg-white/10 dark:text-white"
-                  : "hover:bg-gray-100 hover:text-gray-700 dark:hover:bg-white/10 dark:hover:text-gray-200"
+                  ? "bg-accent text-foreground"
+                  : "hover:bg-accent hover:text-foreground"
               }`}
               aria-current={currentPath === "/edit-guide" ? "page" : undefined}
             >
@@ -45,7 +45,7 @@ const currentYear = new Date().getFullYear();
           <li>
             <a
               href="/rss.xml"
-              class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
+              class="text-muted-foreground hover:bg-accent hover:text-foreground focus:ring-ring relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm transition-colors duration-150 focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:outline-none sm:px-4"
               aria-label="訂閱 RSS 動態"
             >
               RSS
@@ -71,7 +71,7 @@ const currentYear = new Date().getFullYear();
               href="https://github.com/DrJuChunKoO/TransPal"
               target="_blank"
               rel="noopener noreferrer"
-              class="relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm text-gray-500 transition-colors duration-150 hover:bg-gray-100 hover:text-gray-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none sm:px-4 dark:text-gray-400 dark:hover:bg-white/10 dark:hover:text-gray-200 dark:focus:ring-offset-gray-800"
+              class="text-muted-foreground hover:bg-accent hover:text-foreground focus:ring-ring relative flex min-h-[44px] touch-manipulation items-center gap-1 rounded-full px-3 py-2 text-sm transition-colors duration-150 focus:ring-2 focus:ring-offset-2 focus:ring-offset-background focus:outline-none sm:px-4"
               aria-label="在 GitHub 上查看 TransPal 原始碼（開啟新視窗）"
             >
               GitHub
