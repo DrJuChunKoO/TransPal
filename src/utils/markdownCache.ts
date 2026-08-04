@@ -3,18 +3,29 @@
  * Provides build-time caching for markdown content to improve performance
  */
 
-import { marked } from "marked";
+import { unified } from "unified";
+import rehypeStringify from "rehype-stringify";
+import remarkCjkFriendly from "remark-cjk-friendly";
+import remarkCjkFriendlyGfmStrikethrough from "remark-cjk-friendly-gfm-strikethrough";
+import remarkGfm from "remark-gfm";
+import remarkParse from "remark-parse";
+import remarkRehype from "remark-rehype";
 import sanitizeHtml from "sanitize-html";
 import { logError } from "./errorHandler";
 
 // Cache for processed markdown content
 const markdownCache = new Map<string, string>();
 
-// Configure marked
-marked.setOptions({
-  breaks: true,
-  gfm: true,
-});
+// Unified processor configured with GFM and CJK-friendly remark plugins.
+// Order matters: remarkGfm must run before the CJK plugins, and
+// remarkCjkFriendlyGfmStrikethrough between remarkGfm and remarkRehype.
+const remarkProcessor = unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkCjkFriendly)
+  .use(remarkCjkFriendlyGfmStrikethrough)
+  .use(remarkRehype)
+  .use(rehypeStringify);
 
 // Configure sanitize-html to allow safe HTML elements.
 // sanitize-html runs natively in Node.js without requiring a DOM environment,
@@ -71,7 +82,7 @@ export function processMarkdown(content: string, cacheKey?: string): string {
       return markdownCache.get(key)!;
     }
 
-    const htmlContent = marked.parse(content) as string;
+    const htmlContent = String(remarkProcessor.processSync(content));
     const safeHtml = sanitizeHtml(htmlContent, sanitizeConfig);
 
     markdownCache.set(key, safeHtml);

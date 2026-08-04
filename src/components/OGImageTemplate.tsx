@@ -1,7 +1,9 @@
 import React from "react";
 import type { RenderFunctionInput } from "astro-opengraph-images";
-import { marked, type Tokens } from "marked";
-import { markdownToPlainText } from "../utils/markdownText";
+import {
+  getMarkdownListItemTexts,
+  markdownToPlainText,
+} from "../utils/markdownText";
 
 type SatoriTextStyle = React.CSSProperties & {
   lineClamp?: number;
@@ -52,15 +54,9 @@ function getTitleFontSize(title: string): number {
 }
 
 function renderDescriptionMarkdown(markdown: string): React.ReactNode {
-  const tokens = marked
-    .lexer(markdown)
-    .filter((token) => token.type !== "space");
-
-  const list = tokens.find((token) => token.type === "list");
-  const items: SummaryItem[] =
-    list?.type === "list"
-      ? list.items.map((item: Tokens.ListItem) => splitSummaryItem(item.text))
-      : [];
+  const items: SummaryItem[] = getMarkdownListItemTexts(markdown).map(
+    splitSummaryItem,
+  );
 
   if (items.length === 0) {
     return <div style={descriptionStyle}>{markdownToPlainText(markdown)}</div>;

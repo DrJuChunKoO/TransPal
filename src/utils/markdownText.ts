@@ -1,30 +1,58 @@
-import { marked, type Token } from "marked";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
+import type { List, Nodes, Root } from "mdast";
 
-function textFromToken(token: Token): string {
-  if ("tokens" in token && Array.isArray(token.tokens)) {
-    return token.tokens.map(textFromToken).join(" ");
+// Minimal remark parser used to analyze markdown without running transforms.
+const remarkParser = unified().use(remarkParse);
+
+function collectText(node: Nodes): string[] {
+  const parts: string[] = [];
+
+  switch (node.type) {
+    case "text":
+    case "inlineCode":
+    case "code":
+      if ("value" in node) parts.push(node.value as string);
+      break;
+    case "break":
+      parts.push(" ");
+      break;
   }
 
-  if (token.type === "list" && "items" in token) {
-    return token.items.map(textFromToken).join(" ");
+  if ("children" in node && Array.isArray(node.children)) {
+    for (const child of node.children) {
+      parts.push(...collectText(child));
+    }
   }
 
-  if ("text" in token && typeof token.text === "string") {
-    return token.text;
-  }
+  return parts;
+}
 
-  return "";
+function plainTextFromNode(node: Nodes): string {
+  return collectText(node).join(" ").replace(/\s+/g, " ").trim();
 }
 
 export function markdownToPlainText(markdown: string): string {
   if (!markdown) return "";
 
-  return marked
-    .lexer(markdown)
-    .map(textFromToken)
-    .join(" ")
-    .replace(/\s+/g, " ")
-    .trim();
+  const tree = remarkParser.parse(markdown) as Root;
+  return plainTextFromNode(tree);
+}
+
+/**
+ * Extract the plain text of each item in the first list of a markdown
+ * document, if any. Returns an empty array when no list is present.
+ */
+export function getMarkdownListItemTexts(markdown: string): string[] {
+  if (!markdown) return [];
+
+  const tree = remarkParser.parse(markdown) as Root;
+  const list = tree.children.find((node): node is List => node.type === "list");
+  if (!list) return [];
+
+  return list.children
+    .map((item) => plainTextFromNode(item))
+    .filter((text) => text !== "");
 }
 
 export function truncatePlainText(text: string, maxLength = 240): string {

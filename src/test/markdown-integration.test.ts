@@ -134,7 +134,7 @@ describe("Markdown Integration Tests", () => {
       const processed = processMarkdown(sampleMarkdown.complex);
 
       // Check for key HTML elements - we don't check for code specifically since
-      // the exact output depends on the marked implementation
+      // the exact output depends on the unified/remark implementation
       expect(processed).toContain("<h1>");
       expect(processed).toContain("<h2>");
       expect(processed).toContain("<ul>");

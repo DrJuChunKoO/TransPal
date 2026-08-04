@@ -4,7 +4,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, isTextUIPart } from "ai";
-import Markdown from "markdown-to-jsx";
+import ReactMarkdown from "react-markdown";
+import remarkCjkFriendly from "remark-cjk-friendly";
+import remarkCjkFriendlyGfmStrikethrough from "remark-cjk-friendly-gfm-strikethrough";
+import remarkGfm from "remark-gfm";
+import type { PluggableList } from "unified";
 
 import LucideArrowDown from "~icons/lucide/arrow-down";
 import LucideArrowRight from "~icons/lucide/arrow-right";
@@ -77,6 +81,14 @@ const TOOL_ICONS: Record<ToolIconName, IconComponent> = {
   view: LucideEye,
   tool: LucideWrench,
 };
+
+// remarkGfm must run before the CJK-friendly plugins (and the strikethrough
+// variant between remarkGfm and the renderer) to work correctly.
+const remarkPlugins: PluggableList = [
+  remarkGfm,
+  remarkCjkFriendly,
+  remarkCjkFriendlyGfmStrikethrough,
+];
 
 /** One persistent row per tool call, so the activity stays readable after the answer lands. */
 function ToolMarker({ toolPart }: { toolPart: NormalizedToolPart }) {
@@ -474,9 +486,12 @@ export default function ChatBot() {
                                       {message.parts.map((part, index) =>
                                         isTextUIPart(part) &&
                                         part.text !== "" ? (
-                                          <Markdown key={index}>
+                                          <ReactMarkdown
+                                            key={index}
+                                            remarkPlugins={remarkPlugins}
+                                          >
                                             {part.text}
-                                          </Markdown>
+                                          </ReactMarkdown>
                                         ) : null,
                                       )}
                                     </BubbleContent>
